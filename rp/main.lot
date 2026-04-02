@@ -1,0 +1,26 @@
+\thispagestyle {empty}
+\contentsline {table}{\numberline {1}{\ignorespaces Các Thành phần Chính của Hệ thống Cơ sở Dữ liệu}}{6}{table.caption.13}%
+\contentsline {table}{\numberline {2}{\ignorespaces So sánh Cơ sở Dữ liệu Quan hệ (SQL) và Phi quan hệ (NoSQL)}}{7}{table.caption.14}%
+\contentsline {table}{\numberline {3}{\ignorespaces Đặc tả Use Case -- Xem, tìm kiếm và lọc thông tin sự kiện}}{18}{table.caption.21}%
+\contentsline {table}{\numberline {4}{\ignorespaces Đặc tả Use Case -- Truy Cập Chức Năng Yêu Cầu Xác Thực}}{19}{table.caption.22}%
+\contentsline {table}{\numberline {5}{\ignorespaces Đặc tả Use Case -- Mua vé sự kiện}}{20}{table.caption.23}%
+\contentsline {table}{\numberline {6}{\ignorespaces Đặc tả Use Case -- Chat với quản trị viên}}{21}{table.caption.24}%
+\contentsline {table}{\numberline {7}{\ignorespaces Đặc tả Use Case -- Chat với Ban tổ chức}}{21}{table.caption.25}%
+\contentsline {table}{\numberline {8}{\ignorespaces Đặc tả Use Case -- Xem, tìm kiếm hoặc lọc danh sách sự kiện (Ban tổ chức)}}{23}{table.caption.27}%
+\contentsline {table}{\numberline {9}{\ignorespaces Đặc tả Use Case -- Phản hồi tin nhắn người dùng (Ban tổ chức) }}{24}{table.caption.28}%
+\contentsline {table}{\numberline {10}{\ignorespaces Đặc tả Use Case -- Quản lý sự kiện}}{25}{table.caption.30}%
+\contentsline {table}{\numberline {11}{\ignorespaces Đặc tả Use Case -- Quản lý đơn vị tổ chức}}{26}{table.caption.31}%
+\contentsline {table}{\numberline {12}{\ignorespaces Các thuộc tính của bảng User}}{40}{table.caption.46}%
+\contentsline {table}{\numberline {13}{\ignorespaces Các thuộc tính của bảng Organizer}}{40}{table.caption.47}%
+\contentsline {table}{\numberline {14}{\ignorespaces Các thuộc tính của bảng Event}}{40}{table.caption.48}%
+\contentsline {table}{\numberline {15}{\ignorespaces Các thuộc tính của bảng TicketClass}}{41}{table.caption.49}%
+\contentsline {table}{\numberline {16}{\ignorespaces Các thuộc tính của bảng Ticket}}{41}{table.caption.50}%
+\contentsline {table}{\numberline {17}{\ignorespaces Các thuộc tính của bảng Purchases}}{41}{table.caption.51}%
+\contentsline {table}{\numberline {18}{\ignorespaces Các thuộc tính của bảng Vouchers}}{41}{table.caption.52}%
+\contentsline {table}{\numberline {19}{\ignorespaces Các thuộc tính của bảng Interactions}}{41}{table.caption.53}%
+\contentsline {table}{\numberline {20}{\ignorespaces Các thuộc tính của bảng ChatSessions}}{42}{table.caption.54}%
+\contentsline {table}{\numberline {21}{\ignorespaces Các thuộc tính của bảng Messages}}{42}{table.caption.55}%
+\contentsline {table}{\numberline {22}{\ignorespaces Các thuộc tính trích xuất từ thông tin người dùng (User Features)}}{42}{table.caption.56}%
+\contentsline {table}{\numberline {23}{\ignorespaces Dữ liệu sự kiện (Event Features)}}{43}{table.caption.57}%
+\contentsline {table}{\numberline {24}{\ignorespaces Đặc trưng kết hợp User–Event (Cross Features)}}{43}{table.caption.58}%
+\contentsline {table}{\numberline {25}{\ignorespaces Gán nhãn dữ liệu huấn luyện}}{43}{table.caption.59}%

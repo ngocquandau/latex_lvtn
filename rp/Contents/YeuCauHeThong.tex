@@ -1,0 +1,95 @@
+\section{Yêu cầu về hệ thống}
+\indent \indent Để xác định và đảm bảo các tính năng ứng với từng vai trò người dùng cùng với khả năng đáp ứng các yêu cầu thực tiễn khi đưa vào hoạt động, chúng tôi cần làm rõ hệ thống cần phải làm gì và vận hành như thế nào để hiện thực hóa các mục tiêu đó. \\
+\indent Để thực hiện nhiệm vụ trên, chúng tôi sẽ chi tiết hóa các yêu cầu cụ thể, được chia thành hai nhóm chính: 
+\begin{itemize}[leftmargin=3em]
+    \item[1. ] \textbf{Yêu cầu Chức năng (Functional Requirements)}: Mô tả các hành vi và chức năng cụ thể mà hệ thống phải có để đáp ứng nhu cầu của người dùng, Ban tổ chức và quản trị viên.
+    \item[2. ] \textbf{Yêu cầu Phi chức năng (Non-Functional Requirements)}: Quy định các tiêu chí về chất lượng, hiệu suất, bảo mật và độ tin cậy, đảm bảo hệ thống không chỉ chạy đúng mà còn phải chạy ổn định, an toàn và hiệu quả. 
+\end{itemize}
+\indent \indent Các yêu cầu này cùng nhau tạo nên bộ khung kỹ thuật toàn diện để định hướng cho quá trình thiết kế, phát triển và kiểm thử hệ thống MyTicket.
+\subsection{Yêu cầu chức năng}
+\subsubsection{Đối với tất cả người dùng}
+    \begin{itemize}
+        \item[\textbf{-}] \textbf{Các chức năng chung cho cả hai trường hợp là người dùng chưa hoặc đã đăng nhập tài khoản vào hệ thống}: 
+            \begin{itemize}
+                \item[+] Người dùng có thể xem danh sách các sự kiện đang được bán vé có trong hệ thống ứng với 2 danh mục là "Sự kiện đang hot" và "Sự kiện mới" tại trang chủ.
+                \item[+] Người dùng có thể xem các thông tin chi tiết về một sự kiện cụ thể đã được chọn.
+                \item[+] Để thuận tiện trong việc tra cứu các sự kiện đang được bán vé trong hệ thống, người dùng có thể nhập từ khóa tìm kiếm hoặc lọc theo các tiêu chí cụ thể (Địa điểm, Ngày diễn ra sự kiện, Giá vé tối thiểu).
+            \end{itemize}
+        \textbf{\item[-] Trường hợp người dùng chưa đăng nhập tài khoản vào hệ thống}: 
+            \begin{itemize}
+                 \item[+] Người dùng có thể tạo tài khoản trong hệ thống. 
+                 \item[+] Người dùng đã có tài khoản có thể đăng nhập vào hệ thống bằng tài khoản.
+            \end{itemize}
+        \textbf{\item[-] Trường hợp người dùng đã đăng nhập tài khoản vào hệ thống}: 
+        \begin{itemize}
+            \item[+] Người dùng có thể xem thêm danh sách các sự kiện đang được bán vé có trong hệ thống ứng phù hợp với sở thích và hành vi của mình do hệ thống gợi ý trong mục "Sự kiện dành cho bạn" tại trang chủ.
+            \item[+] Người dùng thể tiến hành mua vé và thanh toán.
+            \item[+] Đối với các sự kiện có yêu cầu về độ tuổi, người dùng sẽ nhận được cảnh báo khi thực hiện thanh toán.
+            \item[+] Khi thanh toán, người dùng có thể sử dụng các voucher hoặc mã giảm giá.
+            \item[+] Người dùng sẽ nhận được thông tin vé đã thành toán thành công hoặc nhắc nhở sự kiện đã mua vé sắp diễn ra trước 3 ngày qua email đã đăng ký khi tạo tài khoản.
+            \item[+] Người dùng có thể xem lại lịch sử mua vé trong hệ thống.
+            \item[+] Người dùng có thể gửi tin nhắn cho đơn vị tổ chức của sự kiện mà mình quan tâm hoặc quản trị viên của hệ thống.
+            \item[+] Người dùng có thể đăng xuất tài khoản ra khỏi hệ thống.
+        \end{itemize}
+    \end{itemize}
+\subsubsection{Đối với tất cả Ban tổ chức sự kiện}
+\begin{itemize}
+    \item[\textbf{-}] \textbf{Trường hợp Ban tổ chức chưa đăng nhập vào hệ thống}:
+        \begin{itemize}
+            \item[+] Ban tổ chức có thể đăng nhập vào hệ thống bằng tài khoản.
+            \item[+] Trong lần đăng nhập thành công đầu tiên khi sử dụng tài khoản được cấp sẵn, Ban tổ chức bắt buộc phải đổi mật khẩu để có thể tiếp tục thực hiện được các tác vụ khác.
+        \end{itemize}
+    \item[\textbf{-}] \textbf{Trường hợp Ban tổ chức đã đăng nhập thành công vào hệ thống}:
+        \begin{itemize}
+            \item[+] Ban tổ chức có thể xem được danh sách các sự kiện do mình tổ chức đã, đang và sẽ được đăng tải trên hệ thống.
+            \item[+] Ban tổ chức có thể nhập từ khóa tìm kiếm hoặc lọc theo các tiêu chí cụ thể để quan sát được các sự kiện phù hợp.
+            \item[+] Ban tổ chức có thể đăng xuất tài khoản ra khỏi hệ thống.
+            \item[+] Ban tổ chức có thể xem và phản hồi tin nhắn được gửi từ người dùng.
+        \end{itemize}
+\end{itemize}
+\subsubsection{Đối với vai trò quản trị viên}
+\begin{itemize}
+    \item[-] Quản trị viên có thể đăng nhập vào hệ thống bằng tài khoản.
+    \item[-] Quản trị viên có thể đăng xuất tài khoản ra khỏi hệ thóng.
+    \item[-] Khi đã đăng nhập thành công:
+    \begin{itemize}
+        \item[+] Quản trị viên có thể tạo, xem, sửa hoặc xóa tất cả thông tin về những sự kiện đã được đăng tải trong hệ thống.
+        \item[+] Quản trị viên có thể xem, sửa hoặc xóa tất cả thông tin của các Ban tổ chức có sự kiện được đăng tải trong hệ thống.
+        \item[+] Quản trị viên có thể xem và phản hồi tin nhắn được gửi từ người dùng.
+    \end{itemize}
+\end{itemize}
+\subsection{Yêu cầu phi chức năng}
+\begin{itemize}
+    \item[\textbf{-}] \textbf{Yêu cầu về Bảo mật (Security)}
+        \begin{itemize}
+            \item[+] \textbf{Bảo vệ dữ liệu người dùng}: hệ thống phải mã hóa tất cả các thông tin nhạy cảm của người dùng (như mật khẩu, thông tin thanh toán) cả khi truyền tải (sử dụng \textbf{HTTPS/TLS}) và khi lưu trữ trong cơ sở dữ liệu (\textbf{mã hóa một chiều} cho mật khẩu).
+            \item[+] \textbf{Phân quyền rõ ràng}: Hệ thống phải đảm bảo rằng người dùng, Ban tổ chức và quản trị viên chỉ có thể truy cập và thực hiện các chức năng đã được cấp quyền theo vai trò của họ (\textbf{kiểm soát truy cập dựa trên vai trò - RBAC}).
+            \item[+] \textbf{Xác thực mạnh mẽ}: hệ thống cần có cơ chế chống lại các cuộc tấn công như \textbf{Brute Force} (ví dụ: khóa tài khoản tạm thời sau một số lần đăng nhập thất bại) và sử dụng \textbf{mã hóa mạnh} cho phiên đăng nhập.
+            \item[+] \textbf{Bảo mật thanh toán}: Việc xử lý thanh toán phải tuân thủ các tiêu chuẩn bảo mật ngành (ví dụ: \textbf{PCI DSS} nếu trực tiếp xử lý thông tin thẻ) hoặc thông qua cổng thanh toán uy tín.
+        \end{itemize}
+    \item[\textbf{-}] \textbf{Yêu cầu về Hiệu suất (Performance)}
+        \begin{itemize}
+            \item[+] \textbf{Thời gian phản hồi}: 90\% các giao dịch quan trọng (ví dụ: tìm kiếm sự kiện, xem chi tiết sự kiện, mua vé) phải có \textbf{thời gian phản hồi dưới 3 giây} trong điều kiện tải thông thường.
+            \item[+] \textbf{Khả năng chịu tải}: Hệ thống phải xử lý được \textbf{tối thiểu 1000 người dùng đồng thời} khi diễn ra các sự kiện bán vé lớn.
+            \item[+] \textbf{Tốc độ truy vấn}: Các truy vấn cơ sở dữ liệu phải được tối ưu hóa, đảm bảo tốc độ tải danh sách sự kiện và lịch sử mua vé nhanh chóng.
+        \end{itemize}
+    \item[\textbf{-}] \textbf{Yêu cầu về Tính khả dụng (Usability)}
+        \begin{itemize}
+            \item[+] \textbf{Giao diện trực quan}: Giao diện người dùng phải \textbf{sạch sẽ, dễ hiểu} và nhất quán trên tất cả các màn hình, giúp người dùng dễ dàng tìm kiếm, chọn và mua vé.
+            \item[+] \textbf{Thân thiện với di động}: hệ thống phải \textbf{hoạt động tốt trên các thiết bị di động} (Responsive Design) hoặc được phát triển dưới dạng hệ thống di động chuyên biệt.
+            \item[+] \textbf{Thông báo lỗi rõ ràng}: Hệ thống cần cung cấp các thông báo lỗi và cảnh báo \textbf{cụ thể, dễ hiểu} và có tính định hướng để người dùng có thể tự khắc phục hoặc biết cách liên hệ hỗ trợ.
+            \item[+] \textbf{Quy trình mua vé đơn giản}: Quy trình mua vé và thanh toán cần được tối ưu hóa để hoàn thành trong \textbf{tối thiểu bước} có thể.
+        \end{itemize}
+    \item[\textbf{-}] \textbf{Yêu cầu về Tính sẵn dùng (Availability)}
+        \begin{itemize}
+            \item[+] \textbf{Thời gian hoạt động (Uptime)}: hệ thống phải đảm bảo \textbf{thời gian hoạt động tối thiểu là 99.5\%} (tương đương với không quá 44 giờ ngừng hoạt động mỗi năm).
+            \item[+] \textbf{Phục hồi sau sự cố}: Hệ thống phải có khả năng \textbf{phục hồi nhanh chóng} sau các sự cố ngoài ý muốn (ví dụ: lỗi máy chủ, mất điện), với thời gian phục hồi mục tiêu (\textbf{RTO}) ngắn.
+            \item[+] \textbf{Sao lưu dữ liệu}: Dữ liệu (thông tin người dùng, sự kiện, vé) phải được \textbf{sao lưu định kỳ} và có thể khôi phục hoàn toàn.
+        \end{itemize}
+    \item[\textbf{-}] \textbf{Yêu cầu về Tính bảo trì và Mở rộng (Maintainability)}
+        \begin{itemize}
+            \item[+] \textbf{Cấu trúc mã nguồn}: Mã nguồn phải được \textbf{viết rõ ràng, có cấu trúc tốt}, dễ đọc và tuân thủ các nguyên tắc lập trình tiêu chuẩn để dễ dàng bảo trì và sửa lỗi.
+            \item[+] \textbf{Khả năng mở rộng (Scalability)}: Cấu trúc hệ thống phải hỗ trợ việc \textbf{mở rộng theo chiều ngang} (Horizontal Scaling) để dễ dàng thêm tài nguyên nhằm đáp ứng lượng người dùng và sự kiện tăng lên trong tương lai mà không cần thay đổi lớn về kiến trúc.
+            \item[+] \textbf{Khả năng tùy chỉnh}: hệ thống phải dễ dàng \textbf{thêm các tính năng mới} (ví dụ: loại vé mới, phương thức thanh toán mới) hoặc điều chỉnh quy trình nghiệp vụ hiện có.
+        \end{itemize}
+\end{itemize}
