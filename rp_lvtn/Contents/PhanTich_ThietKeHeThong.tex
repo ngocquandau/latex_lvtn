@@ -1,0 +1,403 @@
+\section{Phân tích \& Thiết kế hệ thống}
+
+\subsection{Kiến trúc hệ thống - OLD}
+\indent \indent Kiến trúc hệ thống này tuân theo mô hình 3 tầng (Three-tier Architecture), giúp phân tách rõ ràng giữa giao diện người dùng, xử lý nghiệp vụ và lưu trữ dữ liệu. Mô hình này đảm bảo hiệu suất, bảo mật và khả năng mở rộng cao.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/KienTrucHeThong.png}
+    \vspace{10pt}
+    \caption{Kiến trúc hệ thống}
+    \label{fig:hdfs_architecture}
+\end{figure}
+\begin{itemize}
+    \item[1.] \textbf{Client Side (Trình duyệt \& Giao diện người dùng)}
+    \begin{itemize}
+        \item[-] Người dùng tương tác với hệ thống thông qua trình duyệt web (ví dụ: Chrome).
+        \item[-] Giao diện được xây dựng bằng ReactJS, đảm nhiệm việc hiển thị dữ liệu, nhận yêu cầu và phản hồi từ người dùng.
+        \item[-] Giao tiếp với máy chủ thông qua các HTTP Request/Response, sử dụng định dạng JSON để truyền dữ liệu.
+    \end{itemize}
+    \item[2.] \textbf{Server Side (Back-end \& Xử lý nghiệp vụ)}
+    \begin{itemize}
+        \item[-] Được phát triển bằng Node.js, đảm nhận xử lý logic nghiệp vụ và điều phối dữ liệu.
+        \item[-] Hỗ trợ các phương thức HTTP như GET, POST, PUT, DELETE để thực hiện các thao tác CRUD.
+        \item[-] Sử dụng JWT (JSON Web Token) để xác thực và phân quyền người dùng, đảm bảo tính bảo mật trong truy cập tài nguyên.
+        \item[-] Là tầng trung gian giữa giao diện người dùng và cơ sở dữ liệu, giúp kiểm soát luồng dữ liệu và logic xử lý.
+    \end{itemize}
+    \item[3.] \textbf{Database Layer (Lưu trữ dữ liệu)}
+    \begin{itemize}
+        \item[-] Dữ liệu được lưu trữ trong MongoDB, một hệ quản trị cơ sở dữ liệu NoSQL phổ biến.
+        \item[-] Tầng này chịu trách nhiệm lưu trữ, truy xuất và quản lý dữ liệu theo yêu cầu từ tầng hệ thống.
+        \item[-] Việc truy cập dữ liệu được kiểm soát thông qua tầng hệ thống, giúp đảm bảo tính toàn vẹn và bảo mật.
+    \end{itemize}
+    \item[4.] \textbf{Ưu điểm của kiến trúc này}
+    \begin{itemize}
+        \item[-] Bảo mật cao: Người dùng không truy cập trực tiếp vào cơ sở dữ liệu.
+        \item[-] Dễ mở rộng: Có thể triển khai nhiều máy chủ hệ thống để xử lý song song.
+        \item[-] Tái sử dụng tốt: Các tầng được tách biệt, dễ bảo trì và nâng cấp.
+        \item[-] Hiệu suất ổn định: Phân chia rõ ràng vai trò giữa các tầng giúp tối ưu hóa xử lý.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Thiết kế Database - OLD}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/schema.png}
+    \vspace{15pt}
+    \caption{Document Schema Diagram}
+\end{figure}
+
+
+\newpage
+\indent Các thực thể này gồm có các thuộc tính:
+
+%==================== USERS TABLE ====================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\hline
+\textbf{Field} & \textbf{Description} \\ \hline
+\_id (PK) & Primary key (ObjectId) \\ \hline
+firstName & User's first name \\ \hline
+lastName & User's last name \\ \hline
+gender & Gender \\ \hline
+birthday & Date of birth \\ \hline
+email & Email address \\ \hline
+phoneNumber & Phone number \\ \hline
+name & Display name \\ \hline
+profileImage & Profile picture URL \\ \hline
+totalSpent & Total amount spent \\ \hline
+totalTicketPurchase & Total tickets purchased \\ \hline
+accumulatedFlag & Loyalty flag \\ \hline
+location & User location \\ \hline
+createdAt & Created timestamp \\ \hline
+updatedAt & Last updated timestamp \\ \hline
+\end{tabular}
+\vspace{15pt}
+\caption{Các thuộc tính của bảng User}
+\end{table}
+
+%==================== ORGANIZERS TABLE ====================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\hline
+\textbf{Field} & \textbf{Description} \\ \hline
+\_id (PK) & Primary key (ObjectId) \\ \hline
+address & Organizer address \\ \hline
+phoneNumber & Organizer phone number \\ \hline
+email & Organizer email \\ \hline
+name & Organizer name \\ \hline
+user & FK referencing users.\_id \\ \hline
+createdAt & Created timestamp \\ \hline
+updatedAt & Last updated timestamp \\ \hline
+\end{tabular}
+\vspace{15pt}
+\caption{Các thuộc tính của bảng Organizer}
+\end{table}
+
+%==================== EVENTS TABLE ====================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\hline
+\textbf{Field} & \textbf{Description} \\ \hline
+\_id (PK) & Primary key (ObjectId) \\ \hline
+name & Event name \\ \hline
+genre & Event genre \\ \hline
+description & Event description \\ \hline
+eventURL & Event page URL \\ \hline
+startDateTime & Start date and time \\ \hline
+endDateTime & End date and time \\ \hline
+maxCapacity & Maximum capacity \\ \hline
+platformCommission & Platform commission fee \\ \hline
+status & Event status \\ \hline
+ticketCount & Number of tickets \\ \hline
+spotLimit & Spot limit \\ \hline
+sellingList & Selling platforms list \\ \hline
+totalTickets & Total tickets available \\ \hline
+organizer & FK referencing organizers.\_id \\ \hline
+location & Event location \\ \hline
+createdAt & Created timestamp \\ \hline
+updatedAt & Last updated timestamp \\ \hline
+\end{tabular}
+\vspace{15pt}
+\caption{Các thuộc tính của bảng Event}
+\end{table}
+
+%==================== TICKETCLASSES TABLE ====================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\hline
+\textbf{Field} & \textbf{Description} \\ \hline
+\_id (PK) & Primary key (ObjectId) \\ \hline
+name & Ticket class name \\ \hline
+totalQuantity & Total number of tickets \\ \hline
+soldQuantity & Number of tickets sold \\ \hline
+availableFrom & Sale start date \\ \hline
+availableUntil & Sale end date \\ \hline
+meta & Additional metadata \\ \hline
+eventType & Type of event \\ \hline
+event & FK referencing events.\_id \\ \hline
+\end{tabular}
+\vspace{15pt}
+\caption{Các thuộc tính của bảng TicketClass}
+\end{table}
+
+%==================== TICKETS TABLE ====================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\hline
+\textbf{Field} & \textbf{Description} \\ \hline
+\_id (PK) & Primary key (ObjectId) \\ \hline
+ticketClass & Ticket class name \\ \hline
+seat & Seat number or code \\ \hline
+isSold & Ticket sold status \\ \hline
+qrCode & QR code string \\ \hline
+ticketId & Unique ticket identifier \\ \hline
+event & FK referencing events.\_id \\ \hline
+\end{tabular}
+\vspace{15pt}
+\caption{Các thuộc tính của bảng Ticket}
+\end{table}
+
+%==================== PURCHASES TABLE ====================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\hline
+\textbf{Field} & \textbf{Description} \\ \hline
+\_id (PK) & Primary key (ObjectId) \\ \hline
+user & FK referencing users.\_id \\ \hline
+event & FK referencing events.\_id \\ \hline
+ticketClass & FK referencing ticketClasses.\_id \\ \hline
+quantity & Number of tickets purchased \\ \hline
+totalAmount & Total amount paid \\ \hline
+originalPrice & Original price before discount \\ \hline
+paymentMethod & Payment method used \\ \hline
+status & Purchase status \\ \hline
+purchaseDate & Date of purchase \\ \hline
+createdAt & Created timestamp \\ \hline
+updatedAt & Last updated timestamp \\ \hline
+\end{tabular}
+\vspace{15pt}
+\caption{Các thuộc tính của bảng Purchases}
+\end{table}
+
+%==================== VOUCHERS TABLE ====================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\hline
+\textbf{Field} & \textbf{Description} \\ \hline
+\_id (PK) & Primary key (ObjectId) \\ \hline
+code & Unique voucher code \\ \hline
+discountAmount & Discount value \\ \hline
+maxAmount & Maximum discount allowed \\ \hline
+minSpend & Minimum spend required \\ \hline
+validUntil & Voucher expiration date \\ \hline
+\end{tabular}
+\vspace{15pt}
+\caption{Các thuộc tính của bảng Vouchers}
+\end{table}
+
+%==================== INTERACTIONS TABLE ====================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\hline
+\textbf{Field} & \textbf{Description} \\ \hline
+\_id (PK) & Primary key (ObjectId) \\ \hline
+event\_id & FK referencing events.\_id \\ \hline
+click & Number of clicks \\ \hline
+purchase & Whether a purchase occurred \\ \hline
+createdAt & Timestamp of interaction \\ \hline
+\end{tabular}
+\vspace{15pt}
+\caption{Các thuộc tính của bảng Interactions}
+\end{table}
+
+%==================== CHATSESSIONS TABLE ====================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\hline
+\textbf{Field} & \textbf{Description} \\ \hline
+\_id (PK) & Primary key (ObjectId) \\ \hline
+title & Chat session title \\ \hline
+created\_at & Creation timestamp \\ \hline
+last\_active\_time & Last activity timestamp \\ \hline
+status & Session status \\ \hline
+created\_by & FK referencing users.\_id \\ \hline
+participants & Array of user IDs \\ \hline
+event & FK referencing events.\_id \\ \hline
+\end{tabular}
+\vspace{15pt}
+\caption{Các thuộc tính của bảng ChatSessions}
+\end{table}
+
+%==================== MESSAGES TABLE ====================
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\hline
+\textbf{Field} & \textbf{Description} \\ \hline
+\_id (PK) & Primary key (ObjectId) \\ \hline
+session\_id & FK referencing chatsessions.\_id \\ \hline
+sender\_id & FK referencing users.\_id \\ \hline
+content & Message content \\ \hline
+is\_read & Read status (true/false) \\ \hline
+read\_at & Timestamp when the message was read \\ \hline
+\end{tabular}
+\vspace{15pt}
+\caption{Các thuộc tính của bảng Messages}
+\end{table}
+
+
+\subsection{Hệ thống Gợi ý Sự kiện Thông minh (Event Recommendation System)}
+
+\subsubsection{Kiến trúc tổng quan và Quy trình MLOps tự động}
+\indent \indent Hệ thống được thiết kế theo mô hình Automated Machine Learning Pipeline, giúp mô hình liên tục học hỏi từ dữ liệu mới mà không cần can thiệp thủ công.
+\begin{itemize}
+    \item[-] \textbf{Dịch vụ Cronjob (Cron-job.org):} Dịch vụ Cronjob định kỳ trích xuất dữ liệu tương tác từ cơ sở dữ liệu hệ thống, xuất thành định dạng .csv và cập nhật lên Hugging Face Datasets.
+    \item[-] \textbf{Huấn luyện tự động (GitHub Actions):} Dịch vụ Cronjob kích hoạt GitHub Actions thông qua API. Tại đây, GitHub Actions sẽ khởi chạy môi trường huấn luyện, thực hiện các bước từ tiền xử lý đến tối ưu hóa tham số mô hình.
+    \item[-] \textbf{Triển khai (Hugging Face Spaces):} Mô hình sau khi huấn luyện được đẩy lên Hugging Face Models. Hugging Face Spaces đóng vai trò là Recommendation Server, nạp mô hình mới nhất để phục vụ các yêu cầu gợi ý từ hệ thống web theo thời gian thực.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{Images/Quy trình xử lý hệ thống.png}
+    \vspace{15pt}
+    \caption{Quy trình MLOps tự động}
+\end{figure}
+
+\subsubsection{Xây dựng tập dữ liệu và Đặc trưng (Feature Engineering)}
+
+\indent \indent \textbf{Giải pháp dữ liệu giả lập (Synthetic Data)}\\
+\indent Do quy mô đồ án trong giai đoạn phát triển chưa có lượng người dùng thực tế đủ lớn, nhóm đã sử dụng AI để sinh dữ liệu giả lập. Việc này đảm bảo mô hình có đủ dữ kiện ban đầu về mối liên hệ giữa các thuộc tính người dùng và thể loại sự kiện.
+
+\begin{table}[H]
+\centering
+\small
+
+\begin{adjustbox}{width=\textwidth}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+user\_id & event\_id & age & gender & avgPurchasePrice & totalSpent & totalTicketsPurchase & genre & ageLimit & eventClickCount & totalTickets & sameEventGenreClickCount & sameEventGenrePurchase & interestScore \\
+\hline
+4a945649c14406ab1dbf3ed5 & fa784fd8a4ef320b3500aca & 17 & 2 & 1742000 & 15678000 & 9 & 5 & 0 & 1629 & 2000 & 3 & 4 & 130 \\
+\hline
+4145aa00ffd2ec0f4d6ae07 & 97df4de4a6d10f463b0ce & 47 & 2 & 1773000 & 24822000 & 14 & 5 & 16 & 6477 & 500 & 14 & 4 & 130 \\
+\hline
+8a17f641d9a651314509a88 & b9be063d98b39a523c51ba7 & 31 & 1 & 1523000 & 28937000 & 19 & 9 & 16 & 3776 & 1000 & 4 & 1 & 130 \\
+\hline
+e59522f577e30a0b69a12372 & 5197e5538045bc60e0ec72c7 & 30 & 0 & 371000 & 7420000 & 20 & 6 & 16 & 7507 & 2000 & 10 & 1 & 130 \\
+\hline
+b4e0501d885cd68d33113b & 41e00528ea39dfada77663 & 44 & 1 & 1131000 & 15834000 & 14 & 9 & 13 & 4584 & 1000 & 9 & 0 & 130 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\vspace{15pt}
+\caption{Dữ liệu hành vi người dùng và sự kiện}
+\end{table}
+
+\indent \textbf{Các nhóm đặc trưng (Features)}\\
+\indent Dữ liệu huấn luyện được tổng hợp từ ba nhóm đặc trưng chính để phản ánh toàn diện mối tương quan giữa người dùng và sự kiện:
+\begin{itemize}
+    \item[1.] \textbf{Đặc trưng Người dùng (User Features):} Tuổi, giới tính, thói quen chi tiêu (tổng chi và giá vé trung bình đã chi).
+    \item[2.] \textbf{Đặc trưng Sự kiện (Event Features):} Thể loại, giới hạn độ tuổi, quy mô (tổng số vé).
+    \item[3.] \textbf{Đặc trưng Tương tác (Interaction Features):} Đây là nhóm quan trọng nhất, bao gồm số lần click vào sự kiện cụ thể, số lần click vào các sự kiện cùng thể loại và số lần mua vé các sự kiện cùng thể loại.
+\end{itemize}
+
+\indent \textbf{Nhãn dữ liệu (Labeling)}\\
+\indent Để áp dụng thuật toán Ranking, biến mục tiêu interestScore được tính từ tổng hợp hành vi click và mua. Biến này được rời rạc hóa thành 5 mức độ (0 đến 4). Việc chuẩn hóa này giúp mô hình tập trung vào việc phân cấp mức độ ưu tiên thay vì dự đoán giá trị tuyệt đối.
+
+\subsubsection{Cơ chế Lọc và Chọn Tập Ứng viên (Candidate Selection)}
+\indent \indent Trước khi gửi dữ liệu đến Recommendation Server để dự đoán, hệ thống thực hiện một bước tiền xử lý nhằm xây dựng tập các sự kiện ứng viên phù hợp với từng người dùng.
+\begin{itemize}
+    \item \textbf{Bước 1 -} \textbf{Xác định thể loại yêu thích (Favorite Genres)}
+    Dựa trên dữ liệu bảng Interaction, hệ thống truy xuất các sự kiện mà người dùng đã từng tương tác (click hoặc purchase), từ đó trích xuất danh sách các thể loại sự kiện tương ứng. Danh sách này được xem là tập genre yêu thích của người dùng và có thể rỗng đối với người dùng mới.
+
+    \item \textbf{Bước 2 -} \textbf{Lọc danh sách sự kiện khả dụng}
+    Hệ thống truy vấn tối đa 50 sự kiện thỏa mãn các điều kiện:
+    \begin{itemize}
+        \item[-] Trạng thái là published
+        \item[-] Thời gian kết thúc (endDateTime) vẫn còn hiệu lực
+        \item[-] Sắp xếp theo thời gian bắt đầu (startDateTime) theo thứ tự tăng dần (ưu tiên các sự kiện sắp diễn ra)
+    \end{itemize}
+    
+    \item \textbf{Bước 3 -} \textbf{Chiến lược chọn 20 sự kiện đầu vào}
+    \begin{itemize}
+        \item[-] Nếu tổng số sự kiện $\le$ 20: Sử dụng toàn bộ danh sách làm đầu vào cho mô hình
+        \item[-] Nếu tổng số sự kiện $>$ 20: Chia thành hai nhóm
+        \begin{itemize}
+            \item[+] Nhóm x: các sự kiện thuộc thể loại yêu thích
+            \item[+] Nhóm y: các sự kiện còn lại
+        \end{itemize}
+       Việc lựa chọn tuân theo các ràng buộc:
+       \begin{itemize}
+            \item[1.] x $+$ y = 20
+            \item[2.] x $\le$ 15
+       \end{itemize}
+       Hệ thống ưu tiên chọn nhiều nhất có thể từ nhóm yêu thích (tối đa 15), phần còn lại được bổ sung từ nhóm khác nhằm đảm bảo tính đa dạng (diversity) trong gợi ý.
+       Trong mỗi nhóm, các sự kiện được chọn ngẫu nhiên (shuffle) để tránh thiên lệch và tăng khả năng khám phá (exploration).
+    \end{itemize}
+    \item \textbf{Bước 4 -} \textbf{Gửi đến Recommendation Server:}
+    Danh sách 20 sự kiện sau khi chọn sẽ được sử dụng làm đầu vào cho mô hình học máy để tính toán điểm số và xếp hạng.\\
+    \textbf{Cơ chế xử lý Cold Start}\\
+    Trong giai đoạn đầu, khi dữ liệu tương tác chưa đủ lớn để huấn luyện mô hình hoặc Recommendation Server chưa sẵn sàng, hệ thống sử dụng chiến lược dự phòng:
+    \begin{itemize}
+        \item[-] Lấy 20 sự kiện từ danh sách đã lọc
+        \item[-] Thực hiện shuffle ngẫu nhiên toàn bộ danh sách
+        \item[-] Trả trực tiếp về phía Frontend mà không thông qua mô hình
+    \end{itemize}
+    Cách tiếp cận này giúp đảm bảo hệ thống luôn có kết quả trả về, tăng tính khám phá hành vi người dùng và thu thập thêm dữ liệu cho các lần huấn luyện sau.
+
+\end{itemize}
+
+\subsubsection{Thuật toán và Phương pháp huấn luyện}
+\indent \indent Mô hình sử dụng thuật toán LightGBM với cấu hình LambdaRank, tập trung vào việc tối ưu thứ tự hiển thị thay vì dự đoán giá trị đơn lẻ.
+\begin{itemize}
+    \item[1.] \textbf{Chiến lược huấn luyện:}\\
+    \textbf{Sử dụng Group K-Fold (5-fold):} dữ liệu được chia thành 5 phần (folds) dựa trên user\_id. Cách tiếp cận này đảm bảo toàn bộ hành vi của một người dùng chỉ nằm trong một tập nhất định, giúp đánh giá chính xác khả năng gợi ý cho người dùng mới mà mô hình chưa từng thấy dữ liệu tương tác.\\
+    \textbf{Sử dụng Early Stopping:} tránh quá tải (overfitting) và tìm ra số vòng lặp (best\_iteration) tối ưu trước khi huấn luyện lại trên toàn bộ tập dữ liệu.
+    \item[2.] \textbf{Độ đo tối ưu:} Sử dụng NDCG$@$15 (Normalized Discounted Cumulative Gain) nhằm đảm bảo các sự kiện có điểm quan tâm cao nhất luôn được đẩy lên các vị trí đầu tiên trong danh sách 15 kết quả trả về.
+\end{itemize}
+
+
+\subsubsection{Đánh giá và Tối ưu hóa mô hình}
+\indent \indent \textbf{Tính quan trọng của đặc trưng (Feature Importance)} \\
+\indent Thông qua huấn luyện, mô hình xác định các đặc trưng về avgPurchasePrice, totalSpent, sameEventGenreClickCount và eventClickCount có ảnh hưởng lớn nhất đến kết quả dự đoán.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Các đặc trưng quan trọng mô hình gợi ý.png}
+    \vspace{15pt}
+    \caption{Tính quan trọng của các đặc trưng trong mô hình gợi ý}
+\end{figure}
+\indent \textbf{Đánh giá bằng Ma trận nhầm lẫn (Confusion Matrix)}\\
+\indent Để đánh giá chi tiết hiệu năng phân loại, nhóm thực hiện sử dụng ma trận nhầm lẫn trên 5 mức độ quan tâm (từ 0 đến 4).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Confusion matrix.png}
+    \vspace{15pt}
+    \caption{Ma trận nhầm lẫn của mô hình gợi ý}
+\end{figure}
+\begin{itemize}
+    \item[-] \textbf{Kết quả:} Mô hình thể hiện khả năng phân loại vượt trội ở các nhãn cực đoan (Nhãn 0 - Không quan tâm và Nhãn 4 - Rất quan tâm). Điều này chứng minh thuật toán LambdaRank hoạt động hiệu quả trong việc phân tách rõ rệt các đối tượng mục tiêu.
+    \item[-] \textbf{Phân tích sai số:} Một số sự nhầm lẫn xảy ra giữa các nhãn kề nhau (ví dụ: nhãn 2 và 3). Điều này là hợp lý trong bài toán gợi ý, vì ranh giới định lượng giữa các mức độ "quan tâm trung bình" thường có sự giao thoa lớn, không ảnh hưởng quá nhiều đến trải nghiệm xếp hạng tổng thể.
+\end{itemize}
+
+\indent \textbf{Tối ưu hóa với định dạng ONNX}\\
+\indent Để đưa mô hình vào vận hành thực tế, nhóm đã thực hiện chuyển đổi định dạng sang ONNX (Open Neural Network Exchange). Giải pháp này mang lại hai lợi ích cốt lõi:
+\begin{itemize}
+    \item[-] \textbf{Tối ưu hiệu năng:} Giảm đáng kể độ trễ khi dự đoán (Inference Latency), cho phép Recommendation Server phản hồi danh sách gợi ý gần như tức thời khi nhận yêu cầu từ Web Server.
+    \item[-] \textbf{Tính độc lập:} Loại bỏ sự phụ thuộc vào thư viện huấn luyện gốc (LightGBM) trong môi trường production, giúp hệ thống gọn nhẹ, dễ dàng mở rộng và tương thích tốt với nhiều nền tảng phần cứng khác nhau.
+\end{itemize}
+
+\subsubsection{Kết luận và Hướng phát triển}
+\indent \indent \textbf{Kết quả:} Xây dựng thành công pipeline tự động từ khâu dữ liệu đến triển khai, đáp ứng bài toán gợi ý thực tế với độ trễ thấp.\\
+\indent \textbf{Hướng cải thiện:} Tích hợp thêm các kỹ thuật xử lý ngôn ngữ tự nhiên (NLP) để phân tích mô tả sự kiện sâu hơn cũng như phân tích hình ảnh banner sự kiện để tăng độ chính xác của gợi ý.
