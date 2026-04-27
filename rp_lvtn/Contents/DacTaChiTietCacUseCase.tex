@@ -202,13 +202,13 @@ $\rightarrow$ Hệ thống hiển thị cảnh báo không hợp lệ, người 
 \subsection{Use Case cho Ban tổ chức}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{Images/Ban_To_Chuc_new.png}
+    \includegraphics[width=1\textwidth]{Images/Ban tổ chức new.drawio.png}
     \vspace{10pt}
     \caption{Use Case Diagram -- Ban tổ chức}
     \label{fig:uc_organizer}
 \end{figure}
 
-\subsubsection{Xem, tìm kiếm hoặc lọc danh sách sự kiện}
+\subsubsection{Theo dõi thông tin sự kiện}
 
 \begin{table}[H]
 \centering
@@ -216,40 +216,44 @@ $\rightarrow$ Hệ thống hiển thị cảnh báo không hợp lệ, người 
 \setlength{\tabcolsep}{8pt}
 \begin{tabularx}{\textwidth}{|l|X|}
 \hline
-\textbf{Tên Use Case} & Xem, tìm kiếm hoặc lọc danh sách sự kiện \\ \hline
+\textbf{Tên Use Case} & Theo dõi thông tin sự kiện \\ \hline
 \textbf{Tác nhân} & Ban tổ chức \\ \hline
 \textbf{Mục đích} & 
-Cho phép Ban tổ chức xem danh sách sự kiện hiện có, đồng thời hỗ trợ tìm kiếm hoặc lọc sự kiện theo tiêu chí mong muốn (tên, thời gian, trạng thái, đơn vị tổ chức, v.v.). \\ \hline
+Cho phép Ban tổ chức theo dõi các thông tin liên quan đến sự kiện do mình tổ chức được đăng tải lên hệ thống, bao gồm cả thông tin khách hàng mua vé. \\ \hline
 \textbf{Điều kiện tiên quyết} & 
 - Ban tổ chức đã đăng nhập vào hệ thống. \newline
-- Cơ sở dữ liệu có thông tin sự kiện. \\ \hline
+- Cơ sở dữ liệu có thông tin sự kiện do đơn vị này tổ chức. \\ \hline
 \textbf{Điều kiện hậu quyết} & 
-Danh sách sự kiện hoặc kết quả tìm kiếm/lọc được hiển thị. \\ \hline
+Hiển thị toàn bộ danh sách sự kiện hoặc các sự kiện thỏa mãn từ khóa mà ban tổ chức nhập vào thanh tìm kiếm nếu có. \\ \hline
 \textbf{Mô tả ngắn gọn} & 
-Ban tổ chức đăng nhập vào hệ thống để xem danh sách sự kiện. Hệ thống hiển thị toàn bộ hoặc các sự kiện phù hợp với từ khóa/tùy chọn lọc mà Ban tổ chức nhập vào. \\ \hline
+Ban tổ chức đăng nhập vào hệ thống để theo dõi các thông tin liên quan đến sự kiện do mình tổ chức. \\ \hline
 \textbf{Quy trình bình thường} &
 1. Ban tổ chức đăng nhập thành công vào hệ thống. \newline
-2. Hệ thống truy xuất dữ liệu sự kiện trong cơ sở dữ liệu. \newline
-3. Hệ thống kiểm tra có sự kiện nào tồn tại không. \newline
-4. Nếu có, hệ thống hiển thị toàn bộ danh sách sự kiện. \newline
-5. Ban tổ chức nhập từ khóa hoặc tiêu chí lọc (theo tên, thời gian, trạng thái, đơn vị tổ chức, v.v.). \newline
-6. Hệ thống tìm kiếm/lọc sự kiện trong cơ sở dữ liệu. \newline
-7. Hệ thống hiển thị danh sách kết quả phù hợp. \newline
-8. Ban tổ chức chọn một sự kiện cụ thể để xem chi tiết. \newline
-9. Sau khi xem xong, Ban tổ chức có thể quay về danh sách sự kiện. \\ \hline
+2. Ban tổ chức truy cập mục "Event Information" trên thanh sidebar. \newline
+3. Hệ thống truy xuất dữ liệu sự kiện trong cơ sở dữ liệu. \newline
+4. Hệ thống kiểm tra có sự kiện nào tồn tại không. \newline
+5. Nếu có sự kiện tồn tại, hệ thống hiển thị danh sách sự kiện do đơn vị tổ chức đó tổ chức. \newline
+6. Ban tổ chức xem các thông tin tổng quan của sự kiện bao gồm poster, tên sự kiện, thời gian diễn ra/kết thúc, địa điểm tổ chức, trạng thái (draft/published/completed/cancelled). \newline
+\begin{itemize}
+    \item 6a. Ban tổ chức có thể nhập từ khóa vào thanh tìm kiếm rồi nhấn enter hoặc icon search để tìm kiếm nhanh các sự kiện. Hệ thống sẽ hiển thị các sự kiện thỏa mãn từ khóa mà ban tổ chức đã nhập vào nếu có. \newline
+    \item 6b. Ban tổ chức có thể nhấn vào icon eye ở cột Action của một sự kiện cụ thể để xem thông chi tiết. Sau khi xem xong nhấn dấu X ở góc phải để đóng trang chi tiết sự kiện và quay về danh sách sự kiện.
+    \item 6c. Ban tổ chức có thể nhấn vào icon person ở cột Action của một sự kiện cụ thể để xem thông tin khách hàng đã mua vé sự kiện đó. \\
+    Khi xem thông tin khách hàng, ban tổ chức có thể nhấn vào 1 trong 2 nút là Export CSV (Sheet) và Export PDF để tải về máy danh sách thông tin khách hàng mua vé với định dạng đã chọn \\
+    Sau khi xem xong, ban tổ chức có thể nhấn dấu X ở góc phải để đóng trang chi tiết khách hàng và quay về danh sách sự kiện.
+\end{itemize} \\ \hline
 \textbf{Quy trình thay thế} &
-3a. Không có sự kiện nào trong cơ sở dữ liệu: \newline
-\hspace*{1em}- Hệ thống hiển thị thông báo “Chưa có sự kiện nào.” \newline
-6a. Không có kết quả phù hợp với tìm kiếm/lọc: \newline
-\hspace*{1em}- Hệ thống hiển thị “Không có sự kiện phù hợp.” \newline
-9a. Ban tổ chức không muốn quay lại danh sách sự kiện: \newline
+5a. Không có sự kiện nào trong cơ sở dữ liệu: \newline
+\hspace*{1em}- Hệ thống hiển thị thông báo “No data” \newline
+6a. Không có kết quả phù hợp với tìm kiếm: \newline
+\hspace*{1em}- Hệ thống hiển thị “No data” \newline
+6b, 6c. Ban tổ chức không muốn quay lại danh sách sự kiện: \newline
 \hspace*{1em}- Hệ thống dừng tiến trình và giữ nguyên trang hiện tại. \\ \hline
 \textbf{Điều kiện lỗi} &
 - Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị “Không thể tải danh sách sự kiện.” \newline
 - Trường hợp lỗi 2: Lỗi xử lý truy vấn tìm kiếm/lọc $\rightarrow$ Hệ thống thông báo “Đã xảy ra lỗi, vui lòng thử lại.” \\ \hline
 \end{tabularx}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Xem, tìm kiếm hoặc lọc danh sách sự kiện (Ban tổ chức)}
+\caption{Đặc tả Use Case -- Theo dõi thông tin sự kiện (Ban tổ chức) }
 \label{tab:uc_view_search_event}
 \end{table}
 
