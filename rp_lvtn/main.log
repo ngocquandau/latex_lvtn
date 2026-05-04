@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.14)  4 MAY 2026 11:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.14)  4 MAY 2026 13:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/PC/Desktop/new latex_lvtn/latex_lvtn/rp_lvtn/main.tex"
-(c:/Users/PC/Desktop/new latex_lvtn/latex_lvtn/rp_lvtn/main.tex
+**c:/Users/PC/Desktop/latexlvtn_new++/latex_lvtn/rp_lvtn/main.tex
+(c:/Users/PC/Desktop/latexlvtn_new++/latex_lvtn/rp_lvtn/main.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -2214,11 +2214,11 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 301.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [69]
-<Images/Quy trình xử lý hệ thống.png, id=1516, 1541.76pt x 1027.84pt>
+<Images/Quy trình xử lý hệ thống.png, id=1516, 1060.96375pt x 742.775pt>
 File: Images/Quy trình xử lý hệ thống.png Graphic file (type png)
 <use Images/Quy trình xử lý hệ thống.png>
 Package pdftex.def Info: Images/Quy trình xử lý hệ thống.png  used on input line 306.
-(pdftex.def)             Requested size: 364.19667pt x 242.79712pt.
+(pdftex.def)             Requested size: 364.19667pt x 254.97693pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 321.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
@@ -2229,9 +2229,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 351.
+Package pdftex.def Info: Images/hcmut.png  used on input line 347.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
-[70 <./Images/Quy trình xử lý hệ thống.png (PNG copy)>]
+[70 <./Images/Quy trình xử lý hệ thống.png>]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 355.
  (c:/texlive/2025/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -2239,15 +2239,22 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 388.
+Package pdftex.def Info: Images/hcmut.png  used on input line 387.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [71{c:/texlive/2025/texmf-dist/fonts/enc/dvips/base/8r.enc}]
-<Images/Các đặc trưng quan trọng mô hình gợi ý.png, id=1529, 673.01437pt x 405.76593pt>
+<Images/Các đặc trưng quan trọng mô hình gợi ý.png, id=1530, 673.01437pt x 405.76593pt>
 File: Images/Các đặc trưng quan trọng mô hình gợi ý.png Graphic file (type png)
 <use Images/Các đặc trưng quan trọng mô hình gợi ý.png>
 Package pdftex.def Info: Images/Các đặc trưng quan trọng mô hình gợi ý.png  used on input line 410.
 (pdftex.def)             Requested size: 364.19667pt x 219.58089pt.
-<Images/Confusion matrix.png, id=1530, 626.34pt x 505.89pt>
+
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 414.
+(pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
+[72]
+<Images/Confusion matrix.png, id=1536, 626.34pt x 505.89pt>
 File: Images/Confusion matrix.png Graphic file (type png)
 <use Images/Confusion matrix.png>
 Package pdftex.def Info: Images/Confusion matrix.png  used on input line 418.
@@ -2256,15 +2263,9 @@ Package pdftex.def Info: Images/Confusion matrix.png  used on input line 418.
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 421.
+Package pdftex.def Info: Images/hcmut.png  used on input line 425.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
-[72 <./Images/Các đặc trưng quan trọng mô hình gợi ý.png>])
-
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 280.
-(pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
-[73 <./Images/Confusion matrix.png>]
+[73 <./Images/Các đặc trưng quan trọng mô hình gợi ý.png> <./Images/Confusion matrix.png>])
 
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
@@ -2293,12 +2294,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--6
 
  []
 
-<Contents/UI/USER/TrangChu.png, id=1565, 1927.2pt x 2464.20625pt>
+<Contents/UI/USER/TrangChu.png, id=1566, 1927.2pt x 2464.20625pt>
 File: Contents/UI/USER/TrangChu.png Graphic file (type png)
 <use Contents/UI/USER/TrangChu.png>
 Package pdftex.def Info: Contents/UI/USER/TrangChu.png  used on input line 9.
 (pdftex.def)             Requested size: 295.90588pt x 378.33836pt.
-<Contents/UI/USER/TrangChu_DN.png, id=1566, 1927.2pt x 3794.175pt>
+<Contents/UI/USER/TrangChu_DN.png, id=1567, 1927.2pt x 3794.175pt>
 File: Contents/UI/USER/TrangChu_DN.png Graphic file (type png)
 <use Contents/UI/USER/TrangChu_DN.png>
 Package pdftex.def Info: Contents/UI/USER/TrangChu_DN.png  used on input line 15.
@@ -2316,7 +2317,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 23.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [79 <./Contents/UI/USER/TrangChu_DN.png>]
-<Contents/UI/USER/AIChatBox.png, id=1580, 1425.07407pt x 749.80125pt>
+<Contents/UI/USER/AIChatBox.png, id=1581, 1425.07407pt x 749.80125pt>
 File: Contents/UI/USER/AIChatBox.png Graphic file (type png)
 <use Contents/UI/USER/AIChatBox.png>
 Package pdftex.def Info: Contents/UI/USER/AIChatBox.png  used on input line 45.
@@ -2328,17 +2329,17 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 49.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [80]
-<Contents/UI/USER/NhapCauHoi.png, id=1586, 1427.3325pt x 750.55406pt>
+<Contents/UI/USER/NhapCauHoi.png, id=1587, 1427.3325pt x 750.55406pt>
 File: Contents/UI/USER/NhapCauHoi.png Graphic file (type png)
 <use Contents/UI/USER/NhapCauHoi.png>
 Package pdftex.def Info: Contents/UI/USER/NhapCauHoi.png  used on input line 53.
 (pdftex.def)             Requested size: 318.66948pt x 167.56178pt.
-<Contents/UI/USER/AISuyNghi.png, id=1587, 1427.3325pt x 751.30687pt>
+<Contents/UI/USER/AISuyNghi.png, id=1588, 1427.3325pt x 751.30687pt>
 File: Contents/UI/USER/AISuyNghi.png Graphic file (type png)
 <use Contents/UI/USER/AISuyNghi.png>
 Package pdftex.def Info: Contents/UI/USER/AISuyNghi.png  used on input line 61.
 (pdftex.def)             Requested size: 318.66948pt x 167.72984pt.
-<Contents/UI/USER/AIPhanHoi.png, id=1588, 1427.3325pt x 748.29562pt>
+<Contents/UI/USER/AIPhanHoi.png, id=1589, 1427.3325pt x 748.29562pt>
 File: Contents/UI/USER/AIPhanHoi.png Graphic file (type png)
 <use Contents/UI/USER/AIPhanHoi.png>
 Package pdftex.def Info: Contents/UI/USER/AIPhanHoi.png  used on input line 69.
@@ -2350,12 +2351,12 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 72.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [81 <./Contents/UI/USER/AIChatBox.png> <./Contents/UI/USER/NhapCauHoi.png> <./Contents/UI/USER/AISuyNghi.png>]
-<Contents/UI/USER/Search without result.png, id=1597, 1927.2pt x 1029.8475pt>
+<Contents/UI/USER/Search without result.png, id=1598, 1927.2pt x 1029.8475pt>
 File: Contents/UI/USER/Search without result.png Graphic file (type png)
 <use Contents/UI/USER/Search without result.png>
 Package pdftex.def Info: Contents/UI/USER/Search without result.png  used on input line 81.
 (pdftex.def)             Requested size: 318.66948pt x 170.27893pt.
-<Contents/UI/USER/Search with result.png, id=1598, 1927.2pt x 6069.67625pt>
+<Contents/UI/USER/Search with result.png, id=1599, 1927.2pt x 6069.67625pt>
 File: Contents/UI/USER/Search with result.png Graphic file (type png)
 <use Contents/UI/USER/Search with result.png>
 Package pdftex.def Info: Contents/UI/USER/Search with result.png  used on input line 88.
@@ -2376,7 +2377,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 92.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [83 <./Contents/UI/USER/Search with result.png>]
-<Contents/UI/USER/ViewAllEvent.png, id=1612, 1927.2pt x 9029.735pt>
+<Contents/UI/USER/ViewAllEvent.png, id=1613, 1927.2pt x 9029.735pt>
 File: Contents/UI/USER/ViewAllEvent.png Graphic file (type png)
 <use Contents/UI/USER/ViewAllEvent.png>
 Package pdftex.def Info: Contents/UI/USER/ViewAllEvent.png  used on input line 98.
@@ -2397,17 +2398,17 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 102.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [85 <./Contents/UI/USER/ViewAllEvent.png>]
-<Contents/UI/USER/ĐN.png, id=1625, 1429.59094pt x 746.79pt>
+<Contents/UI/USER/ĐN.png, id=1626, 1429.59094pt x 746.79pt>
 File: Contents/UI/USER/ĐN.png Graphic file (type png)
 <use Contents/UI/USER/ĐN.png>
 Package pdftex.def Info: Contents/UI/USER/ĐN.png  used on input line 107.
 (pdftex.def)             Requested size: 318.66948pt x 166.45937pt.
-<Contents/UI/USER/Đăng ký.png, id=1626, 1431.84938pt x 752.0597pt>
+<Contents/UI/USER/Đăng ký.png, id=1627, 1431.84938pt x 752.0597pt>
 File: Contents/UI/USER/Đăng ký.png Graphic file (type png)
 <use Contents/UI/USER/Đăng ký.png>
 Package pdftex.def Info: Contents/UI/USER/Đăng ký.png  used on input line 114.
 (pdftex.def)             Requested size: 318.66948pt x 167.37004pt.
-<Contents/UI/USER/Thiếu MK và Email ĐN.png, id=1627, 1427.3325pt x 751.30687pt>
+<Contents/UI/USER/Thiếu MK và Email ĐN.png, id=1628, 1427.3325pt x 751.30687pt>
 File: Contents/UI/USER/Thiếu MK và Email ĐN.png Graphic file (type png)
 <use Contents/UI/USER/Thiếu MK và Email ĐN.png>
 Package pdftex.def Info: Contents/UI/USER/Thiếu MK và Email ĐN.png  used on input line 141.
@@ -2419,17 +2420,17 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 144.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [86 <./Contents/UI/USER/ĐN.png> <./Contents/UI/USER/Đăng ký.png>]
-<Contents/UI/USER/invalid email.png, id=1635, 1428.83812pt x 748.29562pt>
+<Contents/UI/USER/invalid email.png, id=1636, 1428.83812pt x 748.29562pt>
 File: Contents/UI/USER/invalid email.png Graphic file (type png)
 <use Contents/UI/USER/invalid email.png>
 Package pdftex.def Info: Contents/UI/USER/invalid email.png  used on input line 148.
 (pdftex.def)             Requested size: 318.66948pt x 166.88632pt.
-<Contents/UI/USER/Sai MK.png, id=1636, 1427.3325pt x 746.79pt>
+<Contents/UI/USER/Sai MK.png, id=1637, 1427.3325pt x 746.79pt>
 File: Contents/UI/USER/Sai MK.png Graphic file (type png)
 <use Contents/UI/USER/Sai MK.png>
 Package pdftex.def Info: Contents/UI/USER/Sai MK.png  used on input line 155.
 (pdftex.def)             Requested size: 318.66948pt x 166.72145pt.
-<Contents/UI/USER/Thieu TT ĐK.png, id=1637, 1429.59094pt x 749.80125pt>
+<Contents/UI/USER/Thieu TT ĐK.png, id=1638, 1429.59094pt x 749.80125pt>
 File: Contents/UI/USER/Thieu TT ĐK.png Graphic file (type png)
 <use Contents/UI/USER/Thieu TT ĐK.png>
 Package pdftex.def Info: Contents/UI/USER/Thieu TT ĐK.png  used on input line 164.
@@ -2441,17 +2442,17 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 168.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [87 <./Contents/UI/USER/Thiếu MK và Email ĐN.png> <./Contents/UI/USER/invalid email.png> <./Contents/UI/USER/Sai MK.png>]
-<Contents/UI/USER/invalid email ĐK.png, id=1646, 1427.3325pt x 751.30687pt>
+<Contents/UI/USER/invalid email ĐK.png, id=1647, 1427.3325pt x 751.30687pt>
 File: Contents/UI/USER/invalid email ĐK.png Graphic file (type png)
 <use Contents/UI/USER/invalid email ĐK.png>
 Package pdftex.def Info: Contents/UI/USER/invalid email ĐK.png  used on input line 171.
 (pdftex.def)             Requested size: 318.66948pt x 167.72984pt.
-<Contents/UI/USER/Sai XT MK ĐK.png, id=1647, 1429.59094pt x 752.8125pt>
+<Contents/UI/USER/Sai XT MK ĐK.png, id=1648, 1429.59094pt x 752.8125pt>
 File: Contents/UI/USER/Sai XT MK ĐK.png Graphic file (type png)
 <use Contents/UI/USER/Sai XT MK ĐK.png>
 Package pdftex.def Info: Contents/UI/USER/Sai XT MK ĐK.png  used on input line 178.
 (pdftex.def)             Requested size: 318.66948pt x 167.80179pt.
-<Contents/UI/USER/Đăng nhập thành công.png, id=1648, 1427.3325pt x 749.80125pt>
+<Contents/UI/USER/Đăng nhập thành công.png, id=1649, 1427.3325pt x 749.80125pt>
 File: Contents/UI/USER/Đăng nhập thành công.png Graphic file (type png)
 <use Contents/UI/USER/Đăng nhập thành công.png>
 Package pdftex.def Info: Contents/UI/USER/Đăng nhập thành công.png  used on input line 190.
@@ -2463,12 +2464,12 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 194.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [88 <./Contents/UI/USER/Thieu TT ĐK.png> <./Contents/UI/USER/invalid email ĐK.png> <./Contents/UI/USER/Sai XT MK ĐK.png>]
-<Contents/UI/USER/ĐK TC.png, id=1657, 1428.83812pt x 751.30687pt>
+<Contents/UI/USER/ĐK TC.png, id=1658, 1428.83812pt x 751.30687pt>
 File: Contents/UI/USER/ĐK TC.png Graphic file (type png)
 <use Contents/UI/USER/ĐK TC.png>
 Package pdftex.def Info: Contents/UI/USER/ĐK TC.png  used on input line 197.
 (pdftex.def)             Requested size: 318.66948pt x 167.55789pt.
-<Contents/UI/USER/Event Detail.png, id=1658, 1927.2pt x 3565.32pt>
+<Contents/UI/USER/Event Detail.png, id=1659, 1927.2pt x 3565.32pt>
 File: Contents/UI/USER/Event Detail.png Graphic file (type png)
 <use Contents/UI/USER/Event Detail.png>
 Package pdftex.def Info: Contents/UI/USER/Event Detail.png  used on input line 223.
@@ -2486,22 +2487,22 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 231.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [90 <./Contents/UI/USER/Event Detail.png>]
-<Contents/UI/USER/trang thanh toán.png, id=1673, 1927.2pt x 1698.345pt>
+<Contents/UI/USER/trang thanh toán.png, id=1674, 1927.2pt x 1698.345pt>
 File: Contents/UI/USER/trang thanh toán.png Graphic file (type png)
 <use Contents/UI/USER/trang thanh toán.png>
 Package pdftex.def Info: Contents/UI/USER/trang thanh toán.png  used on input line 237.
 (pdftex.def)             Requested size: 218.51521pt x 192.54565pt.
-<Contents/UI/USER/trang thanh toán_ghế cố định.png, id=1674, 1927.2pt x 1698.345pt>
+<Contents/UI/USER/trang thanh toán_ghế cố định.png, id=1675, 1927.2pt x 1698.345pt>
 File: Contents/UI/USER/trang thanh toán_ghế cố định.png Graphic file (type png)
 <use Contents/UI/USER/trang thanh toán_ghế cố định.png>
 Package pdftex.def Info: Contents/UI/USER/trang thanh toán_ghế cố định.png  used on input line 243.
 (pdftex.def)             Requested size: 218.51521pt x 192.54565pt.
-<Contents/UI/USER/cảnh báo độ tuổi.png, id=1675, 1428.08531pt x 745.28438pt>
+<Contents/UI/USER/cảnh báo độ tuổi.png, id=1676, 1428.08531pt x 745.28438pt>
 File: Contents/UI/USER/cảnh báo độ tuổi.png Graphic file (type png)
 <use Contents/UI/USER/cảnh báo độ tuổi.png>
 Package pdftex.def Info: Contents/UI/USER/cảnh báo độ tuổi.png  used on input line 258.
 (pdftex.def)             Requested size: 318.66948pt x 166.30573pt.
-<Contents/UI/USER/thanh toán payos.png, id=1676, 1927.2pt x 1000.73875pt>
+<Contents/UI/USER/thanh toán payos.png, id=1677, 1927.2pt x 1000.73875pt>
 File: Contents/UI/USER/thanh toán payos.png Graphic file (type png)
 <use Contents/UI/USER/thanh toán payos.png>
 Package pdftex.def Info: Contents/UI/USER/thanh toán payos.png  used on input line 266.
@@ -2513,7 +2514,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 270.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [91 <./Contents/UI/USER/trang thanh toán.png> <./Contents/UI/USER/trang thanh toán_ghế cố định.png> <./Contents/UI/USER/cảnh báo độ tuổi.png>]
-<Contents/UI/USER/TicketHistory1.png, id=1686, 1927.2pt x 1452.42625pt>
+<Contents/UI/USER/TicketHistory1.png, id=1687, 1927.2pt x 1452.42625pt>
 File: Contents/UI/USER/TicketHistory1.png Graphic file (type png)
 <use Contents/UI/USER/TicketHistory1.png>
 Package pdftex.def Info: Contents/UI/USER/TicketHistory1.png  used on input line 278.
@@ -2525,17 +2526,17 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 286.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [92 <./Contents/UI/USER/thanh toán payos.png> <./Contents/UI/USER/TicketHistory1.png>]
-<Contents/UI/USER/QR e-ticket.png, id=1694, 1430.34375pt x 752.0597pt>
+<Contents/UI/USER/QR e-ticket.png, id=1695, 1430.34375pt x 752.0597pt>
 File: Contents/UI/USER/QR e-ticket.png Graphic file (type png)
 <use Contents/UI/USER/QR e-ticket.png>
 Package pdftex.def Info: Contents/UI/USER/QR e-ticket.png  used on input line 289.
 (pdftex.def)             Requested size: 318.66948pt x 167.55365pt.
-<Contents/UI/USER/e-ticket.png, id=1695, 1927.2pt x 1243.64626pt>
+<Contents/UI/USER/e-ticket.png, id=1696, 1927.2pt x 1243.64626pt>
 File: Contents/UI/USER/e-ticket.png Graphic file (type png)
 <use Contents/UI/USER/e-ticket.png>
 Package pdftex.def Info: Contents/UI/USER/e-ticket.png  used on input line 296.
 (pdftex.def)             Requested size: 318.66948pt x 205.62923pt.
-<Contents/UI/USER/TicketHistory2.png, id=1696, 1927.2pt x 1796.7125pt>
+<Contents/UI/USER/TicketHistory2.png, id=1697, 1927.2pt x 1796.7125pt>
 File: Contents/UI/USER/TicketHistory2.png Graphic file (type png)
 <use Contents/UI/USER/TicketHistory2.png>
 Package pdftex.def Info: Contents/UI/USER/TicketHistory2.png  used on input line 304.
@@ -2551,7 +2552,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 308--311
 
  []
 
-<Contents/UI/USER/US_Rating.png, id=1704, 1927.2pt x 1452.42625pt>
+<Contents/UI/USER/US_Rating.png, id=1705, 1927.2pt x 1452.42625pt>
 File: Contents/UI/USER/US_Rating.png Graphic file (type png)
 <use Contents/UI/USER/US_Rating.png>
 Package pdftex.def Info: Contents/UI/USER/US_Rating.png  used on input line 314.
@@ -2568,12 +2569,12 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 321.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [94 <./Contents/UI/USER/TicketHistory2.png> <./Contents/UI/USER/US_Rating.png>]
-<Contents/UI/BTC/BTC ĐN.png, id=1712, 1425.82687pt x 746.79pt>
+<Contents/UI/BTC/BTC ĐN.png, id=1713, 1425.82687pt x 746.79pt>
 File: Contents/UI/BTC/BTC ĐN.png Graphic file (type png)
 <use Contents/UI/BTC/BTC ĐN.png>
 Package pdftex.def Info: Contents/UI/BTC/BTC ĐN.png  used on input line 328.
 (pdftex.def)             Requested size: 318.66948pt x 166.90378pt.
-<Contents/UI/BTC/DL TK BTC.png, id=1713, 1427.3325pt x 749.04843pt>
+<Contents/UI/BTC/DL TK BTC.png, id=1714, 1427.3325pt x 749.04843pt>
 File: Contents/UI/BTC/DL TK BTC.png Graphic file (type png)
 <use Contents/UI/BTC/DL TK BTC.png>
 Package pdftex.def Info: Contents/UI/BTC/DL TK BTC.png  used on input line 334.
@@ -2589,12 +2590,12 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 347.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [95 <./Contents/UI/BTC/BTC ĐN.png> <./Contents/UI/BTC/DL TK BTC.png>]
-<Contents/UI/BTC/Giao diện BTC.png, id=1721, 1927.2pt x 1205.50375pt>
+<Contents/UI/BTC/Giao diện BTC.png, id=1722, 1927.2pt x 1205.50375pt>
 File: Contents/UI/BTC/Giao diện BTC.png Graphic file (type png)
 <use Contents/UI/BTC/Giao diện BTC.png>
 Package pdftex.def Info: Contents/UI/BTC/Giao diện BTC.png  used on input line 353.
 (pdftex.def)             Requested size: 318.66948pt x 199.3226pt.
-<Contents/UI/BTC/Xem TT SK.png, id=1722, 1428.08531pt x 743.77875pt>
+<Contents/UI/BTC/Xem TT SK.png, id=1723, 1428.08531pt x 743.77875pt>
 File: Contents/UI/BTC/Xem TT SK.png Graphic file (type png)
 <use Contents/UI/BTC/Xem TT SK.png>
 Package pdftex.def Info: Contents/UI/BTC/Xem TT SK.png  used on input line 360.
@@ -2606,7 +2607,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 364.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [96 <./Contents/UI/BTC/Giao diện BTC.png>]
-<Contents/UI/BTC/List_us.png, id=1729, 1927.2pt x 1041.8925pt>
+<Contents/UI/BTC/List_us.png, id=1730, 1927.2pt x 1041.8925pt>
 File: Contents/UI/BTC/List_us.png Graphic file (type png)
 <use Contents/UI/BTC/List_us.png>
 Package pdftex.def Info: Contents/UI/BTC/List_us.png  used on input line 371.
@@ -2616,7 +2617,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 375--377
 
  []
 
-<Contents/UI/BTC/Org_Rating.png, id=1730, 1927.2pt x 1041.8925pt>
+<Contents/UI/BTC/Org_Rating.png, id=1731, 1927.2pt x 1041.8925pt>
 File: Contents/UI/BTC/Org_Rating.png Graphic file (type png)
 <use Contents/UI/BTC/Org_Rating.png>
 Package pdftex.def Info: Contents/UI/BTC/Org_Rating.png  used on input line 380.
@@ -2632,17 +2633,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 384--386
 
  []
 
-<Contents/UI/BTC/Thông tin BTC.png, id=1739, 1444.64719pt x 746.79pt>
+<Contents/UI/BTC/Thông tin BTC.png, id=1740, 1444.64719pt x 746.79pt>
 File: Contents/UI/BTC/Thông tin BTC.png Graphic file (type png)
 <use Contents/UI/BTC/Thông tin BTC.png>
 Package pdftex.def Info: Contents/UI/BTC/Thông tin BTC.png  used on input line 391.
 (pdftex.def)             Requested size: 318.66948pt x 164.72731pt.
-<Contents/UI/QTV/QTV DN.png, id=1740, 1426.57968pt x 750.55406pt>
+<Contents/UI/QTV/QTV DN.png, id=1741, 1426.57968pt x 750.55406pt>
 File: Contents/UI/QTV/QTV DN.png Graphic file (type png)
 <use Contents/UI/QTV/QTV DN.png>
 Package pdftex.def Info: Contents/UI/QTV/QTV DN.png  used on input line 417.
 (pdftex.def)             Requested size: 318.66948pt x 167.65341pt.
-<Contents/UI/QTV/QTV DN TC.png, id=1741, 1423.56844pt x 744.53156pt>
+<Contents/UI/QTV/QTV DN TC.png, id=1742, 1423.56844pt x 744.53156pt>
 File: Contents/UI/QTV/QTV DN TC.png Graphic file (type png)
 <use Contents/UI/QTV/QTV DN TC.png>
 Package pdftex.def Info: Contents/UI/QTV/QTV DN TC.png  used on input line 423.
@@ -2654,7 +2655,7 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 426.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [98 <./Contents/UI/BTC/Org_Rating.png> <./Contents/UI/BTC/Thông tin BTC.png>]
-<Contents/UI/QTV/DL TK.png, id=1749, 1927.2pt x 1219.55624pt>
+<Contents/UI/QTV/DL TK.png, id=1750, 1927.2pt x 1219.55624pt>
 File: Contents/UI/QTV/DL TK.png Graphic file (type png)
 <use Contents/UI/QTV/DL TK.png>
 Package pdftex.def Info: Contents/UI/QTV/DL TK.png  used on input line 432.
@@ -2671,12 +2672,12 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 439.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [99 <./Contents/UI/QTV/QTV DN.png> <./Contents/UI/QTV/QTV DN TC.png> <./Contents/UI/QTV/DL TK.png>]
-<Contents/UI/QTV/event infor.png, id=1758, 1426.57968pt x 749.80125pt>
+<Contents/UI/QTV/event infor.png, id=1759, 1426.57968pt x 749.80125pt>
 File: Contents/UI/QTV/event infor.png Graphic file (type png)
 <use Contents/UI/QTV/event infor.png>
 Package pdftex.def Info: Contents/UI/QTV/event infor.png  used on input line 444.
 (pdftex.def)             Requested size: 318.66948pt x 167.48524pt.
-<Contents/UI/QTV/search event.png, id=1759, 1440.88312pt x 748.29562pt>
+<Contents/UI/QTV/search event.png, id=1760, 1440.88312pt x 748.29562pt>
 File: Contents/UI/QTV/search event.png Graphic file (type png)
 <use Contents/UI/QTV/search event.png>
 Package pdftex.def Info: Contents/UI/QTV/search event.png  used on input line 454.
@@ -2688,17 +2689,17 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 460.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [100 <./Contents/UI/QTV/event infor.png> <./Contents/UI/QTV/search event.png>]
-<Contents/UI/QTV/view selected event.png, id=1767, 1430.34375pt x 749.04843pt>
+<Contents/UI/QTV/view selected event.png, id=1768, 1430.34375pt x 749.04843pt>
 File: Contents/UI/QTV/view selected event.png Graphic file (type png)
 <use Contents/UI/QTV/view selected event.png>
 Package pdftex.def Info: Contents/UI/QTV/view selected event.png  used on input line 467.
 (pdftex.def)             Requested size: 318.66948pt x 166.88277pt.
-<Contents/UI/QTV/edit selected event.png, id=1768, 1425.07407pt x 747.54282pt>
+<Contents/UI/QTV/edit selected event.png, id=1769, 1425.07407pt x 747.54282pt>
 File: Contents/UI/QTV/edit selected event.png Graphic file (type png)
 <use Contents/UI/QTV/edit selected event.png>
 Package pdftex.def Info: Contents/UI/QTV/edit selected event.png  used on input line 474.
 (pdftex.def)             Requested size: 318.66948pt x 167.16328pt.
-<Contents/UI/QTV/delete selected event.png, id=1769, 1428.83812pt x 746.03719pt>
+<Contents/UI/QTV/delete selected event.png, id=1770, 1428.83812pt x 746.03719pt>
 File: Contents/UI/QTV/delete selected event.png Graphic file (type png)
 <use Contents/UI/QTV/delete selected event.png>
 Package pdftex.def Info: Contents/UI/QTV/delete selected event.png  used on input line 481.
@@ -2710,17 +2711,17 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 485.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [101 <./Contents/UI/QTV/view selected event.png> <./Contents/UI/QTV/edit selected event.png>]
-<Contents/UI/QTV/create new event.png, id=1777, 1425.82687pt x 747.54282pt>
+<Contents/UI/QTV/create new event.png, id=1778, 1425.82687pt x 747.54282pt>
 File: Contents/UI/QTV/create new event.png Graphic file (type png)
 <use Contents/UI/QTV/create new event.png>
 Package pdftex.def Info: Contents/UI/QTV/create new event.png  used on input line 489.
 (pdftex.def)             Requested size: 318.66948pt x 167.07204pt.
-<Contents/UI/QTV/tt btc.png, id=1778, 1927.2pt x 1262.7175pt>
+<Contents/UI/QTV/tt btc.png, id=1779, 1927.2pt x 1262.7175pt>
 File: Contents/UI/QTV/tt btc.png Graphic file (type png)
 <use Contents/UI/QTV/tt btc.png>
 Package pdftex.def Info: Contents/UI/QTV/tt btc.png  used on input line 497.
 (pdftex.def)             Requested size: 318.66948pt x 208.78255pt.
-<Contents/UI/QTV/search btc.png, id=1779, 1442.38875pt x 749.04843pt>
+<Contents/UI/QTV/search btc.png, id=1780, 1442.38875pt x 749.04843pt>
 File: Contents/UI/QTV/search btc.png Graphic file (type png)
 <use Contents/UI/QTV/search btc.png>
 Package pdftex.def Info: Contents/UI/QTV/search btc.png  used on input line 506.
@@ -2732,12 +2733,12 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 512.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [102 <./Contents/UI/QTV/delete selected event.png> <./Contents/UI/QTV/create new event.png> <./Contents/UI/QTV/tt btc.png>]
-<Contents/UI/QTV/edit btc.png, id=1788, 1428.08531pt x 748.29562pt>
+<Contents/UI/QTV/edit btc.png, id=1789, 1428.08531pt x 748.29562pt>
 File: Contents/UI/QTV/edit btc.png Graphic file (type png)
 <use Contents/UI/QTV/edit btc.png>
 Package pdftex.def Info: Contents/UI/QTV/edit btc.png  used on input line 522.
 (pdftex.def)             Requested size: 318.66948pt x 166.97766pt.
-<Contents/UI/QTV/delete btc.png, id=1789, 1428.08531pt x 733.99219pt>
+<Contents/UI/QTV/delete btc.png, id=1790, 1428.08531pt x 733.99219pt>
 File: Contents/UI/QTV/delete btc.png Graphic file (type png)
 <use Contents/UI/QTV/delete btc.png>
 Package pdftex.def Info: Contents/UI/QTV/delete btc.png  used on input line 529.
@@ -2749,17 +2750,17 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 533.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [103 <./Contents/UI/QTV/search btc.png> <./Contents/UI/QTV/edit btc.png>]
-<Contents/UI/QTV/create new btc.png, id=1798, 1444.64719pt x 748.29562pt>
+<Contents/UI/QTV/create new btc.png, id=1799, 1444.64719pt x 748.29562pt>
 File: Contents/UI/QTV/create new btc.png Graphic file (type png)
 <use Contents/UI/QTV/create new btc.png>
 Package pdftex.def Info: Contents/UI/QTV/create new btc.png  used on input line 537.
 (pdftex.def)             Requested size: 318.66948pt x 165.05943pt.
-<Contents/UI/QTV/create ticket overview.png, id=1799, 1927.2pt x 1000.73875pt>
+<Contents/UI/QTV/create ticket overview.png, id=1800, 1927.2pt x 1000.73875pt>
 File: Contents/UI/QTV/create ticket overview.png Graphic file (type png)
 <use Contents/UI/QTV/create ticket overview.png>
 Package pdftex.def Info: Contents/UI/QTV/create ticket overview.png  used on input line 548.
 (pdftex.def)             Requested size: 318.66948pt x 165.46597pt.
-<Contents/UI/QTV/chọn tên sự kiện cần tạo vé.png, id=1800, 1444.64719pt x 748.29562pt>
+<Contents/UI/QTV/chọn tên sự kiện cần tạo vé.png, id=1801, 1444.64719pt x 748.29562pt>
 File: Contents/UI/QTV/chọn tên sự kiện cần tạo vé.png Graphic file (type png)
 <use Contents/UI/QTV/chọn tên sự kiện cần tạo vé.png>
 Package pdftex.def Info: Contents/UI/QTV/chọn tên sự kiện cần tạo vé.png  used on input line 558.
@@ -2771,12 +2772,12 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 561.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [104 <./Contents/UI/QTV/create ticket overview.png> <./Contents/UI/QTV/delete btc.png> <./Contents/UI/QTV/create new btc.png>]
-<Contents/UI/QTV/điền tt vé general.png, id=1810, 1425.82687pt x 747.54282pt>
+<Contents/UI/QTV/điền tt vé general.png, id=1811, 1425.82687pt x 747.54282pt>
 File: Contents/UI/QTV/điền tt vé general.png Graphic file (type png)
 <use Contents/UI/QTV/điền tt vé general.png>
 Package pdftex.def Info: Contents/UI/QTV/điền tt vé general.png  used on input line 569.
 (pdftex.def)             Requested size: 318.66948pt x 167.07204pt.
-<Contents/UI/QTV/save lưu 1 vé cho general.png, id=1811, 1444.64719pt x 746.79pt>
+<Contents/UI/QTV/save lưu 1 vé cho general.png, id=1812, 1444.64719pt x 746.79pt>
 File: Contents/UI/QTV/save lưu 1 vé cho general.png Graphic file (type png)
 <use Contents/UI/QTV/save lưu 1 vé cho general.png>
 Package pdftex.def Info: Contents/UI/QTV/save lưu 1 vé cho general.png  used on input line 578.
@@ -2788,12 +2789,12 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 582.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [105 <./Contents/UI/QTV/chọn tên sự kiện cần tạo vé.png> <./Contents/UI/QTV/điền tt vé general.png>]
-<Contents/UI/QTV/tạo nhiều vé general.png, id=1819, 1430.34375pt x 747.54282pt>
+<Contents/UI/QTV/tạo nhiều vé general.png, id=1820, 1430.34375pt x 747.54282pt>
 File: Contents/UI/QTV/tạo nhiều vé general.png Graphic file (type png)
 <use Contents/UI/QTV/tạo nhiều vé general.png>
 Package pdftex.def Info: Contents/UI/QTV/tạo nhiều vé general.png  used on input line 586.
 (pdftex.def)             Requested size: 318.66948pt x 166.54733pt.
-<Contents/UI/QTV/điền tt vé reserved.png, id=1820, 1426.57968pt x 747.54282pt>
+<Contents/UI/QTV/điền tt vé reserved.png, id=1821, 1426.57968pt x 747.54282pt>
 File: Contents/UI/QTV/điền tt vé reserved.png Graphic file (type png)
 <use Contents/UI/QTV/điền tt vé reserved.png>
 Package pdftex.def Info: Contents/UI/QTV/điền tt vé reserved.png  used on input line 596.
@@ -2805,12 +2806,12 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 600.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [106 <./Contents/UI/QTV/save lưu 1 vé cho general.png> <./Contents/UI/QTV/tạo nhiều vé general.png>]
-<Contents/UI/QTV/điền ds ghế.png, id=1828, 1442.38875pt x 743.02594pt>
+<Contents/UI/QTV/điền ds ghế.png, id=1829, 1442.38875pt x 743.02594pt>
 File: Contents/UI/QTV/điền ds ghế.png Graphic file (type png)
 <use Contents/UI/QTV/điền ds ghế.png>
 Package pdftex.def Info: Contents/UI/QTV/điền ds ghế.png  used on input line 603.
 (pdftex.def)             Requested size: 318.66948pt x 164.1578pt.
-<Contents/UI/QTV/Lưu tt 1 vé reserved.png, id=1829, 1442.38875pt x 749.04843pt>
+<Contents/UI/QTV/Lưu tt 1 vé reserved.png, id=1830, 1442.38875pt x 749.04843pt>
 File: Contents/UI/QTV/Lưu tt 1 vé reserved.png Graphic file (type png)
 <use Contents/UI/QTV/Lưu tt 1 vé reserved.png>
 Package pdftex.def Info: Contents/UI/QTV/Lưu tt 1 vé reserved.png  used on input line 614.
@@ -2822,12 +2823,12 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 618.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [107 <./Contents/UI/QTV/điền tt vé reserved.png> <./Contents/UI/QTV/điền ds ghế.png>]
-<Contents/UI/QTV/Tạo 1 loạt vé reserved.png, id=1837, 1431.09656pt x 750.55406pt>
+<Contents/UI/QTV/Tạo 1 loạt vé reserved.png, id=1838, 1431.09656pt x 750.55406pt>
 File: Contents/UI/QTV/Tạo 1 loạt vé reserved.png Graphic file (type png)
 <use Contents/UI/QTV/Tạo 1 loạt vé reserved.png>
 Package pdftex.def Info: Contents/UI/QTV/Tạo 1 loạt vé reserved.png  used on input line 622.
 (pdftex.def)             Requested size: 318.66948pt x 167.12659pt.
-<Contents/UI/QTV/Giao diện bảng vé hiện có.png, id=1838, 1927.2pt x 1133.23375pt>
+<Contents/UI/QTV/Giao diện bảng vé hiện có.png, id=1839, 1927.2pt x 1133.23375pt>
 File: Contents/UI/QTV/Giao diện bảng vé hiện có.png Graphic file (type png)
 <use Contents/UI/QTV/Giao diện bảng vé hiện có.png>
 Package pdftex.def Info: Contents/UI/QTV/Giao diện bảng vé hiện có.png  used on input line 633.
@@ -2839,12 +2840,12 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 642.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [108 <./Contents/UI/QTV/Lưu tt 1 vé reserved.png> <./Contents/UI/QTV/Tạo 1 loạt vé reserved.png>]
-<Contents/UI/QTV/Quản lý TT KH.png, id=1846, 1927.2pt x 1256.695pt>
+<Contents/UI/QTV/Quản lý TT KH.png, id=1847, 1927.2pt x 1256.695pt>
 File: Contents/UI/QTV/Quản lý TT KH.png Graphic file (type png)
 <use Contents/UI/QTV/Quản lý TT KH.png>
 Package pdftex.def Info: Contents/UI/QTV/Quản lý TT KH.png  used on input line 649.
 (pdftex.def)             Requested size: 318.66948pt x 207.78676pt.
-<Contents/UI/QTV/search user.png, id=1847, 1444.64719pt x 749.04843pt>
+<Contents/UI/QTV/search user.png, id=1848, 1444.64719pt x 749.04843pt>
 File: Contents/UI/QTV/search user.png Graphic file (type png)
 <use Contents/UI/QTV/search user.png>
 Package pdftex.def Info: Contents/UI/QTV/search user.png  used on input line 658.
@@ -2856,17 +2857,17 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 664.
 (pdftex.def)             Requested size: 28.44968pt x 28.44977pt.
 [109 <./Contents/UI/QTV/Giao diện bảng vé hiện có.png> <./Contents/UI/QTV/Quản lý TT KH.png>]
-<Contents/UI/QTV/detail info user.png, id=1856, 1444.64719pt x 746.03719pt>
+<Contents/UI/QTV/detail info user.png, id=1857, 1444.64719pt x 746.03719pt>
 File: Contents/UI/QTV/detail info user.png Graphic file (type png)
 <use Contents/UI/QTV/detail info user.png>
 Package pdftex.def Info: Contents/UI/QTV/detail info user.png  used on input line 667.
 (pdftex.def)             Requested size: 318.66948pt x 164.56126pt.
-<Contents/UI/QTV/edit user.png, id=1857, 1444.64719pt x 746.79pt>
+<Contents/UI/QTV/edit user.png, id=1858, 1444.64719pt x 746.79pt>
 File: Contents/UI/QTV/edit user.png Graphic file (type png)
 <use Contents/UI/QTV/edit user.png>
 Package pdftex.def Info: Contents/UI/QTV/edit user.png  used on input line 674.
 (pdftex.def)             Requested size: 318.66948pt x 164.72731pt.
-<Contents/UI/QTV/delete user.png, id=1858, 1444.64719pt x 744.53156pt>
+<Contents/UI/QTV/delete user.png, id=1859, 1444.64719pt x 744.53156pt>
 File: Contents/UI/QTV/delete user.png Graphic file (type png)
 <use Contents/UI/QTV/delete user.png>
 Package pdftex.def Info: Contents/UI/QTV/delete user.png  used on input line 681.
@@ -2972,16 +2973,16 @@ Package rerunfilecheck Info: File `main.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  32953 strings out of 473190
- 630046 string characters out of 5719978
+ 630047 string characters out of 5719978
  1172262 words of memory out of 5000000
  55072 multiletter control sequences out of 15000+600000
  614737 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 109i,25n,131p,1282b,833s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,25n,131p,1281b,833s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2025/texmf-dist/fonts/type1/vntex/urwvn/utmb8v.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/vntex/urwvn/utmr8v.pfb><c:/texlive/2025/texmf-dist/fonts/type1/vntex/urwvn/utmri8v.pfb><c:/texlive/2025/texmf-dist/fonts/type1/vntex/vnr/vntt10.pfb>
-Output written on main.pdf (130 pages, 53011339 bytes).
+Output written on main.pdf (130 pages, 51200510 bytes).
 PDF statistics:
- 2119 PDF objects out of 2487 (max. 8388607)
+ 2120 PDF objects out of 2487 (max. 8388607)
  1745 compressed objects within 18 object streams
  441 named destinations out of 1000 (max. 500000)
  1698 words of extra memory for PDF output out of 10000 (max. 10000000)
