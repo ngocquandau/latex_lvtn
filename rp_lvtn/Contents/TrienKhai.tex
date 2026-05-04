@@ -1,1 +1,129 @@
-\section{Triển khai}
+\section{Kiểm thử hệ thống}
+
+\subsection{Mục tiêu kiểm thử}
+
+Mục tiêu của quá trình kiểm thử backend của hệ thống MyTicket nhằm đảm bảo các chức năng cốt lõi hoạt động chính xác, ổn định và không phát sinh lỗi sau khi thay đổi mã nguồn. Cụ thể:
+\begin{itemize}
+    \item[-] Xác thực và phân quyền người dùng hoạt động đúng theo thiết kế.
+    \item[-] Các API chính (User, Event, Purchase, Payment) trả về kết quả chính xác.
+    \item[-] Phát hiện lỗi sớm và tránh lỗi hồi quy (regression).
+    \item[-] Đảm bảo hệ thống có thể duy trì tính ổn định thông qua kiểm thử tự động.
+\end{itemize}
+
+\subsection{Môi trường và công cụ kiểm thử}
+\begin{table}[H]
+\centering
+\label{tab:testing-tools}
+\begin{tabularx}{\textwidth}{@{} >{\bfseries}l X @{}}
+\toprule
+\textnormal{\textbf{Thành phần}} & \textbf{Công cụ / Thư viện sử dụng} \\ \midrule
+Test Runner        & Jest \\ \addlinespace
+API Testing        & Supertest \\ \addlinespace
+Database mô phỏng  & MongoDB in-memory (\texttt{mongodb-memory-server}) \\ \addlinespace
+Thư viện hỗ trợ    & \texttt{bcryptjs}, \texttt{jsonwebtoken}, \texttt{mongoose} \\ \bottomrule
+\end{tabularx}
+\vspace{15pt}
+\caption{Danh sách các công cụ và thư viện sử dụng trong Testing}
+\end{table}
+
+Cấu trúc hỗ trợ test: Hệ thống tách biệt app.js (Export Express app) và server.js (Khởi chạy server) để các bản kiểm thử có thể chạy độc lập mà không cần khởi động server thật.
+
+\subsection{Phương pháp kiểm thử}
+Sử dụng mô hình kết hợp giúp tối ưu hóa tốc độ và độ tin cậy:
+\begin{itemize}
+    \item[-] \textbf{Unit Testing}: Tập trung vào các Middleware (verifyToken, verifyAdmin) để kiểm tra logic phân quyền.
+    \item[-] \textbf{Integration Testing}: Kiểm thử luồng dữ liệu từ API Request đến Database thông qua Express application.
+    \item[-] \textbf{Data Isolation}: Sử dụng MongoDB in-memory giúp làm sạch dữ liệu sau mỗi lần chạy, tránh phụ thuộc vào database thật hoặc dịch vụ bên ngoài.
+\end{itemize}
+
+\subsection{Kịch bản kiểm thử}
+\textbf{a. Kiểm thử middleware xác thực}
+\begin{itemize}
+    \item[-] Thiếu token $\rightarrow$ trả về lỗi 403
+    \item[-] Token không hợp lệ $\rightarrow$ trả về lỗi 401
+    \item[-] Người dùng không hoạt động $\rightarrow$ từ chối truy cập
+    \item[-] Token hợp lệ $\rightarrow$ cho phép tiếp tục xử lý
+    \item[-] Kiểm tra quyền admin thông qua role
+\end{itemize}
+\textbf{b. Kiểm thử API User}
+\begin{itemize}
+    \item[-] Đăng ký tài khoản thành công, không trả về mật khẩu
+    \item[-] Đăng nhập đúng $\rightarrow$ trả về token
+    \item[-] Đăng nhập sai $\rightarrow$ trả về lỗi 401
+    \item[-] Truy xuất thông tin cá nhân với token hợp lệ
+    \item[-] Kiểm tra phân quyền khi truy cập danh sách user
+\end{itemize}
+\textbf{c. Kiểm thử API Event}
+\begin{itemize}
+    \item[-] Chỉ admin được tạo sự kiện
+    \item[-] Người dùng thường không có quyền tạo
+    \item[-] API trả về danh sách sự kiện chính xác
+\end{itemize}
+\textbf{d. Kiểm thử API Purchase}
+\begin{itemize}
+    \item[-] Tạo đơn hàng với trạng thái ban đầu là pending
+    \item[-] Truy xuất vé đã thanh toán (paid)
+    \item[-] Đảm bảo dữ liệu trả về chứa danh sách vé
+\end{itemize}
+\textbf{e. Kiểm thử API Payment}
+\begin{itemize}
+    \item[-] Tạo URL thanh toán với điều kiện hợp lệ
+    \item[-] Xử lý webhook thanh toán từ hệ thống bên ngoài
+    \item[-] Cập nhật trạng thái đơn hàng từ pending sang paid
+\end{itemize}
+
+\subsection{Kết quả kiểm thử}
+\begin{table}[htbp]
+\centering
+\label{tab:test-results}
+\small % Giảm kích thước chữ một chút để bảng gọn hơn
+\begin{tabularx}{\textwidth}{@{} X l l >{\bfseries\color{green!60!black}}l @{}}
+\toprule
+\textbf{Test Case} & \textbf{Expected} & \textbf{Actual} & \textnormal{\textbf{Status}} \\ \midrule
+verifyToken thiếu token & 403 & 403 & Passed \\
+verifyToken token không hợp lệ & 401 & 401 & Passed \\
+verifyToken user inactive & 403 & 403 & Passed \\
+verifyToken token hợp lệ & Gọi next() & Gọi next() & Passed \\ \addlinespace
+verifyAdmin req.user chưa có & 401 & 401 & Passed \\
+verifyAdmin user không admin & 403 & 403 & Passed \\
+verifyAdmin user admin & Gọi next() & Gọi next() & Passed \\ \addlinespace
+POST /api/user tạo user & 201, không mật khẩu & 201, không mật khẩu & Passed \\
+POST /api/user/login đúng & Token & Token & Passed \\
+POST /api/user/login sai & 401 & 401 & Passed \\ \addlinespace
+GET /api/user/profile & Profile data & Profile data & Passed \\
+GET /api/user user thường & 403 & 403 & Passed \\
+GET /api/user admin & Danh sách user & Danh sách user & Passed \\ \addlinespace
+POST /api/event thiếu token & 403 & 403 & Passed \\
+POST /api/event user không admin & 403 & 403 & Passed \\
+POST /api/event admin & Tạo event & Tạo event & Passed \\ \addlinespace
+GET /api/event & Danh sách event & Danh sách event & Passed \\
+POST /api/purchases & Tạo purchase pending & Tạo purchase pending & Passed \\
+GET /api/purchases/my-tickets & Chỉ paid purchases & Chỉ paid purchases & Passed \\ \addlinespace
+POST /api/payment/create-url thiếu token & 403 & 403 & Passed \\
+POST /api/payment/create-url purchase không tồn tại & 404 & 404 & Passed \\
+POST /api/payment/payos-webhook & Cập nhật paid & Cập nhật paid & Passed \\ \bottomrule
+\end{tabularx}
+\vspace{15pt}
+\caption{Kết quả thực thi Test Case cho hệ thống}
+\end{table}
+\textbf{Thống kê tổng quát}:
+\begin{itemize}
+    \item[-] Tổng số Test Suite: 05
+    \item[-] Tổng số Test Case: 22
+    \item[-] Tỷ lệ thành công: 100\% (22/22 Passed)
+\end{itemize}
+
+\subsection{Đánh giá \& Kết luận}
+\subsubsection{Đánh giá chung}
+\begin{itemize}
+    \item[-] \textbf{Ưu điểm}: Các chức năng cốt lõi, cơ chế xác thực và luồng nghiệp vụ API đáp ứng đúng yêu cầu đề ra.
+    \item[-] \textbf{Hạn chế}: Chưa kiểm thử các trường hợp biên (edge cases), hiệu năng (performance), và các dịch vụ thực tế (Email, cổng thanh toán thật).
+\end{itemize}
+\subsubsection{Định hướng phát triển}
+\begin{itemize}
+    \item[-] Bổ sung kịch bản kiểm thử cho các luồng công việc (workflow) phức tạp hơn.
+    \item[-] Tích hợp quy trình CI/CD để tự động chạy test khi đẩy mã nguồn mới.
+    \item[-] Mở rộng kiểm thử bảo mật và kiểm thử tải (Load testing).
+\end{itemize}
+\subsubsection{Kết luận}
+Hệ thống backend của MyTicket hiện tại hoạt động rất ổn định, đạt tỷ lệ vượt qua kiểm thử đối với các kịch bản quan trọng, sẵn sàng cho việc triển khai các giai đoạn tiếp theo.

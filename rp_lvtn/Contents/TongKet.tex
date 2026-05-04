@@ -1,76 +1,274 @@
-\section{Tổng kết và đánh giá - OLD}
-\subsection{Kết quả hiện thực giai đoạn Đồ án Chuyên ngành}
-\indent \indent Trong giai đoạn Đồ án Chuyên ngành, nhóm đã tập trung nghiên cứu cơ sở lý thuyết, phân tích nghiệp vụ và thiết kế kiến trúc tổng thể cho hệ thống MyTicket. Mục tiêu cốt lõi của giai đoạn này là xây dựng nền móng vững chắc về công nghệ và hoàn thiện các chức năng giao dịch trọng yếu cho người dùng cuối.\\
-\indent Các kết quả chính nhóm đã đạt được bao gồm:
-\begin{itemize}
-    \item[-] \textbf{Về Nghiên cứu và Thiết kế hệ thống:}
-    \begin{itemize}
-        \item[1.] \textbf{Phân tích nghiệp vụ:} Hoàn tất khảo sát thị trường, xác định yêu cầu chức năng và phi chức năng chi tiết cho ba đối tượng: Người dùng, Ban tổ chức và Quản trị viên.
-        \item[2.] \textbf{Kiến trúc công nghệ:} Xây dựng thành công kiến trúc hệ thống 3 tầng (Frontend - Backend - Database) sử dụng bộ công nghệ ReactJS (TypeScript), Node.js và MongoDB.
-        \item[3.] \textbf{Thiết kế giao diện (UI/UX):} Hoàn thiện 100\% thiết kế giao diện trên Figma cho toàn bộ các phân hệ của hệ thống, bao gồm các màn hình quản trị phức tạp dành cho Ban tổ chức và Quản trị viên.
-        \item[4.] \textbf{Mô hình thuật toán:} Đã xây dựng cơ sở lý thuyết và thiết kế luồng dữ liệu cho mô hình gợi ý sự kiện sử dụng thuật toán LightGBM Ranker (như trình bày tại Chương 6).
-    \end{itemize}
-    \item[-] \textbf{Về Kết quả Hiện thực (Implementation):}
-    \begin{itemize}
-        \item[1.] \textbf{Đối với Người dùng (User):} Hoàn tất lập trình cả Frontend và Backend cho các chức năng cốt lõi:
-        \begin{itemize}
-            \item[-] Đăng ký và Đăng nhập tài khoản.
-            \item[-] Trang chủ: Hiển thị danh sách sự kiện theo danh mục ("Đang hot", "Mới nhất").
-            \item[-] Tìm kiếm và Lọc sự kiện (theo từ khóa, địa điểm, thời gian).
-            \item[-] Xem chi tiết thông tin sự kiện và chọn vé.
-            \item[-] Quy trình đặt vé và thanh toán trực tuyến tích hợp ví điện tử MoMo.
-            \item[-] Quản lý lịch sử mua vé cá nhân.
-        \end{itemize}
-        \item[2.] \textbf{Đối với Quản trị viên (Admin):} Đã xây dựng Backend (API) cho chức năng trích xuất và quản lý danh sách dữ liệu Ban tổ chức.
-        \item[3.] \textbf{Đối với Ban tổ chức (Organizer):} Đã hoàn tất đặc tả yêu cầu và thiết kế giao diện, sẵn sàng cho việc hiện thực hóa trong giai đoạn tiếp theo.
-    \end{itemize}
-\end{itemize}
-\indent \indent Các hạn chế và chức năng chưa triển khai trong giai đoạn này bao gồm:
-\begin{itemize}
-    \item[-] \textbf{Người dùng:}
-    \begin{itemize}
-        \item[1.] Các tính năng tương tác nâng cao (Chat, Đánh giá Ban tổ chức).
-        \item[2.] Tính năng cá nhân hóa (Gợi ý "Sự kiện dành cho bạn" tích hợp model AI).
-        \item[3.] Hệ thống gửi Email thông báo tự động (xác nhận vé, nhắc nhở).
-    \end{itemize}
-    \item[-] \textbf{Ban tổ chức \& Quản trị viên:}
-    \begin{itemize}
-        \item[1.] Các chức năng quản lý sự kiện (CRUD), xem báo cáo thống kê.
-        \item[2.] Giao diện Frontend tương tác cho các phân hệ này chưa được lập trình.
-    \end{itemize}
-\end{itemize}
+\section{Tổng kết}
 
-\subsection{Kế hoạch triển khai giai đoạn Đồ án Tốt nghiệp}
-\subsubsection{Mục tiêu chính}
-\indent \indent Kế thừa các kết quả từ Đồ án Chuyên ngành, giai đoạn Đồ án Tốt nghiệp sẽ tập trung vào việc hoàn thiện các module còn thiếu và tối ưu hóa hệ thống để đưa vào vận hành thực tế. Kế hoạch cụ thể như sau:
-\begin{itemize}
-    \item[-] \textbf{Hoàn thiện chức năng cho Người dùng:}
-    \begin{itemize}
-        \item[1.] Hiện thực chức năng Chat Real-time giữa người dùng và Ban tổ chức/Quản trị viên (sử dụng WebSocket).
-        \item[2.] Xây dựng chức năng Đánh giá \& Phản hồi sau sự kiện.
-        \item[3.] Tích hợp AI: Triển khai mô hình LightGBM Ranker vào Backend để kích hoạt tính năng gợi ý "Sự kiện dành cho bạn" dựa trên lịch sử hành vi.
-        \item[4.] Tích hợp dịch vụ gửi Email tự động (xác nhận vé, nhắc nhở sự kiện).
-    \end{itemize}
-    \item[-] \textbf{Hiện thực toàn diện phân hệ Ban tổ chức \& Quản trị viên:}
-    \begin{itemize}
-        \item[1.] Lập trình Frontend (dựa trên thiết kế Figma đã có) và Backend cho toàn bộ các chức năng quản lý.
-        \item[2.] \textbf{Ban tổ chức:} Dashboard thống kê doanh thu/vé bán, Quản lý sự kiện (Tạo/Sửa/Xóa), Phản hồi tin nhắn người dùng.
-        \item[3.] \textbf{Quản trị viên:} Duyệt sự kiện, Quản lý tài khoản Ban tổ chức và Người dùng, Dashboard thống kê toàn hệ thống.
-        \item[4.] Xây dựng hệ thống Thống kê Real-time giúp Ban tổ chức và Quản trị viên theo dõi biến động doanh số và lưu lượng truy cập ngay lập tức.
-    \end{itemize}
-    \item[-] \textbf{Tối ưu hóa và Kiểm thử:}
-    \begin{itemize}
-        \item[1.] Tối ưu hóa truy vấn cơ sở dữ liệu và tốc độ tải trang (Performance Optimization).
-        \item[2.] Kiểm thử bảo mật (Security Testing) đặc biệt cho các luồng thanh toán và dữ liệu cá nhân.
-        \item[3.] Triển khai kiểm thử chấp nhận người dùng (UAT) và sửa lỗi trước khi bảo vệ tốt nghiệp.
-    \end{itemize}
-\end{itemize}
+\indent \indent Trong phần này, nhóm tổng kết lại những kết quả đã đạt được trong quá trình
+thực hiện đồ án tốt nghiệp, đánh giá hiệu quả của hệ thống đã được hiện thực
+hóa, cũng như nhận diện những hạn chế còn tồn tại và đề xuất hướng phát triển
+tương lai cho hệ thống đặt vé và gợi ý sự kiện thông minh tích hợp chatbot AI.
 
-\subsubsection{Tiến độ phát triển giai đoạn đồ án tốt nghiệp}
+% -----------------------------------------------------------
+\subsection{Đánh giá kết quả hiện thực hệ thống giai đoạn Đồ án tốt nghiệp}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.95\textwidth]{Images/gantt4.jpg}
-    \vspace{15pt}
-    \caption{Danh sách công việc và sơ đồ Gantt}
-\end{figure}
+\indent \indent Sau quá trình nghiên cứu, thiết kế và triển khai, nhóm đã hoàn thiện một hệ
+thống đặt vé sự kiện trực tuyến tích hợp mô hình gợi ý sự kiện thông minh và hệ thống trợ lý ảo - Chatbot AI, vận hành ổn định trên môi trường cloud với backend được
+deploy trên \textbf{Render} và frontend được deploy trên \textbf{Vercel}.
+Dưới đây là tổng hợp các kết quả đã đạt được theo từng nhóm chức năng.
+
+\subsubsection*{(1) Quản lý tài khoản và phân quyền}
+
+\indent \indent Hệ thống hiện thực thành công cơ chế xác thực dựa trên \textbf{JWT} với ba
+vai trò hoàn toàn tách biệt: \textbf{user} (người dùng cuối), \textbf{organizer}
+(ban tổ chức) và \textbf{admin} (quản trị viên). Mỗi vai trò được định tuyến
+đến giao diện riêng biệt (\texttt{ClientLayout}, \texttt{OrganizerLayout},
+\texttt{AdminLayout}) với bộ tính năng độc lập, đảm bảo nguyên tắc phân quyền
+tối thiểu (\textit{principle of least privilege}). Luồng quên mật khẩu được
+hiện thực hoàn chỉnh thông qua email tự động sinh mật khẩu mới và gửi đến
+người dùng qua Nodemailer.
+
+\subsubsection*{(2) Quản lý sự kiện và vé}
+
+\indent \indent Ban tổ chức có thể tạo sự kiện với đầy đủ thông tin: tiêu đề, thể loại
+(11 thể loại chuẩn hóa), mô tả dạng rich-text (Quill editor), poster, thời
+gian, địa điểm (GeoJSON), sức chứa, giới hạn tuổi và sơ đồ chỗ ngồi. Mỗi
+sự kiện hỗ trợ \textbf{nhiều hạng vé} (\texttt{TicketClass}) với hai loại
+chỗ ngồi: tự do (\texttt{general}) và có ghế cụ thể (\texttt{reserved}),
+kèm cơ chế kiểm soát số lượng và trạng thái bán vé (\texttt{available},
+\texttt{sold\_out}, \texttt{unavailable}). Quản trị viên có toàn quyền duyệt,
+chỉnh sửa và theo dõi toàn bộ sự kiện trên hệ thống.
+
+\subsubsection*{(3) Luồng đặt vé và thanh toán}
+
+\indent \indent Nhóm đã tích hợp thành công cổng thanh toán \textbf{PayOS} -- một cổng thanh
+toán nội địa phổ biến tại Việt Nam hỗ trợ chuyển khoản ngân hàng và QR
+thanh toán. Luồng đặt vé bao gồm các bước: chọn vé $\to$ nhập voucher
+(tùy chọn) $\to$ tạo đơn với trạng thái \texttt{pending} $\to$ thanh toán
+qua PayOS $\to$ xác nhận qua webhook $\to$ cập nhật trạng thái
+\texttt{paid} $\to$ gửi email xác nhận kèm QR vé. Đơn hàng chưa thanh
+toán sau 15 phút sẽ tự động bị thu hồi bởi cron job, đảm bảo slot vé
+không bị chiếm giữ vô thời hạn. Hệ thống voucher hỗ trợ chiết khấu
+theo số tiền cố định với điều kiện chi tiêu tối thiểu và ngày hết hạn.
+
+\subsubsection*{(4) Vé điện tử và QR Code}
+
+\indent \indent Mỗi vé sau khi thanh toán thành công sẽ được gắn một mã định danh duy nhất
+(\texttt{ticketId}) và sinh kèm \textbf{QR code} trỏ đến trang thông tin
+vé công khai (\texttt{/ticket-info/:ticketId}). Người dùng có thể xem, tải
+ảnh QR về thiết bị hoặc nhận trực tiếp qua email. Ban tổ chức hoặc nhân
+viên tại sự kiện có thể quét mã để kiểm tra tính hợp lệ của vé và tra cứu
+đầy đủ thông tin người mua ở dạng HTML hoặc JSON thông qua API công khai
+không cần xác thực.
+
+\subsubsection*{(5) Hệ thống email tự động}
+
+\indent \indent Nhóm xây dựng một email service hoàn chỉnh với nhiều loại thông báo: xác
+nhận đặt vé (kèm QR từng vé inline trong email), cấp lại mật khẩu, và các
+thông báo nghiệp vụ khác. Toàn bộ template email được thiết kế bằng HTML
+thuần với logo thương hiệu nhúng dạng CID, tương thích với hầu hết các
+ứng dụng email phổ biến. Dữ liệu động được escape HTML trước khi render
+để phòng chống tấn công XSS qua email.
+
+\subsubsection*{(6) Gợi ý sự kiện thông minh -- AI Chatbot}
+
+\indent \indent Nhóm tích hợp \textbf{Google Gemini 2.5 Flash} làm trợ lý ảo tư vấn sự
+kiện cho người dùng. Chatbot được cung cấp context động là danh sách tối
+đa 30 sự kiện đang mở bán (bao gồm tên, thể loại, thời gian, địa điểm,
+giá vé từng hạng), giúp trả lời các câu hỏi như ``có sự kiện nào rẻ dưới
+500k không?'' hay ``sự kiện âm nhạc nào cuối tuần này?'' một cách tự nhiên
+bằng tiếng Việt.
+
+\subsubsection*{(7) Pipeline dữ liệu cho mô hình gợi ý ML}
+
+\indent \indent Hệ thống xây dựng pipeline thu thập và xử lý dữ liệu tương tác người dùng
+(click, purchase theo từng cặp user--event) thông qua model \texttt{Interaction}.
+Dữ liệu được aggregate trong MongoDB (tính điểm tương tác, mã hóa đặc trưng
+về tuổi, giới tính, thể loại sự kiện, vị trí địa lý, ngân sách trung bình)
+và xuất ra file CSV, tự động upload lên \textbf{HuggingFace Hub} để phục vụ
+việc huấn luyện mô hình gợi ý ngoại tuyến (\textit{offline training}).
+
+\subsubsection*{(8) Dashboard thống kê}
+
+\indent \indent Ban tổ chức có trang thống kê riêng với dữ liệu doanh thu, số vé bán được
+theo sự kiện. Quản trị viên có dashboard tổng quan với các chỉ số: tổng số
+sự kiện, tổng người dùng, tổng ban tổ chức, số liệu tăng trưởng trong tháng
+(sự kiện mới, người dùng mới, ban tổ chức hoạt động). Dữ liệu thống kê
+được lưu dạng snapshot định kỳ trong collection \texttt{statistics}, cho
+phép theo dõi xu hướng theo thời gian.
+
+\subsubsection*{(9) Đánh giá và phản hồi}
+
+\indent \indent Hệ thống hiện thực chức năng đánh giá sự kiện với ràng buộc nghiệp vụ chặt
+chẽ: chỉ người dùng đã mua vé và thanh toán thành công mới được đánh giá,
+và chỉ sau khi sự kiện đã kết thúc. Mỗi người dùng chỉ được đánh giá một
+lần cho mỗi sự kiện (ràng buộc unique index). Điểm đánh giá trung bình của
+ban tổ chức được tự động cập nhật mỗi khi có đánh giá mới thông qua
+MongoDB Aggregation Pipeline.
+
+\subsubsection*{(10) Bảo mật tổng thể}
+
+\indent \indent Toàn bộ các cơ chế bảo mật đã được hiện thực như mô tả trong Phần~1, bao
+gồm: JWT với kiểm tra trạng thái tài khoản trong DB, hash mật khẩu bcrypt,
+CORS whitelist, HTML escaping, DOMPurify, bảo vệ cron endpoint bằng secret
+header, giới hạn số lượng bản ghi trả về và lọc input MongoDB để phòng
+chống injection.
+
+% -----------------------------------------------------------
+\subsection{Hạn chế và hướng phát triển tương lai}
+
+\indent \indent Mặc dù hệ thống đã đạt được những kết quả tích cực nêu trên, nhóm nhận thức
+rõ rằng vẫn còn tồn tại một số hạn chế xuất phát từ điều kiện thời gian,
+quy mô nhóm và phạm vi của đồ án tốt nghiệp. Các hạn chế này đồng thời mở
+ra những hướng phát triển cụ thể cho giai đoạn tiếp theo.
+
+\subsubsection*{Hạn chế hiện tại}
+
+\begin{enumerate}[leftmargin=*, label=\textbf{\arabic*.}]
+
+    \item \textbf{Mô hình gợi ý ML chưa được triển khai ở tầng phục vụ
+    (inference serving).}
+    Pipeline thu thập dữ liệu và upload lên HuggingFace đã được xây dựng
+    đầy đủ, tuy nhiên việc tích hợp mô hình đã huấn luyện trở lại vào hệ
+    thống để phục vụ gợi ý theo thời gian thực (real-time inference) cho
+    từng người dùng chưa được hoàn thiện trong giai đoạn này. Hiện tại,
+    chức năng gợi ý sự kiện chủ yếu dựa vào Gemini Chatbot với context
+    tĩnh.
+
+    \item \textbf{Chưa có bộ kiểm thử tự động (automated testing).}
+    Cả backend lẫn frontend đều chưa có unit test hay integration test.
+    Script \texttt{test} trong \texttt{package.json} của backend chỉ
+    là placeholder (\texttt{echo "Error: no test specified"}). Điều này
+    làm tăng rủi ro regression khi codebase phát triển thêm và khó đảm
+    bảo độ bao phủ kiểm thử theo tiêu chuẩn công nghiệp.
+
+    \item \textbf{Chưa có cơ chế rate limiting và throttling.}
+    Hệ thống chưa tích hợp middleware giới hạn tần suất request (như
+    \texttt{express-rate-limit}), khiến các endpoint nhạy cảm như đăng
+    nhập, đăng ký, gửi email có thể bị lạm dụng bằng tấn công brute-force
+    hoặc spam request với số lượng lớn.
+
+    \item \textbf{Cơ chế reset mật khẩu chưa theo chuẩn token-based.}
+    Luồng quên mật khẩu hiện tại sinh một mật khẩu ngẫu nhiên và gửi
+    thẳng qua email. Cách tiếp cận này kém an toàn hơn so với chuẩn
+    công nghiệp sử dụng token có thời hạn (OTP hoặc signed URL), vì
+    mật khẩu mới bị truyền qua kênh email vốn không phải kênh bảo mật
+    tuyệt đối.
+
+    \item \textbf{BullMQ chưa được triển khai đầy đủ.}
+    Mặc dù \texttt{bullmq} và \texttt{redis} đã được khai báo trong
+    \texttt{package.json}, việc xử lý email và job nặng hiện vẫn chạy
+    trực tiếp trong request cycle thay vì thông qua hàng đợi. Kiến trúc
+    job queue chưa được kích hoạt hoàn toàn.
+
+    \item \textbf{Chọn chỗ ngồi tương tác (interactive seat map) chưa
+    được hiện thực hóa đầy đủ.}
+    Model \texttt{Event} đã có trường \texttt{seatImgUrl} để lưu sơ đồ
+    ghế và \texttt{TicketClass} hỗ trợ loại ghế \texttt{reserved}, nhưng
+    giao diện chọn ghế tương tác trực quan (kéo-thả, tô màu theo trạng
+    thái) chưa được phát triển. Người dùng hiện chưa thể tự chọn ghế cụ
+    thể trên sơ đồ.
+
+    \item \textbf{Chưa hỗ trợ cập nhật trạng thái vé theo thời gian thực.}
+    Khi số lượng vé thay đổi (có người vừa mua hoặc cron job thu hồi vé),
+    giao diện người dùng chỉ cập nhật khi họ tải lại trang, không có cơ
+    chế đẩy dữ liệu theo thời gian thực (WebSocket / Server-Sent Events).
+    Điều này có thể dẫn đến trải nghiệm kém trong các sự kiện có lượng
+    người mua đồng thời cao.
+
+    \item \textbf{Ràng buộc một tài khoản -- một ban tổ chức.}
+    Hiện tại mỗi tài khoản \texttt{organizer} chỉ được liên kết với một
+    thực thể Organizer duy nhất. Hệ thống chưa hỗ trợ mô hình tổ chức
+    có nhiều thành viên (team-based organizer) hay phân quyền chi tiết
+    trong nội bộ một ban tổ chức.
+
+    \item \textbf{Chưa có ứng dụng di động.}
+    Hệ thống hiện chỉ là ứng dụng web. Giao diện được tối ưu cho màn
+    hình desktop và responsive cơ bản cho mobile browser, nhưng chưa có
+    ứng dụng native (iOS/Android) để cung cấp trải nghiệm người dùng
+    đầy đủ trên thiết bị di động, đặc biệt cho chức năng quét QR check-in.
+
+    \item \textbf{Hệ thống thiếu kho mã giảm giá.}
+    Hiện tại hệ thống chưa có cơ chế quản lý và mã giảm giá hợp lệ cho người dùng khi thanh toán vé do chưa thể làm việc được với nhà quản lý nền tảng thanh toán chính hiện tại là PayOs. 
+    Việc này hạn chế khả năng triển khai các chiến dịch khuyến mãi và tăng cường trải nghiệm người dùng.
+
+\end{enumerate}
+
+\subsubsection*{Hướng phát triển tương lai}
+
+\begin{enumerate}[leftmargin=*, label=\textbf{\arabic*.}]
+
+    \item \textbf{Hoàn thiện và triển khai mô hình gợi ý cá nhân hóa.}
+    Bước tiếp theo quan trọng nhất là hoàn thiện vòng lặp ML: huấn luyện
+    mô hình collaborative filtering hoặc content-based filtering trên
+    dataset đã thu thập tại HuggingFace, sau đó triển khai API inference
+    (có thể dùng HuggingFace Inference Endpoints hoặc một microservice
+    riêng) để tích hợp vào luồng gợi ý sự kiện theo người dùng cụ thể
+    thay vì context chung như hiện tại.
+
+    \item \textbf{Xây dựng bộ kiểm thử tự động và CI/CD pipeline.}
+    Cần bổ sung unit test cho các controller và service quan trọng
+    (thanh toán, đặt vé, xác thực) bằng Jest (backend) và React Testing
+    Library (frontend), kết hợp tích hợp liên tục (CI) thông qua
+    GitHub Actions để tự động kiểm thử mỗi khi có commit mới.
+
+    \item \textbf{Tích hợp rate limiting và nâng cấp bảo mật.}
+    Bổ sung \texttt{express-rate-limit} cho các endpoint nhạy cảm, nâng
+    cấp luồng reset mật khẩu sang cơ chế token có thời hạn (6 chữ số
+    OTP hoặc signed URL JWT), và bổ sung CAPTCHA cho form đăng ký/đăng
+    nhập.
+
+    \item \textbf{Kích hoạt BullMQ và tách worker process.}
+    Triển khai đầy đủ kiến trúc job queue với BullMQ -- tách worker
+    process gửi email và xử lý task nặng ra khỏi HTTP server process
+    chính. Điều này giúp server phản hồi request nhanh hơn và tăng
+    khả năng chịu tải khi lưu lượng tăng đột biến.
+
+    \item \textbf{Phát triển chức năng chọn ghế tương tác.}
+    Xây dựng component SVG/canvas cho phép người dùng trực quan chọn
+    ghế theo sơ đồ, với màu sắc thể hiện trạng thái ghế (còn trống,
+    đã đặt, đang giữ chỗ). Tích hợp WebSocket để cập nhật trạng thái
+    ghế theo thời gian thực trong quá trình nhiều người cùng đặt.
+
+    \item \textbf{Cập nhật thời gian thực với WebSocket.}
+    Tích hợp Socket.IO hoặc Server-Sent Events để đẩy cập nhật số
+    lượng vé còn lại, trạng thái sự kiện và thông báo hệ thống đến
+    người dùng mà không cần tải lại trang, đặc biệt quan trọng trong
+    các sự kiện có lưu lượng mua vé cao.
+
+    \item \textbf{Phát triển ứng dụng di động.}
+    Xây dựng ứng dụng React Native tái sử dụng logic từ các service
+    TypeScript hiện có, tập trung vào các tính năng cốt lõi: duyệt và
+    tìm kiếm sự kiện, đặt vé, hiển thị và quét QR check-in, nhận
+    thông báo push khi sự kiện sắp diễn ra.
+
+    \item \textbf{Nâng cấp hệ thống phân tích và báo cáo.}
+    Bổ sung dashboard analytics chi tiết hơn cho ban tổ chức: biểu đồ
+    doanh thu theo thời gian, phân tích nhân khẩu học người mua vé,
+    tỷ lệ hoàn vé, và xuất báo cáo PDF/Excel. Tích hợp các chỉ số
+    tương tác thực tế (tỷ lệ chuyển đổi click-to-purchase) vào
+    dashboard để ban tổ chức tối ưu chiến lược bán vé.
+
+    \item \textbf{Mở rộng tích hợp cổng thanh toán và phát triển kho mã giảm giá.}
+    Bổ sung hỗ trợ các phương thức thanh toán phổ biến khác tại Việt
+    Nam như VNPay, MoMo và ZaloPay, đồng thời xây dựng luồng hoàn tiền
+    (refund) tự động khi sự kiện bị hủy.\\
+    Phát triển hệ thống quản lý mã giảm giá (coupon) với các loại chiết khấu: 
+    theo phần trăm, theo số tiền cố định, hoặc miễn phí vận chuyển (nếu có). Mã giảm giá sẽ có điều kiện áp dụng (tối thiểu hóa đơn, chỉ áp dụng cho sự kiện cụ thể, giới hạn số lượng sử dụng) 
+    và được tích hợp vào luồng thanh toán.
+
+    \item \textbf{Hỗ trợ đa ngôn ngữ (i18n).}
+    Mở rộng hệ thống hỗ trợ tiếng Anh ngoài tiếng Việt, sử dụng thư
+    viện \texttt{i18next} hoặc \texttt{react-intl}, nhằm phục vụ cả
+    người dùng quốc tế và ban tổ chức sự kiện có yếu tố nước ngoài.
+
+\end{enumerate}
+
+\subsubsection*{Kết luận}
+
+\indent \indent Nhìn lại toàn bộ quá trình thực hiện, hiện nhóm
+đã thành công trong việc xây dựng một hệ thống đặt vé sự kiện trực tuyến
+đầy đủ chức năng, tích hợp các công nghệ hiện đại bao gồm xác thực JWT,
+thanh toán điện tử, vé QR điện tử, email tự động và trí tuệ nhân tạo,
+được triển khai và vận hành thực tế trên nền tảng cloud. Các hạn chế hiện
+tại chủ yếu là những tính năng nâng cao mà nhóm đã có kế hoạch kiến trúc
+rõ ràng nhưng chưa đủ thời gian hoàn thiện trong phạm vi đồ án. Những
+hướng phát triển được đề xuất đều có cơ sở từ kiến trúc hệ thống đã xây
+dựng, tạo nền tảng vững chắc để nhóm hoặc các thành viên tiếp theo có thể
+phát triển liên tục sau khi kết thúc đồ án.

@@ -407,6 +407,15 @@ Mô hình sau khi được huấn luyện sẽ được chuyển đổi sang ONN
 
 \subsection{Các dịch vụ tích hợp và Tiện ích hỗ trợ}
 
+\subsubsection{Gemini 2.5 Flash: Mô hình ngôn ngữ lớn tối ưu cho chatbot AI}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.35\textwidth]{Images/Gemini 2.5 Flash.png}
+    \vspace{15pt}
+    \caption{Mô hình ngôn ngữ lớn Gemini 2.5 Flash} 
+\end{figure}
+\indent \indent Gemini 2.5 Flash là mô hình ngôn ngữ lớn theo hướng tối ưu tốc độ phản hồi, phù hợp cho các bài toán hội thoại thời gian thực trong hệ thống web. Về bản chất, chatbot AI sử dụng mô hình này hoạt động theo cơ chế: tiếp nhận câu hỏi người dùng, kết hợp ngữ cảnh hội thoại, áp dụng chỉ dẫn hệ thống, sau đó sinh phản hồi ngôn ngữ tự nhiên. So với chatbot luật, cách tiếp cận dựa trên mô hình ngôn ngữ lớn có ưu điểm là linh hoạt hơn, hiểu ngữ cảnh tốt hơn và giảm phụ thuộc vào kịch bản cố định.\\
+\indent Trong triển khai nghiệp vụ, chất lượng trả lời phụ thuộc mạnh vào thiết kế prompt gồm ba lớp: chỉ dẫn vai trò trợ lý, dữ liệu ngữ cảnh phiên trao đổi, và câu hỏi hiện tại của người dùng. Ngoài ra, cần kiểm soát tham số suy luận như mức sáng tạo và độ dài đầu ra để đảm bảo phản hồi ổn định, ngắn gọn, đúng mục đích. Để tăng độ tin cậy, hệ thống cần cơ chế hậu kiểm nội dung và chính sách fallback khi thiếu dữ liệu. Như vậy, hiệu quả chatbot không chỉ đến từ bản thân mô hình Gemini 2.5 Flash mà còn từ kiến trúc tích hợp, quản lý ngữ cảnh và kiểm soát đầu ra.
 
 \subsubsection{Nodemailer trong hệ thống gửi email thông báo và xác thực}
 

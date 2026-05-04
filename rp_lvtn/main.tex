@@ -20,7 +20,6 @@
 \usepackage{amsthm}
 \usepackage{multicol,longtable,amscd}
 \usepackage{diagbox}%Make diagonal lines in tables
-\usepackage{booktabs}
 \usepackage{alltt}
 \usepackage[framemethod=tikz]{mdframed}% For highlighting paragraph backgrounds
 \usepackage{caption,subcaption}
@@ -28,10 +27,8 @@
 \usepackage{lastpage}
 \usepackage[lined,boxed,commentsnumbered]{algorithm2e}
 \usepackage{enumerate}
-\usepackage{enumitem}
 \usepackage{color}
 \usepackage{graphicx}							% Standard graphics package
-\usepackage{array}
 \usepackage{tabularx, caption}
 \usepackage{multirow}
 \usepackage{multicol}
@@ -39,18 +36,25 @@
 \usepackage{graphics}
 \usepackage{subcaption}
 \captionsetup[subfigure]{justification=centering} % caption mỗi subfigure căn giữa
-\usepackage{geometry}
 \usepackage{setspace}
 \setstretch{1.5} % --- Tăng khoảng cách dòng lên 1.2 lần
 \usepackage{epsfig}
 \usepackage{tikz}
+
+\usepackage[T5]{fontenc}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{parskip}
 
 
 \usetikzlibrary{arrows,snakes,backgrounds,calc}
 
 \hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true} 
 \usepackage{listings}
-\usepackage{xcolor}
 
 %\usepackage{pstcol} 								% PSTricks with the standard color package
 
@@ -273,6 +277,9 @@ morekeywords={}
 \newpage
 
 \input{Contents/PhanTich_ThietKeHeThong}
+\newpage
+
+\input{Contents/TrienKhai.tex}
 \newpage
 \input{Contents/HienThuc}
 \newpage

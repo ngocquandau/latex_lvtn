@@ -179,8 +179,6 @@ INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\pict2e\p2e-pdftex.
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\pict2e\p2e-pdftex.def
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\tools\calc.sty
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\base\alltt.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\base\alltt.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\mdframed\mdframed.sty
@@ -327,12 +325,17 @@ INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\relsize\relsize.st
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\relsize\relsize.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\tools\enumerate.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\tools\enumerate.sty
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5ptm.fd
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5ptm.fd
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5ptm.fd
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\urwvn\utmr8v.tfm
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
@@ -340,8 +343,14 @@ INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\generic\iftex\ifvtex.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\setspace\setspace.sty
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\titlesec\titlesec.sty
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\titlesec\titlesec.sty
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\parskip\parskip.sty
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\parskip\parskip.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryarrows.code.tex
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\generic\pgf\frontendlayer\tikz\libraries\tikzlibraryarrows.code.tex
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\generic\pgf\libraries\pgflibraryarrows.code.tex
@@ -387,10 +396,6 @@ INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang2.
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang3.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang3.sty
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang3.sty
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5ptm.fd
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5ptm.fd
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5ptm.fd
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\urwvn\utmr8v.tfm
 INPUT .\main.aux
 INPUT .\main.aux
 INPUT main.aux
@@ -496,6 +501,10 @@ INPUT .\Images\hcmut.png
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\urwvn\utmr8v.tfm
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\urwvn\utmb8v.tfm
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\urwvn\utmr8v.tfm
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 OUTPUT main.toc
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -524,19 +533,8 @@ INPUT .\Contents\GioiThieu.tex
 INPUT Contents\GioiThieu.tex
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\urwvn\utmr8v.tfm
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\urwvn\utmb8v.tfm
-INPUT .\Images\KhaoSat.png
-INPUT .\Images\KhaoSat.png
-INPUT .\Images\KhaoSat.png
-INPUT .\Images\KhaoSat.png
-INPUT .\Images\KhaoSat.png
-INPUT .\Images\KhaoSat.png
-INPUT .\Images\KhaoSat.png
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\urwvn\utmr8v.tfm
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\urwvn\utmb8v.tfm
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -591,6 +589,10 @@ INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmtt.fd
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmtt.fd
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\vntex\t5cmtt.fd
@@ -610,17 +612,17 @@ INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\react.png
-INPUT .\Images\react.png
-INPUT .\Images\react.png
-INPUT .\Images\react.png
-INPUT .\Images\react.png
-INPUT .\Images\react.png
-INPUT .\Images\react.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
+INPUT .\Images\react.png
+INPUT .\Images\react.png
+INPUT .\Images\react.png
+INPUT .\Images\react.png
+INPUT .\Images\react.png
+INPUT .\Images\react.png
+INPUT .\Images\react.png
 INPUT .\Images\nodejs.png
 INPUT .\Images\nodejs.png
 INPUT .\Images\nodejs.png
@@ -694,6 +696,17 @@ INPUT .\Images\github-actions.png
 INPUT .\Images\github-actions.png
 INPUT .\Images\github-actions.png
 INPUT .\Images\github-actions.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\Gemini 2.5 Flash.png
+INPUT .\Images\Gemini 2.5 Flash.png
+INPUT .\Images\Gemini 2.5 Flash.png
+INPUT .\Images\Gemini 2.5 Flash.png
+INPUT .\Images\Gemini 2.5 Flash.png
+INPUT .\Images\Gemini 2.5 Flash.png
+INPUT .\Images\Gemini 2.5 Flash.png
 INPUT .\Images\Nodemailer.png
 INPUT .\Images\Nodemailer.png
 INPUT .\Images\Nodemailer.png
@@ -742,22 +755,6 @@ INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Contents\MoHinhHoaHeThong.tex
-INPUT .\Contents\MoHinhHoaHeThong.tex
-INPUT .\Contents\MoHinhHoaHeThong.tex
-INPUT .\Contents\MoHinhHoaHeThong.tex
-INPUT Contents\MoHinhHoaHeThong.tex
-INPUT .\Images\User_UseCaseDiagram.png
-INPUT .\Images\User_UseCaseDiagram.png
-INPUT .\Images\User_UseCaseDiagram.png
-INPUT .\Images\User_UseCaseDiagram.png
-INPUT .\Images\User_UseCaseDiagram.png
-INPUT .\Images\User_UseCaseDiagram.png
-INPUT .\Images\User_UseCaseDiagram.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -770,6 +767,53 @@ INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\symbol\psyr.tfm
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT C:\Users\Lenovo\AppData\Local\MiKTeX\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7m.vf
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\psyro.tfm
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Contents\MoHinhHoaHeThong.tex
+INPUT .\Contents\MoHinhHoaHeThong.tex
+INPUT .\Contents\MoHinhHoaHeThong.tex
+INPUT .\Contents\MoHinhHoaHeThong.tex
+INPUT Contents\MoHinhHoaHeThong.tex
+INPUT .\Images\User_UseCaseDiagram.drawio.png
+INPUT .\Images\User_UseCaseDiagram.drawio.png
+INPUT .\Images\User_UseCaseDiagram.drawio.png
+INPUT .\Images\User_UseCaseDiagram.drawio.png
+INPUT .\Images\User_UseCaseDiagram.drawio.png
+INPUT .\Images\User_UseCaseDiagram.drawio.png
+INPUT .\Images\User_UseCaseDiagram.drawio.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -805,46 +849,62 @@ INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\Usecase_Admin.jpg
-INPUT .\Images\Usecase_Admin.jpg
-INPUT .\Images\Usecase_Admin.jpg
-INPUT .\Images\Usecase_Admin.jpg
-INPUT .\Images\Usecase_Admin.jpg
-INPUT .\Images\Usecase_Admin.jpg
-INPUT .\Images\Usecase_Admin.jpg
+INPUT .\Images\Admin_UseCaseDiagram.png
+INPUT .\Images\Admin_UseCaseDiagram.png
+INPUT .\Images\Admin_UseCaseDiagram.png
+INPUT .\Images\Admin_UseCaseDiagram.png
+INPUT .\Images\Admin_UseCaseDiagram.png
+INPUT .\Images\Admin_UseCaseDiagram.png
+INPUT .\Images\Admin_UseCaseDiagram.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\DangKy_ActivityDiagram.png
-INPUT .\Images\DangKy_ActivityDiagram.png
-INPUT .\Images\DangKy_ActivityDiagram.png
-INPUT .\Images\DangKy_ActivityDiagram.png
-INPUT .\Images\DangKy_ActivityDiagram.png
-INPUT .\Images\DangKy_ActivityDiagram.png
-INPUT .\Images\DangKy_ActivityDiagram.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\DangNhap_ActivityDiagram.png
-INPUT .\Images\DangNhap_ActivityDiagram.png
-INPUT .\Images\DangNhap_ActivityDiagram.png
-INPUT .\Images\DangNhap_ActivityDiagram.png
-INPUT .\Images\DangNhap_ActivityDiagram.png
-INPUT .\Images\DangNhap_ActivityDiagram.png
-INPUT .\Images\DangNhap_ActivityDiagram.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\MuaVe_ActivityDiagram.png
-INPUT .\Images\MuaVe_ActivityDiagram.png
-INPUT .\Images\MuaVe_ActivityDiagram.png
-INPUT .\Images\MuaVe_ActivityDiagram.png
-INPUT .\Images\MuaVe_ActivityDiagram.png
-INPUT .\Images\MuaVe_ActivityDiagram.png
-INPUT .\Images\MuaVe_ActivityDiagram.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\Activity_Diagram_User\User_BuyTicket.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_BuyTicket.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_BuyTicket.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_BuyTicket.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_BuyTicket.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_BuyTicket.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_BuyTicket.drawio.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\Activity_Diagram_User\User_ChatBoxAI.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_ChatBoxAI.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_ChatBoxAI.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_ChatBoxAI.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_ChatBoxAI.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_ChatBoxAI.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_ChatBoxAI.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_Feelback.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_Feelback.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_Feelback.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_Feelback.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_Feelback.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_Feelback.drawio.png
+INPUT .\Images\Activity_Diagram_User\User_Feelback.drawio.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -867,17 +927,17 @@ INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Xem danh sách sự kiện.d
 INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Xem danh sách sự kiện.drawio.png
 INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Xem danh sách sự kiện.drawio.png
 INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Xem danh sách sự kiện.drawio.png
+INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
+INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
+INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
+INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
+INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
+INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
+INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
-INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
-INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
-INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
-INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
-INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
-INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Tìm kiếm sự kiện.drawio.png
 INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-xem chi tiết thông tin sự kiện.drawio.png
 INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-xem chi tiết thông tin sự kiện.drawio.png
 INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-xem chi tiết thông tin sự kiện.drawio.png
@@ -892,10 +952,6 @@ INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Xem_xuất thông tin khách
 INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Xem_xuất thông tin khách hàng đã mua vé 1 sự kiện cụ thể.drawio.png
 INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Xem_xuất thông tin khách hàng đã mua vé 1 sự kiện cụ thể.drawio.png
 INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Xem_xuất thông tin khách hàng đã mua vé 1 sự kiện cụ thể.drawio.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
 INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Đổi mật khẩu.drawio.png
 INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Đổi mật khẩu.drawio.png
 INPUT .\Images\Activity_Diagram_BTC\Ativity Diagram-Đổi mật khẩu.drawio.png
@@ -933,57 +989,57 @@ INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\QuanLySuKien_ActivityDiagram.png
-INPUT .\Images\QuanLySuKien_ActivityDiagram.png
-INPUT .\Images\QuanLySuKien_ActivityDiagram.png
-INPUT .\Images\QuanLySuKien_ActivityDiagram.png
-INPUT .\Images\QuanLySuKien_ActivityDiagram.png
-INPUT .\Images\QuanLySuKien_ActivityDiagram.png
-INPUT .\Images\QuanLySuKien_ActivityDiagram.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý sự kiện.drawio.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý sự kiện.drawio.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý sự kiện.drawio.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý sự kiện.drawio.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý sự kiện.drawio.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý sự kiện.drawio.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý sự kiện.drawio.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\QuanLyToChuc_ActivityDiagram.png
-INPUT .\Images\QuanLyToChuc_ActivityDiagram.png
-INPUT .\Images\QuanLyToChuc_ActivityDiagram.png
-INPUT .\Images\QuanLyToChuc_ActivityDiagram.png
-INPUT .\Images\QuanLyToChuc_ActivityDiagram.png
-INPUT .\Images\QuanLyToChuc_ActivityDiagram.png
-INPUT .\Images\QuanLyToChuc_ActivityDiagram.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý đơn vị tổ chức.drawio.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý đơn vị tổ chức.drawio.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý đơn vị tổ chức.drawio.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý đơn vị tổ chức.drawio.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý đơn vị tổ chức.drawio.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý đơn vị tổ chức.drawio.png
+INPUT .\Images\Activity_Diagram_Admin\DACN - Activity Diagram - Admin-Quản lý đơn vị tổ chức.drawio.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\seq_muave.png
-INPUT .\Images\seq_muave.png
-INPUT .\Images\seq_muave.png
-INPUT .\Images\seq_muave.png
-INPUT .\Images\seq_muave.png
-INPUT .\Images\seq_muave.png
-INPUT .\Images\seq_muave.png
+INPUT .\Images\seq_muave.drawio.png
+INPUT .\Images\seq_muave.drawio.png
+INPUT .\Images\seq_muave.drawio.png
+INPUT .\Images\seq_muave.drawio.png
+INPUT .\Images\seq_muave.drawio.png
+INPUT .\Images\seq_muave.drawio.png
+INPUT .\Images\seq_muave.drawio.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\seq_goiy.png
-INPUT .\Images\seq_goiy.png
-INPUT .\Images\seq_goiy.png
-INPUT .\Images\seq_goiy.png
-INPUT .\Images\seq_goiy.png
-INPUT .\Images\seq_goiy.png
-INPUT .\Images\seq_goiy.png
+INPUT .\Images\Sequence diagram-seq_goiy.drawio.png
+INPUT .\Images\Sequence diagram-seq_goiy.drawio.png
+INPUT .\Images\Sequence diagram-seq_goiy.drawio.png
+INPUT .\Images\Sequence diagram-seq_goiy.drawio.png
+INPUT .\Images\Sequence diagram-seq_goiy.drawio.png
+INPUT .\Images\Sequence diagram-seq_goiy.drawio.png
+INPUT .\Images\Sequence diagram-seq_goiy.drawio.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\seq_chat.png
-INPUT .\Images\seq_chat.png
-INPUT .\Images\seq_chat.png
-INPUT .\Images\seq_chat.png
-INPUT .\Images\seq_chat.png
-INPUT .\Images\seq_chat.png
-INPUT .\Images\seq_chat.png
+INPUT .\Images\seq chatbot.drawio.png
+INPUT .\Images\seq chatbot.drawio.png
+INPUT .\Images\seq chatbot.drawio.png
+INPUT .\Images\seq chatbot.drawio.png
+INPUT .\Images\seq chatbot.drawio.png
+INPUT .\Images\seq chatbot.drawio.png
+INPUT .\Images\seq chatbot.drawio.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -997,20 +1053,32 @@ INPUT .\Contents\PhanTich_ThietKeHeThong.tex
 INPUT .\Contents\PhanTich_ThietKeHeThong.tex
 INPUT .\Contents\PhanTich_ThietKeHeThong.tex
 INPUT Contents\PhanTich_ThietKeHeThong.tex
-INPUT .\Images\KienTrucHeThong.png
-INPUT .\Images\KienTrucHeThong.png
-INPUT .\Images\KienTrucHeThong.png
-INPUT .\Images\KienTrucHeThong.png
-INPUT .\Images\KienTrucHeThong.png
-INPUT .\Images\KienTrucHeThong.png
-INPUT .\Images\KienTrucHeThong.png
-INPUT .\Images\schema.png
-INPUT .\Images\schema.png
-INPUT .\Images\schema.png
-INPUT .\Images\schema.png
-INPUT .\Images\schema.png
-INPUT .\Images\schema.png
-INPUT .\Images\schema.png
+INPUT .\Images\KTHT.png
+INPUT .\Images\KTHT.png
+INPUT .\Images\KTHT.png
+INPUT .\Images\KTHT.png
+INPUT .\Images\KTHT.png
+INPUT .\Images\KTHT.png
+INPUT .\Images\KTHT.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\Document Schema Diagram.png
+INPUT .\Images\Document Schema Diagram.png
+INPUT .\Images\Document Schema Diagram.png
+INPUT .\Images\Document Schema Diagram.png
+INPUT .\Images\Document Schema Diagram.png
+INPUT .\Images\Document Schema Diagram.png
+INPUT .\Images\Document Schema Diagram.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -1034,10 +1102,6 @@ INPUT .\Images\Quy trình xử lý hệ thống.png
 INPUT .\Images\Quy trình xử lý hệ thống.png
 INPUT .\Images\Quy trình xử lý hệ thống.png
 INPUT .\Images\Quy trình xử lý hệ thống.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\zptmcm7t.tfm
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\zptmcm7t.tfm
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\zptmcm7t.tfm
@@ -1064,6 +1128,10 @@ INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sy
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\latex-fonts\lasy9.tfm
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\public\latex-fonts\lasy5.tfm
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1ptm.fd
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1ptm.fd
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1ptm.fd
@@ -1074,21 +1142,14 @@ INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\ptmr8c.vf
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\base\8r.enc
-INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
-INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
-INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
-INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
-INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
-INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
-INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7m.vf
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\psyro.tfm
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\times\ptmri8r.tfm
 INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\times\zptmcm7t.vf
+INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
+INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
+INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
+INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
+INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
+INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
+INPUT .\Images\Các đặc trưng quan trọng mô hình gợi ý.png
 INPUT .\Images\Confusion matrix.png
 INPUT .\Images\Confusion matrix.png
 INPUT .\Images\Confusion matrix.png
@@ -1096,6 +1157,25 @@ INPUT .\Images\Confusion matrix.png
 INPUT .\Images\Confusion matrix.png
 INPUT .\Images\Confusion matrix.png
 INPUT .\Images\Confusion matrix.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Contents\TrienKhai.tex
+INPUT .\Contents\TrienKhai.tex
+INPUT Contents\TrienKhai.tex
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -1156,6 +1236,10 @@ INPUT .\Contents\UI\USER\AISuyNghi.png
 INPUT .\Contents\UI\USER\AISuyNghi.png
 INPUT .\Contents\UI\USER\AISuyNghi.png
 INPUT .\Contents\UI\USER\AISuyNghi.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Contents\UI\USER\AIPhanHoi.png
 INPUT .\Contents\UI\USER\AIPhanHoi.png
 INPUT .\Contents\UI\USER\AIPhanHoi.png
@@ -1163,10 +1247,6 @@ INPUT .\Contents\UI\USER\AIPhanHoi.png
 INPUT .\Contents\UI\USER\AIPhanHoi.png
 INPUT .\Contents\UI\USER\AIPhanHoi.png
 INPUT .\Contents\UI\USER\AIPhanHoi.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
 INPUT .\Contents\UI\USER\Search without result.png
 INPUT .\Contents\UI\USER\Search without result.png
 INPUT .\Contents\UI\USER\Search without result.png
@@ -1174,6 +1254,10 @@ INPUT .\Contents\UI\USER\Search without result.png
 INPUT .\Contents\UI\USER\Search without result.png
 INPUT .\Contents\UI\USER\Search without result.png
 INPUT .\Contents\UI\USER\Search without result.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Contents\UI\USER\Search with result.png
 INPUT .\Contents\UI\USER\Search with result.png
 INPUT .\Contents\UI\USER\Search with result.png
@@ -1181,10 +1265,6 @@ INPUT .\Contents\UI\USER\Search with result.png
 INPUT .\Contents\UI\USER\Search with result.png
 INPUT .\Contents\UI\USER\Search with result.png
 INPUT .\Contents\UI\USER\Search with result.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
 INPUT .\Contents\UI\USER\ViewAllEvent.png
 INPUT .\Contents\UI\USER\ViewAllEvent.png
 INPUT .\Contents\UI\USER\ViewAllEvent.png
@@ -1192,6 +1272,10 @@ INPUT .\Contents\UI\USER\ViewAllEvent.png
 INPUT .\Contents\UI\USER\ViewAllEvent.png
 INPUT .\Contents\UI\USER\ViewAllEvent.png
 INPUT .\Contents\UI\USER\ViewAllEvent.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Contents\UI\USER\ĐN.png
 INPUT .\Contents\UI\USER\ĐN.png
 INPUT .\Contents\UI\USER\ĐN.png
@@ -1199,10 +1283,6 @@ INPUT .\Contents\UI\USER\ĐN.png
 INPUT .\Contents\UI\USER\ĐN.png
 INPUT .\Contents\UI\USER\ĐN.png
 INPUT .\Contents\UI\USER\ĐN.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
-INPUT .\Images\hcmut.png
 INPUT .\Contents\UI\USER\Đăng ký.png
 INPUT .\Contents\UI\USER\Đăng ký.png
 INPUT .\Contents\UI\USER\Đăng ký.png
@@ -1210,17 +1290,17 @@ INPUT .\Contents\UI\USER\Đăng ký.png
 INPUT .\Contents\UI\USER\Đăng ký.png
 INPUT .\Contents\UI\USER\Đăng ký.png
 INPUT .\Contents\UI\USER\Đăng ký.png
-INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
-INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
-INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
-INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
-INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
-INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
-INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
+INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
+INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
+INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
+INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
+INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
+INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
+INPUT .\Contents\UI\USER\Thiếu MK và Email ĐN.png
 INPUT .\Contents\UI\USER\invalid email.png
 INPUT .\Contents\UI\USER\invalid email.png
 INPUT .\Contents\UI\USER\invalid email.png
@@ -1235,17 +1315,17 @@ INPUT .\Contents\UI\USER\Sai MK.png
 INPUT .\Contents\UI\USER\Sai MK.png
 INPUT .\Contents\UI\USER\Sai MK.png
 INPUT .\Contents\UI\USER\Sai MK.png
-INPUT .\Contents\UI\USER\Thieu TT ĐK.png
-INPUT .\Contents\UI\USER\Thieu TT ĐK.png
-INPUT .\Contents\UI\USER\Thieu TT ĐK.png
-INPUT .\Contents\UI\USER\Thieu TT ĐK.png
-INPUT .\Contents\UI\USER\Thieu TT ĐK.png
-INPUT .\Contents\UI\USER\Thieu TT ĐK.png
-INPUT .\Contents\UI\USER\Thieu TT ĐK.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
+INPUT .\Contents\UI\USER\Thieu TT ĐK.png
+INPUT .\Contents\UI\USER\Thieu TT ĐK.png
+INPUT .\Contents\UI\USER\Thieu TT ĐK.png
+INPUT .\Contents\UI\USER\Thieu TT ĐK.png
+INPUT .\Contents\UI\USER\Thieu TT ĐK.png
+INPUT .\Contents\UI\USER\Thieu TT ĐK.png
+INPUT .\Contents\UI\USER\Thieu TT ĐK.png
 INPUT .\Contents\UI\USER\invalid email ĐK.png
 INPUT .\Contents\UI\USER\invalid email ĐK.png
 INPUT .\Contents\UI\USER\invalid email ĐK.png
@@ -1260,17 +1340,17 @@ INPUT .\Contents\UI\USER\Sai XT MK ĐK.png
 INPUT .\Contents\UI\USER\Sai XT MK ĐK.png
 INPUT .\Contents\UI\USER\Sai XT MK ĐK.png
 INPUT .\Contents\UI\USER\Sai XT MK ĐK.png
-INPUT .\Contents\UI\USER\Đăng nhập thành công.png
-INPUT .\Contents\UI\USER\Đăng nhập thành công.png
-INPUT .\Contents\UI\USER\Đăng nhập thành công.png
-INPUT .\Contents\UI\USER\Đăng nhập thành công.png
-INPUT .\Contents\UI\USER\Đăng nhập thành công.png
-INPUT .\Contents\UI\USER\Đăng nhập thành công.png
-INPUT .\Contents\UI\USER\Đăng nhập thành công.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
+INPUT .\Contents\UI\USER\Đăng nhập thành công.png
+INPUT .\Contents\UI\USER\Đăng nhập thành công.png
+INPUT .\Contents\UI\USER\Đăng nhập thành công.png
+INPUT .\Contents\UI\USER\Đăng nhập thành công.png
+INPUT .\Contents\UI\USER\Đăng nhập thành công.png
+INPUT .\Contents\UI\USER\Đăng nhập thành công.png
+INPUT .\Contents\UI\USER\Đăng nhập thành công.png
 INPUT .\Contents\UI\USER\ĐK TC.png
 INPUT .\Contents\UI\USER\ĐK TC.png
 INPUT .\Contents\UI\USER\ĐK TC.png
@@ -1613,17 +1693,17 @@ INPUT .\Contents\UI\QTV\Giao diện bảng vé hiện có.png
 INPUT .\Contents\UI\QTV\Giao diện bảng vé hiện có.png
 INPUT .\Contents\UI\QTV\Giao diện bảng vé hiện có.png
 INPUT .\Contents\UI\QTV\Giao diện bảng vé hiện có.png
-INPUT .\Contents\UI\QTV\Quản lý TT KH.png
-INPUT .\Contents\UI\QTV\Quản lý TT KH.png
-INPUT .\Contents\UI\QTV\Quản lý TT KH.png
-INPUT .\Contents\UI\QTV\Quản lý TT KH.png
-INPUT .\Contents\UI\QTV\Quản lý TT KH.png
-INPUT .\Contents\UI\QTV\Quản lý TT KH.png
-INPUT .\Contents\UI\QTV\Quản lý TT KH.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
+INPUT .\Contents\UI\QTV\Quản lý TT KH.png
+INPUT .\Contents\UI\QTV\Quản lý TT KH.png
+INPUT .\Contents\UI\QTV\Quản lý TT KH.png
+INPUT .\Contents\UI\QTV\Quản lý TT KH.png
+INPUT .\Contents\UI\QTV\Quản lý TT KH.png
+INPUT .\Contents\UI\QTV\Quản lý TT KH.png
+INPUT .\Contents\UI\QTV\Quản lý TT KH.png
 INPUT .\Contents\UI\QTV\search user.png
 INPUT .\Contents\UI\QTV\search user.png
 INPUT .\Contents\UI\QTV\search user.png
@@ -1665,17 +1745,19 @@ INPUT .\Contents\TongKet.tex
 INPUT .\Contents\TongKet.tex
 INPUT .\Contents\TongKet.tex
 INPUT Contents\TongKet.tex
+INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\urwvn\utmri8v.tfm
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
-INPUT .\Images\gantt4.jpg
-INPUT .\Images\gantt4.jpg
-INPUT .\Images\gantt4.jpg
-INPUT .\Images\gantt4.jpg
-INPUT .\Images\gantt4.jpg
-INPUT .\Images\gantt4.jpg
-INPUT .\Images\gantt4.jpg
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
@@ -1689,7 +1771,10 @@ INPUT .\Outro\TaiLieuThamKhao.tex
 INPUT .\Outro\TaiLieuThamKhao.tex
 INPUT .\Outro\TaiLieuThamKhao.tex
 INPUT Outro\TaiLieuThamKhao.tex
-INPUT C:\Users\Lenovo\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\urwvn\utmri8v.tfm
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
+INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png
 INPUT .\Images\hcmut.png

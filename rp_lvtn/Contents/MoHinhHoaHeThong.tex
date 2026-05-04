@@ -4,200 +4,412 @@
 \subsection{Lược đồ Use-Case}
 
 
-\subsubsection{Use Case cho Người Dùng - OLD}
+\subsubsection{Use Case cho Người Dùng}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{Images/User_UseCaseDiagram.png}
+    \includegraphics[width=1\textwidth]{Images/User_UseCaseDiagram.drawio.png}
     \vspace{10pt}
     \caption{Use Case Diagram -- Người dùng}
     \label{fig:uc_user}
 \end{figure}
 
-\subsubsubsection{Xem, tìm kiếm và lọc thông tin sự kiện}
+% \subsubsubsection{Đăng ký}
+% \begin{table}[H]
+% \centering
+% \renewcommand{\arraystretch}{1.3}
+% \setlength{\tabcolsep}{8pt}
+% \begin{tabularx}{\textwidth}{|l|X|}
+% \hline
+% \textbf{Tên Use Case} & Đăng ký \\ \hline
+% \textbf{Tác nhân} & Người dùng \\ \hline
+% \textbf{Mục đích} & Cho phép người dùng tạo tài khoản mới trên hệ thống. \\ \hline
+% \textbf{Điều kiện tiên quyết} & Người dùng chưa có tài khoản trên hệ thống. \\ \hline
+% \textbf{Điều kiện hậu quyết} & Người dùng được đăng ký thành công, nhận được JWT token và được chuyển hướng đến trang HomePage. \\ \hline
+% \textbf{Mô tả ngắn gọn} & Người dùng nhập thông tin cần thiết để đăng ký tài khoản mới trên hệ thống. \\ \hline
+% \textbf{Quy trình bình thường} &
+% 1. Người dùng truy cập form đăng ký. \newline
+% 2. Người dùng nhập thông tin cần thiết. \newline
+% 3. Hệ thống xác thực thông tin đăng ký. \newline
+% 4. Nếu hợp lệ, hệ thống tạo tài khoản mới, tạo JWT token, lưu vào localStorage/session và ghi log hoạt động đăng ký. \newline
+% 5. Hệ thống chuyển hướng người dùng đến trang HomePage. \\ \hline
+% \textbf{Quy trình thay thế} &
+% 3a. Thông tin đăng ký không hợp lệ $\rightarrow$ Hệ thống thông báo lỗi và yêu cầu nhập lại. \\ \hline
+% \textbf{Điều kiện lỗi} &
+% - Trường hợp lỗi 1: Lỗi hệ thống khi xử lý đăng ký $\rightarrow$ Hệ thống ghi log lỗi và thông báo yêu cầu đăng ký lại. \newline
+% - Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép đăng ký nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
+% \end{tabularx}
+% \vspace{15pt}
+% \caption{Đặc tả Use Case -- Đăng ký (Người dùng) }
+% \label{tab:uc_register_user}
+% \end{table}
+
+% \subsubsubsection{Đăng nhập}
+% \begin{table}[H]
+% \centering
+% \renewcommand{\arraystretch}{1.3}
+% \setlength{\tabcolsep}{8pt}
+% \begin{tabularx}{\textwidth}{|l|X|}
+% \hline
+% \textbf{Tên Use Case} & Đăng nhập \\ \hline
+% \textbf{Tác nhân} & Người dùng \\ \hline
+% \textbf{Mục đích} & Cho phép người dùng đăng nhập vào hệ thống để truy cập các chức năng và thông tin liên quan đến sự kiện. \\ \hline
+% \textbf{Điều kiện tiên quyết} & Người dùng đã có tài khoản được đăng ký trên hệ thống. \\ \hline
+% \textbf{Điều kiện hậu quyết} & Người dùng được đăng nhập thành công, nhận được JWT token và được chuyển hướng đến trang chủ. \\ \hline
+% \textbf{Mô tả ngắn gọn} & Người dùng nhập email và mật khẩu để đăng nhập vào hệ thống. \\ \hline
+% \textbf{Quy trình bình thường} &
+% 1. Người dùng truy cập form đăng nhập. \newline
+% 2. Người dùng nhập email và mật khẩu. \newline
+% 3. Hệ thống xác thực thông tin đăng nhập. \newline
+% 4. Nếu hợp lệ, hệ thống tạo JWT token, lưu vào localStorage/session và ghi log hoạt động đăng nhập. \newline
+% 5. Hệ thống chuyển hướng người dùng đến trang HomePage. \\ \hline
+% \textbf{Quy trình thay thế} &
+% 3a. Thông tin đăng nhập không hợp lệ $\rightarrow$ Hệ thống thông báo lỗi và yêu cầu nhập lại. \\ \hline
+% \textbf{Điều kiện lỗi} &
+% - Trường hợp lỗi 1: Lỗi hệ thống khi xử lý đăng nhập $\rightarrow$ Hệ thống ghi log lỗi và thông báo yêu cầu đăng nhập lại. \newline
+% - Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép đăng nhập nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
+% \end{tabularx}
+% \vspace{15pt}
+% \caption{Đặc tả Use Case -- Đăng nhập (Người dùng) }
+% \label{tab:uc_login_user}
+% \end{table}
+
+\subsubsubsection{Quên mật khẩu}
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{8pt}
 \begin{tabularx}{\textwidth}{|l|X|}
 \hline
-\textbf{Tên Use Case} & Tìm kiếm và xem thông tin sự kiện \\ \hline
+\textbf{Tên Use Case} & Quên mật khẩu \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
-\textbf{Mục đích} & Giúp người dùng tìm sự kiện theo từ khóa, lọc theo các tiêu chí, xem thông tin chi tiết của sự kiện. \\ \hline
-\textbf{Tiền điều kiện} & Không có \\ \hline
-\textbf{Hậu điều kiện} & Chi tiết sự kiện phù hợp được hiển thị. \\ \hline
-\textbf{Mô tả ngắn gọn} & Người dùng nhập từ khóa và có thể áp dụng bộ lọc (Địa điểm, Ngày diễn ra sự kiện, Giá vé tối thiểu) để tìm kiếm sự kiện; hệ thống trả về kết quả phù hợp, người dùng chọn sự kiện quan tâm để xem chi tiết. \\ \hline
-\textbf{Luồng chính} &
-1. Người dùng nhập từ khóa vào thanh tìm kiếm trên trang chủ hoặc trang sự kiện. \newline
-2. Nếu áp dụng bộ lọc, người dùng có thể lọc theo các tiêu chí: \newline
-\hspace*{1em}a) Địa điểm: Thành phố hoặc tỉnh diễn ra sự kiện \newline
-\hspace*{1em}b) Ngày diễn ra sự kiện: Những sự kiện có ngày bắt đầu tổ chức nằm trong phạm vi ngày tháng được chọn \newline
-\hspace*{1em}d) Giá vé tối thiểu: Giá hạng vé thấp nhất của sự kiện \newline
-3. Hệ thống thực hiện truy vấn cơ sở dữ liệu, tìm kiếm sự kiện phù hợp. \newline
-4. Hệ thống hiển thị danh sách sự kiện (gồm Poster, Tên, Thời gian, Địa điểm, Giá tối thiểu) theo thứ tự liên quan. \newline
-5. Người dùng nhấp vào sự kiện để xem chi tiết. \newline
-6. Hệ thống hiển thị: Tên, Poster, địa điểm, ngày tổ chức, mô tả sự kiện, sơ đồ chỗ ngồi hoặc vị trí các hạng vé, giá và số lượng còn lại ứng với các hạng vé hoặc vị trí ghế ngồi, nút mua vé, đơn vị tổ chức (tên, mô tả) và nút chat với Ban tố chức. \newline
-7. Người dùng có thể nhấp “Mua ngay” hoặc "Chat vơi Ban tổ chức" để tiếp tục. \\ \hline
-\textbf{Luồng thay thế} &
-2a. Không tìm thấy kết quả: \newline
-\hspace*{1em}Hệ thống hiển thị “Không tìm thấy sự kiện” và gợi ý sự kiện phổ biến hoặc sắp diễn ra. \newline
-2b. Sự kiện không còn slot: \newline
-\hspace*{1em}Hệ thống hiển thị “Hết vé” và vô hiệu hóa nút mua. \\ \hline
-\textbf{Điều kiện lỗi} &
-\textbf{Trường hợp lỗi 1:} Truy vấn cơ sở dữ liệu thất bại — Hệ thống hiển thị danh sách sự kiện phổ biến được lưu trữ. \newline
-\textbf{Trường hợp lỗi 2:} Thời gian phản hồi quá 3 giây — Hệ thống thông báo “Vui lòng thử lại!”. \\ \hline
-\end{tabularx}
-\vspace{15pt}
-\caption{Đặc tả Use Case -- Xem, tìm kiếm và lọc thông tin sự kiện}
-\label{tab:uc_search_event}
-\end{table}
-
-\subsubsubsection{Truy cập chức năng yêu cầu xác thực}
-
-\begin{table}[H]
-\centering
-\renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
-\begin{tabularx}{\textwidth}{|l|X|}
-\hline
-\textbf{Tên Use Case} & Truy Cập Chức Năng Yêu Cầu Xác Thực \\ \hline
-\textbf{Tác nhân} & Người dùng \\ \hline
-\textbf{Mục đích} & Đảm bảo người dùng đã đăng nhập thành công để truy cập các chức năng cá nhân hóa và nhạy cảm, tránh truy cập trái phép. \\ \hline
-\textbf{Điều kiện tiên quyết} &
-Người dùng cố gắng thực hiện một trong các chức năng sau: \newline
-\hspace*{1em}- Mua vé. \newline
-\hspace*{1em}- Xem lịch sử mua vé \newline
-\hspace*{1em}- Chat với đơn vị tổ chức sự kiện hoặc quản trị viên. \\ \hline
-\textbf{Điều kiện hậu quyết} & Các chức năng được kích hoạt nếu đăng nhập thành công; nếu không, người dùng bị chuyển hướng đến trang đăng nhập. \\ \hline
-\textbf{Mô tả ngắn gọn} & Hệ thống kiểm tra trạng thái xác thực (JWT token hoặc session) trước khi cho phép truy cập các chức năng yêu cầu đăng nhập, bao gồm: mua vé, xem lịch sử mua vé và chat với đơn vị tổ chức sự kiện hoặc quản trị viên..\\ \hline
+\textbf{Mục đích} & Cho phép người dùng khôi phục mật khẩu khi quên để tiếp tục sử dụng hệ thống. \\ \hline
+\textbf{Điều kiện tiên quyết} & Người dùng có tài khoản đã đăng ký trên hệ thống và có quyền truy cập email đã đăng ký. \\ \hline
+\textbf{Điều kiện hậu quyết} & Người dùng nhận được email cấp mật khẩu tạm thời, có thể đặt lại mật khẩu mới khi đăng nhập thành công. \\ \hline
+\textbf{Mô tả ngắn gọn} & Người dùng truy cập form đăng nhập, chọn “Quên mật khẩu”, nhập email để nhận hướng dẫn đặt lại mật khẩu. \\ \hline
 \textbf{Quy trình bình thường} &
-1. Người dùng cố gắng truy cập một chức năng yêu cầu đăng nhập (ví dụ: nhấp “Mua vé” hoặc “Vé của tôi”). \newline
-2. Hệ thống kiểm tra trạng thái xác thực (JWT token hợp lệ trong localStorage/session). \newline
-3. Nếu đã đăng nhập thành công, hệ thống cho phép tiếp tục thực hiện chức năng tương ứng (ví dụ: chuyển đến trang mua vé hoặc hiển thị lịch sử). \newline
-4. Hệ thống ghi log truy cập để theo dõi hoạt động. \\ \hline
+1. Người dùng truy cập form đăng nhập và chọn “Quên mật khẩu”. \newline
+2. Hệ thống hiển thị form yêu cầu nhập email đã đăng ký. \newline
+3. Người dùng nhập email và gửi yêu cầu. \newline
+4. Hệ thống xác thực email tồn tại trong cơ sở dữ liệu. \newline
+5. Nếu email hợp lệ, hệ thống tạo token khôi phục mật khẩu và gửi email có chứa mật khẩu mới tạm thời và hướng dẫn. \newline
+6. Người dùng nhận email. \newline
+7. Người dùng sử dụng mật khẩu tạm thời để đăng nhập thành công. \newline
+8. Hệ thống sẽ điều hướng người dùng đến mục đặt lại mật khẩu mới. \newline
+9. Người dùng nhập mật khẩu mới và xác nhận, sau đó gửi yêu cầu. \newline
+10. Hệ thống xác thực token và cập nhật mật khẩu mới vào cơ sở dữ liệu. \newline
+11. Hệ thống ghi log hoạt động khôi phục mật khẩu. \newline
+12. Hệ thống thông báo thành công \\ \hline
 \textbf{Quy trình thay thế} &
-2a. Chưa đăng nhập hoặc token hết hạn: \newline
-\hspace*{1em}- Hệ thống hiển thị modal/popup yêu cầu đăng nhập (với liên kết đến trang đăng nhập). \newline
-\hspace*{1em}- Người dùng hoàn tất đăng nhập \newline
-\hspace*{1em}- Sau khi đăng nhập thành công, hệ thống tự động chuyển hướng trở lại chức năng ban đầu. \\ \hline
+4a. Email không tồn tại $\rightarrow$ Hệ thống thông báo lỗi và yêu cầu nhập lại. \newline
+5b. Lỗi gửi email $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Failed to send recovery email, please try again later.” \newline
+8a. Token không hợp lệ hoặc hết hạn $\rightarrow$ Hệ thống thông báo “Invalid or expired token” và yêu cầu bắt đầu lại quy trình quên mật khẩu. \\ \hline
 \textbf{Điều kiện lỗi} &
-- Trường hợp lỗi 1: Token không hợp lệ hoặc bị giả mạo $\rightarrow$ Hệ thống vô hiệu hóa token, ghi log bảo mật và buộc đăng nhập lại. \newline
-- Trường hợp lỗi 2: Lỗi kiểm tra xác thực (kết nối backend thất bại) $\rightarrow$ Hệ thống hiển thị “Lỗi hệ thống, vui lòng thử lại” và ghi log để kiểm tra. \\ \hline
+- Trường hợp lỗi 1: Lỗi hệ thống khi xử lý khôi phục mật khẩu $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Password recovery failed, please try again.” \newline
+- Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép khôi phục mật khẩu nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
 \end{tabularx}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Truy Cập Chức Năng Yêu Cầu Xác Thực}
-\label{tab:uc_auth_access}
+\caption{Đặc tả Use Case -- Quên mật khẩu (Người dùng) }
+\label{tab:uc_forgot_password_user}
 \end{table}
 
 \subsubsubsection{Mua vé}
-
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{8pt}
 \begin{tabularx}{\textwidth}{|l|X|}
 \hline
-\textbf{Tên Use Case} & Mua vé sự kiện (bao gồm cảnh báo độ tuổi và áp dụng voucher/mã giảm giá) \\ \hline
+\textbf{Tên Use Case} & Mua vé \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
-\textbf{Mục đích} & Cho phép người dùng mua vé sự kiện an toàn qua MoMo, đồng thời áp dụng mã giảm giá hay voucher(nếu có) và nhận cảnh báo giới hạn độ tuổi trước khi thanh toán. \\ \hline
-\textbf{Điều kiện tiên quyết} &
-- Người dùng đã đăng nhập thành công. \newline
-- Sự kiện tồn tại, còn slot vé khả dụng. \\ \hline
-\textbf{Điều kiện hậu quyết} &
-- Thanh toán hoàn tất, vé được cấp thành công. \newline
-- Lịch sử mua vé được cập nhật. \\ \hline
-\textbf{Mô tả ngắn gọn} &
-Người dùng chọn hạng vé, nhận cảnh báo độ tuổi (nếu có), áp dụng voucher hoặc mã giảm giá nếu có và thanh toán qua MoMo QR. \\ \hline
+\textbf{Mục đích} & Cho phép người dùng mua vé cho các sự kiện mà mình quan tâm. \\ \hline
+\textbf{Điều kiện tiên quyết} & Người dùng đã đăng nhập vào hệ thống và đã chọn một sự kiện cụ thể để mua vé. \\ \hline
+\textbf{Điều kiện hậu quyết} & Người dùng hoàn tất quá trình mua vé, nhận được email xác nhận và vé điện tử. \\ \hline
+\textbf{Mô tả ngắn gọn} & Người dùng chọn sự kiện, chọn loại vé, quét QR thanh toán và hoàn tất giao dịch để mua vé. \\ \hline
 \textbf{Quy trình bình thường} &
-1. Người dùng nhấp “Mua vé” từ trang chi tiết sự kiện. \newline
-2. Hệ thống kiểm tra trạng thái đăng nhập và slot vé khả dụng. \newline
-3. Người dùng chọn hạng vé và số lượng từ sơ đồ ghế hoặc dropdown. \newline
-4. Hệ thống kiểm tra nhãn độ tuổi của sự kiện: \newline
-\hspace*{1em}- Nếu có giới hạn (P, K, T13, v.v.), hiển thị cảnh báo. \newline
-\hspace*{1em}- Người dùng xác nhận tiếp tục hoặc quay lại. \newline
-5. Người dùng nhập mã voucher hoặc mã giảm giá (nếu có). \newline
-6. Hệ thống xác thực mã voucher hoặc mã giảm giá (kiểm tra tồn tại, còn hiệu lực, áp dụng cho giao dịch). \newline
-7. Nếu hợp lệ, hệ thống cập nhật tổng giá vé sau khi giảm. \newline
-8. Hệ thống tạo yêu cầu thanh toán và hiển thị mã QR MoMo. \newline
-9. Người dùng quét mã QR và hoàn tất thanh toán qua hệ thống MoMo. \newline
-10. Hệ thống nhận callback từ MoMo, xác nhận thanh toán, cấp vé (mã QR hoặc ID vé). \newline
-11. Hệ thống lưu giao dịch vào lịch sử mua và hiển thị thông báo thành công. \\ \hline
+1. Người dùng nhấn vào nút mua vé ứng với loại vé mong muốn tại bảng giá vé của trang thông tin chi tiết của sự kiện đã chọn. \newline
+2. Hệ thống hiển thị trang xác nhận thanh toán. \newline
+3. Hệ thống hiển thị cảnh báo độ tuổi nếu sự kiện có yêu cầu độ tuổi tối thiểu. \newline
+4. Người dùng kiểm tra lại thông tin vé, nhập mã giảm giá nếu có và có thể điều chỉnh số lượng vé (miễn là còn đủ số lượng) và chọn ghế với trường hợp là mua vé có chỗ ngồi cố định. Sau đó xác nhận thanh toán.
+5. Hệ thống tạo đơn hàng, ghi log hoạt động mua vé và điều hướng người dùng đến trang tiến hành thanh toán. \newline
+6. Người dùng thực hiện thanh toán bằng cách quét mã QR được hệ thống tạo ra. \newline
+7. Hệ thống xác nhận thanh toán thành công, cập nhật số lượng vé đã bán và vé còn lại của sự kiện. \newline
+8. Vé của người dùng được lưu vào hệ thống và người dùng được điều hướng đến trang lịch sử mua vé để xem thông tin vé vừa mua cùng mã QR để quét nhận vé điện tử - phục vụ cho mục đích checkin khi tham gia sự kiện. \newline
+9. Hệ thống gửi email xác nhận mua vé thành công, bao gồm thông tin vé và mã QR điện tử. \\ \hline
 \textbf{Quy trình thay thế} &
-4a. Không có giới hạn độ tuổi $\rightarrow$ Bỏ qua bước cảnh báo. \newline
-5a. Voucher hoặc mã giảm giá không hợp lệ.
-$\rightarrow$ Hệ thống hiển thị cảnh báo không hợp lệ, người dùng có thể nhập mã khác hoặc bỏ qua. \newline
-9a. Thanh toán thất bại $\rightarrow$ Hệ thống thông báo “Thanh toán thất bại”, cho phép thử lại hoặc hủy. \\ \hline
+4a. Thông tin vé không hợp lệ (ví dụ: số lượng vé vượt quá số lượng còn lại) $\rightarrow$ Hệ thống thông báo lỗi và yêu cầu điều chỉnh lại thông tin vé. \newline
+6a. Thanh toán thất bại $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Payment failed, please try again.” \newline
+8a. Nếu có lỗi khi cập nhật số lượng vé hoặc lưu vé vào hệ thống sau khi thanh toán thành công $\rightarrow$ Hệ thống ghi log lỗi và thông báo “An error occurred while processing your order, please contact support.” \\ \hline
 \textbf{Điều kiện lỗi} &
-- Trường hợp lỗi 1: MoMo API không phản hồi $\rightarrow$ Ghi log và thông báo “Vui lòng thử lại sau 1 phút”. \newline
-- Trường hợp lỗi 2: Dữ liệu nhãn độ tuổi không tải được $\rightarrow$ Hệ thống ghi log và cho phép tiếp tục mua vé. \newline
-- Trường hợp lỗi 3: Lỗi truy vấn cơ sở dữ liệu voucher/mã giảm giá $\rightarrow$ Hệ thống thông báo “Lỗi hệ thống, vui lòng thử lại”. \\ \hline
+- Trường hợp lỗi 1: Lỗi hệ thống khi xử lý mua vé $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Ticket purchase failed, please try again.” \newline
+- Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép mua vé nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
 \end{tabularx}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Mua vé sự kiện}
-\label{tab:uc_ticket_purchase}
+\caption{Đặc tả Use Case -- Mua vé (Người dùng) }
+\label{tab:uc_buy_ticket_user}
 \end{table}
 
-\subsubsubsection{Chat với Quản trị viên}
+\subsubsubsection{Xem lịch sử mua vé}
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{8pt}
 \begin{tabularx}{\textwidth}{|l|X|}
 \hline
-\textbf{Tên Use Case} & Chat với quản trị viên \\ \hline
+\textbf{Tên Use Case} & Xem lịch sử mua vé \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
-\textbf{Mục đích} & Cho phép người dùng giao tiếp với quản trị viên để được hỗ trợ. \\ \hline
-\textbf{Tiền điều kiện} & Người dùng đã đăng nhập. \\ \hline
-\textbf{Hậu điều kiện} & Tin nhắn được gửi, lịch sử chat được lưu. \\ \hline
-\textbf{Mô tả ngắn gọn} & Người dùng khởi tạo chat theo thời gian thực để nhận hỗ trợ. \\ \hline
-\textbf{Luồng chính} &
-1. Người dùng điều hướng đến trang “Hỗ trợ” (yêu cầu đăng nhập). \newline
-2. Hệ thống hiển thị giao diện chat. \newline
-3. Người dùng gửi tin nhắn qua WebSocket. \newline
-4. Hệ thống lưu tin nhắn vào cơ sở dữ liệu và chuyển đến bàn tổ chức/quản trị viên. \newline
-5. Hệ thống thông báo trạng thái gửi thành công. \\ \hline
-\textbf{Luồng thay thế} &
-3a. Quản trị viên không phản hồi: \newline
-\hspace*{1em}1. Hệ thống gửi thông báo “Đang chờ phản hồi”. \newline
-\hspace*{1em}2. Người dùng có thể tiếp tục chờ hoặc hủy. \\ \hline
+\textbf{Mục đích} & Cho phép người dùng xem lại lịch sử các vé đã mua trước đó. \\ \hline
+\textbf{Điều kiện tiên quyết} & Người dùng đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Điều kiện hậu quyết} & Lịch sử mua vé được hiển thị chính xác và đầy đủ. \\ \hline
+\textbf{Mô tả ngắn gọn} & Người dùng truy cập vào trang lịch sử mua vé để xem lại các vé đã mua trước đó. \\ \hline
+\textbf{Quy trình bình thường} &
+1. Người dùng chọn mục “Vé của tôi” trên thanh Header. \newline
+2. Hệ thống truy xuất lịch sử mua vé của người dùng từ cơ sở dữ liệu. \newline
+3. Hệ thống hiển thị lịch sử mua vé trên giao diện, bao gồm thông tin về các vé đã mua. \\ \hline
+\textbf{Quy trình thay thế} &
+2a. Không có lịch sử mua vé: Hệ thống hiển thị thông báo "No data". \\ \hline
 \textbf{Điều kiện lỗi} &
-\textbf{Trường hợp lỗi 1:} WebSocket mất kết nối — Hệ thống thử kết nối lại (3 lần). \newline
-\textbf{Trường hợp lỗi 2:} Lưu tin nhắn thất bại — Hệ thống thông báo thử lại. \\ \hline
+- Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo lỗi và ghi log để kiểm tra. \newline
+- Trường hợp lỗi 2: Dữ liệu lịch sử mua vé không tải được $\rightarrow$ Hệ thống ghi log và thông báo lỗi, yêu cầu truy cập lại. \\ \hline
 \end{tabularx}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Chat với quản trị viên}
-\label{tab:uc_chat_admin}
+\caption{Đặc tả Use Case -- Xem lịch sử mua vé (Người dùng) }
+\label{tab:uc_view_ticket_history_user}
 \end{table}
 
-\subsubsubsection{Chat với Ban tổ chức}
+\subsubsubsection{Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra}
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{8pt}
 \begin{tabularx}{\textwidth}{|l|X|}
 \hline
-\textbf{Tên Use Case} & Chat với Ban tổ chức \\ \hline
+\textbf{Tên Use Case} & Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
-\textbf{Mục đích} & Cho phép người dùng giao tiếp với Ban tổ chức để được hỗ trợ. \\ \hline
-\textbf{Tiền điều kiện} & Người dùng đã đăng nhập. \\ \hline
-\textbf{Hậu điều kiện} & Tin nhắn được gửi, lịch sử chat được lưu. \\ \hline
-\textbf{Mô tả ngắn gọn} & Người dùng khởi tạo chat theo thời gian thực để nhận hỗ trợ. \\ \hline
-\textbf{Luồng chính} &
-1. Người dùng chọn chat ngay ở giao diện chi tiết sự kiện hoặc icon chat ở góc màn hình. \newline
-2. Hệ thống hiển thị giao diện chat. \newline
-3. Người dùng gửi tin nhắn qua WebSocket. \newline
-4. Hệ thống lưu tin nhắn vào cơ sở dữ liệu và chuyển đến Ban tổ chức. \newline
-5. Hệ thống thông báo trạng thái gửi thành công. \\ \hline
-\textbf{Luồng thay thế} &
-3a. Ban tổ chức không phản hồi: \newline
-\hspace*{1em}1. Hệ thống gửi thông báo “Đang chờ phản hồi”. \newline
-\hspace*{1em}2. Người dùng có thể tiếp tục chờ hoặc hủy. \\ \hline
+\textbf{Mục đích} & Cho phép người dùng đánh giá và xem lại đánh giá của mình dành cho ban tổ chức của sự kiện mà mình đã tham gia. \\ \hline
+\textbf{Điều kiện tiên quyết} & Người dùng đã mua vé và tham gia sự kiện do ban tổ chức tổ chức. \\ \hline
+\textbf{Điều kiện hậu quyết} & Đánh giá được lưu trữ và hiển thị chính xác. \\ \hline
+\textbf{Mô tả ngắn gọn} & Người dùng có thể đánh giá ban tổ chức của sự kiện đã mua vé thành công và đã diễn ra và xem lại các đánh giá trước đó. \\ \hline
+\textbf{Quy trình bình thường} &
+1. Người dùng truy cập vào icon ngôi sao hoặc mục "Vé của tôi" trên thanh Header. \newline
+2. Người dùng chọn một sự kiện đã diễn ra để đánh giá hoặc xem lại đánh giá trước đó. \newline
+3. Hệ thống hiển thị form đánh giá nếu người dùng chưa đánh giá hoặc hiển thị đánh giá trước đó nếu người dùng đã đánh giá. \newline    
+4. Người dùng nhập đánh giá (ví dụ: số sao, bình luận) nếu chưa có thực hiện đánh giá nào cho sự kiện đã chọn và gửi yêu cầu. \newline
+5. Hệ thống xác thực và lưu đánh giá vào cơ sở dữ liệu, ghi log hoạt động đánh giá. \newline
+6. Hệ thống thông báo đánh giá thành công hoặc hiển thị đánh giá trước đó. \\ \hline
+\textbf{Quy trình thay thế} &
+4a. Thông tin đánh giá không hợp lệ $\rightarrow$ Hệ thống thông báo lỗi và yêu cầu nhập lại. \newline
+5a. Lỗi hệ thống khi lưu đánh giá $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Failed to submit review, please try again.” \\ \hline
 \textbf{Điều kiện lỗi} &
-\textbf{Trường hợp lỗi 1:} WebSocket mất kết nối — Hệ thống thử kết nối lại (3 lần). \newline
-\textbf{Trường hợp lỗi 2:} Lưu tin nhắn thất bại — Hệ thống thông báo thử lại. \\ \hline
+- Trường hợp lỗi 1: Lỗi hệ thống khi xử lý đánh giá $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Failed to submit review, please try again.” \newline
+- Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép đánh giá nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
 \end{tabularx}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Chat với Ban tổ chức}
-\label{tab:uc_chat_org}
+\caption{Đặc tả Use Case -- Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra (Người dùng) }
+\label{tab:uc_review_organizer_user}
+\end{table}
+
+\subsubsubsection{Chat với trợ lý ảo}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{8pt}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Tên Use Case} & Chat với trợ lý ảo \\ \hline
+\textbf{Tác nhân} & Người dùng \\ \hline
+\textbf{Mục đích} & Cho phép người dùng tương tác với trợ lý ảo để nhận được sự hỗ trợ nhanh chóng và tiện lợi. \\ \hline
+\textbf{Điều kiện tiên quyết} & Người dùng đang truy cập vào hệ thống và có nhu cầu được trợ giúp. \\ \hline
+\textbf{Điều kiện hậu quyết} & Người dùng nhận được phản hồi hữu ích từ trợ lý ảo. \\ \hline
+\textbf{Mô tả ngắn gọn} & Người dùng có thể đặt câu hỏi hoặc yêu cầu trợ giúp từ trợ lý ảo và nhận được phản hồi. \\ \hline
+\textbf{Quy trình bình thường} &
+1. Người dùng nhấp vào biểu tượng trợ lý ảo trên giao diện. \newline
+2. Người dùng nhập câu hỏi hoặc yêu cầu trợ giúp vào khung chat. \newline
+3. Hệ thống gửi yêu cầu đến API của trợ lý ảo và nhận phản hồi. \newline
+4. Hệ thống hiển thị phản hồi từ trợ lý ảo trên giao diện chat. \newline
+5. Người dùng có thể tiếp tục tương tác với trợ lý ảo để nhận thêm thông tin hoặc hỗ trợ. \\ \hline
+\textbf{Quy trình thay thế} &
+3a. Lỗi kết nối với API của trợ lý ảo $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Failed to connect to virtual assistant, please try again later.” \\ \hline
+\textbf{Điều kiện lỗi} &
+- Trường hợp lỗi 1: Lỗi hệ thống khi xử lý yêu cầu từ trợ lý ảo $\rightarrow$ Hệ thống ghi log lỗi và thông báo “An error occurred while processing your request, please try again.” \newline
+- Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép tương tác với trợ lý ảo nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
+\end{tabularx}
+\vspace{15pt}
+\caption{Đặc tả Use Case -- Chat với trợ lý ảo (Người dùng) }
+\label{tab:uc_chat_virtual_assistant_user}
+\end{table}
+
+
+\subsubsubsection{Xem danh sách sự kiện}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{8pt}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Tên Use Case} & Xem danh sách sự kiện \\ \hline
+\textbf{Tác nhân} & Người dùng \\ \hline
+\textbf{Mục đích} & Cho phép người dùng xem danh sách các sự kiện đang được đăng tải lên hệ thống. \\ \hline
+\textbf{Điều kiện tiên quyết} & Người dùng đang truy cập vào trang chủ hệ thống. \\ \hline
+\textbf{Điều kiện hậu quyết} & Danh sách sự kiện được hiển thị chính xác. \\ \hline
+\textbf{Mô tả ngắn gọn} & Người dùng truy cập vào trang chủ để xem danh sách các sự kiện đang được đăng tải lên hệ thống. \\ \hline
+\textbf{Quy trình bình thường} &
+1. Người dùng truy cập vào trang chủ. \newline
+2. Hệ thống truy xuất danh sách sự kiện từ cơ sở dữ liệu. \newline
+3. Hệ thống hiển thị danh sách sự kiện trên giao diện. \\ \hline
+\textbf{Quy trình thay thế} &
+2a. Không có dữ liệu sự kiện: Hệ thống hiển thị thông báo "No data". \\ \hline
+\textbf{Điều kiện lỗi} &
+- Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo lỗi và ghi log để kiểm tra. \newline
+- Trường hợp lỗi 2: Dữ liệu sự kiện không tải được $\rightarrow$ Hệ thống ghi log và thông báo “Failed to load event list, please try again.” \\ \hline
+\end{tabularx}
+\vspace{15pt}
+\caption{Đặc tả Use Case -- Xem danh sách sự kiện (Người dùng) }
+\label{tab:uc_view_event_list}
+\end{table}
+
+\subsubsubsection{Xem thông tin chi tiết sự kiện}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{8pt}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Tên Use Case} & Xem thông tin chi tiết sự kiện \\ \hline
+\textbf{Tác nhân} & Người dùng \\ \hline
+\textbf{Mục đích} & Cho phép người dùng xem thông tin chi tiết về sự kiện mà mình quan tâm. \\ \hline
+\textbf{Điều kiện tiên quyết} & Người dùng đã chọn một sự kiện cụ thể từ danh sách sự kiện. \\ \hline
+\textbf{Điều kiện hậu quyết} & Thông tin chi tiết về sự kiện được hiển thị chính xác. \\ \hline
+\textbf{Mô tả ngắn gọn} & Người dùng chọn một sự kiện cụ thể để xem thông tin chi tiết về sự kiện đó. \\ \hline
+\textbf{Quy trình bình thường} &
+1. Người dùng chọn một sự kiện cụ thể từ danh sách sự kiện. \newline
+2. Hệ thống truy xuất thông tin chi tiết về sự kiện từ cơ sở dữ liệu. \newline
+3. Hệ thống điều hướng sang trang xem chi tiết thông tin sự kiện và hiển thị thông tin chi tiết về sự kiện trên giao diện. \\ \hline
+\textbf{Quy trình thay thế} &
+2a. Không có dữ liệu chi tiết về sự kiện: Hệ thống hiển thị "No data" tại các mục thông tin tương ứng. \\ \hline
+\textbf{Điều kiện lỗi} &
+- Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo lỗi và ghi log để kiểm tra. \newline
+- Trường hợp lỗi 2: Dữ liệu chi tiết về sự kiện không tải được $\rightarrow$ Hệ thống ghi log và thông báo lỗi, yêu cầu truy cập lại \\ \hline
+\end{tabularx}
+\vspace{15pt}
+\caption{Đặc tả Use Case -- Xem thông tin chi tiết sự kiện (Người dùng) }
+\label{tab:uc_view_event_details}
+\end{table}
+
+\subsubsubsection{Tìm kiếm sự kiện}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{8pt}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Tên Use Case} & Tìm kiếm sự kiện \\ \hline
+\textbf{Tác nhân} & Người dùng \\ \hline
+\textbf{Mục đích} & Cho phép người dùng tìm kiếm sự kiện theo từ khóa để nhanh chóng tìm được sự kiện mình quan tâm. \\ \hline
+\textbf{Điều kiện tiên quyết} & Người dùng đang truy cập vào bất kỳ trang nào của hệ thống, ngoại trừ trang tiến hành thanh toán. \\ \hline
+\textbf{Điều kiện hậu quyết} & Kết quả tìm kiếm được hiển thị chính xác và phù hợp với từ khóa. \\ \hline
+\textbf{Mô tả ngắn gọn} & Người dùng nhập từ khóa vào thanh tìm kiếm ở header để tìm kiếm sự kiện. \\ \hline
+\textbf{Quy trình bình thường} &
+1. Người dùng nhập từ khóa vào thanh tìm kiếm ở header. \newline
+2. Hệ thống xử lý yêu cầu tìm kiếm, truy xuất dữ liệu sự kiện phù hợp với từ khóa từ cơ sở dữ liệu. \newline
+3. Hệ thống hiển thị kết quả tìm kiếm trên giao diện. \\ \hline
+\textbf{Quy trình thay thế} &
+2a. Không có kết quả tìm kiếm phù hợp: Hệ thống hiển thị thông báo "No data", kèm liên kết cho xem danh sách tất cả sự kiện trong hệ thống. \\ \hline
+\textbf{Điều kiện lỗi} &
+- Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo lỗi và ghi log để kiểm tra. \newline
+- Trường hợp lỗi 2: Lỗi hệ thống khi xử lý tìm kiếm $\rightarrow$ Hệ thống ghi log và thông báo lỗi, yêu cầu thử lại. \\ \hline
+\end{tabularx}
+\vspace{15pt}
+\caption{Đặc tả Use Case -- Tìm kiếm sự kiện (Người dùng) }
+\label{tab:uc_search_event}
+\end{table}
+
+\subsubsubsection{Xem thông tin cá nhân}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{8pt}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Tên Use Case} & Xem thông tin cá nhân \\ \hline
+\textbf{Tác nhân} & Người dùng \\ \hline
+\textbf{Mục đích} & Cho phép người dùng xem thông tin cá nhân của mình đã đăng ký trên hệ thống. \\ \hline
+\textbf{Điều kiện tiên quyết} & Người dùng đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Điều kiện hậu quyết} & Thông tin cá nhân được hiển thị chính xác. \\ \hline
+\textbf{Mô tả ngắn gọn} & Người dùng truy cập vào trang thông tin cá nhân để xem lại các thông tin cá nhân đã đăng ký trên hệ thống. \\ \hline
+\textbf{Quy trình bình thường} &
+1. Người dùng chọn mục “Thông tin cá nhân” trên thanh Header. \newline
+2. Hệ thống truy xuất thông tin cá nhân của người dùng từ cơ sở dữ liệu. \newline
+3. Hệ thống hiển thị thông tin cá nhân trên giao diện. \\ \hline
+\textbf{Quy trình thay thế} &
+2a. Không có dữ liệu thông tin cá nhân: Hệ thống hiển thị thông báo "No data". \\ \hline
+\textbf{Điều kiện lỗi} &
+- Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo lỗi và ghi log để kiểm tra. \newline
+- Trường hợp lỗi 2: Dữ liệu thông tin cá nhân không tải được $\rightarrow$ Hệ thống ghi log và thông báo lỗi, yêu cầu truy cập lại. \\ \hline
+\end{tabularx}
+\vspace{15pt}
+\caption{Đặc tả Use Case -- Xem thông tin cá nhân (Người dùng) }
+\label{tab:uc_view_profile_user}
+\end{table}
+
+\subsubsubsection{Chỉnh sửa thông tin cá nhân}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{8pt}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Tên Use Case} & Chỉnh sửa thông tin cá nhân \\ \hline
+\textbf{Tác nhân} & Người dùng \\ \hline
+\textbf{Mục đích} & Cho phép người dùng chỉnh sửa thông tin cá nhân của mình đã đăng ký trên hệ thống. \\ \hline
+\textbf{Điều kiện tiên quyết} & Người dùng đã đăng nhập vào hệ thống và đang ở trang thông tin cá nhân. \\ \hline
+\textbf{Điều kiện hậu quyết} & Thông tin cá nhân được cập nhật chính xác và lưu trữ thành công. \\ \hline
+\textbf{Mô tả ngắn gọn} & Người dùng chỉnh sửa thông tin cá nhân của mình trên trang thông tin cá nhân và lưu lại thay đổi. \\ \hline
+\textbf{Quy trình bình thường} &
+1. Người dùng chọn mục “Thông tin cá nhân” trên thanh Header. \newline
+2. Hệ thống truy xuất thông tin cá nhân của người dùng từ cơ sở dữ liệu và hiển thị trên giao diện. \newline
+3. Người dùng chỉnh sửa thông tin cá nhân trên giao diện và lưu lại thay đổi. \newline
+4. Hệ thống xác thực thông tin đã chỉnh sửa, cập nhật vào cơ sở dữ liệu, ghi log hoạt động chỉnh sửa thông tin cá nhân và thông báo cập nhật thành công. \\ \hline
+\textbf{Quy trình thay thế} &   
+3a. Thông tin chỉnh sửa không hợp lệ $\rightarrow$ Hệ thống thông báo lỗi và yêu cầu chỉnh sửa lại. \newline
+4a. Lỗi hệ thống khi cập nhật thông tin cá nhân $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Failed to update profile, please try again.” \\ \hline
+\textbf{Điều kiện lỗi} &
+- Trường hợp lỗi 1: Lỗi hệ thống khi xử lý chỉnh sửa thông tin cá nhân $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Failed to update profile, please try again.” \newline
+- Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép chỉnh sửa thông tin cá nhân nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
+\end{tabularx}
+\vspace{15pt}
+\caption{Đặc tả Use Case -- Chỉnh sửa thông tin cá nhân (Người dùng) }
+\label{tab:uc_edit_profile_user}
+\end{table}
+
+\subsubsubsection{Thay đổi mật khẩu}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{8pt}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Tên Use Case} & Thay đổi mật khẩu \\ \hline 
+\textbf{Tác nhân} & Người dùng \\ \hline
+\textbf{Mục đích} & Cho phép người dùng thay đổi mật khẩu của mình để bảo vệ tài khoản. \\ \hline
+\textbf{Điều kiện tiên quyết} & Người dùng đã đăng nhập vào hệ thống và đang ở trang thông tin cá nhân. \\ \hline
+\textbf{Điều kiện hậu quyết} & Mật khẩu được cập nhật chính xác và lưu trữ thành công. \\ \hline
+\textbf{Mô tả ngắn gọn} & Người dùng thay đổi mật khẩu của mình trên trang thông tin cá nhân và lưu lại thay đổi. \\ \hline
+\textbf{Quy trình bình thường} &    
+1. Người dùng chọn mục “Thông tin cá nhân” trên thanh Header. \newline
+2. Hệ thống hiển thị thông tin cá nhân của người dùng trên giao diện. \newline
+3. Người dùng chọn chức năng thay đổi mật khẩu, nhập các trường thông tin yêu cầu (mật khẩu cũ, mật khẩu mới và xác nhận lại mật khẩu mới), sau đó lưu lại thay đổi. \newline
+4. Hệ thống xác thực mật khẩu hiện tại, kiểm tra tính hợp lệ của mật khẩu mới, cập nhật mật khẩu mới vào cơ sở dữ liệu, ghi log hoạt động thay đổi mật khẩu và thông báo cập nhật thành công. \\ \hline
+\textbf{Quy trình thay thế} &
+3a. Thông tin nhập vào không hợp lệ (ví dụ: mật khẩu mới không khớp với xác nhận mật khẩu mới) $\rightarrow$ Hệ thống thông báo lỗi và yêu cầu nhập lại. \newline
+4a. Mật khẩu hiện tại không đúng $\rightarrow$ Hệ thống thông báo lỗi và yêu cầu nhập lại. \newline
+4b. Lỗi hệ thống khi cập nhật mật khẩu $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Failed to change password, please try again.” \\ \hline
+\textbf{Điều kiện lỗi} &
+- Trường hợp lỗi 1: Lỗi hệ thống khi xử lý thay đổi mật khẩu $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Failed to change password, please try again.” \newline
+- Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép thay đổi mật khẩu nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
+\end{tabularx}
+\vspace{15pt}
+\caption{Đặc tả Use Case -- Thay đổi mật khẩu (Người dùng) }
+\label{tab:uc_change_password_user}
 \end{table}
 
 
@@ -211,35 +423,66 @@ $\rightarrow$ Hệ thống hiển thị cảnh báo không hợp lệ, người 
     \label{fig:uc_organizer}
 \end{figure}
 
-\subsubsubsection{Đăng xuất}
-\begin{table}[H]
-\centering
-\renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
-\begin{tabularx}{\textwidth}{|l|X|}
-\hline
-\textbf{Tên Use Case} & Đăng xuất \\ \hline
-\textbf{Tác nhân} & Ban tổ chức \\ \hline
-\textbf{Mục đích} & Cho phép Ban tổ chức đăng xuất khỏi hệ thống để bảo vệ tài khoản và thông tin cá nhân. \\ \hline        
-\textbf{Điều kiện tiên quyết} & Ban tổ chức đã đăng nhập vào hệ thống. \\ \hline
-\textbf{Điều kiện hậu quyết} & Ban tổ chức được đăng xuất thành công, phiên làm việc kết thúc và được chuyển hướng đến trang chủ hoặc trang đăng nhập. \\ \hline
-\textbf{Mô tả ngắn gọn} & Ban tổ chức chọn chức năng đăng xuất để kết thúc phiên làm việc. \\ \hline
-\textbf{Quy trình bình thường} &
-1. Ban tổ chức nhấp vào nút “Đăng xuất” trên giao diện. \newline
-2. Hệ thống xóa JWT token hoặc session liên quan đến phiên làm việc của Ban tổ chức. \newline
-3. Hệ thống ghi log hoạt động đăng xuất. \newline
-4. Hệ thống chuyển hướng Ban tổ chức đến trang chủ hoặc trang đăng nhập. \\ \hline
-\textbf{Quy trình thay thế} &
-2a. Nếu có lỗi khi xóa token/session: \newline
-\hspace*{1em}- Hệ thống ghi log lỗi và vẫn chuyển hướng Ban tổ chức đến trang chủ hoặc trang đăng nhập để đảm bảo an toàn. \\ \hline
-\textbf{Điều kiện lỗi} &
-- Trường hợp lỗi 1: Lỗi hệ thống khi xử lý đăng xuất $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Đăng xuất thất bại, vui lòng thử lại.” \newline
-- Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép đăng xuất nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
-\end{tabularx}
-\vspace{15pt}
-\caption{Đặc tả Use Case -- Đăng xuất (Ban tổ chức) }
-\label{tab:uc_logout}
-\end{table}
+% \subsubsubsection{Đăng nhập}
+% \begin{table}[H]
+% \centering
+% \renewcommand{\arraystretch}{1.3}
+% \setlength{\tabcolsep}{8pt}
+% \begin{tabularx}{\textwidth}{|l|X|}
+% \hline
+% \textbf{Tên Use Case} & Đăng nhập \\ \hline
+% \textbf{Tác nhân} & Ban tổ chức \\ \hline
+% \textbf{Mục đích} & Cho phép Ban tổ chức đăng nhập vào hệ thống để xem các thông tin và dữ liệu thống kê liên quan đến các sự kiện do mình tổ chức. \\ \hline
+% \textbf{Điều kiện tiên quyết} & Ban tổ chức đã có tài khoản được đăng ký trên hệ thống. \\ \hline
+% \textbf{Điều kiện hậu quyết} & Ban tổ chức được đăng nhập thành công, nhận được JWT token và được chuyển hướng đến trang thống kê. \\ \hline
+% \textbf{Mô tả ngắn gọn} & Ban tổ chức nhập email và mật khẩu để đăng nhập vào hệ thống. \\ \hline
+% \textbf{Quy trình bình thường} &
+% 1. Ban tổ chức truy cập trang đăng nhập. \newline
+% 2. Ban tổ chức nhập email và mật khẩu. \newline
+% 3. Hệ thống xác thực thông tin đăng nhập. \newline
+% 4. Nếu hợp lệ, hệ thống tạo JWT token, lưu vào localStorage/session và ghi log hoạt động đăng nhập. \newline
+% 5. Hệ thống chuyển hướng Ban tổ chức đến trang thống kê. \\ \hline
+% \textbf{Quy trình thay thế} &
+% 3a. Thông tin đăng nhập không hợp lệ $\rightarrow$ Hệ thống thông báo lỗi và yêu cầu nhập lại. \\ \hline
+% \textbf{Điều kiện lỗi} &
+% - Trường hợp lỗi 1: Lỗi hệ thống khi xử lý đăng nhập $\rightarrow$ Hệ thống ghi log lỗi và thông báo yêu cầu đăng nhập lại. \newline
+% - Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép đăng nhập nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
+% \end{tabularx}
+% \vspace{15pt}
+% \caption{Đặc tả Use Case -- Đăng nhập (Ban tổ chức) }
+% \label{tab:uc_login}
+% \end{table}
+
+
+% \subsubsubsection{Đăng xuất}
+% \begin{table}[H]
+% \centering
+% \renewcommand{\arraystretch}{1.3}
+% \setlength{\tabcolsep}{8pt}
+% \begin{tabularx}{\textwidth}{|l|X|}
+% \hline
+% \textbf{Tên Use Case} & Đăng xuất \\ \hline
+% \textbf{Tác nhân} & Ban tổ chức \\ \hline
+% \textbf{Mục đích} & Cho phép Ban tổ chức đăng xuất khỏi hệ thống để bảo vệ tài khoản và thông tin cá nhân. \\ \hline        
+% \textbf{Điều kiện tiên quyết} & Ban tổ chức đã đăng nhập vào hệ thống. \\ \hline
+% \textbf{Điều kiện hậu quyết} & Ban tổ chức được đăng xuất thành công, phiên làm việc kết thúc và được chuyển hướng đến trang chủ hoặc trang đăng nhập. \\ \hline
+% \textbf{Mô tả ngắn gọn} & Ban tổ chức chọn chức năng đăng xuất để kết thúc phiên làm việc. \\ \hline
+% \textbf{Quy trình bình thường} &
+% 1. Ban tổ chức nhấp vào nút “Đăng xuất” trên giao diện. \newline
+% 2. Hệ thống xóa JWT token hoặc session liên quan đến phiên làm việc của Ban tổ chức. \newline
+% 3. Hệ thống ghi log hoạt động đăng xuất. \newline
+% 4. Hệ thống chuyển hướng Ban tổ chức đến trang chủ hoặc trang đăng nhập. \\ \hline
+% \textbf{Quy trình thay thế} &
+% 2a. Nếu có lỗi khi xóa token/session: \newline
+% \hspace*{1em}- Hệ thống ghi log lỗi và vẫn chuyển hướng Ban tổ chức đến trang chủ hoặc trang đăng nhập để đảm bảo an toàn. \\ \hline
+% \textbf{Điều kiện lỗi} &
+% - Trường hợp lỗi 1: Lỗi hệ thống khi xử lý đăng xuất $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Đăng xuất thất bại, vui lòng thử lại.” \newline
+% - Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép đăng xuất nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
+% \end{tabularx}
+% \vspace{15pt}
+% \caption{Đặc tả Use Case -- Đăng xuất (Ban tổ chức) }
+% \label{tab:uc_logout}
+% \end{table}
 
 \subsubsubsection{Theo dõi dữ liệu thống kê}
 \begin{table}[H]
@@ -331,17 +574,16 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 \textbf{Quy trình bình thường} &
 1. Ban tổ chức chọn mục “Profile” trên thanh sidebar. \newline
 2. Ban tổ chức chọn "Đổi mật khẩu". \newline
-3. Hệ thống hiển thị form thay đổi mật khẩu (mật khẩu mới, xác nhận mật khẩu mới). \newline
-4. Ban tổ chức nhập thông tin và gửi yêu cầu. \newline
-5. Hệ thống xác thực tính hợp lệ của mật khẩu mới \newline
+3. Hệ thống hiển thị form thay đổi mật khẩu. \newline
+4. Ban tổ chức nhập các trường thông tin yêu cầu (mật khẩu cũ, mật khẩu mới và xác nhận lại mật khẩu mới), sau đó gửi yêu cầu. \newline
+5. Hệ thống xác thực tính hợp lệ các trường thông tin đã nhập. \newline
 6. Nếu hợp lệ, hệ thống cập nhật mật khẩu mới vào cơ sở dữ liệu. \newline
 7. Hệ thống ghi log hoạt động thay đổi mật khẩu. \newline
 8. Hệ thống thông báo thành công và yêu cầu Ban tổ chức đăng nhập lại. \\ \hline
 \textbf{Quy trình thay thế} &
-% 4a. Mật khẩu cũ không chính xác $\rightarrow$ Hệ thống thông báo
-% “Current password is incorrect” và yêu cầu nhập lại. \newline
+5a. Mật khẩu cũ không chính xác $\rightarrow$ Hệ thống thông báo lỗi và yêu cầu nhập lại. \newline
 5b. Mật khẩu mới không hợp lệ $\rightarrow$ Hệ thống thông báo lỗi và yêu cầu nhập lại. \newline
-5c. Mật khẩu mới và xác nhận không khớp $\rightarrow$ Hệ thống thông báo “Mật khẩu mới không khớp” và yêu cầu nhập lại. \\ \hline
+5c. Mật khẩu mới và xác nhận không khớp $\rightarrow$ Hệ thống thông báo lỗi “Mật khẩu mới không khớp” và yêu cầu nhập lại. \\ \hline
 \textbf{Điều kiện lỗi} &    
 - Trường hợp lỗi 1: Lỗi hệ thống khi cập nhật mật khẩu $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Password change failed, please try again.” \newline
 - Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép cập nhật mật khẩu nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
@@ -421,10 +663,10 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 \end{table}
 
 
-\subsubsection{Use Case cho Quản trị viên - OLD}
+\subsubsection{Use Case cho Quản trị viên}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{Images/Usecase_Admin.jpg}
+    \includegraphics[width=1\textwidth]{Images/Admin_UseCaseDiagram.png}
     \vspace{15pt}
     \caption{Use Case Diagram -- Quản trị viên}
     \label{fig:uc_admin}
@@ -439,29 +681,31 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 \hline
 \textbf{Tên Use Case} & Quản lý sự kiện \\ \hline
 \textbf{Tác nhân} & Admin \\ \hline
-\textbf{Mục đích} & Quản lý thông tin sự kiện (thêm, sửa, xóa, tìm kiếm). \\ \hline
-\textbf{Tiền điều kiện} & Admin đã đăng nhập. \\ \hline
-\textbf{Hậu điều kiện} & Thông tin sự kiện được thêm mới, cập nhật hoặc xóa khỏi cơ sở dữ liệu. \\ \hline
-\textbf{Luồng chính} &
-1. Admin chọn chức năng “Quản lý sự kiện”. \newline
-2. Hệ thống hiển thị danh sách sự kiện hiện có. \newline
-3. Admin chọn thao tác: thêm, chỉnh sửa, xóa hoặc xem chi tiết sự kiện. \newline
-4. Hệ thống xử lý yêu cầu và cập nhật dữ liệu. \\ \hline
-\textbf{Luồng thay thế} &
-3a. Nếu Admin chọn “Tìm kiếm/Lọc sự kiện”: \newline
-\hspace*{1em}a. Hệ thống hiển thị ô tìm kiếm. \newline
-\hspace*{1em}b. Admin nhập từ khóa $\to$ Hệ thống hiển thị danh sách kết quả phù hợp. \\ \hline
+\textbf{Mục đích} & Quản lý toàn bộ thông tin sự kiện: thêm mới, xem, chỉnh sửa, xóa và tìm kiếm sự kiện. \\ \hline
+\textbf{Điều kiện tiên quyết} & Admin đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Điều kiện hậu quyết} & Thông tin sự kiện được thêm mới, cập nhật hoặc xóa khỏi cơ sở dữ liệu. \\ \hline
+\textbf{Mô tả ngắn gọn} & Admin truy cập mục quản lý để thực hiện các thao tác điều chỉnh dữ liệu sự kiện. \\ \hline
+\textbf{Quy trình bình thường} &
+1. Admin chọn mục “Quản lý sự kiện” trên thanh điều hướng. \newline
+2. Hệ thống truy xuất và hiển thị danh sách các sự kiện hiện có từ cơ sở dữ liệu. \newline
+3. Admin chọn thao tác: Thêm mới, Xem chi tiết, Chỉnh sửa hoặc Xóa sự kiện. \newline
+4. Hệ thống xử lý yêu cầu và cập nhật dữ liệu tương ứng vào hệ thống. \newline
+5. Hệ thống hiển thị thông báo thực hiện thao tác thành công. \\ \hline
+\textbf{Quy trình thay thế} &
+3a. Nếu Admin chọn "Tìm kiếm sự kiện": \newline
+- Hệ thống hiển thị ô tìm kiếm. \newline
+- Admin nhập từ khóa $\rightarrow$ Hệ thống hiển thị danh sách kết quả phù hợp. \\ \hline
 \textbf{Điều kiện lỗi} &
-1. Nhập thiếu thông tin bắt buộc khi thêm sự kiện $\to$ Hệ thống báo lỗi và yêu cầu nhập lại. \newline
-2. Lỗi hệ thống khi ghi dữ liệu $\to$ Hệ thống hiển thị thông báo thất bại. \\ \hline
+- Trường hợp lỗi 1: Nhập thiếu thông tin bắt buộc khi thêm sự kiện $\rightarrow$ Hệ thống báo lỗi và yêu cầu nhập lại các trường còn thiếu. \newline
+- Trường hợp lỗi 2: Lỗi hệ thống khi ghi dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo thất bại và ghi log lỗi. \newline
+- Trường hợp lỗi 3: Xóa sự kiện đang có vé đã bán $\rightarrow$ Hệ thống hiển thị cảnh báo vi phạm ràng buộc và yêu cầu xác nhận đặc biệt. \\ \hline
 \end{tabularx}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Quản lý sự kiện}
-\label{tab:uc_manage_event}
+\caption{Đặc tả Use Case -- Quản lý sự kiện (Admin)}
+\label{tab:uc_manage_events}
 \end{table}
 
 \subsubsubsection{Quản lý đơn vị tổ chức}
-
 \begin{table}[H]
 \centering
 \renewcommand{\arraystretch}{1.3}
@@ -470,70 +714,168 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 \hline
 \textbf{Tên Use Case} & Quản lý đơn vị tổ chức \\ \hline
 \textbf{Tác nhân} & Admin \\ \hline
-\textbf{Mục đích} & Quản lý thông tin đơn vị tổ chức (thêm, sửa, xóa, tìm kiếm). \\ \hline
-\textbf{Tiền điều kiện} & Admin đã đăng nhập. \\ \hline
-\textbf{Hậu điều kiện} & Thông tin đơn vị tổ chức được thêm, cập nhật hoặc xóa khỏi hệ thống. \\ \hline
-\textbf{Luồng chính} &
-1. Admin truy cập chức năng “Quản lý đơn vị tổ chức”. \newline
-2. Hệ thống hiển thị danh sách đơn vị. \newline
-3. Admin chọn thao tác: thêm, chỉnh sửa, xóa hoặc xem chi tiết đơn vị. \newline
-4. Hệ thống xử lý và lưu kết quả vào cơ sở dữ liệu. \\ \hline
-\textbf{Luồng thay thế} &
-3a. Nếu Admin chọn “Tìm kiếm/Lọc đơn vị”: \newline
-\hspace*{1em}a. Hệ thống hiển thị ô tìm kiếm. \newline
-\hspace*{1em}b. Admin nhập từ khóa $\rightarrow$ Hệ thống hiển thị danh sách kết quả phù hợp. \newline
-3b. Nếu Admin chọn “Cập nhật trạng thái đơn vị”: \newline
-\hspace*{1em}a. Hệ thống hiển thị danh sách trạng thái mới. \newline
-\hspace*{1em}b. Admin chọn và lưu thay đổi. \\ \hline
+\textbf{Mục đích} & Quản lý thông tin các đơn vị tổ chức sự kiện: thêm mới, xem, chỉnh sửa, xóa, tìm kiếm và cập nhật trạng thái tài khoản. \\ \hline
+\textbf{Điều kiện tiên quyết} & Admin đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Điều kiện hậu quyết} & Thông tin đơn vị tổ chức được thêm mới, cập nhật, xóa hoặc trạng thái tài khoản được thay đổi trong cơ sở dữ liệu. \\ \hline
+\textbf{Mô tả ngắn gọn} & Admin truy cập mục quản lý đơn vị tổ chức để thực hiện điều chỉnh thông tin và quản lý trạng thái tài khoản của các đối tác. \\ \hline
+\textbf{Quy trình bình thường} &
+1. Admin chọn mục “Quản lý đơn vị tổ chức” trên thanh điều hướng. \newline
+2. Hệ thống truy xuất và hiển thị danh sách các đơn vị tổ chức hiện có từ cơ sở dữ liệu. \newline
+3. Admin chọn thao tác: Thêm mới, Xem thông tin, Chỉnh sửa, Xóa hoặc Cập nhật trạng thái tài khoản. \newline
+4. Hệ thống xử lý yêu cầu và cập nhật dữ liệu tương ứng vào hệ thống. \newline
+5. Hệ thống hiển thị thông báo thực hiện thao tác thành công. \\ \hline
+\textbf{Quy trình thay thế} &
+3a. Nếu Admin chọn "Tìm kiếm đơn vị tổ chức": \newline
+- Hệ thống hiển thị ô tìm kiếm. \newline
+- Admin nhập từ khóa $\rightarrow$ Hệ thống hiển thị danh sách kết quả phù hợp. \newline
+3b. Nếu Admin chọn "Cập nhật trạng thái tài khoản đơn vị tổ chức": \newline
+- Hệ thống hiển thị trạng thái hiện tại (Hoạt động / Tạm khóa). \newline
+- Admin thay đổi trạng thái và xác nhận. \newline
+- Hệ thống cập nhật trạng thái tài khoản tương ứng. \\ \hline
 \textbf{Điều kiện lỗi} &
-1. Nhập thiếu thông tin bắt buộc khi thêm đơn vị $\rightarrow$ Hệ thống báo lỗi và yêu cầu nhập lại. \newline
-2. Lỗi hệ thống khi ghi dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo thất bại. \\ \hline
+- Trường hợp lỗi 1: Nhập thiếu thông tin bắt buộc khi thêm/chỉnh sửa $\rightarrow$ Hệ thống báo lỗi và yêu cầu nhập lại các trường còn thiếu. \newline
+- Trường hợp lỗi 2: Xóa đơn vị tổ chức đang có sự kiện hoạt động $\rightarrow$ Hệ thống hiển thị cảnh báo vi phạm ràng buộc nghiệp vụ và không cho phép xóa. \newline
+- Trường hợp lỗi 3: Lỗi hệ thống khi ghi dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo thất bại và ghi log lỗi hệ thống. \\ \hline
 \end{tabularx}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Quản lý đơn vị tổ chức}
-\label{tab:uc_manage_organizer}
+\caption{Đặc tả Use Case -- Quản lý đơn vị tổ chức (Admin)}
+\label{tab:uc_manage_organizers}
 \end{table}
+
+\subsubsubsection{Quản lý vé}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{8pt}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Tên Use Case} & Quản lý vé \\ \hline
+\textbf{Tác nhân} & Admin \\ \hline
+\textbf{Mục đích} & Quản lý toàn bộ thông tin vé: tạo mới, xem, chỉnh sửa và xóa vé đã tạo. \\ \hline
+\textbf{Điều kiện tiên quyết} & Admin đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Điều kiện hậu quyết} & Thông tin vé được tạo mới, cập nhật hoặc xóa khỏi cơ sở dữ liệu. \\ \hline
+\textbf{Mô tả ngắn gọn} & Admin truy cập vào chức năng quản lý vé trong một sự kiện để thực hiện điều chỉnh các loại vé và số lượng tương ứng. \\ \hline
+\textbf{Quy trình bình thường} &
+1. Admin chọn chức năng "Quản lý sự kiện" từ thanh menu. \newline
+2. Admin chọn mục "Quản lý vé sự kiện" tại sự kiện cụ thể. \newline
+3. Hệ thống truy xuất và hiển thị danh sách các loại vé hiện có. \newline
+4. Admin chọn một trong các thao tác: Tạo vé, Xem thông tin vé, Chỉnh sửa thông tin vé hoặc Xóa vé đã tạo. \newline
+5. Hệ thống xử lý yêu cầu và cập nhật dữ liệu vào cơ sở dữ liệu. \newline
+6. Hệ thống hiển thị thông báo thực hiện thành công. \\ \hline
+\textbf{Quy trình thay thế} &
+3a. Nếu Admin chọn "Tạo vé": Hệ thống hiển thị form (loại vé, giá, số lượng) $\rightarrow$ Admin nhập liệu $\rightarrow$ Hệ thống tạo vé liên kết với sự kiện. \newline
+3b. Nếu Admin chọn "Chỉnh sửa thông tin vé": Hệ thống hiển thị form dữ liệu cũ $\rightarrow$ Admin cập nhật $\rightarrow$ Hệ thống xác nhận và lưu dữ liệu. \newline
+3c. Nếu Admin chọn "Xem thông tin vé": Admin chọn vé cụ thể $\rightarrow$ Hệ thống hiển thị chi tiết thông tin vé. \newline
+3d. Nếu Admin chọn "Xóa vé": Admin chọn vé $\rightarrow$ Hệ thống yêu cầu xác nhận $\rightarrow$ Admin xác nhận xóa. \\ \hline
+\textbf{Điều kiện lỗi} &
+- Trường hợp lỗi 1: Nhập thiếu thông tin hoặc dữ liệu không hợp lệ (giá < 0 hoặc số lượng $\le$ 0) $\rightarrow$ Hệ thống báo lỗi và yêu cầu nhập lại. \newline
+- Trường hợp lỗi 2: Xóa vé thuộc sự kiện đang hoạt động $\rightarrow$ Hệ thống cảnh báo vi phạm ràng buộc và không cho phép xóa. \newline
+- Trường hợp lỗi 3: Lỗi hệ thống khi ghi dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo thất bại và ghi log. \\ \hline
+\end{tabularx}
+\vspace{15pt}
+\caption{Đặc tả Use Case -- Quản lý vé (Admin)}
+\label{tab:uc_manage_tickets}
+\end{table}
+
+\subsubsubsection{Quản lý thông tin khách hàng}
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{8pt}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\textbf{Tên Use Case} & Quản lý thông tin khách hàng \\ \hline
+\textbf{Tác nhân} & Admin \\ \hline
+\textbf{Mục đích} & Quản lý thông tin tài khoản khách hàng: xem, chỉnh sửa, tìm kiếm và xóa tài khoản. \\ \hline
+\textbf{Điều kiện tiên quyết} & Admin đã đăng nhập vào hệ thống. \\ \hline
+\textbf{Điều kiện hậu quyết} & Thông tin khách hàng được cập nhật hoặc tài khoản được xóa khỏi hệ thống. \\ \hline
+\textbf{Mô tả ngắn gọn} & Admin truy cập mục quản lý người dùng để theo dõi, điều chỉnh thông tin hoặc loại bỏ các tài khoản khách hàng khỏi hệ thống. \\ \hline
+\textbf{Quy trình bình thường} &
+1. Admin chọn chức năng "Quản lý người dùng" từ thanh điều hướng (menu). \newline
+2. Hệ thống truy xuất và hiển thị danh sách các tài khoản khách hàng hiện có. \newline
+3. Admin chọn thao tác: Xem thông tin, Chỉnh sửa thông tin hoặc Xóa tài khoản khách hàng. \newline
+4. Hệ thống xử lý yêu cầu và cập nhật dữ liệu vào cơ sở dữ liệu. \newline
+5. Hệ thống hiển thị thông báo thực hiện thao tác thành công. \\ \hline
+\textbf{Quy trình thay thế} &
+3a. Nếu Admin chọn "Tìm kiếm khách hàng": \newline
+- Hệ thống hiển thị ô tìm kiếm. \newline
+- Admin nhập từ khóa (tên, email, số điện thoại) $\rightarrow$ Hệ thống hiển thị danh sách kết quả phù hợp. \newline
+3b. Nếu Admin chọn "Chỉnh sửa thông tin khách hàng": \newline
+- Hệ thống hiển thị form với thông tin hiện tại của khách hàng. \newline
+- Admin cập nhật các trường thông tin và nhấn Lưu. \newline
+- Hệ thống xác nhận và lưu thay đổi vào hệ thống. \\ \hline
+\textbf{Điều kiện lỗi} &
+- Trường hợp lỗi 1: Không tìm thấy khách hàng theo từ khóa $\rightarrow$ Hệ thống hiển thị thông báo "No results found" (không có kết quả). \newline
+- Trường hợp lỗi 2: Lỗi hệ thống khi cập nhật dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo thất bại và ghi log giám sát. \\ \hline
+\end{tabularx}
+\vspace{15pt}
+\caption{Đặc tả Use Case -- Quản lý thông tin khách hàng (Admin)}
+\label{tab:uc_manage_customers}
+\end{table}
+
 
 % %%%%%%%%%%%%%% Activity diagram
 
 
 \subsection{Lược đồ hoạt động}
 
-\subsubsection{Activity Diagram cho Người dùng - OLD}
+\subsubsection{Activity Diagram cho Người dùng}
 
-\subsubsubsection{Đăng ký}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{Images/DangKy_ActivityDiagram.png}
-    \vspace{15pt}
-    \caption{Activity Diagram -- Đăng ký tài khoản}
-\end{figure}
+% \subsubsubsection{Đăng ký}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{Images/Activity_Diagram_User/User_RegisterAccount.drawio.png}
+%     \vspace{15pt}
+%     \caption{Activity Diagram -- Đăng ký tài khoản}
+% \end{figure}
 
-\indent \indent Người dùng chọn đăng kí tài khoản nếu chưa có tài khoản. Người dùng sẽ được chuyển hướng tới trang đăng kí. Sau khi người dùng nhập thông tin và chọn đăng kí, nếu
-thông tin đã nhập là hợp lệ thì hệ thống sẽ lưu tài khoản và mã hóa mật khẩu. Trường hợp thông tin đã nhập được xác định là chưa hợp lệ, người dùng buộc phải nhập lại.
+% \indent \indent Người dùng sẽ truy cập vào hệ thống, chọn "Đăng Ký" trên thanh Header để tiến hành đăng ký tài khoản. Hệ thống sẽ hiển thị giao diện form đăng ký tài khoản. Sau khi người dùng nhập thông tin và chọn đăng kí, nếu
+% thông tin đã nhập là hợp lệ thì hệ thống sẽ lưu tài khoản và mã hóa mật khẩu. Trường hợp thông tin đã nhập được xác định là chưa hợp lệ, hệ thống sẽ báo lỗi và người dùng buộc phải nhập lại.
 
 
-\subsubsubsection{Đăng nhập}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{Images/DangNhap_ActivityDiagram.png}
-    \vspace{15pt}
-    \caption{Activity Diagram -- Đăng nhập tài khoản}
-\end{figure}
+% \subsubsubsection{Đăng nhập}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{Images/Activity_Diagram_User/User_Login.drawio.png}
+%     \vspace{15pt}
+%     \caption{Activity Diagram -- Đăng nhập tài khoản}
+% \end{figure}
 
-\indent \indent Người dùng sẽ nhập thông tin tài khoản để đăng nhập vào hệ thống. Sau khi đăng nhập thành công thì hệ thống sẽ chuyển hướng đến trang chủ. \\
-\indent \underline{Lưu ý:} Sơ đồ hoạt động đăng nhập tài khoản trên có thể áp dụng cho cả Ban tổ chức hoặc quản trị viên trong cùng hoạt động.
+% \indent \indent Người dùng sẽ truy cập vào hệ thống, chọn "Đăng nhập" trên thanh Header để tiến hành đăng nhập. Hệ thống sẽ hiển thị giao diện form đăng nhập tài khoản. Sau khi người dùng nhập thông tin và chọn đăng nhập, nếu thông tin đã nhập là hợp lệ thì hệ thống sẽ tạo JWT token, lưu vào localStorage/session và ghi log hoạt động đăng nhập. Trường hợp thông tin đã nhập được xác định là chưa hợp lệ, hệ thống sẽ báo lỗi và người dùng buộc phải nhập lại.
+% \indent \underline{Lưu ý:} Sơ đồ hoạt động đăng nhập tài khoản trên có thể áp dụng cho cả Ban tổ chức hoặc quản trị viên trong cùng hoạt động.
 
 \subsubsubsection{Mua vé sự kiện}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{Images/MuaVe_ActivityDiagram.png}
+    \includegraphics[width=0.7\textwidth]{Images/Activity_Diagram_User/User_BuyTicket.drawio.png}
     \vspace{15pt}
     \caption{Activity Diagram -- Mua vé sự kiện}
 \end{figure}
 
-\subsubsubsection{Chat với Ban tổ chức hoặc quản trị viên}
+\indent \indent Sau khi đã truy cập vào hệ thống và đăng nhập thành công, người dùng sẽ chọn một sự kiện mà mình quan tâm. Tại trang thông tin chi tiết sự kiện, người dùng sẽ chọn mua vé với loại vé tương ứng. Hệ thống sẽ điều hướng đến trang xác nhận thanh toán. 
+Tại đây, hệ thống sẽ hiển thị cảnh báo độ tuổi nếu có. Trong đồng ý tiếp tục mua vé, người dùng sẽ kiểm tra lại thông tin vé và có thể điều chỉnh số lượng vé (miễn là còn đủ số lượng vé). Nếu loại vé đang mua là vé có chỗ ngồi cố định thì cần chọn ghế. 
+Sau khi chọn xác nhận mua vé, hệ thống sẽ điều hướng sang trang thanh toán, người dùng tiến hành quét mã QR để thanh toán bằng app ngân hàng hoặc ví điện tử của mình. Sau khi thanh toán thành công, hệ thống sẽ cập nhật trạng thái vé là "Đã mua", ghi log hoạt động mua vé, hiển thị thông báo và gửi email xác nhận mua vé thành công, tạo vé và điều hướng sang trang lịch sử mua vé. 
+Nếu có lỗi trong quá trình thanh toán, hệ thống sẽ ghi log lỗi và thông báo “Payment failed, please try again.”
+\subsubsubsection{Chat với trợ lý ảo}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/Activity_Diagram_User/User_ChatBoxAI.drawio.png}
+    \vspace{15pt}
+    \caption{Activity Diagram -- Chat với trợ lý ảo}
+\end{figure}
+
+\indent \indent Người dùng sẽ truy cập vào hệ thống, chọn biểu tượng Chatbot trên giao diện để bắt đầu trò chuyện với trợ lý ảo. Hệ thống sẽ hiển thị giao diện hộp thoại chat. Người dùng nhập câu hỏi hoặc yêu cầu vào ô nhập liệu và gửi đi. Hệ thống sẽ xử lý yêu cầu, gửi câu hỏi đến API của Gemini và nhận phản hồi. Sau đó, hệ thống sẽ hiển thị phản hồi từ Gemini trong hộp thoại chat. Người dùng có thể tiếp tục đặt câu hỏi hoặc kết thúc cuộc trò chuyện khi đã nhận được thông tin cần thiết.
+
+\subsubsubsection{Đánh giá ban tổ chức sau sự kiện}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Images/Activity_Diagram_User/User_Feelback.drawio.png}
+    \vspace{15pt}
+    \caption{Activity Diagram -- Đánh giá ban tổ chức sau sự kiện}
+\end{figure}
+
+\indent \indent Đối với những sự kiện đã mua vé thành công và đã diễn ra, người dùng có thể truy cập vào trang lịch sử mua vé hoặc icon ngôi sao trên thanh Header để tiến hành đánh giá ban tổ chức sự kiện bằng cấp đánh số sao (từ 1 đến 5) và bình luận. Hệ thống sẽ hiển thị form đánh giá với các trường nhập liệu cần thiết. Người dùng nhập thông tin và gửi đánh giá. Hệ thống sẽ xác thực thông tin, lưu đánh giá vào cơ sở dữ liệu, ghi log hoạt động đánh giá và hiển thị thông báo thành công. Nếu có lỗi trong quá trình lưu đánh giá, hệ thống sẽ ghi log lỗi và thông báo “Failed to submit feedback, please try again.”
 
 \subsubsection{Activity Diagram cho Ban tổ chức}
 
@@ -612,35 +954,36 @@ Nếu có lỗi kết nối cơ sở dữ liệu hoặc không có dữ liệu v
 
 \indent \indent Ban tổ chức có thể xem thông tin cá nhân của mình, bao gồm  Name, Email, Phone, Address, Tax Code, Rating, Created At và Updated At. Hệ thống sẽ hiển thị các thông tin này khi Ban tổ chức truy cập vào mục Profile trên thanh Sidebar. Nếu có lỗi khi tải thông tin cá nhân, hệ thống sẽ hiển thị thông báo lỗi và giá trị ở các trường sẽ hiển thị là "--". 
 
-\subsubsection{Activity Diagram cho Quản trị viên - OLD}
+\subsubsection{Activity Diagram cho Quản trị viên}
 
 \subsubsubsection{Quản lý danh sách các sự kiện}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{Images/QuanLySuKien_ActivityDiagram.png}
+    \includegraphics[width=0.7\textwidth]{Images/Activity_Diagram_Admin/DACN - Activity Diagram - Admin-Quản lý sự kiện.drawio.png}
     \vspace{15pt}
-    \caption{Activity Diagram -- Quản lý danh sách sự kiện}
+    \caption{Activity Diagram -- Quản lý sự kiện}
 \end{figure}
-\indent \indent Đầu tiên, admin mở mục quản lý sự kiện và có thể lọc hoặc chọn một sự kiện cụ thể để xem chi tiết. Từ đây, admin có thể thực hiện các chức năng như tạo mới, chỉnh sửa hoặc xóa sự kiện. Nếu xóa, hệ thống sẽ yêu cầu xác nhận và hiển thị thông báo sau khi xóa thành công; nếu chỉnh sửa hoặc tạo mới, hệ thống hiển thị form nhập liệu để admin điền thông tin. Sau khi admin lưu, hệ thống kiểm tra tính hợp lệ và đầy đủ của dữ liệu, rồi lưu thông tin vào cơ sở dữ liệu và thông báo kết quả tương ứng.
+\indent \indent Đầu tiên, admin mở mục thông tin sự kiện trên thanh Sidebar. Tại đây admin có thể xem nhanh danh sách các sự kiện và có thể nhập từ khóa tìm kiếm. Khi chọn một sự kiện cụ thể để xem chi tiết, admin có thể thực hiện các chức năng như chỉnh sửa hoặc xóa thông tin sự kiện. Nếu xóa, hệ thống sẽ yêu cầu xác nhận và hiển thị thông báo sau khi xóa thành công; nếu chỉnh sửa hoặc tạo mới, hệ thống hiển thị form nhập liệu để admin điền thông tin. Sau khi admin lưu, hệ thống kiểm tra tính hợp lệ và đầy đủ của dữ liệu, rồi lưu thông tin vào cơ sở dữ liệu và thông báo kết quả tương ứng.
 \subsubsubsection{Quản lý đơn vị tổ chức sự kiện}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{Images/QuanLyToChuc_ActivityDiagram.png}
+    \includegraphics[width=0.7\textwidth]{Images/Activity_Diagram_Admin/DACN - Activity Diagram - Admin-Quản lý đơn vị tổ chức.drawio.png}
     \vspace{15pt}
     \caption{Activity Diagram -- Quản lý các đơn vị tổ chức sự kiện}
 \end{figure}
-\indent \indent Đầu tiên, admin truy cập mục quản lý và có thể thực hiện lọc danh sách hoặc chọn đơn vị cụ thể để xem chi tiết. Sau đó, admin có thể thực hiện các chức năng như tạo mới, chỉnh sửa hoặc xóa đơn vị tổ chức. Khi thực hiện thao tác xóa, hệ thống sẽ yêu cầu xác nhận trước khi xóa dữ liệu. Đối với thao tác thêm hoặc chỉnh sửa, hệ thống kiểm tra tính hợp lệ của thông tin và lưu vào cơ sở dữ liệu nếu hợp lệ, đồng thời hiển thị thông báo kết quả tương ứng.
+\indent \indent Đầu tiên, admin truy cập mục thông tin ban tổ chức trên thanh Sidebar. Tại đây, admin có thể xem nhanh danh sách các ban tổ chức, tạo mới thông tin ban tổ chức và có thể nhập từ khóa tìm kiếm. Khi chọn một đơn vị tổ chức sự kiện cụ thể để xem chi tiết, admin có thể thực hiện các chức năng như tạo chỉnh sửa hoặc xóa đơn vị tổ chức. Khi thực hiện thao tác xóa, hệ thống sẽ yêu cầu xác nhận trước khi xóa dữ liệu. Đối với thao tác thêm hoặc chỉnh sửa, hệ thống kiểm tra tính hợp lệ của thông tin và lưu vào cơ sở dữ liệu nếu hợp lệ, đồng thời hiển thị thông báo kết quả tương ứng.
+
 
 
 %%%%%%%%%%%% Sequence diagram
 
-\subsection{Lược đồ tuần tự - OLD}
+\subsection{Lược đồ tuần tự}
 
 \subsubsection{Chức năng mua vé dành cho người dùng}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/seq_muave.png}
+    \includegraphics[width=0.9\textwidth]{Images/seq_muave.drawio.png}
     \vspace{15pt}
     \caption{Sequence Diagram -- Chức năng mua vé dành cho người dùng}
 \end{figure}
@@ -649,16 +992,16 @@ Nếu có lỗi kết nối cơ sở dữ liệu hoặc không có dữ liệu v
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{Images/seq_goiy.png}
+    \includegraphics[width=1\textwidth]{Images/Sequence diagram-seq_goiy.drawio.png}
     \vspace{15pt}
     \caption{Sequence Diagram -- Chức năng gợi ý sự kiện cá nhân hóa dành cho người dùng}
 \end{figure}
 
-\subsubsection{Chức năng nhắn tin}
+\subsubsection{Chức năng chat với trợ lý ảo}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{Images/seq_chat.png}
+    \includegraphics[width=1\textwidth]{Images/seq chatbot.drawio.png}
     \vspace{15pt}
-    \caption{Sequence Diagram -- Chức năng nhắn tin}
+    \caption{Sequence Diagram -- Chức năng chat với trợ lý ảo}
 \end{figure}

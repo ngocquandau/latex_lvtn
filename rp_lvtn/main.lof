@@ -1,102 +1,101 @@
 \thispagestyle {empty}
-\contentsline {figure}{\numberline {1}{\ignorespaces Kết quả khảo sát dành cho người tham gia sự kiện}}{1}{figure.caption.9}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Cách thức hoạt động của mô hình Client-Server}}{4}{figure.caption.11}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Cách thức hoạt động của RESTful API}}{5}{figure.caption.12}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Hệ thống cơ sở dữ liệu đơn giản}}{6}{figure.caption.13}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Ngôn ngữ lập trình TypeScript}}{11}{figure.caption.16}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Thư viên ReactJS}}{12}{figure.caption.17}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Môi trường lập trình NodeJS}}{12}{figure.caption.18}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Ngôn ngữ lập trình Python}}{13}{figure.caption.19}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Hệ quản trị cơ sở dữ liệu MongoDB}}{14}{figure.caption.20}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Giải pháp xử lý và lưu trữ hình ảnh Cloudinary}}{15}{figure.caption.21}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Nền tảng Hugging Face}}{16}{figure.caption.22}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Định dạng ONNX (Open Neural Network Exchange)}}{17}{figure.caption.23}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Công cụ tự động hóa GitHub Actions}}{18}{figure.caption.24}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Thư viện Nodemailer cho dịch vụ gửi email}}{19}{figure.caption.25}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Cổng thanh toán PayOS và cơ chế Webhooks}}{20}{figure.caption.26}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Use Case Diagram -- Người dùng}}{25}{figure.caption.27}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Use Case Diagram -- Ban tổ chức}}{30}{figure.caption.33}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Use Case Diagram -- Quản trị viên}}{35}{figure.caption.40}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Activity Diagram -- Đăng ký tài khoản}}{37}{figure.caption.43}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Activity Diagram -- Đăng nhập tài khoản}}{38}{figure.caption.44}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Activity Diagram -- Mua vé sự kiện}}{39}{figure.caption.45}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Activity Diagram -- Theo dõi dữ liệu thống kê (Ban tổ chức)}}{40}{figure.caption.46}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Activity Diagram -- Theo dõi thông tin sự kiện (Ban tổ chức)}}{41}{figure.caption.47}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Activity Diagram -- Tìm kiếm sự kiện (Ban tổ chức)}}{41}{figure.caption.48}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Activity Diagram -- Xem chi tiết sự kiện (Ban tổ chức)}}{42}{figure.caption.49}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Activity Diagram -- Xem danh sách khách hàng mua vé (Ban tổ chức)}}{43}{figure.caption.50}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Activity Diagram -- Thay đổi mật khẩu (Ban tổ chức)}}{44}{figure.caption.51}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Activity Diagram -- Quên mật khẩu (Ban tổ chức)}}{45}{figure.caption.52}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Activity Diagram -- Xem profile cá nhân (Ban tổ chức)}}{46}{figure.caption.53}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Activity Diagram -- Quản lý danh sách sự kiện}}{47}{figure.caption.54}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Activity Diagram -- Quản lý các đơn vị tổ chức sự kiện}}{48}{figure.caption.55}%
-\contentsline {figure}{\numberline {32}{\ignorespaces Sequence Diagram -- Chức năng mua vé dành cho người dùng}}{49}{figure.caption.56}%
-\contentsline {figure}{\numberline {33}{\ignorespaces Sequence Diagram -- Chức năng gợi ý sự kiện cá nhân hóa dành cho người dùng}}{50}{figure.caption.57}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Sequence Diagram -- Chức năng nhắn tin}}{51}{figure.caption.58}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Kiến trúc hệ thống}}{52}{figure.caption.59}%
-\contentsline {figure}{\numberline {36}{\ignorespaces Document Schema Diagram}}{53}{figure.caption.60}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Quy trình MLOps tự động}}{56}{figure.caption.71}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Tính quan trọng của các đặc trưng trong mô hình gợi ý}}{59}{figure.caption.73}%
-\contentsline {figure}{\numberline {39}{\ignorespaces Ma trận nhầm lẫn của mô hình gợi ý}}{59}{figure.caption.74}%
-\contentsline {figure}{\numberline {40}{\ignorespaces Giao diện HomePage của người dùng khi chưa đăng nhập}}{61}{figure.caption.75}%
-\contentsline {figure}{\numberline {41}{\ignorespaces Giao diện HomePage của người dùng khi đã đăng nhập}}{62}{figure.caption.76}%
-\contentsline {figure}{\numberline {42}{\ignorespaces Giao diện khung chat của Chatbot AI}}{64}{figure.caption.77}%
-\contentsline {figure}{\numberline {43}{\ignorespaces Giao diện khung chat sau khi người dùng nhập câu hỏi}}{64}{figure.caption.78}%
-\contentsline {figure}{\numberline {44}{\ignorespaces Giao diện Chatbot AI đang suy nghĩ}}{64}{figure.caption.79}%
-\contentsline {figure}{\numberline {45}{\ignorespaces Giao diện Chatbot AI trả về phản hồi cho người dùng}}{65}{figure.caption.80}%
-\contentsline {figure}{\numberline {46}{\ignorespaces Trang kết quả tìm kiếm khi không có sự kiện phù hợp}}{65}{figure.caption.81}%
-\contentsline {figure}{\numberline {47}{\ignorespaces Trang kết quả tìm kiếm khi có sự kiện phù hợp}}{66}{figure.caption.82}%
-\contentsline {figure}{\numberline {48}{\ignorespaces Trang hiển thị tất cả sự kiện khi không có kết quả tìm kiếm phù hợp}}{66}{figure.caption.83}%
-\contentsline {figure}{\numberline {49}{\ignorespaces Giao diện đăng nhập tài khoản}}{67}{figure.caption.84}%
-\contentsline {figure}{\numberline {50}{\ignorespaces Giao diện đăng ký tài khoản}}{67}{figure.caption.85}%
-\contentsline {figure}{\numberline {51}{\ignorespaces Thông báo lỗi khi người dùng không nhập đủ email hoặc mật khẩu}}{68}{figure.caption.86}%
-\contentsline {figure}{\numberline {52}{\ignorespaces Thông báo lỗi khi người dùng nhập email không hợp lệ}}{68}{figure.caption.87}%
-\contentsline {figure}{\numberline {53}{\ignorespaces Thông báo lỗi khi người dùng nhập mật khẩu không hợp lệ}}{68}{figure.caption.88}%
-\contentsline {figure}{\numberline {54}{\ignorespaces Thông báo lỗi khi người dùng không nhập đủ các thông tin yêu cầu}}{69}{figure.caption.89}%
-\contentsline {figure}{\numberline {55}{\ignorespaces Thông báo lỗi khi người dùng nhập email không hợp lệ}}{69}{figure.caption.90}%
-\contentsline {figure}{\numberline {56}{\ignorespaces Thông báo lỗi khi người dùng nhập mật khẩu và xác nhận mật khẩu không khớp nhau}}{69}{figure.caption.91}%
-\contentsline {figure}{\numberline {57}{\ignorespaces Thông báo thành công khi người dùng đăng nhập thành công}}{70}{figure.caption.92}%
-\contentsline {figure}{\numberline {58}{\ignorespaces Thông báo thành công khi người dùng đăng ký tài khoản thành công}}{70}{figure.caption.93}%
-\contentsline {figure}{\numberline {59}{\ignorespaces Giao diện hiển thị chi tiết thông tin sự kiện}}{71}{figure.caption.94}%
-\contentsline {figure}{\numberline {60}{\ignorespaces Trang xác nhận thanh toán với các loại ghế khác nhau}}{72}{figure.caption.95}%
-\contentsline {figure}{\numberline {61}{\ignorespaces Khung tin nhắn cảnh báo độ tuổi}}{73}{figure.caption.96}%
-\contentsline {figure}{\numberline {62}{\ignorespaces Giao diện thanh toán liên kết với PayOS}}{73}{figure.caption.97}%
-\contentsline {figure}{\numberline {63}{\ignorespaces Giao diện lịch sử mua vé}}{74}{figure.caption.98}%
-\contentsline {figure}{\numberline {64}{\ignorespaces Giao diện hiển thị mã QR vé điện tử}}{75}{figure.caption.99}%
-\contentsline {figure}{\numberline {65}{\ignorespaces Giao diện thông tin vé điện tử sau khi quét mã QR}}{75}{figure.caption.100}%
-\contentsline {figure}{\numberline {66}{\ignorespaces Giao diện ban tổ chức nhập thông tin đăng nhập}}{76}{figure.caption.101}%
-\contentsline {figure}{\numberline {67}{\ignorespaces Giao diện ban tổ chức sau khi đăng nhập thành công}}{76}{figure.caption.102}%
-\contentsline {figure}{\numberline {68}{\ignorespaces Giao diện hiển thị dữ liệu thống kê của Ban tổ chức}}{76}{figure.caption.103}%
-\contentsline {figure}{\numberline {69}{\ignorespaces Giao diện hiển thị danh sách các sự kiện tổng quan của Ban tổ chức}}{77}{figure.caption.104}%
-\contentsline {figure}{\numberline {70}{\ignorespaces Giao diện hiển thị chi tiết thông tin một sự kiện cụ thể của Ban tổ chức}}{77}{figure.caption.105}%
-\contentsline {figure}{\numberline {71}{\ignorespaces Giao diện hiển thị thông tin cá nhân của Ban tổ chức}}{78}{figure.caption.106}%
-\contentsline {figure}{\numberline {72}{\ignorespaces Giao diện quản trị viên nhập thông tin đăng nhập}}{78}{figure.caption.107}%
-\contentsline {figure}{\numberline {73}{\ignorespaces Giao diện quản trị viên sau khi đăng nhập thành công}}{79}{figure.caption.108}%
-\contentsline {figure}{\numberline {74}{\ignorespaces Giao diện hiển thị dữ liệu thống kê của Quản trị viên}}{79}{figure.caption.109}%
-\contentsline {figure}{\numberline {75}{\ignorespaces Giao diện quản lý thông tin sự kiện của Quản trị viên}}{80}{figure.caption.110}%
-\contentsline {figure}{\numberline {76}{\ignorespaces Giao diện hiển thị kết quả tìm kiếm sự kiện tại trang quản lý thông tin sự kiện của Quản trị viên}}{80}{figure.caption.111}%
-\contentsline {figure}{\numberline {77}{\ignorespaces Giao diện hiển thị chi tiết thông tin một sự kiện cụ thể tại trang quản lý thông tin của Quản trị viên}}{81}{figure.caption.112}%
-\contentsline {figure}{\numberline {78}{\ignorespaces Giao diện chỉnh sửa thông tin một sự kiện cụ thể tại trang quản lý thông tin của Quản trị viên}}{81}{figure.caption.113}%
-\contentsline {figure}{\numberline {79}{\ignorespaces Giao diện xác nhận xóa một sự kiện cụ thể tại trang quản lý thông tin của Quản trị viên}}{81}{figure.caption.114}%
-\contentsline {figure}{\numberline {80}{\ignorespaces Giao diện tạo mới sự kiện tại trang quản lý thông tin sự kiện của Quản trị viên}}{82}{figure.caption.115}%
-\contentsline {figure}{\numberline {81}{\ignorespaces Giao diện quản lý thông tin Ban tổ chức của Quản trị viên}}{82}{figure.caption.116}%
-\contentsline {figure}{\numberline {82}{\ignorespaces Giao diện hiển thị kết quả tìm kiếm Ban tổ chức tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{83}{figure.caption.117}%
-\contentsline {figure}{\numberline {83}{\ignorespaces Giao diện chỉnh sửa thông tin một Ban tổ chức cụ thể tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{83}{figure.caption.118}%
-\contentsline {figure}{\numberline {84}{\ignorespaces Giao diện xác nhận xóa một Ban tổ chức cụ thể tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{83}{figure.caption.119}%
-\contentsline {figure}{\numberline {86}{\ignorespaces Giao diện quản lý thông tin vé của Quản trị viên}}{84}{figure.caption.121}%
-\contentsline {figure}{\numberline {85}{\ignorespaces Giao diện tạo mới Ban tổ chức tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{84}{figure.caption.120}%
-\contentsline {figure}{\numberline {87}{\ignorespaces Giao diện lựa chọn sự kiện để tạo vé tại trang quản lý thông tin vé của Quản trị viên}}{84}{figure.caption.122}%
-\contentsline {figure}{\numberline {88}{\ignorespaces Giao diện điền thông tin vé có chỗ ngồi tự do tại trang quản lý thông tin vé của Quản trị viên}}{85}{figure.caption.123}%
-\contentsline {figure}{\numberline {89}{\ignorespaces Giao diện lưu thông tin một vé có chỗ ngồi tự do sau khi nhấn nút "Save" tại trang quản lý thông tin vé của Quản trị viên}}{85}{figure.caption.124}%
-\contentsline {figure}{\numberline {90}{\ignorespaces Giao diện tạo và điền thông tin nhiều vé có chỗ ngồi tự do cùng lúc tại trang quản lý thông tin vé của Quản trị viên}}{86}{figure.caption.125}%
-\contentsline {figure}{\numberline {91}{\ignorespaces Giao diện điền thông tin vé có chỗ ngồi cố định tại trang quản lý thông tin vé của Quản trị viên}}{86}{figure.caption.126}%
-\contentsline {figure}{\numberline {92}{\ignorespaces Giao diện điền thông tin ghế cho vé có chỗ ngồi cố định sau khi nhấn nút "Save" tại trang quản lý thông tin vé của Quản trị viên}}{86}{figure.caption.127}%
-\contentsline {figure}{\numberline {93}{\ignorespaces Giao diện lưu thông tin một vé có chỗ ngồi cố định tại trang quản lý thông tin vé của Quản trị viên}}{87}{figure.caption.128}%
-\contentsline {figure}{\numberline {94}{\ignorespaces Giao diện tạo và điền thông tin nhiều vé có chỗ ngồi cố định cùng lúc tại trang quản lý thông tin vé của Quản trị viên}}{87}{figure.caption.129}%
-\contentsline {figure}{\numberline {95}{\ignorespaces Giao diện hiển thị vé đã được lưu vào bảng vé hiện có của sự kiện tại trang quản lý thông tin vé của Quản trị viên}}{88}{figure.caption.130}%
-\contentsline {figure}{\numberline {97}{\ignorespaces Giao diện hiển thị kết quả tìm kiếm người dùng tại trang quản lý thông tin người dùng của Quản trị viên}}{89}{figure.caption.132}%
-\contentsline {figure}{\numberline {96}{\ignorespaces Giao diện quản lý thông tin người dùng của Quản trị viên}}{89}{figure.caption.131}%
-\contentsline {figure}{\numberline {98}{\ignorespaces Giao diện hiển thị chi tiết thông tin một người dùng cụ thể tại trang quản lý thông tin người dùng của Quản trị viên}}{90}{figure.caption.133}%
-\contentsline {figure}{\numberline {99}{\ignorespaces Giao diện chỉnh sửa thông tin một người dùng cụ thể tại trang quản lý thông tin người dùng của Quản trị viên}}{90}{figure.caption.134}%
-\contentsline {figure}{\numberline {100}{\ignorespaces Giao diện xác nhận xóa một người dùng cụ thể tại trang quản lý thông tin người dùng của Quản trị viên}}{90}{figure.caption.135}%
-\contentsline {figure}{\numberline {101}{\ignorespaces Danh sách công việc và sơ đồ Gantt}}{93}{figure.caption.136}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Cách thức hoạt động của mô hình Client-Server}}{3}{figure.caption.4}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Cách thức hoạt động của RESTful API}}{4}{figure.caption.5}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Hệ thống cơ sở dữ liệu đơn giản}}{5}{figure.caption.6}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Ngôn ngữ lập trình TypeScript}}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Thư viên ReactJS}}{12}{figure.caption.10}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Môi trường lập trình NodeJS}}{13}{figure.caption.11}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Ngôn ngữ lập trình Python}}{14}{figure.caption.12}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Hệ quản trị cơ sở dữ liệu MongoDB}}{14}{figure.caption.13}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Giải pháp xử lý và lưu trữ hình ảnh Cloudinary}}{15}{figure.caption.14}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Nền tảng Hugging Face}}{16}{figure.caption.15}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Định dạng ONNX (Open Neural Network Exchange)}}{17}{figure.caption.16}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Công cụ tự động hóa GitHub Actions}}{18}{figure.caption.17}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Mô hình ngôn ngữ lớn Gemini 2.5 Flash}}{19}{figure.caption.18}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Thư viện Nodemailer cho dịch vụ gửi email}}{20}{figure.caption.19}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Cổng thanh toán PayOS và cơ chế Webhooks}}{21}{figure.caption.20}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Use Case Diagram -- Người dùng}}{30}{figure.caption.21}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Use Case Diagram -- Ban tổ chức}}{38}{figure.caption.33}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Use Case Diagram -- Quản trị viên}}{44}{figure.caption.39}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Activity Diagram -- Mua vé sự kiện}}{49}{figure.caption.44}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Activity Diagram -- Chat với trợ lý ảo}}{50}{figure.caption.45}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Activity Diagram -- Đánh giá ban tổ chức sau sự kiện}}{51}{figure.caption.46}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Activity Diagram -- Theo dõi dữ liệu thống kê (Ban tổ chức)}}{51}{figure.caption.47}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Activity Diagram -- Theo dõi thông tin sự kiện (Ban tổ chức)}}{52}{figure.caption.48}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Activity Diagram -- Xem chi tiết sự kiện (Ban tổ chức)}}{53}{figure.caption.50}%
+\contentsline {figure}{\numberline {24}{\ignorespaces Activity Diagram -- Tìm kiếm sự kiện (Ban tổ chức)}}{53}{figure.caption.49}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Activity Diagram -- Xem danh sách khách hàng mua vé (Ban tổ chức)}}{54}{figure.caption.51}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Activity Diagram -- Thay đổi mật khẩu (Ban tổ chức)}}{55}{figure.caption.52}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Activity Diagram -- Quên mật khẩu (Ban tổ chức)}}{56}{figure.caption.53}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Activity Diagram -- Xem profile cá nhân (Ban tổ chức)}}{57}{figure.caption.54}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Activity Diagram -- Quản lý sự kiện}}{58}{figure.caption.55}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Activity Diagram -- Quản lý các đơn vị tổ chức sự kiện}}{59}{figure.caption.56}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Sequence Diagram -- Chức năng mua vé dành cho người dùng}}{60}{figure.caption.57}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Sequence Diagram -- Chức năng gợi ý sự kiện cá nhân hóa dành cho người dùng}}{61}{figure.caption.58}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Sequence Diagram -- Chức năng chat với trợ lý ảo}}{62}{figure.caption.59}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Kiến trúc hệ thống}}{63}{figure.caption.60}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Document Schema Diagram}}{65}{figure.caption.61}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Quy trình MLOps tự động}}{70}{figure.caption.71}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Tính quan trọng của các đặc trưng trong mô hình gợi ý}}{72}{figure.caption.73}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Ma trận nhầm lẫn của mô hình gợi ý}}{73}{figure.caption.74}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Giao diện HomePage của người dùng khi chưa đăng nhập}}{78}{figure.caption.77}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Giao diện HomePage của người dùng khi đã đăng nhập}}{79}{figure.caption.78}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Giao diện khung chat của Chatbot AI}}{81}{figure.caption.79}%
+\contentsline {figure}{\numberline {43}{\ignorespaces Giao diện khung chat sau khi người dùng nhập câu hỏi}}{81}{figure.caption.80}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Giao diện Chatbot AI đang suy nghĩ}}{82}{figure.caption.81}%
+\contentsline {figure}{\numberline {45}{\ignorespaces Giao diện Chatbot AI trả về phản hồi cho người dùng}}{82}{figure.caption.82}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Trang kết quả tìm kiếm khi không có sự kiện phù hợp}}{83}{figure.caption.83}%
+\contentsline {figure}{\numberline {47}{\ignorespaces Trang kết quả tìm kiếm khi có sự kiện phù hợp}}{83}{figure.caption.84}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Trang hiển thị tất cả sự kiện khi không có kết quả tìm kiếm phù hợp}}{84}{figure.caption.85}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Giao diện đăng nhập tài khoản}}{84}{figure.caption.86}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Giao diện đăng ký tài khoản}}{84}{figure.caption.87}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Thông báo lỗi khi người dùng không nhập đủ email hoặc mật khẩu}}{85}{figure.caption.88}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Thông báo lỗi khi người dùng nhập email không hợp lệ}}{85}{figure.caption.89}%
+\contentsline {figure}{\numberline {53}{\ignorespaces Thông báo lỗi khi người dùng nhập mật khẩu không hợp lệ}}{86}{figure.caption.90}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Thông báo lỗi khi người dùng không nhập đủ các thông tin yêu cầu}}{86}{figure.caption.91}%
+\contentsline {figure}{\numberline {55}{\ignorespaces Thông báo lỗi khi người dùng nhập email không hợp lệ}}{86}{figure.caption.92}%
+\contentsline {figure}{\numberline {56}{\ignorespaces Thông báo lỗi khi người dùng nhập mật khẩu và xác nhận mật khẩu không khớp nhau}}{87}{figure.caption.93}%
+\contentsline {figure}{\numberline {57}{\ignorespaces Thông báo thành công khi người dùng đăng nhập thành công}}{87}{figure.caption.94}%
+\contentsline {figure}{\numberline {58}{\ignorespaces Thông báo thành công khi người dùng đăng ký tài khoản thành công}}{87}{figure.caption.95}%
+\contentsline {figure}{\numberline {59}{\ignorespaces Giao diện hiển thị chi tiết thông tin sự kiện}}{88}{figure.caption.96}%
+\contentsline {figure}{\numberline {60}{\ignorespaces Trang xác nhận thanh toán với các loại ghế khác nhau}}{89}{figure.caption.97}%
+\contentsline {figure}{\numberline {61}{\ignorespaces Khung tin nhắn cảnh báo độ tuổi}}{90}{figure.caption.98}%
+\contentsline {figure}{\numberline {62}{\ignorespaces Giao diện thanh toán liên kết với PayOS}}{90}{figure.caption.99}%
+\contentsline {figure}{\numberline {63}{\ignorespaces Giao diện lịch sử mua vé}}{91}{figure.caption.100}%
+\contentsline {figure}{\numberline {64}{\ignorespaces Giao diện hiển thị mã QR vé điện tử}}{92}{figure.caption.101}%
+\contentsline {figure}{\numberline {65}{\ignorespaces Giao diện thông tin vé điện tử sau khi quét mã QR}}{92}{figure.caption.102}%
+\contentsline {figure}{\numberline {66}{\ignorespaces Giao diện ban tổ chức nhập thông tin đăng nhập}}{93}{figure.caption.103}%
+\contentsline {figure}{\numberline {67}{\ignorespaces Giao diện ban tổ chức sau khi đăng nhập thành công}}{93}{figure.caption.104}%
+\contentsline {figure}{\numberline {68}{\ignorespaces Giao diện hiển thị dữ liệu thống kê của Ban tổ chức}}{93}{figure.caption.105}%
+\contentsline {figure}{\numberline {69}{\ignorespaces Giao diện hiển thị danh sách các sự kiện tổng quan của Ban tổ chức}}{94}{figure.caption.106}%
+\contentsline {figure}{\numberline {70}{\ignorespaces Giao diện hiển thị chi tiết thông tin một sự kiện cụ thể của Ban tổ chức}}{94}{figure.caption.107}%
+\contentsline {figure}{\numberline {71}{\ignorespaces Giao diện hiển thị thông tin cá nhân của Ban tổ chức}}{95}{figure.caption.108}%
+\contentsline {figure}{\numberline {72}{\ignorespaces Giao diện quản trị viên nhập thông tin đăng nhập}}{95}{figure.caption.109}%
+\contentsline {figure}{\numberline {73}{\ignorespaces Giao diện quản trị viên sau khi đăng nhập thành công}}{96}{figure.caption.110}%
+\contentsline {figure}{\numberline {74}{\ignorespaces Giao diện hiển thị dữ liệu thống kê của Quản trị viên}}{96}{figure.caption.111}%
+\contentsline {figure}{\numberline {75}{\ignorespaces Giao diện quản lý thông tin sự kiện của Quản trị viên}}{97}{figure.caption.112}%
+\contentsline {figure}{\numberline {76}{\ignorespaces Giao diện hiển thị kết quả tìm kiếm sự kiện tại trang quản lý thông tin sự kiện của Quản trị viên}}{97}{figure.caption.113}%
+\contentsline {figure}{\numberline {77}{\ignorespaces Giao diện hiển thị chi tiết thông tin một sự kiện cụ thể tại trang quản lý thông tin của Quản trị viên}}{98}{figure.caption.114}%
+\contentsline {figure}{\numberline {78}{\ignorespaces Giao diện chỉnh sửa thông tin một sự kiện cụ thể tại trang quản lý thông tin của Quản trị viên}}{98}{figure.caption.115}%
+\contentsline {figure}{\numberline {79}{\ignorespaces Giao diện xác nhận xóa một sự kiện cụ thể tại trang quản lý thông tin của Quản trị viên}}{98}{figure.caption.116}%
+\contentsline {figure}{\numberline {80}{\ignorespaces Giao diện tạo mới sự kiện tại trang quản lý thông tin sự kiện của Quản trị viên}}{99}{figure.caption.117}%
+\contentsline {figure}{\numberline {81}{\ignorespaces Giao diện quản lý thông tin Ban tổ chức của Quản trị viên}}{99}{figure.caption.118}%
+\contentsline {figure}{\numberline {82}{\ignorespaces Giao diện hiển thị kết quả tìm kiếm Ban tổ chức tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{100}{figure.caption.119}%
+\contentsline {figure}{\numberline {83}{\ignorespaces Giao diện chỉnh sửa thông tin một Ban tổ chức cụ thể tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{100}{figure.caption.120}%
+\contentsline {figure}{\numberline {84}{\ignorespaces Giao diện xác nhận xóa một Ban tổ chức cụ thể tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{100}{figure.caption.121}%
+\contentsline {figure}{\numberline {86}{\ignorespaces Giao diện quản lý thông tin vé của Quản trị viên}}{101}{figure.caption.123}%
+\contentsline {figure}{\numberline {85}{\ignorespaces Giao diện tạo mới Ban tổ chức tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{101}{figure.caption.122}%
+\contentsline {figure}{\numberline {87}{\ignorespaces Giao diện lựa chọn sự kiện để tạo vé tại trang quản lý thông tin vé của Quản trị viên}}{101}{figure.caption.124}%
+\contentsline {figure}{\numberline {88}{\ignorespaces Giao diện điền thông tin vé có chỗ ngồi tự do tại trang quản lý thông tin vé của Quản trị viên}}{102}{figure.caption.125}%
+\contentsline {figure}{\numberline {89}{\ignorespaces Giao diện lưu thông tin một vé có chỗ ngồi tự do sau khi nhấn nút "Save" tại trang quản lý thông tin vé của Quản trị viên}}{102}{figure.caption.126}%
+\contentsline {figure}{\numberline {90}{\ignorespaces Giao diện tạo và điền thông tin nhiều vé có chỗ ngồi tự do cùng lúc tại trang quản lý thông tin vé của Quản trị viên}}{103}{figure.caption.127}%
+\contentsline {figure}{\numberline {91}{\ignorespaces Giao diện điền thông tin vé có chỗ ngồi cố định tại trang quản lý thông tin vé của Quản trị viên}}{103}{figure.caption.128}%
+\contentsline {figure}{\numberline {92}{\ignorespaces Giao diện điền thông tin ghế cho vé có chỗ ngồi cố định sau khi nhấn nút "Save" tại trang quản lý thông tin vé của Quản trị viên}}{104}{figure.caption.129}%
+\contentsline {figure}{\numberline {93}{\ignorespaces Giao diện lưu thông tin một vé có chỗ ngồi cố định tại trang quản lý thông tin vé của Quản trị viên}}{104}{figure.caption.130}%
+\contentsline {figure}{\numberline {95}{\ignorespaces Giao diện hiển thị vé đã được lưu vào bảng vé hiện có của sự kiện tại trang quản lý thông tin vé của Quản trị viên}}{105}{figure.caption.132}%
+\contentsline {figure}{\numberline {94}{\ignorespaces Giao diện tạo và điền thông tin nhiều vé có chỗ ngồi cố định cùng lúc tại trang quản lý thông tin vé của Quản trị viên}}{105}{figure.caption.131}%
+\contentsline {figure}{\numberline {97}{\ignorespaces Giao diện hiển thị kết quả tìm kiếm người dùng tại trang quản lý thông tin người dùng của Quản trị viên}}{106}{figure.caption.134}%
+\contentsline {figure}{\numberline {96}{\ignorespaces Giao diện quản lý thông tin người dùng của Quản trị viên}}{106}{figure.caption.133}%
+\contentsline {figure}{\numberline {98}{\ignorespaces Giao diện hiển thị chi tiết thông tin một người dùng cụ thể tại trang quản lý thông tin người dùng của Quản trị viên}}{107}{figure.caption.135}%
+\contentsline {figure}{\numberline {99}{\ignorespaces Giao diện chỉnh sửa thông tin một người dùng cụ thể tại trang quản lý thông tin người dùng của Quản trị viên}}{107}{figure.caption.136}%
+\contentsline {figure}{\numberline {100}{\ignorespaces Giao diện xác nhận xóa một người dùng cụ thể tại trang quản lý thông tin người dùng của Quản trị viên}}{107}{figure.caption.137}%

@@ -1,10 +1,12 @@
 \section{Phân tích \& Thiết kế hệ thống}
 
-\subsection{Kiến trúc hệ thống - OLD}
-\indent \indent Kiến trúc hệ thống này tuân theo mô hình 3 tầng (Three-tier Architecture), giúp phân tách rõ ràng giữa giao diện người dùng, xử lý nghiệp vụ và lưu trữ dữ liệu. Mô hình này đảm bảo hiệu suất, bảo mật và khả năng mở rộng cao.
+\subsection{Kiến trúc hệ thống}
+\indent \indent Kiến trúc hệ thống được xây dựng dựa trên mô hình 3 tầng mở rộng (Extended Three-tier Architecture) kết hợp với các dịch vụ bên ngoài (External Services) và microservice trí tuệ nhân tạo, nhằm tăng cường khả năng mở rộng, tự động hóa và cá nhân hóa trải nghiệm người dùng.\\
+\indent Mô hình này không chỉ phân tách rõ ràng giữa giao diện, xử lý nghiệp vụ và dữ liệu, mà còn tích hợp thêm các thành phần như thanh toán trực tuyến, xử lý tác vụ định kỳ và hệ thống gợi ý thông minh
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/KienTrucHeThong.png}
+    \includegraphics[width=1\textwidth]{Images/KTHT.png}
     \vspace{10pt}
     \caption{Kiến trúc hệ thống}
     \label{fig:hdfs_architecture}
@@ -16,34 +18,52 @@
         \item[-] Giao diện được xây dựng bằng ReactJS, đảm nhiệm việc hiển thị dữ liệu, nhận yêu cầu và phản hồi từ người dùng.
         \item[-] Giao tiếp với máy chủ thông qua các HTTP Request/Response, sử dụng định dạng JSON để truyền dữ liệu.
     \end{itemize}
-    \item[2.] \textbf{Server Side (Back-end \& Xử lý nghiệp vụ)}
+    \item[2.] \textbf{Server Side (Back-end \& Điều phối hệ thống)}: Được phát triển bằng Node.js, đóng vai trò là trung tâm xử lý và điều phối của toàn bộ hệ thống.
     \begin{itemize}
-        \item[-] Được phát triển bằng Node.js, đảm nhận xử lý logic nghiệp vụ và điều phối dữ liệu.
         \item[-] Hỗ trợ các phương thức HTTP như GET, POST, PUT, DELETE để thực hiện các thao tác CRUD.
         \item[-] Sử dụng JWT (JSON Web Token) để xác thực và phân quyền người dùng, đảm bảo tính bảo mật trong truy cập tài nguyên.
+        \item[-] Tích hợp Nodemailer để gửi email tự động (ví dụ: thông báo, xác nhận).
         \item[-] Là tầng trung gian giữa giao diện người dùng và cơ sở dữ liệu, giúp kiểm soát luồng dữ liệu và logic xử lý.
+        \item[-] Các tích hợp mở rộng trong tầng Server:
+        \begin{itemize}
+            \item[a.] \textbf{Tích hợp hệ thống thanh toán (PayOS)}
+            \item[] Backend gửi yêu cầu tạo thanh toán đến PayOS thông qua API.
+            \item[] Sau khi người dùng hoàn tất thanh toán, PayOS gửi webhook về hệ thống.
+            \item[] Backend xử lý webhook để xác nhận trạng thái giao dịch và cập nhật dữ liệu vào hệ thống.
+            \item[b.] \textbf{Tích hợp hệ thống tác vụ định kỳ (cronjob.org)}
+            \item[] Sử dụng dịch vụ cronjob.org để thực hiện các tác vụ theo lịch.
+            \item[] Dịch vụ này sẽ gửi request đến backend theo thời gian định sẵn.
+            \item[] Các tác vụ bao gồm: gửi email nhắc lịch, cập nhật trạng thái sự kiện, cập nhật input định kỳ để huấn luyện mô hình gợi ý…
+            \item[c.] \textbf{ Tích hợp hệ thống gợi ý (Recommendation Service - Hugging Face Spaces)}
+            \item[] Hệ thống gợi ý được triển khai như một microservice độc lập trên Hugging Face Spaces.
+            \item[] Backend gửi request đến service này để lấy danh sách đề xuất.
+            \item[] Service xử lý dữ liệu bằng mô hình AI và trả về kết quả dưới dạng JSON.
+            \item[] Backend có thể xử lý bổ sung trước khi trả về client.
+        \end{itemize}
     \end{itemize}
     \item[3.] \textbf{Database Layer (Lưu trữ dữ liệu)}
     \begin{itemize}
-        \item[-] Dữ liệu được lưu trữ trong MongoDB, một hệ quản trị cơ sở dữ liệu NoSQL phổ biến.
-        \item[-] Tầng này chịu trách nhiệm lưu trữ, truy xuất và quản lý dữ liệu theo yêu cầu từ tầng hệ thống.
-        \item[-] Việc truy cập dữ liệu được kiểm soát thông qua tầng hệ thống, giúp đảm bảo tính toàn vẹn và bảo mật.
+        \item[-] Dữ liệu được lưu trữ trong MongoDB, một hệ quản trị cơ sở dữ liệu NoSQL.
+        \item[-] Chịu trách nhiệm: lưu trữ thông tin người dùng, sự kiện, vé, giao dịch và lưu trữ dữ liệu phục vụ hệ thống gợi ý.
+        \item[-] Việc truy cập dữ liệu được thực hiện thông qua backend, đảm bảo: tính toàn vẹn dữ liệu và tính bảo mật.
     \end{itemize}
-    \item[4.] \textbf{Ưu điểm của kiến trúc này}
+    \item[4.] \textbf{Ưu điểm của kiến trúc mở rộng}
     \begin{itemize}
-        \item[-] Bảo mật cao: Người dùng không truy cập trực tiếp vào cơ sở dữ liệu.
-        \item[-] Dễ mở rộng: Có thể triển khai nhiều máy chủ hệ thống để xử lý song song.
-        \item[-] Tái sử dụng tốt: Các tầng được tách biệt, dễ bảo trì và nâng cấp.
-        \item[-] Hiệu suất ổn định: Phân chia rõ ràng vai trò giữa các tầng giúp tối ưu hóa xử lý.
+        \item[-] Khả năng mở rộng cao: Dễ dàng tích hợp thêm các dịch vụ bên ngoài hoặc tách thành microservices.
+        \item[-] Tăng cường tự động hóa: Các tác vụ định kỳ được xử lý tự động thông qua cronjob.org.
+        \item[-] Tích hợp thực tế: Hệ thống thanh toán PayOS giúp ứng dụng gần với môi trường triển khai thực tế.
+        \item[-] Cá nhân hóa trải nghiệm người dùng: Hệ thống recommendation sử dụng AI giúp đề xuất nội dung phù hợp.
+        \item[-] Bảo mật và kiểm soát tốt: Backend đóng vai trò trung gian, kết hợp JWT và webhook verification.
+        \item[-] Dễ bảo trì và nâng cấp: Các thành phần được tách biệt rõ ràng giữa core system và external services.
     \end{itemize}
 \end{itemize}
 
-\subsection{Thiết kế Database - OLD}
+\subsection{Thiết kế Database}
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\textwidth]{Images/schema.png}
+    \includegraphics[width=1\textwidth]{Images/Document Schema Diagram.png}
     \vspace{15pt}
     \caption{Document Schema Diagram}
 \end{figure}
@@ -55,7 +75,7 @@
 %==================== USERS TABLE ====================
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
@@ -63,125 +83,133 @@ firstName & User's first name \\ \hline
 lastName & User's last name \\ \hline
 gender & Gender \\ \hline
 birthday & Date of birth \\ \hline
-email & Email address \\ \hline
+email (UK) & Email address (Unique) \\ \hline
 phoneNumber & Phone number \\ \hline
-name & Display name \\ \hline
+password & Hashed password \\ \hline
+role & User role in the system \\ \hline
 profileImage & Profile picture URL \\ \hline
+avgPurchasePrice & Average purchase price (Auto-calculated when accumulateFlag is true) \\ \hline
 totalSpent & Total amount spent \\ \hline
-totalTicketPurchase & Total tickets purchased \\ \hline
-accumulatedFlag & Loyalty flag \\ \hline
+totalTicketsPurchase & Total tickets purchased \\ \hline
+accumulateFlag & A temporary toggle flag for update logic: TRUE for accumulating/adding to current data (e.g., new purchase), FALSE/Default for overwriting data (e.g., admin edit). Deleted after middleware execution. \\ \hline
 location & User location \\ \hline
-createdAt & Created timestamp \\ \hline
-updatedAt & Last updated timestamp \\ \hline
+isActive & Account status \\ \hline
+createdAt & Timestamps for creation \\ \hline
+updatedAt & Timestamps for last update \\ \hline
 \end{tabular}
 \vspace{15pt}
-\caption{Các thuộc tính của bảng User}
+\caption{Các thuộc tính của bảng Users}
 \end{table}
 
 %==================== ORGANIZERS TABLE ====================
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
-address & Organizer address \\ \hline
-phoneNumber & Organizer phone number \\ \hline
-email & Organizer email \\ \hline
 name & Organizer name \\ \hline
-user & FK referencing users.\_id \\ \hline
-createdAt & Created timestamp \\ \hline
-updatedAt & Last updated timestamp \\ \hline
+address & Address \\ \hline
+phoneNumber & Contact phone number \\ \hline
+email (UK) & Contact email \\ \hline
+taxCode (UK) & Tax identification number \\ \hline
+rating & Rating \\ \hline
+user (FK) & Associated user account \\ \hline
+createdAt & Timestamps for creation \\ \hline
+updatedAt & Timestamps for last update \\ \hline
 \end{tabular}
 \vspace{15pt}
-\caption{Các thuộc tính của bảng Organizer}
+\caption{Các thuộc tính của bảng Organizers}
 \end{table}
 
 %==================== EVENTS TABLE ====================
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
-name & Event name \\ \hline
-genre & Event genre \\ \hline
-description & Event description \\ \hline
-eventURL & Event page URL \\ \hline
-startDateTime & Start date and time \\ \hline
-endDateTime & End date and time \\ \hline
+title & Event title \\ \hline
+genre & Genre/Category \\ \hline
+description & Description \\ \hline
+posterURL & Poster image URL \\ \hline
+startDateTime & Start time \\ \hline
+endDateTime & End time \\ \hline
 maxCapacity & Maximum capacity \\ \hline
 platformCommission & Platform commission fee \\ \hline
 status & Event status \\ \hline
-ticketCount & Number of tickets \\ \hline
-spotLimit & Spot limit \\ \hline
-sellingList & Selling platforms list \\ \hline
-totalTickets & Total tickets available \\ \hline
-organizer & FK referencing organizers.\_id \\ \hline
+clickCount & Number of clicks \\ \hline
+ageLimit & Age limit \\ \hline
+seatImgUrl & Seat map image URL \\ \hline
+totalTickets & Total number of tickets \\ \hline
+organizer (FK) & Organizer ID \\ \hline
 location & Event location \\ \hline
-createdAt & Created timestamp \\ \hline
-updatedAt & Last updated timestamp \\ \hline
+createdAt & Timestamps for creation \\ \hline
+updatedAt & Timestamps for last update \\ \hline
 \end{tabular}
 \vspace{15pt}
-\caption{Các thuộc tính của bảng Event}
+\caption{Các thuộc tính của bảng Events}
 \end{table}
 
 %==================== TICKETCLASSES TABLE ====================
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
-name & Ticket class name \\ \hline
-totalQuantity & Total number of tickets \\ \hline
-soldQuantity & Number of tickets sold \\ \hline
-availableFrom & Sale start date \\ \hline
-availableUntil & Sale end date \\ \hline
-meta & Additional metadata \\ \hline
-eventType & Type of event \\ \hline
-event & FK referencing events.\_id \\ \hline
+name & Ticket class name (VIP, Standard, etc.) \\ \hline
+price & Ticket price \\ \hline
+totalQuantity & Total quantity \\ \hline
+soldQuantity & Sold quantity \\ \hline
+availableFrom & Sale start time \\ \hline
+availableUntil & Sale end time \\ \hline
+status & Ticket class status \\ \hline
+seatType & Seat type \\ \hline
+event (FK) & Belongs to which event \\ \hline
 \end{tabular}
 \vspace{15pt}
-\caption{Các thuộc tính của bảng TicketClass}
+\caption{Các thuộc tính của bảng TicketClasses}
 \end{table}
 
 %==================== TICKETS TABLE ====================
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
-ticketClass & Ticket class name \\ \hline
-seat & Seat number or code \\ \hline
-isSold & Ticket sold status \\ \hline
-qrCode & QR code string \\ \hline
-ticketId & Unique ticket identifier \\ \hline
-event & FK referencing events.\_id \\ \hline
+ticketClass (FK) & Corresponding ticket class \\ \hline
+seat & Specific seat position \\ \hline
+isSold & Sold status \\ \hline
+qrCode & QR Code for verification \\ \hline
+purchase (FK) & Belongs to which purchase order \\ \hline
+ticketId & Display ticket ID \\ \hline
 \end{tabular}
 \vspace{15pt}
-\caption{Các thuộc tính của bảng Ticket}
+\caption{Các thuộc tính của bảng Tickets}
 \end{table}
 
 %==================== PURCHASES TABLE ====================
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
-user & FK referencing users.\_id \\ \hline
-event & FK referencing events.\_id \\ \hline
-ticketClass & FK referencing ticketClasses.\_id \\ \hline
-quantity & Number of tickets purchased \\ \hline
-totalAmount & Total amount paid \\ \hline
+user (FK) & Buyer ID \\ \hline
+event (FK) & Event ID \\ \hline
+ticketClass (FK) & Ticket class ID \\ \hline
+quantity & Quantity of tickets purchased \\ \hline
+totalAmount & Total amount after discount \\ \hline
 originalPrice & Original price before discount \\ \hline
-paymentMethod & Payment method used \\ \hline
-status & Purchase status \\ \hline
-purchaseDate & Date of purchase \\ \hline
-createdAt & Created timestamp \\ \hline
-updatedAt & Last updated timestamp \\ \hline
+voucher (FK) & Applied voucher ID \\ \hline
+orderCode & Reference order code \\ \hline
+paymentMethod & Payment method \\ \hline
+paymentStatus & Payment status \\ \hline
+purchaseDate & Purchase date \\ \hline
+createdAt & Timestamps for creation \\ \hline
+updatedAt & Timestamps for last update \\ \hline
 \end{tabular}
 \vspace{15pt}
 \caption{Các thuộc tính của bảng Purchases}
@@ -190,73 +218,78 @@ updatedAt & Last updated timestamp \\ \hline
 %==================== VOUCHERS TABLE ====================
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
-code & Unique voucher code \\ \hline
-discountAmount & Discount value \\ \hline
-maxAmount & Maximum discount allowed \\ \hline
+code (UK) & Voucher code \\ \hline
+discountAmount & Discount amount or percentage \\ \hline
+maxAmount & Maximum discount amount \\ \hline
 minSpend & Minimum spend required \\ \hline
-validUntil & Voucher expiration date \\ \hline
+validUntil & Expiry date \\ \hline
 \end{tabular}
 \vspace{15pt}
 \caption{Các thuộc tính của bảng Vouchers}
 \end{table}
 
-%==================== INTERACTIONS TABLE ====================
+%==================== REVIEWS TABLE ====================
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{4.5cm}|p{6cm}|}
+\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
-event\_id & FK referencing events.\_id \\ \hline
-click & Number of clicks \\ \hline
-purchase & Whether a purchase occurred \\ \hline
-createdAt & Timestamp of interaction \\ \hline
+user (FK) & Reviewer ID \\ \hline
+event (FK) & Reference to the event being reviewed \\ \hline
+organizer (FK) & Reference to the organizer being reviewed \\ \hline
+rating & Rating stars \\ \hline
+comment & Comment content \\ \hline
+\end{tabular}
+\vspace{15pt}
+\caption{Các thuộc tính của bảng Reviews}
+\end{table}
+
+%==================== INTERACTIONS TABLE ====================
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
+\hline
+\textbf{Field} & \textbf{Description} \\ \hline
+\_id (PK) & Primary key (ObjectId) \\ \hline
+user\_id (FK) & User ID \\ \hline
+event\_id (FK) & Event ID \\ \hline
+click & User click count on the event \\ \hline
+purchase & User purchase count for the event \\ \hline
+createdAt & Timestamps for creation \\ \hline
 \end{tabular}
 \vspace{15pt}
 \caption{Các thuộc tính của bảng Interactions}
 \end{table}
 
-%==================== CHATSESSIONS TABLE ====================
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{4.5cm}|p{6cm}|}
-\hline
-\textbf{Field} & \textbf{Description} \\ \hline
-\_id (PK) & Primary key (ObjectId) \\ \hline
-title & Chat session title \\ \hline
-created\_at & Creation timestamp \\ \hline
-last\_active\_time & Last activity timestamp \\ \hline
-status & Session status \\ \hline
-created\_by & FK referencing users.\_id \\ \hline
-participants & Array of user IDs \\ \hline
-event & FK referencing events.\_id \\ \hline
-\end{tabular}
-\vspace{15pt}
-\caption{Các thuộc tính của bảng ChatSessions}
-\end{table}
+\subsection{Cơ chế hoạt động trợ lý ảo - Chatbot AI}
+\indent \indent Chức năng trợ lý ảo được triển khai dưới dạng một chatbot AI tích hợp trực tiếp vào giao diện người dùng. Chatbot này sử dụng mô hình ngôn ngữ lớn (LLM) để hiểu và phản hồi các câu hỏi, yêu cầu của người dùng liên quan đến sự kiện, vé và các thông tin liên quan khác.\\
+\indent Chatbot AI này được thiết kế theo kiến trúc phân lớp (Layered Architecture), tách biệt rõ ràng giữa giao diện người dùng, logic nghiệp vụ và dịch vụ trí tuệ nhân tạo. 
+Sự tách biệt này không chỉ tối ưu hóa quy trình phát triển mà còn đảm bảo tính linh hoạt, cho phép hệ thống dễ dàng mở rộng hoặc thay đổi mô hình ngôn ngữ trong tương lai.\\
+\indent \textbf{Kiến trúc hệ thống trợ lý ảo}: Kiến trúc tổng thể của hệ thống bao gồm ba tầng chính
+\begin{itemize}
+    \item[1.] \textbf{Tầng Giao diện (Frontend)}: Tập trung vào việc xây dựng trải nghiệm người dùng (UX/UI), tiếp nhận yêu cầu đầu vào và hiển thị kết quả phản hồi.
+    \item[2.] \textbf{Tầng Nghiệp vụ (Backend \& Trung gian)}: Đóng vai trò là "bộ não" điều phối, chịu trách nhiệm xác thực người dùng, phân quyền, quản lý luồng dữ liệu và tích hợp API.
+    \item[3.] \textbf{Tầng Dịch vụ AI (AI Service Layer)}: Sử dụng mô hình Gemini 2.5 Flash đóng vai trò là công cụ suy luận ngôn ngữ chính, được kết nối thông qua giao thức API.
+\end{itemize}
 
-%==================== MESSAGES TABLE ====================
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{4.5cm}|p{6cm}|}
-\hline
-\textbf{Field} & \textbf{Description} \\ \hline
-\_id (PK) & Primary key (ObjectId) \\ \hline
-session\_id & FK referencing chatsessions.\_id \\ \hline
-sender\_id & FK referencing users.\_id \\ \hline
-content & Message content \\ \hline
-is\_read & Read status (true/false) \\ \hline
-read\_at & Timestamp when the message was read \\ \hline
-\end{tabular}
-\vspace{15pt}
-\caption{Các thuộc tính của bảng Messages}
-\end{table}
-
+\indent \indent \textbf{Luồng xử lý dữ liệu (Data Flow)}: Quy trình xử lý một yêu cầu từ người dùng được thực hiện tuần tự qua các bước sau
+\begin{itemize}
+    \item[1.] \textbf{Tiếp nhận và Xác thực}: Khi người dùng gửi câu hỏi từ Frontend, Backend sẽ thực hiện kiểm tra phiên đăng nhập (Session) và phân quyền truy cập nhằm đảm bảo tính bảo mật.
+    \item[2.] \textbf{Làm giàu ngữ cảnh (Context Enrichment)}: Thay vì gửi truy vấn thô, Backend tiến hành tổng hợp dữ liệu từ lịch sử hội thoại và các nguồn tri thức nghiệp vụ nội bộ. Việc này giúp mô hình AI hiểu rõ bối cảnh để đưa ra câu trả lời chính xác nhất.
+    \item[3.] \textbf{Xử lý tại tầng AI}: Request sau khi chuẩn hóa được chuyển đến Gemini 2.5 Flash. Tại đây, mô hình thực hiện suy luận và sinh phản hồi dựa trên ngữ cảnh đã cung cấp.
+    \item[4.] \textbf{Hậu xử lý và Kiểm soát}: Phản hồi từ AI không được trả về trực tiếp mà đi qua một lớp kiểm soát tại Backend để:
+    \begin{itemize}
+        \item[-] Lọc các nội dung không phù hợp hoặc vi phạm chính sách.
+        \item[-] Chuẩn hóa định dạng dữ liệu (JSON/Markdown).
+        \item[-] Ghi log hệ thống để phục vụ công tác giám sát và đánh giá hiệu năng.
+    \end{itemize}
+    \item[5.] \textbf{Phản hồi}: Kết quả cuối cùng sau khi được làm sạch và định dạng sẽ được gửi lại cho Frontend để hiển thị tới người dùng.
+\end{itemize}
 
 \subsection{Hệ thống Gợi ý Sự kiện Thông minh (Event Recommendation System)}
 
@@ -270,7 +303,7 @@ read\_at & Timestamp when the message was read \\ \hline
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.55\textwidth]{Images/Quy trình xử lý hệ thống.png}
+    \includegraphics[width=0.8\textwidth]{Images/Quy trình xử lý hệ thống.png}
     \vspace{15pt}
     \caption{Quy trình MLOps tự động}
 \end{figure}

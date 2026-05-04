@@ -11,7 +11,7 @@
     \begin{itemize}
         \item[\textbf{-}] \textbf{Các chức năng chung cho cả hai trường hợp là người dùng chưa hoặc đã đăng nhập tài khoản vào hệ thống}: 
             \begin{itemize}
-                \item[+] Nhắn tin với Chatbot AI để được tư vấn và giải đáp thắc mắc về các sự kiện, quy trình đặt vé, chính sách hoàn hủy, v.v.
+                \item[+] Nhắn tin với trợ lý ảo (Chatbot AI) để được tư vấn và giải đáp thắc mắc về các sự kiện, quy trình đặt vé, chính sách hoàn hủy, v.v.
                 \item[+] Xem danh sách các sự kiện đang được bán vé có trong hệ thống ứng với 2 danh mục là "Sự kiện đang hot" và "Sự kiện mới" tại trang chủ.
                 \item[+] Xem các thông tin chi tiết về một sự kiện cụ thể đã được chọn.
                 \item[+] Nhập từ khóa tìm kiếm sự kiện.
@@ -19,6 +19,7 @@
         \textbf{\item[-] Trường hợp người dùng chưa đăng nhập tài khoản vào hệ thống}: 
             \begin{itemize}
                  \item[+] Tạo tài khoản trong hệ thống. 
+                 \item[+] Quên mật khẩu trường hợp đã có tài khoản nhưng không nhớ mật khẩu.
                  \item[+] Đăng nhập vào hệ thống bằng tài khoản đã có.
             \end{itemize}
         \textbf{\item[-] Trường hợp người dùng đã đăng nhập tài khoản vào hệ thống}: 
@@ -33,9 +34,10 @@
             \item[+] Khi xem lịch sử mua vé, người dùng có thể thực hiện nhóm chức năng sau: 
             \item[] \begin{itemize}
                 \item[1.] Nhận mã QR code của vé đã mua để truy cập thông tin vé điện tử khi tham gia sự kiện.
-                \item[2.] Đánh giá sự kiện đã mua vé sau khi tham gia.
+                \item[2.] Thực hiện đánh giá hoặc xem lại đánh giá cũ của mình dành cho ban tổ chức một sự kiện cụ thể đã mua vé thành công và đã diễn ra.
             \end{itemize}
             % \item[+] Người dùng có thể gửi tin nhắn cho đơn vị tổ chức của sự kiện mà mình quan tâm hoặc quản trị viên của hệ thống.
+            \item[+] Thay đổi mật khẩu tài khoản của mình.
             \item[+] Đăng xuất tài khoản ra khỏi hệ thống.
         \end{itemize}
     \end{itemize}
@@ -44,67 +46,384 @@
     \item[\textbf{-}] \textbf{Trường hợp Ban tổ chức chưa đăng nhập vào hệ thống}:
         \begin{itemize}
             \item[+] Đăng nhập vào hệ thống bằng tài khoản.
+            \item[+] Quên mật khẩu trường hợp đã có tài khoản nhưng không nhớ mật khẩu.
             % \item[+] Trong lần đăng nhập thành công đầu tiên khi sử dụng tài khoản được cấp sẵn, Ban tổ chức bắt buộc phải đổi mật khẩu để có thể tiếp tục thực hiện được các tác vụ khác.
         \end{itemize}
     \item[\textbf{-}] \textbf{Trường hợp Ban tổ chức đã đăng nhập thành công vào hệ thống}:
         \begin{itemize}
             \item[+] Xem dữ liệu thống kê tổng quan về các sự kiện do mình tổ chức đang được đăng tải trên hệ thống: Số lượng sự kiện, Tổng số vé đã đăng bán, Tổng số vé thực đã bán, Tỉ lệ bán vé trung bình và Tổng doanh thu nhận được.
             \item[+] Xem được danh sách các sự kiện do mình tổ chức đang được đăng tải trên hệ thống.
-            \item[+] Xem hoặc xuất danh sách (định dạng file .pdf hoặc .csv) khách hàng đã mua vé của sự kiện do mình tổ chức.
+            \item[+] Xem hoặc xuất danh sách (định dạng file .pdf hoặc .csv) khách hàng đã mua vé của một sự kiện cụ thể do mình tổ chức.
             \item[+] Nhập từ khóa tìm kiếm để quan sát được các sự kiện phù hợp.
             \item[+] Xem thông tin cá nhân: Tên đơn vị tổ chức, Email, Số điện thoại, Địa chỉ, Mã số thuế, Điểm đánh giá trung bình của khách hàng, Thời gian tạo tài khoản và Thời gian cập nhật thông tin cá nhân lần cuối.
+            \item[+] Thay đổi mật khẩu tài khoản của mình.
             \item[+] Đăng xuất tài khoản ra khỏi hệ thống.
         \end{itemize}
 \end{itemize}
 \subsubsection{Đối với vai trò quản trị viên}
 \begin{itemize}
     \item[-] Đăng nhập vào hệ thống bằng tài khoản.
-    \item[-] Đăng xuất tài khoản ra khỏi hệ thóng.
+    \item[-] Quên mật khẩu trường hợp đã có tài khoản nhưng không nhớ mật khẩu.
     \item[-] Khi đã đăng nhập thành công:
     \begin{itemize}
         \item[+] Xem dữ liệu thống kê tổng quan toàn hệ thống: Tổng số sự kiện, Tổng số khách hàng (Số tài khoản User), Tổng số Ban tổ chức; Các thống kê gần đây dựa trên hai tiêu chí về Số lượng và dấu hiện (Tăng/Giảm/Ổn định) dành cho Sự kiện mới trong tháng, Khách hàng đăng ký mới và Ban tổ chức hoạt động.
         \item[+] Tìm kiếm, tạo, xem, sửa hoặc xóa tất cả thông tin của các Ban tổ chức có sự kiện được đăng tải trong hệ thống.
         \item[+] Tìm kiếm, tạo, xem, sửa hoặc xóa tất thông tin sự kiện. Lưu ý:
         \begin{itemize}
-            \item[1.] Khi tạo hoặc sửa thông tin sự kiện, quản trị viên phải đảm bảo rằng sự kiện đó đã có đủ thông tin về sự kiện và Ban tổ chức.
+            \item[1.] Khi tạo thông tin sự kiện, quản trị viên phải đảm bảo rằng sự kiện đó đã có đủ thông tin yêu cầu để nhập liệu và đã có thông tin về Ban tổ chức tổ chức sự kiện đó trong mục thông tin Ban tổ chức.
             \item[2.] Khi xóa một sự kiện, hệ thống sẽ xóa tất cả thông tin liên quan đến sự kiện bao gồm cả vé, ngoại trừ thông tin về Ban tổ chức của sự kiện đó.
         \end{itemize}
         \item[+] Tạo, xem, sửa hoặc xóa tất cả thông tin vé của một sự kiện cụ thể được chọn đã có đủ thông tin về sự kiện và Ban tổ chức.
         \item[+] Tìm kiếm, xem, sửa hoặc xóa tất cả thông tin của một khách hàng được chọn trong bảng danh sách thông tin tài khoản khách hàng đã đăng ký trong hệ thống.
+        \item[+] Xem thông tin tài khoản.
+        \item[+] Thay đổi mật khẩu tài khoản của mình.
+        \item[+] Đăng xuất tài khoản ra khỏi hệ thống.
     \end{itemize}
 \end{itemize}
 \subsection{Yêu cầu phi chức năng}
-\begin{itemize}
-    \item[\textbf{-}] \textbf{Yêu cầu về Bảo mật (Security)}
-        \begin{itemize}
-            \item[+] \textbf{Bảo vệ dữ liệu người dùng}: hệ thống phải mã hóa tất cả các thông tin nhạy cảm của người dùng (như mật khẩu, thông tin thanh toán) cả khi truyền tải (sử dụng \textbf{HTTPS/TLS}) và khi lưu trữ trong cơ sở dữ liệu (\textbf{mã hóa một chiều} cho mật khẩu).
-            \item[+] \textbf{Phân quyền rõ ràng}: Hệ thống phải đảm bảo rằng người dùng, Ban tổ chức và quản trị viên chỉ có thể truy cập và thực hiện các chức năng đã được cấp quyền theo vai trò của họ (\textbf{kiểm soát truy cập dựa trên vai trò - RBAC}).
-            \item[+] \textbf{Xác thực mạnh mẽ}: hệ thống cần có cơ chế chống lại các cuộc tấn công như \textbf{Brute Force} (ví dụ: khóa tài khoản tạm thời sau một số lần đăng nhập thất bại) và sử dụng \textbf{mã hóa mạnh} cho phiên đăng nhập.
-            \item[+] \textbf{Bảo mật thanh toán}: Việc xử lý thanh toán phải tuân thủ các tiêu chuẩn bảo mật ngành (ví dụ: \textbf{PCI DSS} nếu trực tiếp xử lý thông tin thẻ) hoặc thông qua cổng thanh toán uy tín.
-        \end{itemize}
-    \item[\textbf{-}] \textbf{Yêu cầu về Hiệu suất (Performance)}
-        \begin{itemize}
-            \item[+] \textbf{Thời gian phản hồi}: 90\% các giao dịch quan trọng (ví dụ: tìm kiếm sự kiện, xem chi tiết sự kiện, mua vé) phải có \textbf{thời gian phản hồi dưới 3 giây} trong điều kiện tải thông thường.
-            \item[+] \textbf{Khả năng chịu tải}: Hệ thống phải xử lý được \textbf{tối thiểu 1000 người dùng đồng thời} khi diễn ra các sự kiện bán vé lớn.
-            \item[+] \textbf{Tốc độ truy vấn}: Các truy vấn cơ sở dữ liệu phải được tối ưu hóa, đảm bảo tốc độ tải danh sách sự kiện và lịch sử mua vé nhanh chóng.
-        \end{itemize}
-    \item[\textbf{-}] \textbf{Yêu cầu về Tính khả dụng (Usability)}
-        \begin{itemize}
-            \item[+] \textbf{Giao diện trực quan}: Giao diện người dùng phải \textbf{sạch sẽ, dễ hiểu} và nhất quán trên tất cả các màn hình, giúp người dùng dễ dàng tìm kiếm, chọn và mua vé.
-            \item[+] \textbf{Thân thiện với di động}: hệ thống phải \textbf{hoạt động tốt trên các thiết bị di động} (Responsive Design) hoặc được phát triển dưới dạng hệ thống di động chuyên biệt.
-            \item[+] \textbf{Thông báo lỗi rõ ràng}: Hệ thống cần cung cấp các thông báo lỗi và cảnh báo \textbf{cụ thể, dễ hiểu} và có tính định hướng để người dùng có thể tự khắc phục hoặc biết cách liên hệ hỗ trợ.
-            \item[+] \textbf{Quy trình mua vé đơn giản}: Quy trình mua vé và thanh toán cần được tối ưu hóa để hoàn thành trong \textbf{tối thiểu bước} có thể.
-        \end{itemize}
-    \item[\textbf{-}] \textbf{Yêu cầu về Tính sẵn dùng (Availability)}
-        \begin{itemize}
-            \item[+] \textbf{Thời gian hoạt động (Uptime)}: hệ thống phải đảm bảo \textbf{thời gian hoạt động tối thiểu là 99.5\%} (tương đương với không quá 44 giờ ngừng hoạt động mỗi năm).
-            \item[+] \textbf{Phục hồi sau sự cố}: Hệ thống phải có khả năng \textbf{phục hồi nhanh chóng} sau các sự cố ngoài ý muốn (ví dụ: lỗi máy chủ, mất điện), với thời gian phục hồi mục tiêu (\textbf{RTO}) ngắn.
-            \item[+] \textbf{Sao lưu dữ liệu}: Dữ liệu (thông tin người dùng, sự kiện, vé) phải được \textbf{sao lưu định kỳ} và có thể khôi phục hoàn toàn.
-        \end{itemize}
-    \item[\textbf{-}] \textbf{Yêu cầu về Tính bảo trì và Mở rộng (Maintainability)}
-        \begin{itemize}
-            \item[+] \textbf{Cấu trúc mã nguồn}: Mã nguồn phải được \textbf{viết rõ ràng, có cấu trúc tốt}, dễ đọc và tuân thủ các nguyên tắc lập trình tiêu chuẩn để dễ dàng bảo trì và sửa lỗi.
-            \item[+] \textbf{Khả năng mở rộng (Scalability)}: Cấu trúc hệ thống phải hỗ trợ việc \textbf{mở rộng theo chiều ngang} (Horizontal Scaling) để dễ dàng thêm tài nguyên nhằm đáp ứng lượng người dùng và sự kiện tăng lên trong tương lai mà không cần thay đổi lớn về kiến trúc.
-            \item[+] \textbf{Khả năng tùy chỉnh}: hệ thống phải dễ dàng \textbf{thêm các tính năng mới} (ví dụ: loại vé mới, phương thức thanh toán mới) hoặc điều chỉnh quy trình nghiệp vụ hiện có.
-        \end{itemize}
+
+\subsubsection{Bảo mật (Security)}
+
+\subsubsubsection{Xác thực và Phân quyền}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{JWT (JSON Web Token):} Mọi API bảo vệ đều yêu cầu Bearer Token
+    trong header \texttt{Authorization}. Secret key lấy từ biến môi trường
+    \texttt{SECRET\_KEY}; thiếu key trả về lỗi HTTP 500 thay vì tiếp tục xử lý.
+
+    \item \textbf{Phân quyền 3 tầng:} Hệ thống phân biệt rõ \texttt{user} /
+    \texttt{organizer} / \texttt{admin}. Middleware \texttt{verifyAdmin} chặn truy
+    cập trái phép; \texttt{verifyToken} kiểm tra cả trạng thái \texttt{isActive}
+    của tài khoản trong cơ sở dữ liệu -- không chỉ kiểm tra chữ ký token.
+
+    \item \textbf{Optional Auth:} Middleware \texttt{optionalAuth} cho phép người
+    dùng ẩn danh vẫn sử dụng được một số tính năng (xem sự kiện, tương tác),
+    nhưng không ghi nhận interaction.
+
+    \item \textbf{Frontend Protected Route:} Component \texttt{ProtectedRoute.tsx}
+    chặn điều hướng sai role ở phía client. Token hết hạn được phát hiện bằng
+    cách giải mã payload \texttt{exp} -- tự động xóa token và chuyển hướng về
+    trang chủ.
 \end{itemize}
+
+\subsubsubsection{Mã hóa Dữ liệu Nhạy cảm}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{bcryptjs} với \texttt{saltRounds = 10} để hash password trước
+    khi lưu vào MongoDB.
+
+    \item Password \textbf{không bao giờ trả về} trong query nhờ cấu hình
+    \texttt{select: false} trên schema.
+
+    \item Người dùng \textbf{không được phép} tự thay đổi trường \texttt{role}
+    qua API -- server kiểm tra và xóa field nếu người gửi không phải admin.
+\end{itemize}
+
+\subsubsubsection{Ngăn chặn Tấn công}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{CORS Whitelist:} Chỉ chấp nhận request từ
+    \texttt{https://mticket.vercel.app} và \texttt{http://localhost:3000}.
+
+    \item \textbf{HTML Escaping} trong email service (hàm \texttt{escapeHtml})
+    ngăn XSS khi render nội dung động vào HTML email.
+
+    \item \textbf{DOMPurify} (frontend) sanitize nội dung rich-text từ Quill
+    editor trước khi render ra giao diện.
+
+    \item \textbf{Cron Job bảo vệ bằng \texttt{X-Cron-Secret}:} Route trigger
+    cron từ bên ngoài yêu cầu header bí mật khớp với
+    \texttt{process.env.CRON\_SECRET}.
+
+    \item \textbf{Giới hạn query:} Số record trả về tối đa 200 bản ghi
+    (\texttt{Math.min(..., 200)}) để tránh tấn công DoS qua over-fetching.
+
+    \item \textbf{Input filter:} Chỉ cho phép các filter hợp lệ
+    (\texttt{status}, \texttt{genre}, \texttt{organizer}) trong query --
+    không để raw query từ client truyền thẳng vào MongoDB.
+\end{itemize}
+
+\subsubsubsection{Bảo mật Thanh toán}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item Tích hợp \textbf{PayOS} với \texttt{checksumKey} riêng để xác minh
+    webhook.
+
+    \item QR thanh toán \textbf{hết hạn sau 15 phút} (trường \texttt{expiredAt}),
+    đồng bộ với cron job thu hồi vé pending.
+\end{itemize}
+
+% ============================================================
+%  2. HIỆU NĂNG
+% ============================================================
+\subsubsection{Hiệu năng (Performance)}
+
+\subsubsubsection{Cơ sở Dữ liệu}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{MongoDB Text Index:} Hỗ trợ full-text search trên sự kiện
+    (dùng \texttt{\$text: \{ \$search \}} kết hợp \texttt{textScore}).
+
+    \item \textbf{2dsphere Index:} Trên \texttt{User.location} và
+    \texttt{Event.location} cho phép truy vấn địa lý (sự kiện gần nhất theo
+    tọa độ người dùng).
+
+    \item \textbf{Index \texttt{createdAt: -1}} trên collection
+    \texttt{Statistic} để lấy bản ghi mới nhất nhanh chóng.
+
+    \item \textbf{\texttt{.lean()}:} Sử dụng trong Gemini service và các
+    aggregate pipeline để trả về plain JS object, giảm overhead của Mongoose.
+
+    \item \textbf{Aggregate Pipeline:} Dữ liệu interaction và thống kê được
+    tính toán trực tiếp trong MongoDB thay vì load toàn bộ về Node.js.
+\end{itemize}
+
+\subsubsubsection{Caching}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{Logo caching:} Biến \texttt{cachedLogoAttachment} và
+    \texttt{watermarkLogoDataUri} cache file ảnh logo vào bộ nhớ -- chỉ đọc
+    disk một lần duy nhất.
+
+    \item \textbf{Redis} (dependency \texttt{redis} \^{}5.10.0): Sẵn sàng làm
+    caching layer / session store cho toàn hệ thống.
+\end{itemize}
+
+\subsubsubsection{Phân trang và Giới hạn Tải}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item Phân trang chuẩn với các tham số: \texttt{page}, \texttt{limit},
+    \texttt{direction}, \texttt{sortField}.
+
+    \item \textbf{Cursor-based pagination} hỗ trợ thêm để tránh \texttt{skip()}
+    chậm trên collection lớn.
+
+    \item Chatbot AI chỉ load \textbf{tối đa 30 sự kiện} published gần nhất,
+    không dump toàn bộ cơ sở dữ liệu vào prompt.
+\end{itemize}
+
+\subsubsubsection{Xử lý Bất đồng bộ}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{BullMQ} (dependency) để xử lý job nặng (email, notification)
+    theo hàng đợi, tránh block event loop của Node.js.
+
+    \item \texttt{triggerTicketEmail} được gọi theo kiểu fire-and-forget
+    (không \texttt{await}) trong webhook handler để phản hồi PayOS nhanh
+    nhất có thể.
+\end{itemize}
+
+% ============================================================
+%  3. ĐỘ TIN CẬY & TÍNH NHẤT QUÁN DỮ LIỆU
+% ============================================================
+\subsubsection{Độ tin cậy và Tính nhất quán Dữ liệu (Reliability \& Data Integrity)}
+
+\subsubsubsection{Giao dịch Nguyên tử}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{MongoDB Transactions} trong cron job: Mỗi đơn hàng pending
+    hết hạn được xử lý trong một session transaction riêng biệt. Nếu xảy ra
+    lỗi thì \texttt{abortTransaction()} -- đảm bảo không có trạng thái nửa
+    vời (vé đã thu hồi nhưng số lượng chưa được hoàn trả).
+\end{itemize}
+
+\subsubsubsection{Cơ chế Tự phục hồi}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{Cron Job mỗi 1 phút:} Tự động quét và thu hồi vé của đơn
+    hàng có \texttt{paymentStatus: 'pending'} quá 15 phút -- giải phóng slot
+    cho người mua tiếp theo.
+
+    \item \textbf{ScheduledJob model} hỗ trợ \texttt{retryCount} /
+    \texttt{maxRetries: 3} / \texttt{lastError} -- cho phép retry job thất
+    bại (email, cleanup).
+
+    \item \textbf{Graceful startup:} Nếu MongoDB không kết nối được thì
+    \texttt{process.exit(1)} ngay lập tức, không để server chạy ở trạng
+    thái lỗi không xác định.
+
+    \item \textbf{DNS override} sang \texttt{8.8.8.8}: Tránh lỗi DNS
+    resolver của Render khi kết nối MongoDB Atlas.
+\end{itemize}
+
+\subsubsubsection{Validation Dữ liệu}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{Mongoose validators:}
+    \begin{itemize}[label={\(\circ\)}]
+        \item \texttt{endDateTime} $\geq$ \texttt{startDateTime} (Event).
+        \item \texttt{discountAmount} $\leq$ \texttt{maxAmount} (Voucher).
+        \item \texttt{validUntil} $>$ \texttt{now()} (Voucher).
+        \item Các ràng buộc \texttt{min} / \texttt{max} trên các trường số liệu.
+    \end{itemize}
+
+    \item \textbf{Pre-save / Pre-update hooks:} Tự động tính
+    \texttt{avgPurchasePrice}, kiểm tra logic nghiệp vụ trước khi ghi vào
+    cơ sở dữ liệu.
+
+    \item \textbf{\texttt{runValidators: true}} trong
+    \texttt{findByIdAndUpdate} đảm bảo Mongoose validator chạy ngay cả
+    khi thực hiện update.
+\end{itemize}
+
+% ============================================================
+%  4. KHẢ NĂNG MỞ RỘNG
+% ============================================================
+\subsubsection{Khả năng Mở rộng (Scalability)}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{Cloud-native deployment:} Backend deploy trên \textbf{Render}
+    (lắng nghe \texttt{0.0.0.0}), Frontend deploy trên \textbf{Vercel}.
+
+    \item \textbf{Cloudinary} làm CDN lưu ảnh: Không lưu file trên server,
+    dễ dàng scale theo chiều ngang.
+
+    \item \textbf{BullMQ + Redis} tách biệt xử lý job nặng khỏi HTTP request
+    cycle -- sẵn sàng chạy worker process riêng biệt.
+
+    \item \textbf{HuggingFace dataset} lưu data training ML -- pipeline AI/ML
+    tách rời hoàn toàn khỏi backend chính.
+
+    \item Kiến trúc \textbf{MVC tách biệt rõ ràng:}
+    routes / controllers / services / models -- mỗi tầng có thể thay thế
+    hoặc mở rộng độc lập mà không ảnh hưởng tầng khác.
+\end{itemize}
+
+% ============================================================
+%  5. KHẢ NĂNG BẢO TRÌ
+% ============================================================
+\subsubsection{Khả năng Bảo trì (Maintainability)}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{ES Modules} (\texttt{"type": "module"}) toàn bộ backend --
+    chuẩn modern JavaScript.
+
+    \item \textbf{TypeScript} toàn bộ frontend -- type-safe, bắt lỗi tại
+    compile-time thay vì runtime.
+
+    \item \textbf{Nodemon} cho phép hot-reload trong môi trường phát triển.
+
+    \item \textbf{Environment-based configuration:} Mọi secret và cấu hình
+    đều thông qua file \texttt{.env}:
+    \texttt{SECRET\_KEY}, \texttt{MONGO\_URI}, \texttt{PAYOS\_*},
+    \texttt{CLOUDINARY\_*}, \texttt{GEMINI\_API\_KEY}, \texttt{HF\_TOKEN},
+    \texttt{CRON\_SECRET}, \texttt{FRONTEND\_URL}.
+
+    \item \textbf{Thư mục \texttt{docs/}:} Bộ tài liệu handover ghi chép
+    chi tiết các luồng quan trọng bao gồm: QR ticket, email, forgot
+    password, organizer attendees, payment.
+\end{itemize}
+
+% ============================================================
+%  6. KHẢ NĂNG TƯƠNG THÍCH
+% ============================================================
+\subsubsection{Khả năng Tương thích (Compatibility)}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{Browserslist production:} \texttt{>0.2\%},
+    \texttt{not dead}, \texttt{not op\_mini all} -- hỗ trợ phần lớn trình
+    duyệt đang được sử dụng thực tế.
+
+    \item \textbf{Ant Design 5.x} + \textbf{Tailwind CSS 3.x}: UI component
+    library kết hợp utility-first CSS, hỗ trợ responsive design.
+
+    \item \textbf{React 18.3}: Tương thích concurrent rendering.
+
+    \item \textbf{Express 5.x} (phiên bản beta): Backend sử dụng phiên bản
+    mới nhất của Express framework.
+\end{itemize}
+
+% ============================================================
+%  7. KHẢ NĂNG SỬ DỤNG & TRẢI NGHIỆM NGƯỜI DÙNG
+% ============================================================
+\subsubsection{Khả năng Sử dụng và Trải nghiệm Người dùng (Usability)}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{Giao diện đa ngôn ngữ:} Toàn bộ giao diện hiển thị bằng
+    tiếng Việt.
+
+    \item \textbf{3 layout riêng biệt:} \texttt{AdminLayout},
+    \texttt{OrganizerLayout}, \texttt{ClientLayout} -- trải nghiệm UX phù
+    hợp với từng vai trò người dùng.
+
+    \item \textbf{Token hết hạn tự xử lý:} Axios interceptor tự phát hiện
+    lỗi 401, xóa token và thông báo cho người dùng.
+
+    \item \textbf{Rich Text Editor} (Quill): Ban tổ chức có thể soạn mô tả
+    sự kiện với đầy đủ định dạng văn bản phong phú.
+
+    \item \textbf{QR Code vé điện tử:} Sinh QR dẫn đến link tra cứu vé cá
+    nhân (\texttt{/ticket-info/:ticketId}).
+
+    \item \textbf{AI Chatbot} (Gemini 2.5 Flash): Hỗ trợ tư vấn sự kiện
+    bằng tiếng Việt, hiểu ký hiệu viết tắt ``k = nghìn đồng''.
+
+    \item \textbf{Email tự động:} Gửi xác nhận đặt vé kèm QR code ngay
+    sau khi thanh toán thành công qua webhook PayOS.
+\end{itemize}
+
+% ============================================================
+%  8. GIÁM SÁT & KHẢ NĂNG QUAN SÁT
+% ============================================================
+\subsubsection{Giám sát và Khả năng Quan sát (Observability)}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item \textbf{Console logging có tiền tố rõ ràng:}
+    \texttt{[CRON JOB]}, \texttt{[PayOS Webhook]} -- dễ dàng grep log
+    trên môi trường Render.
+
+    \item \textbf{\texttt{ScheduledJob.lastError}:} Lưu nội dung lỗi cuối
+    cùng của mỗi job để hỗ trợ debug sau sự cố.
+
+    \item \textbf{Statistic snapshot:} Cron job bên ngoài (trigger qua HTTP
+    với \texttt{X-Cron-Secret}) tạo bản ghi thống kê tổng quan định kỳ.
+
+    \item \textbf{Interaction tracking:} Ghi nhận số lượt click và purchase
+    của từng người dùng đối với từng sự kiện -- phục vụ cả analytics lẫn
+    mô hình gợi ý ML.
+\end{itemize}
+
+% ============================================================
+%  9. TÍCH HỢP BÊN THỨ BA
+% ============================================================
+\subsubsection{Tích hợp Bên thứ ba (Third-party Integration)}
+
+\begin{longtable}{>{\bfseries}p{3.5cm} p{5.5cm} p{5.5cm}}
+\toprule
+\textbf{Dịch vụ} & \textbf{Mục đích} & \textbf{Ghi chú} \\
+\midrule
+\endhead
+PayOS          & Cổng thanh toán nội địa            & Webhook xác nhận thanh toán; QR hết hạn sau 15 phút \\
+\midrule
+Cloudinary     & Lưu trữ và CDN ảnh                 & Upload từ buffer stream, không lưu file trên server \\
+\midrule
+Nodemailer     & Gửi email giao dịch                & HTML template với logo inline qua CID \\
+\midrule
+Google Gemini AI & Chatbot tư vấn sự kiện           & Model \texttt{gemini-2.5-flash} với system prompt tiếng Việt \\
+\midrule
+HuggingFace Hub & Lưu trữ dataset training ML       & Auto-upload file CSV định kỳ \\
+\midrule
+node-cron      & Scheduled tasks                    & Cron mỗi 1 phút thu hồi vé hết hạn \\
+\midrule
+BullMQ + Redis & Job queue                          & Xử lý email và task nặng bất đồng bộ \\
+\bottomrule
+\end{longtable}
+
+% ============================================================
+%  10. RIÊNG TƯ DỮ LIỆU
+% ============================================================
+\subsubsection{Riêng tư Dữ liệu (Privacy)}
+
+\begin{itemize}[leftmargin=*, label={--}]
+    \item Trường \texttt{password} sử dụng \texttt{select: false} --
+    không bao giờ trả về trong response dù query trực tiếp vào collection.
+
+    \item Trường \texttt{avgPurchasePrice} không cho phép client cập nhật
+    trực tiếp -- field bị loại bỏ khỏi payload nếu có trong request body.
+
+    \item Vị trí địa lý của người dùng lưu dạng GeoJSON -- chỉ phục vụ
+    tính năng gợi ý sự kiện gần vị trí, không expose ra ngoài trừ khi
+    người dùng xem thông tin profile của chính mình.
+\end{itemize}
+
+
