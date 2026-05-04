@@ -42,60 +42,64 @@
 \contentsline {figure}{\numberline {41}{\ignorespaces Giao diện HomePage của người dùng khi đã đăng nhập}}{79}{figure.caption.78}%
 \contentsline {figure}{\numberline {42}{\ignorespaces Giao diện khung chat của Chatbot AI}}{81}{figure.caption.79}%
 \contentsline {figure}{\numberline {43}{\ignorespaces Giao diện khung chat sau khi người dùng nhập câu hỏi}}{81}{figure.caption.80}%
-\contentsline {figure}{\numberline {44}{\ignorespaces Giao diện Chatbot AI đang suy nghĩ}}{82}{figure.caption.81}%
+\contentsline {figure}{\numberline {44}{\ignorespaces Giao diện Chatbot AI đang suy nghĩ}}{81}{figure.caption.81}%
 \contentsline {figure}{\numberline {45}{\ignorespaces Giao diện Chatbot AI trả về phản hồi cho người dùng}}{82}{figure.caption.82}%
-\contentsline {figure}{\numberline {46}{\ignorespaces Trang kết quả tìm kiếm khi không có sự kiện phù hợp}}{83}{figure.caption.83}%
+\contentsline {figure}{\numberline {46}{\ignorespaces Trang kết quả tìm kiếm khi không có sự kiện phù hợp}}{82}{figure.caption.83}%
 \contentsline {figure}{\numberline {47}{\ignorespaces Trang kết quả tìm kiếm khi có sự kiện phù hợp}}{83}{figure.caption.84}%
-\contentsline {figure}{\numberline {48}{\ignorespaces Trang hiển thị tất cả sự kiện khi không có kết quả tìm kiếm phù hợp}}{84}{figure.caption.85}%
-\contentsline {figure}{\numberline {49}{\ignorespaces Giao diện đăng nhập tài khoản}}{84}{figure.caption.86}%
-\contentsline {figure}{\numberline {50}{\ignorespaces Giao diện đăng ký tài khoản}}{84}{figure.caption.87}%
-\contentsline {figure}{\numberline {51}{\ignorespaces Thông báo lỗi khi người dùng không nhập đủ email hoặc mật khẩu}}{85}{figure.caption.88}%
-\contentsline {figure}{\numberline {52}{\ignorespaces Thông báo lỗi khi người dùng nhập email không hợp lệ}}{85}{figure.caption.89}%
-\contentsline {figure}{\numberline {53}{\ignorespaces Thông báo lỗi khi người dùng nhập mật khẩu không hợp lệ}}{86}{figure.caption.90}%
-\contentsline {figure}{\numberline {54}{\ignorespaces Thông báo lỗi khi người dùng không nhập đủ các thông tin yêu cầu}}{86}{figure.caption.91}%
-\contentsline {figure}{\numberline {55}{\ignorespaces Thông báo lỗi khi người dùng nhập email không hợp lệ}}{86}{figure.caption.92}%
-\contentsline {figure}{\numberline {56}{\ignorespaces Thông báo lỗi khi người dùng nhập mật khẩu và xác nhận mật khẩu không khớp nhau}}{87}{figure.caption.93}%
-\contentsline {figure}{\numberline {57}{\ignorespaces Thông báo thành công khi người dùng đăng nhập thành công}}{87}{figure.caption.94}%
-\contentsline {figure}{\numberline {58}{\ignorespaces Thông báo thành công khi người dùng đăng ký tài khoản thành công}}{87}{figure.caption.95}%
-\contentsline {figure}{\numberline {59}{\ignorespaces Giao diện hiển thị chi tiết thông tin sự kiện}}{88}{figure.caption.96}%
-\contentsline {figure}{\numberline {60}{\ignorespaces Trang xác nhận thanh toán với các loại ghế khác nhau}}{89}{figure.caption.97}%
-\contentsline {figure}{\numberline {61}{\ignorespaces Khung tin nhắn cảnh báo độ tuổi}}{90}{figure.caption.98}%
-\contentsline {figure}{\numberline {62}{\ignorespaces Giao diện thanh toán liên kết với PayOS}}{90}{figure.caption.99}%
-\contentsline {figure}{\numberline {63}{\ignorespaces Giao diện lịch sử mua vé}}{91}{figure.caption.100}%
-\contentsline {figure}{\numberline {64}{\ignorespaces Giao diện hiển thị mã QR vé điện tử}}{92}{figure.caption.101}%
-\contentsline {figure}{\numberline {65}{\ignorespaces Giao diện thông tin vé điện tử sau khi quét mã QR}}{92}{figure.caption.102}%
-\contentsline {figure}{\numberline {66}{\ignorespaces Giao diện ban tổ chức nhập thông tin đăng nhập}}{93}{figure.caption.103}%
-\contentsline {figure}{\numberline {67}{\ignorespaces Giao diện ban tổ chức sau khi đăng nhập thành công}}{93}{figure.caption.104}%
-\contentsline {figure}{\numberline {68}{\ignorespaces Giao diện hiển thị dữ liệu thống kê của Ban tổ chức}}{93}{figure.caption.105}%
-\contentsline {figure}{\numberline {69}{\ignorespaces Giao diện hiển thị danh sách các sự kiện tổng quan của Ban tổ chức}}{94}{figure.caption.106}%
-\contentsline {figure}{\numberline {70}{\ignorespaces Giao diện hiển thị chi tiết thông tin một sự kiện cụ thể của Ban tổ chức}}{94}{figure.caption.107}%
-\contentsline {figure}{\numberline {71}{\ignorespaces Giao diện hiển thị thông tin cá nhân của Ban tổ chức}}{95}{figure.caption.108}%
-\contentsline {figure}{\numberline {72}{\ignorespaces Giao diện quản trị viên nhập thông tin đăng nhập}}{95}{figure.caption.109}%
-\contentsline {figure}{\numberline {73}{\ignorespaces Giao diện quản trị viên sau khi đăng nhập thành công}}{96}{figure.caption.110}%
-\contentsline {figure}{\numberline {74}{\ignorespaces Giao diện hiển thị dữ liệu thống kê của Quản trị viên}}{96}{figure.caption.111}%
-\contentsline {figure}{\numberline {75}{\ignorespaces Giao diện quản lý thông tin sự kiện của Quản trị viên}}{97}{figure.caption.112}%
-\contentsline {figure}{\numberline {76}{\ignorespaces Giao diện hiển thị kết quả tìm kiếm sự kiện tại trang quản lý thông tin sự kiện của Quản trị viên}}{97}{figure.caption.113}%
-\contentsline {figure}{\numberline {77}{\ignorespaces Giao diện hiển thị chi tiết thông tin một sự kiện cụ thể tại trang quản lý thông tin của Quản trị viên}}{98}{figure.caption.114}%
-\contentsline {figure}{\numberline {78}{\ignorespaces Giao diện chỉnh sửa thông tin một sự kiện cụ thể tại trang quản lý thông tin của Quản trị viên}}{98}{figure.caption.115}%
-\contentsline {figure}{\numberline {79}{\ignorespaces Giao diện xác nhận xóa một sự kiện cụ thể tại trang quản lý thông tin của Quản trị viên}}{98}{figure.caption.116}%
-\contentsline {figure}{\numberline {80}{\ignorespaces Giao diện tạo mới sự kiện tại trang quản lý thông tin sự kiện của Quản trị viên}}{99}{figure.caption.117}%
-\contentsline {figure}{\numberline {81}{\ignorespaces Giao diện quản lý thông tin Ban tổ chức của Quản trị viên}}{99}{figure.caption.118}%
-\contentsline {figure}{\numberline {82}{\ignorespaces Giao diện hiển thị kết quả tìm kiếm Ban tổ chức tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{100}{figure.caption.119}%
-\contentsline {figure}{\numberline {83}{\ignorespaces Giao diện chỉnh sửa thông tin một Ban tổ chức cụ thể tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{100}{figure.caption.120}%
-\contentsline {figure}{\numberline {84}{\ignorespaces Giao diện xác nhận xóa một Ban tổ chức cụ thể tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{100}{figure.caption.121}%
-\contentsline {figure}{\numberline {86}{\ignorespaces Giao diện quản lý thông tin vé của Quản trị viên}}{101}{figure.caption.123}%
-\contentsline {figure}{\numberline {85}{\ignorespaces Giao diện tạo mới Ban tổ chức tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{101}{figure.caption.122}%
-\contentsline {figure}{\numberline {87}{\ignorespaces Giao diện lựa chọn sự kiện để tạo vé tại trang quản lý thông tin vé của Quản trị viên}}{101}{figure.caption.124}%
-\contentsline {figure}{\numberline {88}{\ignorespaces Giao diện điền thông tin vé có chỗ ngồi tự do tại trang quản lý thông tin vé của Quản trị viên}}{102}{figure.caption.125}%
-\contentsline {figure}{\numberline {89}{\ignorespaces Giao diện lưu thông tin một vé có chỗ ngồi tự do sau khi nhấn nút "Save" tại trang quản lý thông tin vé của Quản trị viên}}{102}{figure.caption.126}%
-\contentsline {figure}{\numberline {90}{\ignorespaces Giao diện tạo và điền thông tin nhiều vé có chỗ ngồi tự do cùng lúc tại trang quản lý thông tin vé của Quản trị viên}}{103}{figure.caption.127}%
-\contentsline {figure}{\numberline {91}{\ignorespaces Giao diện điền thông tin vé có chỗ ngồi cố định tại trang quản lý thông tin vé của Quản trị viên}}{103}{figure.caption.128}%
-\contentsline {figure}{\numberline {92}{\ignorespaces Giao diện điền thông tin ghế cho vé có chỗ ngồi cố định sau khi nhấn nút "Save" tại trang quản lý thông tin vé của Quản trị viên}}{104}{figure.caption.129}%
-\contentsline {figure}{\numberline {93}{\ignorespaces Giao diện lưu thông tin một vé có chỗ ngồi cố định tại trang quản lý thông tin vé của Quản trị viên}}{104}{figure.caption.130}%
-\contentsline {figure}{\numberline {95}{\ignorespaces Giao diện hiển thị vé đã được lưu vào bảng vé hiện có của sự kiện tại trang quản lý thông tin vé của Quản trị viên}}{105}{figure.caption.132}%
-\contentsline {figure}{\numberline {94}{\ignorespaces Giao diện tạo và điền thông tin nhiều vé có chỗ ngồi cố định cùng lúc tại trang quản lý thông tin vé của Quản trị viên}}{105}{figure.caption.131}%
-\contentsline {figure}{\numberline {97}{\ignorespaces Giao diện hiển thị kết quả tìm kiếm người dùng tại trang quản lý thông tin người dùng của Quản trị viên}}{106}{figure.caption.134}%
-\contentsline {figure}{\numberline {96}{\ignorespaces Giao diện quản lý thông tin người dùng của Quản trị viên}}{106}{figure.caption.133}%
-\contentsline {figure}{\numberline {98}{\ignorespaces Giao diện hiển thị chi tiết thông tin một người dùng cụ thể tại trang quản lý thông tin người dùng của Quản trị viên}}{107}{figure.caption.135}%
-\contentsline {figure}{\numberline {99}{\ignorespaces Giao diện chỉnh sửa thông tin một người dùng cụ thể tại trang quản lý thông tin người dùng của Quản trị viên}}{107}{figure.caption.136}%
-\contentsline {figure}{\numberline {100}{\ignorespaces Giao diện xác nhận xóa một người dùng cụ thể tại trang quản lý thông tin người dùng của Quản trị viên}}{107}{figure.caption.137}%
+\contentsline {figure}{\numberline {48}{\ignorespaces Trang hiển thị tất cả sự kiện khi không có kết quả tìm kiếm phù hợp}}{85}{figure.caption.85}%
+\contentsline {figure}{\numberline {49}{\ignorespaces Giao diện đăng nhập tài khoản}}{86}{figure.caption.86}%
+\contentsline {figure}{\numberline {50}{\ignorespaces Giao diện đăng ký tài khoản}}{86}{figure.caption.87}%
+\contentsline {figure}{\numberline {51}{\ignorespaces Thông báo lỗi khi người dùng không nhập đủ email hoặc mật khẩu}}{87}{figure.caption.88}%
+\contentsline {figure}{\numberline {52}{\ignorespaces Thông báo lỗi khi người dùng nhập email không hợp lệ}}{87}{figure.caption.89}%
+\contentsline {figure}{\numberline {53}{\ignorespaces Thông báo lỗi khi người dùng nhập mật khẩu không hợp lệ}}{87}{figure.caption.90}%
+\contentsline {figure}{\numberline {54}{\ignorespaces Thông báo lỗi khi người dùng không nhập đủ các thông tin yêu cầu}}{88}{figure.caption.91}%
+\contentsline {figure}{\numberline {55}{\ignorespaces Thông báo lỗi khi người dùng nhập email không hợp lệ}}{88}{figure.caption.92}%
+\contentsline {figure}{\numberline {56}{\ignorespaces Thông báo lỗi khi người dùng nhập mật khẩu và xác nhận mật khẩu không khớp nhau}}{88}{figure.caption.93}%
+\contentsline {figure}{\numberline {57}{\ignorespaces Thông báo thành công khi người dùng đăng nhập thành công}}{89}{figure.caption.94}%
+\contentsline {figure}{\numberline {58}{\ignorespaces Thông báo thành công khi người dùng đăng ký tài khoản thành công}}{89}{figure.caption.95}%
+\contentsline {figure}{\numberline {59}{\ignorespaces Giao diện hiển thị chi tiết thông tin sự kiện}}{90}{figure.caption.96}%
+\contentsline {figure}{\numberline {60}{\ignorespaces Trang xác nhận thanh toán với các loại ghế khác nhau}}{91}{figure.caption.97}%
+\contentsline {figure}{\numberline {61}{\ignorespaces Khung tin nhắn cảnh báo độ tuổi}}{91}{figure.caption.98}%
+\contentsline {figure}{\numberline {62}{\ignorespaces Giao diện thanh toán liên kết với PayOS}}{92}{figure.caption.99}%
+\contentsline {figure}{\numberline {63}{\ignorespaces Giao diện lịch sử mua vé với sự kiện chưa diễn ra}}{92}{figure.caption.100}%
+\contentsline {figure}{\numberline {64}{\ignorespaces Giao diện hiển thị mã QR vé điện tử}}{93}{figure.caption.101}%
+\contentsline {figure}{\numberline {65}{\ignorespaces Giao diện thông tin vé điện tử sau khi quét mã QR}}{93}{figure.caption.102}%
+\contentsline {figure}{\numberline {66}{\ignorespaces Giao diện lịch sử mua vé với sự kiện đã diễn ra để có thể đánh giá và bình luận}}{94}{figure.caption.103}%
+\contentsline {figure}{\numberline {67}{\ignorespaces Giao diện trang Đánh giá sự kiện đã diễn ra}}{94}{figure.caption.104}%
+\contentsline {figure}{\numberline {68}{\ignorespaces Giao diện ban tổ chức nhập thông tin đăng nhập}}{95}{figure.caption.105}%
+\contentsline {figure}{\numberline {69}{\ignorespaces Giao diện ban tổ chức sau khi đăng nhập thành công}}{95}{figure.caption.106}%
+\contentsline {figure}{\numberline {70}{\ignorespaces Giao diện hiển thị dữ liệu thống kê của Ban tổ chức}}{96}{figure.caption.107}%
+\contentsline {figure}{\numberline {71}{\ignorespaces Giao diện hiển thị danh sách các sự kiện tổng quan của Ban tổ chức}}{96}{figure.caption.108}%
+\contentsline {figure}{\numberline {72}{\ignorespaces Giao diện hiển thị chi tiết thông tin một sự kiện cụ thể của Ban tổ chức}}{97}{figure.caption.109}%
+\contentsline {figure}{\numberline {73}{\ignorespaces Giao diện hiển thị danh sách khách hàng}}{97}{figure.caption.110}%
+\contentsline {figure}{\numberline {74}{\ignorespaces Giao diện hiển thị danh sách đánh giá}}{98}{figure.caption.111}%
+\contentsline {figure}{\numberline {75}{\ignorespaces Giao diện hiển thị thông tin cá nhân của Ban tổ chức}}{98}{figure.caption.112}%
+\contentsline {figure}{\numberline {76}{\ignorespaces Giao diện quản trị viên nhập thông tin đăng nhập}}{99}{figure.caption.113}%
+\contentsline {figure}{\numberline {77}{\ignorespaces Giao diện quản trị viên sau khi đăng nhập thành công}}{99}{figure.caption.114}%
+\contentsline {figure}{\numberline {78}{\ignorespaces Giao diện hiển thị dữ liệu thống kê của Quản trị viên}}{99}{figure.caption.115}%
+\contentsline {figure}{\numberline {79}{\ignorespaces Giao diện quản lý thông tin sự kiện của Quản trị viên}}{100}{figure.caption.116}%
+\contentsline {figure}{\numberline {80}{\ignorespaces Giao diện hiển thị kết quả tìm kiếm sự kiện tại trang quản lý thông tin sự kiện của Quản trị viên}}{100}{figure.caption.117}%
+\contentsline {figure}{\numberline {81}{\ignorespaces Giao diện hiển thị chi tiết thông tin một sự kiện cụ thể tại trang quản lý thông tin của Quản trị viên}}{101}{figure.caption.118}%
+\contentsline {figure}{\numberline {82}{\ignorespaces Giao diện chỉnh sửa thông tin một sự kiện cụ thể tại trang quản lý thông tin của Quản trị viên}}{101}{figure.caption.119}%
+\contentsline {figure}{\numberline {83}{\ignorespaces Giao diện xác nhận xóa một sự kiện cụ thể tại trang quản lý thông tin của Quản trị viên}}{102}{figure.caption.120}%
+\contentsline {figure}{\numberline {84}{\ignorespaces Giao diện tạo mới sự kiện tại trang quản lý thông tin sự kiện của Quản trị viên}}{102}{figure.caption.121}%
+\contentsline {figure}{\numberline {85}{\ignorespaces Giao diện quản lý thông tin Ban tổ chức của Quản trị viên}}{102}{figure.caption.122}%
+\contentsline {figure}{\numberline {86}{\ignorespaces Giao diện hiển thị kết quả tìm kiếm Ban tổ chức tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{103}{figure.caption.123}%
+\contentsline {figure}{\numberline {87}{\ignorespaces Giao diện chỉnh sửa thông tin một Ban tổ chức cụ thể tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{103}{figure.caption.124}%
+\contentsline {figure}{\numberline {90}{\ignorespaces Giao diện quản lý thông tin vé của Quản trị viên}}{104}{figure.caption.127}%
+\contentsline {figure}{\numberline {88}{\ignorespaces Giao diện xác nhận xóa một Ban tổ chức cụ thể tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{104}{figure.caption.125}%
+\contentsline {figure}{\numberline {89}{\ignorespaces Giao diện tạo mới Ban tổ chức tại trang quản lý thông tin Ban tổ chức của Quản trị viên}}{104}{figure.caption.126}%
+\contentsline {figure}{\numberline {91}{\ignorespaces Giao diện lựa chọn sự kiện để tạo vé tại trang quản lý thông tin vé của Quản trị viên}}{105}{figure.caption.128}%
+\contentsline {figure}{\numberline {92}{\ignorespaces Giao diện điền thông tin vé có chỗ ngồi tự do tại trang quản lý thông tin vé của Quản trị viên}}{105}{figure.caption.129}%
+\contentsline {figure}{\numberline {93}{\ignorespaces Giao diện lưu thông tin một vé có chỗ ngồi tự do sau khi nhấn nút "Save" tại trang quản lý thông tin vé của Quản trị viên}}{106}{figure.caption.130}%
+\contentsline {figure}{\numberline {94}{\ignorespaces Giao diện tạo và điền thông tin nhiều vé có chỗ ngồi tự do cùng lúc tại trang quản lý thông tin vé của Quản trị viên}}{106}{figure.caption.131}%
+\contentsline {figure}{\numberline {95}{\ignorespaces Giao diện điền thông tin vé có chỗ ngồi cố định tại trang quản lý thông tin vé của Quản trị viên}}{107}{figure.caption.132}%
+\contentsline {figure}{\numberline {96}{\ignorespaces Giao diện điền thông tin ghế cho vé có chỗ ngồi cố định sau khi nhấn nút "Save" tại trang quản lý thông tin vé của Quản trị viên}}{107}{figure.caption.133}%
+\contentsline {figure}{\numberline {97}{\ignorespaces Giao diện lưu thông tin một vé có chỗ ngồi cố định tại trang quản lý thông tin vé của Quản trị viên}}{108}{figure.caption.134}%
+\contentsline {figure}{\numberline {98}{\ignorespaces Giao diện tạo và điền thông tin nhiều vé có chỗ ngồi cố định cùng lúc tại trang quản lý thông tin vé của Quản trị viên}}{108}{figure.caption.135}%
+\contentsline {figure}{\numberline {99}{\ignorespaces Giao diện hiển thị vé đã được lưu vào bảng vé hiện có của sự kiện tại trang quản lý thông tin vé của Quản trị viên}}{109}{figure.caption.136}%
+\contentsline {figure}{\numberline {100}{\ignorespaces Giao diện quản lý thông tin người dùng của Quản trị viên}}{109}{figure.caption.137}%
+\contentsline {figure}{\numberline {101}{\ignorespaces Giao diện hiển thị kết quả tìm kiếm người dùng tại trang quản lý thông tin người dùng của Quản trị viên}}{110}{figure.caption.138}%
+\contentsline {figure}{\numberline {102}{\ignorespaces Giao diện hiển thị chi tiết thông tin một người dùng cụ thể tại trang quản lý thông tin người dùng của Quản trị viên}}{110}{figure.caption.139}%
+\contentsline {figure}{\numberline {103}{\ignorespaces Giao diện chỉnh sửa thông tin một người dùng cụ thể tại trang quản lý thông tin người dùng của Quản trị viên}}{110}{figure.caption.140}%
+\contentsline {figure}{\numberline {104}{\ignorespaces Giao diện xác nhận xóa một người dùng cụ thể tại trang quản lý thông tin người dùng của Quản trị viên}}{111}{figure.caption.141}%

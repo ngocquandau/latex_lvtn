@@ -124,23 +124,23 @@
 \contentsline {subsection}{\numberline {8.1}Chức năng người dùng}{78}{subsection.8.1}%
 \contentsline {subsubsection}{\numberline {8.1.1}Trang HomePage}{78}{subsubsection.8.1.1}%
 \contentsline {subsubsection}{\numberline {8.1.2}Giao diện Chatbot AI}{80}{subsubsection.8.1.2}%
-\contentsline {subsubsection}{\numberline {8.1.3}Tìm kiếm sự kiện}{83}{subsubsection.8.1.3}%
-\contentsline {subsubsection}{\numberline {8.1.4}Giao diện Đăng nhập/Đăng ký tài khoản}{84}{subsubsection.8.1.4}%
-\contentsline {subsubsection}{\numberline {8.1.5}Trang xem chi tiết thông tin sự kiện}{88}{subsubsection.8.1.5}%
-\contentsline {subsubsection}{\numberline {8.1.6}Trang xác nhận thanh toán}{89}{subsubsection.8.1.6}%
-\contentsline {subsubsection}{\numberline {8.1.7}Tiến hành thanh toán}{90}{subsubsection.8.1.7}%
-\contentsline {subsubsection}{\numberline {8.1.8}Trang Lịch sử mua vé}{91}{subsubsection.8.1.8}%
-\contentsline {subsection}{\numberline {8.2}Chức năng của Ban tổ chức sự kiện}{92}{subsection.8.2}%
-\contentsline {subsubsection}{\numberline {8.2.1}Trang dữ liệu thống kê}{93}{subsubsection.8.2.1}%
-\contentsline {subsubsection}{\numberline {8.2.2}Trang thông tin sự kiện}{94}{subsubsection.8.2.2}%
-\contentsline {subsubsection}{\numberline {8.2.3}Trang thông tin cá nhân}{95}{subsubsection.8.2.3}%
-\contentsline {subsection}{\numberline {8.3}Chức năng của Quản trị viên}{95}{subsection.8.3}%
-\contentsline {subsubsection}{\numberline {8.3.1}Trang dữ liệu thống kê}{96}{subsubsection.8.3.1}%
-\contentsline {subsubsection}{\numberline {8.3.2}Quản lý thông tin sự kiện}{97}{subsubsection.8.3.2}%
-\contentsline {subsubsection}{\numberline {8.3.3}Quản lý thông tin Ban tổ chức}{99}{subsubsection.8.3.3}%
-\contentsline {subsubsection}{\numberline {8.3.4}Quản lý thông tin vé cho sự kiện}{101}{subsubsection.8.3.4}%
-\contentsline {subsubsection}{\numberline {8.3.5}Quản lý thông tin người dùng}{106}{subsubsection.8.3.5}%
-\contentsline {section}{\numberline {9}Tổng kết}{108}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Đánh giá kết quả hiện thực hệ thống giai đoạn Đồ án tốt nghiệp}{108}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Hạn chế và hướng phát triển tương lai}{109}{subsection.9.2}%
-\contentsline {section}{Tài liệu tham khảo}{113}{Item.20}%
+\contentsline {subsubsection}{\numberline {8.1.3}Tìm kiếm sự kiện}{82}{subsubsection.8.1.3}%
+\contentsline {subsubsection}{\numberline {8.1.4}Giao diện Đăng nhập/Đăng ký tài khoản}{86}{subsubsection.8.1.4}%
+\contentsline {subsubsection}{\numberline {8.1.5}Trang xem chi tiết thông tin sự kiện}{90}{subsubsection.8.1.5}%
+\contentsline {subsubsection}{\numberline {8.1.6}Trang xác nhận thanh toán}{91}{subsubsection.8.1.6}%
+\contentsline {subsubsection}{\numberline {8.1.7}Tiến hành thanh toán}{92}{subsubsection.8.1.7}%
+\contentsline {subsubsection}{\numberline {8.1.8}Trang Lịch sử mua vé}{92}{subsubsection.8.1.8}%
+\contentsline {subsection}{\numberline {8.2}Chức năng của Ban tổ chức sự kiện}{95}{subsection.8.2}%
+\contentsline {subsubsection}{\numberline {8.2.1}Trang dữ liệu thống kê}{96}{subsubsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2}Trang thông tin sự kiện}{96}{subsubsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.3}Trang thông tin cá nhân}{98}{subsubsection.8.2.3}%
+\contentsline {subsection}{\numberline {8.3}Chức năng của Quản trị viên}{98}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Trang dữ liệu thống kê}{99}{subsubsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.2}Quản lý thông tin sự kiện}{100}{subsubsection.8.3.2}%
+\contentsline {subsubsection}{\numberline {8.3.3}Quản lý thông tin Ban tổ chức}{102}{subsubsection.8.3.3}%
+\contentsline {subsubsection}{\numberline {8.3.4}Quản lý thông tin vé cho sự kiện}{104}{subsubsection.8.3.4}%
+\contentsline {subsubsection}{\numberline {8.3.5}Quản lý thông tin người dùng}{109}{subsubsection.8.3.5}%
+\contentsline {section}{\numberline {9}Tổng kết}{112}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Đánh giá kết quả hiện thực hệ thống giai đoạn Đồ án tốt nghiệp}{112}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Hạn chế và hướng phát triển tương lai}{113}{subsection.9.2}%
+\contentsline {section}{Tài liệu tham khảo}{117}{Item.20}%
