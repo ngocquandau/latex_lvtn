@@ -1,36 +1,36 @@
 \thispagestyle {empty}
 \contentsline {table}{\numberline {1}{\ignorespaces So sánh các nền tảng đặt vé tại Việt Nam theo tính năng chính}}{1}{table.caption.3}%
-\contentsline {table}{\numberline {2}{\ignorespaces Các Thành phần Chính của Hệ thống Cơ sở Dữ liệu}}{6}{table.caption.7}%
-\contentsline {table}{\numberline {3}{\ignorespaces So sánh Cơ sở Dữ liệu Quan hệ (SQL) và Phi quan hệ (NoSQL)}}{7}{table.caption.8}%
-\contentsline {table}{\numberline {5}{\ignorespaces Đặc tả Use Case -- Quên mật khẩu (Người dùng) }}{31}{table.caption.22}%
-\contentsline {table}{\numberline {6}{\ignorespaces Đặc tả Use Case -- Mua vé (Người dùng) }}{32}{table.caption.23}%
-\contentsline {table}{\numberline {7}{\ignorespaces Đặc tả Use Case -- Xem lịch sử mua vé (Người dùng) }}{33}{table.caption.24}%
-\contentsline {table}{\numberline {8}{\ignorespaces Đặc tả Use Case -- Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra (Người dùng) }}{33}{table.caption.25}%
-\contentsline {table}{\numberline {9}{\ignorespaces Đặc tả Use Case -- Chat với trợ lý ảo (Người dùng) }}{34}{table.caption.26}%
-\contentsline {table}{\numberline {10}{\ignorespaces Đặc tả Use Case -- Xem danh sách sự kiện (Người dùng) }}{34}{table.caption.27}%
-\contentsline {table}{\numberline {11}{\ignorespaces Đặc tả Use Case -- Xem thông tin chi tiết sự kiện (Người dùng) }}{35}{table.caption.28}%
-\contentsline {table}{\numberline {12}{\ignorespaces Đặc tả Use Case -- Tìm kiếm sự kiện (Người dùng) }}{35}{table.caption.29}%
-\contentsline {table}{\numberline {13}{\ignorespaces Đặc tả Use Case -- Xem thông tin cá nhân (Người dùng) }}{36}{table.caption.30}%
-\contentsline {table}{\numberline {14}{\ignorespaces Đặc tả Use Case -- Chỉnh sửa thông tin cá nhân (Người dùng) }}{36}{table.caption.31}%
-\contentsline {table}{\numberline {15}{\ignorespaces Đặc tả Use Case -- Thay đổi mật khẩu (Người dùng) }}{37}{table.caption.32}%
-\contentsline {table}{\numberline {16}{\ignorespaces Đặc tả Use Case -- Theo dõi dữ liệu thống kê (Ban tổ chức) }}{39}{table.caption.34}%
-\contentsline {table}{\numberline {17}{\ignorespaces Đặc tả Use Case -- Theo dõi thông tin sự kiện (Ban tổ chức)}}{40}{table.caption.35}%
-\contentsline {table}{\numberline {18}{\ignorespaces Đặc tả Use Case -- Thay đổi mật khẩu (Ban tổ chức) }}{41}{table.caption.36}%
-\contentsline {table}{\numberline {19}{\ignorespaces Đặc tả Use Case -- Quên mật khẩu (Ban tổ chức) }}{42}{table.caption.37}%
-\contentsline {table}{\numberline {20}{\ignorespaces Đặc tả Use Case -- Xem profile cá nhân (Ban tổ chức) }}{43}{table.caption.38}%
-\contentsline {table}{\numberline {21}{\ignorespaces Đặc tả Use Case -- Quản lý sự kiện (Admin)}}{45}{table.caption.40}%
-\contentsline {table}{\numberline {22}{\ignorespaces Đặc tả Use Case -- Quản lý đơn vị tổ chức (Admin)}}{46}{table.caption.41}%
-\contentsline {table}{\numberline {23}{\ignorespaces Đặc tả Use Case -- Quản lý vé (Admin)}}{47}{table.caption.42}%
-\contentsline {table}{\numberline {24}{\ignorespaces Đặc tả Use Case -- Quản lý thông tin khách hàng (Admin)}}{48}{table.caption.43}%
-\contentsline {table}{\numberline {25}{\ignorespaces Các thuộc tính của bảng Users}}{66}{table.caption.62}%
-\contentsline {table}{\numberline {26}{\ignorespaces Các thuộc tính của bảng Organizers}}{66}{table.caption.63}%
-\contentsline {table}{\numberline {27}{\ignorespaces Các thuộc tính của bảng Events}}{67}{table.caption.64}%
-\contentsline {table}{\numberline {28}{\ignorespaces Các thuộc tính của bảng TicketClasses}}{67}{table.caption.65}%
-\contentsline {table}{\numberline {29}{\ignorespaces Các thuộc tính của bảng Tickets}}{67}{table.caption.66}%
-\contentsline {table}{\numberline {30}{\ignorespaces Các thuộc tính của bảng Purchases}}{68}{table.caption.67}%
-\contentsline {table}{\numberline {31}{\ignorespaces Các thuộc tính của bảng Vouchers}}{68}{table.caption.68}%
-\contentsline {table}{\numberline {32}{\ignorespaces Các thuộc tính của bảng Reviews}}{68}{table.caption.69}%
-\contentsline {table}{\numberline {33}{\ignorespaces Các thuộc tính của bảng Interactions}}{68}{table.caption.70}%
-\contentsline {table}{\numberline {34}{\ignorespaces Dữ liệu hành vi người dùng và sự kiện}}{70}{table.caption.72}%
-\contentsline {table}{\numberline {35}{\ignorespaces Danh sách các công cụ và thư viện sử dụng trong Testing}}{75}{table.caption.75}%
-\contentsline {table}{\numberline {36}{\ignorespaces Kết quả thực thi Test Case cho hệ thống}}{77}{table.caption.76}%
+\contentsline {table}{\numberline {2}{\ignorespaces Các Thành phần Chính của Hệ thống Cơ sở Dữ liệu}}{5}{table.caption.7}%
+\contentsline {table}{\numberline {3}{\ignorespaces So sánh Cơ sở Dữ liệu Quan hệ (SQL) và Phi quan hệ (NoSQL)}}{6}{table.caption.8}%
+\contentsline {table}{\numberline {6}{\ignorespaces Đặc tả Use Case -- Quên mật khẩu (Người dùng) }}{30}{table.6}%
+\contentsline {table}{\numberline {8}{\ignorespaces Đặc tả Use Case -- Mua vé (Người dùng) }}{32}{table.8}%
+\contentsline {table}{\numberline {10}{\ignorespaces Đặc tả Use Case -- Xem lịch sử mua vé (Người dùng) }}{32}{table.10}%
+\contentsline {table}{\numberline {12}{\ignorespaces Đặc tả Use Case -- Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra (Người dùng) }}{33}{table.12}%
+\contentsline {table}{\numberline {14}{\ignorespaces Đặc tả Use Case -- Chat với trợ lý ảo (Người dùng) }}{34}{table.14}%
+\contentsline {table}{\numberline {16}{\ignorespaces Đặc tả Use Case -- Xem danh sách sự kiện (Người dùng) }}{35}{table.16}%
+\contentsline {table}{\numberline {18}{\ignorespaces Đặc tả Use Case -- Xem thông tin chi tiết sự kiện (Người dùng) }}{35}{table.18}%
+\contentsline {table}{\numberline {20}{\ignorespaces Đặc tả Use Case -- Tìm kiếm sự kiện (Người dùng) }}{36}{table.20}%
+\contentsline {table}{\numberline {22}{\ignorespaces Đặc tả Use Case -- Xem thông tin cá nhân (Người dùng) }}{36}{table.22}%
+\contentsline {table}{\numberline {24}{\ignorespaces Đặc tả Use Case -- Chỉnh sửa thông tin cá nhân (Người dùng) }}{37}{table.24}%
+\contentsline {table}{\numberline {26}{\ignorespaces Đặc tả Use Case -- Thay đổi mật khẩu (Người dùng) }}{38}{table.26}%
+\contentsline {table}{\numberline {28}{\ignorespaces Đặc tả Use Case -- Theo dõi dữ liệu thống kê (Ban tổ chức) }}{40}{table.28}%
+\contentsline {table}{\numberline {30}{\ignorespaces Đặc tả Use Case -- Theo dõi thông tin sự kiện (Ban tổ chức)}}{41}{table.30}%
+\contentsline {table}{\numberline {32}{\ignorespaces Đặc tả Use Case -- Thay đổi mật khẩu (Ban tổ chức) }}{42}{table.32}%
+\contentsline {table}{\numberline {34}{\ignorespaces Đặc tả Use Case -- Quên mật khẩu (Ban tổ chức) }}{43}{table.34}%
+\contentsline {table}{\numberline {36}{\ignorespaces Đặc tả Use Case -- Xem profile cá nhân (Ban tổ chức) }}{44}{table.36}%
+\contentsline {table}{\numberline {38}{\ignorespaces Đặc tả Use Case -- Quản lý sự kiện (Admin)}}{45}{table.38}%
+\contentsline {table}{\numberline {40}{\ignorespaces Đặc tả Use Case -- Quản lý đơn vị tổ chức (Admin)}}{46}{table.40}%
+\contentsline {table}{\numberline {42}{\ignorespaces Đặc tả Use Case -- Quản lý vé (Admin)}}{47}{table.42}%
+\contentsline {table}{\numberline {44}{\ignorespaces Đặc tả Use Case -- Quản lý thông tin khách hàng (Admin)}}{48}{table.44}%
+\contentsline {table}{\numberline {45}{\ignorespaces Các thuộc tính của bảng Users}}{65}{table.caption.42}%
+\contentsline {table}{\numberline {46}{\ignorespaces Các thuộc tính của bảng Organizers}}{65}{table.caption.43}%
+\contentsline {table}{\numberline {47}{\ignorespaces Các thuộc tính của bảng Events}}{66}{table.caption.44}%
+\contentsline {table}{\numberline {48}{\ignorespaces Các thuộc tính của bảng TicketClasses}}{66}{table.caption.45}%
+\contentsline {table}{\numberline {49}{\ignorespaces Các thuộc tính của bảng Tickets}}{66}{table.caption.46}%
+\contentsline {table}{\numberline {50}{\ignorespaces Các thuộc tính của bảng Purchases}}{67}{table.caption.47}%
+\contentsline {table}{\numberline {51}{\ignorespaces Các thuộc tính của bảng Vouchers}}{67}{table.caption.48}%
+\contentsline {table}{\numberline {52}{\ignorespaces Các thuộc tính của bảng Reviews}}{67}{table.caption.49}%
+\contentsline {table}{\numberline {53}{\ignorespaces Các thuộc tính của bảng Interactions}}{67}{table.caption.50}%
+\contentsline {table}{\numberline {54}{\ignorespaces Dữ liệu hành vi người dùng và sự kiện}}{69}{table.caption.52}%
+\contentsline {table}{\numberline {55}{\ignorespaces Danh sách các công cụ và thư viện sử dụng trong Testing}}{73}{table.caption.55}%
+\contentsline {table}{\numberline {56}{\ignorespaces Kết quả thực thi Test Case cho hệ thống}}{74}{table.caption.56}%

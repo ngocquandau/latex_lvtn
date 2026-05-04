@@ -11,11 +11,11 @@
 \end{figure}
 
 \subsubsection{Đăng nhập}
-\begin{table}[H]
-\centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{8pt}
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Xem, tìm kiếm và lọc thông tin sự kiện}
+\label{tab:uc_search_event} \\
 \hline
 \textbf{Tên Use Case} & Tìm kiếm và xem thông tin sự kiện \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -42,19 +42,16 @@
 \textbf{Điều kiện lỗi} &
 \textbf{Trường hợp lỗi 1:} Truy vấn cơ sở dữ liệu thất bại — Hệ thống hiển thị danh sách sự kiện phổ biến được lưu trữ. \newline
 \textbf{Trường hợp lỗi 2:} Thời gian phản hồi quá 3 giây — Hệ thống thông báo “Vui lòng thử lại!”. \\ \hline
-\end{tabularx}
+\end{longtable}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Xem, tìm kiếm và lọc thông tin sự kiện}
-\label{tab:uc_search_event}
-\end{table}
 
 \subsubsection{Truy cập chức năng yêu cầu xác thực}
 
-\begin{table}[H]
-\centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{8pt}
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Truy Cập Chức Năng Yêu Cầu Xác Thực}
+\label{tab:uc_auth_access} \\
 \hline
 \textbf{Tên Use Case} & Truy Cập Chức Năng Yêu Cầu Xác Thực \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -79,19 +76,16 @@ Người dùng cố gắng thực hiện một trong các chức năng sau: \new
 \textbf{Điều kiện lỗi} &
 - Trường hợp lỗi 1: Token không hợp lệ hoặc bị giả mạo $\rightarrow$ Hệ thống vô hiệu hóa token, ghi log bảo mật và buộc đăng nhập lại. \newline
 - Trường hợp lỗi 2: Lỗi kiểm tra xác thực (kết nối backend thất bại) $\rightarrow$ Hệ thống hiển thị “Lỗi hệ thống, vui lòng thử lại” và ghi log để kiểm tra. \\ \hline
-\end{tabularx}
+\end{longtable}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Truy Cập Chức Năng Yêu Cầu Xác Thực}
-\label{tab:uc_auth_access}
-\end{table}
 
 \subsubsection{Mua vé}
 
-\begin{table}[H]
-\centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{8pt}
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Mua vé sự kiện}
+\label{tab:uc_ticket_purchase} \\
 \hline
 \textbf{Tên Use Case} & Mua vé sự kiện (bao gồm cảnh báo độ tuổi và áp dụng voucher/mã giảm giá) \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -127,18 +121,15 @@ $\rightarrow$ Hệ thống hiển thị cảnh báo không hợp lệ, người 
 - Trường hợp lỗi 1: MoMo API không phản hồi $\rightarrow$ Ghi log và thông báo “Vui lòng thử lại sau 1 phút”. \newline
 - Trường hợp lỗi 2: Dữ liệu nhãn độ tuổi không tải được $\rightarrow$ Hệ thống ghi log và cho phép tiếp tục mua vé. \newline
 - Trường hợp lỗi 3: Lỗi truy vấn cơ sở dữ liệu voucher/mã giảm giá $\rightarrow$ Hệ thống thông báo “Lỗi hệ thống, vui lòng thử lại”. \\ \hline
-\end{tabularx}
+\end{longtable}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Mua vé sự kiện}
-\label{tab:uc_ticket_purchase}
-\end{table}
 
 \subsubsection{Chat với Quản trị viên}
-\begin{table}[H]
-\centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{8pt}
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Chat với quản trị viên}
+\label{tab:uc_chat_admin} \\
 \hline
 \textbf{Tên Use Case} & Chat với quản trị viên \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -159,18 +150,15 @@ $\rightarrow$ Hệ thống hiển thị cảnh báo không hợp lệ, người 
 \textbf{Điều kiện lỗi} &
 \textbf{Trường hợp lỗi 1:} WebSocket mất kết nối — Hệ thống thử kết nối lại (3 lần). \newline
 \textbf{Trường hợp lỗi 2:} Lưu tin nhắn thất bại — Hệ thống thông báo thử lại. \\ \hline
-\end{tabularx}
+\end{longtable}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Chat với quản trị viên}
-\label{tab:uc_chat_admin}
-\end{table}
 
 \subsubsection{Chat với Ban tổ chức}
-\begin{table}[H]
-\centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{8pt}
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Chat với Ban tổ chức}
+\label{tab:uc_chat_org} \\
 \hline
 \textbf{Tên Use Case} & Chat với Ban tổ chức \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -191,11 +179,8 @@ $\rightarrow$ Hệ thống hiển thị cảnh báo không hợp lệ, người 
 \textbf{Điều kiện lỗi} &
 \textbf{Trường hợp lỗi 1:} WebSocket mất kết nối — Hệ thống thử kết nối lại (3 lần). \newline
 \textbf{Trường hợp lỗi 2:} Lưu tin nhắn thất bại — Hệ thống thông báo thử lại. \\ \hline
-\end{tabularx}
+\end{longtable}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Chat với Ban tổ chức}
-\label{tab:uc_chat_org}
-\end{table}
 
 
 
@@ -210,11 +195,11 @@ $\rightarrow$ Hệ thống hiển thị cảnh báo không hợp lệ, người 
 
 \subsubsection{Theo dõi thông tin sự kiện}
 
-\begin{table}[H]
-\centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{8pt}
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Theo dõi thông tin sự kiện (Ban tổ chức) }
+\label{tab:uc_view_search_event} \\
 \hline
 \textbf{Tên Use Case} & Theo dõi thông tin sự kiện \\ \hline
 \textbf{Tác nhân} & Ban tổ chức \\ \hline
@@ -251,19 +236,16 @@ Ban tổ chức đăng nhập vào hệ thống để theo dõi các thông tin 
 \textbf{Điều kiện lỗi} &
 - Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị “Không thể tải danh sách sự kiện.” \newline
 - Trường hợp lỗi 2: Lỗi xử lý truy vấn tìm kiếm/lọc $\rightarrow$ Hệ thống thông báo “Đã xảy ra lỗi, vui lòng thử lại.” \\ \hline
-\end{tabularx}
+\end{longtable}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Theo dõi thông tin sự kiện (Ban tổ chức) }
-\label{tab:uc_view_search_event}
-\end{table}
 
 \subsubsection{Phản hồi tin nhắn người dùng}
 
-\begin{table}[H]
-\centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{8pt}
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Phản hồi tin nhắn người dùng (Ban tổ chức) }
+\label{tab:uc_reply_message} \\
 \hline
 \textbf{Tên Use Case} & Phản hồi tin nhắn người dùng \\ \hline
 \textbf{Tác nhân} & Ban tổ chức \\ \hline
@@ -297,11 +279,8 @@ Ban tổ chức truy cập mục “Tin nhắn người dùng”, chọn một h
 - Trường hợp lỗi 1: Mất kết nối mạng $\rightarrow$ Hệ thống hiển thị “Không thể gửi tin nhắn, vui lòng kiểm tra kết nối.” \newline
 - Trường hợp lỗi 2: Tin nhắn không tồn tại hoặc đã bị xóa $\rightarrow$ Hệ thống hiển thị “Tin nhắn không tồn tại.” \newline
 - Trường hợp lỗi 3: Lỗi lưu tin nhắn $\rightarrow$ Ghi log hệ thống và thông báo “Vui lòng thử lại sau.” \\ \hline
-\end{tabularx}
+\end{longtable}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Phản hồi tin nhắn người dùng (Ban tổ chức) }
-\label{tab:uc_reply_message}
-\end{table}
 
 \underline{Lưu ý:} Đặc tả Use Case cho chức năng phản hồi tin nhắn người dùng trên của Ban tổ chức có thể áp dụng cho vai trò người dùng là quản trị viên trong cùng chức năng.
 
@@ -315,11 +294,11 @@ Ban tổ chức truy cập mục “Tin nhắn người dùng”, chọn một h
 \end{figure}
 
 \subsubsection{Quản lý sự kiện}
-\begin{table}[H]
-\centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{8pt}
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Quản lý sự kiện}
+\label{tab:uc_manage_event} \\
 \hline
 \textbf{Tên Use Case} & Quản lý sự kiện \\ \hline
 \textbf{Tác nhân} & Admin \\ \hline
@@ -338,19 +317,16 @@ Ban tổ chức truy cập mục “Tin nhắn người dùng”, chọn một h
 \textbf{Điều kiện lỗi} &
 1. Nhập thiếu thông tin bắt buộc khi thêm sự kiện $\rightarrow$ Hệ thống báo lỗi và yêu cầu nhập lại. \newline
 2. Lỗi hệ thống khi ghi dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo thất bại. \\ \hline
-\end{tabularx}
+\end{longtable}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Quản lý sự kiện}
-\label{tab:uc_manage_event}
-\end{table}
 
 \subsubsection{Quản lý đơn vị tổ chức}
 
-\begin{table}[H]
-\centering
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{8pt}
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Quản lý đơn vị tổ chức}
+\label{tab:uc_manage_organizer} \\
 \hline
 \textbf{Tên Use Case} & Quản lý đơn vị tổ chức \\ \hline
 \textbf{Tác nhân} & Admin \\ \hline
@@ -372,9 +348,6 @@ Ban tổ chức truy cập mục “Tin nhắn người dùng”, chọn một h
 \textbf{Điều kiện lỗi} &
 1. Nhập thiếu thông tin bắt buộc khi thêm đơn vị $\rightarrow$ Hệ thống báo lỗi và yêu cầu nhập lại. \newline
 2. Lỗi hệ thống khi ghi dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo thất bại. \\ \hline
-\end{tabularx}
+\end{longtable}
 \vspace{15pt}
-\caption{Đặc tả Use Case -- Quản lý đơn vị tổ chức}
-\label{tab:uc_manage_organizer}
-\end{table}
 
