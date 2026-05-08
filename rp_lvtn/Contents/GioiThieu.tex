@@ -23,44 +23,59 @@
 % \indent \indent Các kết quả này cho thấy nhu cầu có một nền tảng đặt vé sự kiện đơn giản, tiện lợi, bảo mật và có tính tương tác cao là vô cùng cần thiết, đặc biệt trong bối cảnh Việt Nam đang đẩy mạnh chuyển đổi số trong lĩnh vực giải trí và dịch vụ.
 \subsubsection{Thực trạng các hệ thống hiện có}
 \indent \indent Với sức hút ngày càng lớn của các sự kiện cùng sự tiện lợi mà các công nghệ mang lại, tại Việt Nam nhiều nền tảng cung cấp dịch vụ đặt vé trực tuyến đã ra đời. 
-Để đánh giá thực trạng các hệ thống này, nhóm đã tiến hành khảo sát và phân tích ba nền tảng phổ biến bao gồm TicketBox, VnTicket và Ticketgo dựa trên các tiêu chí về tính tiện dụng, hệ thống gợi ý và khả năng hỗ trợ tự động. 
+Để nhìn nhận thị trường theo hướng khách quan, nhóm lựa chọn khảo sát ba nền tảng đang hiện diện phổ biến là TicketBox, VnTicket và TicketGo, sau đó đối chiếu các thông tin công khai trên trang chủ và các trang hướng dẫn sử dụng liên quan đến trải nghiệm đặt vé, cách hiển thị gợi ý sự kiện và hình thức hỗ trợ người dùng (Xem thêm các tài liệu tham khảo số: \cite{ticketbox_home,ticketbox_payment_methods,ticketbox_customer_terms,ticketgo_home,ticketgo_booking_guide,vnticket_home}). 
 Kết quả như sau:
 
-\begin{table}[H]
-\centering
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{6pt}
-\begin{tabularx}{\textwidth}{|l|X|X|X|}
+\setlength{\tabcolsep}{4pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{0.12\textwidth}|p{0.26\textwidth}|p{0.28\textwidth}|p{0.24\textwidth}|}
+\caption{So sánh các nền tảng đặt vé tại Việt Nam theo tính năng chính}\label{tab:so_sanh_he_thong_ve}\\[15pt]
+% --- Thiết lập đầu bảng ---
 \hline
 \textbf{Nền tảng} & \textbf{Tính tiện dụng} & \textbf{Hệ thống gợi ý} & \textbf{Khả năng hỗ trợ tự động} \\ \hline
+\endfirsthead
 
+\hline
+\textbf{Nền tảng} & \textbf{Tính tiện dụng} & \textbf{Hệ thống gợi ý} & \textbf{Khả năng hỗ trợ tự động} \\ \hline
+\endhead
+
+% --- Thiết lập chân bảng cho các trang trung gian ---
+\hline
+\endfoot
+
+% --- Thiết lập chân bảng cho trang cuối cùng ---
+\endlastfoot
+
+% --- Nội dung bảng ---
 \textbf{TicketBox} 
-& Giao diện hiện đại, UX/UI thân thiện; tích hợp thanh toán (Momo, ngân hàng); quy trình đặt vé nhanh, nhận E-ticket tiện lợi 
-& Gợi ý ở mức cơ bản, chủ yếu dựa trên xu hướng (Trending), chưa cá nhân hóa sâu 
-& Hỗ trợ ở mức trung bình, chưa có hệ thống phản hồi tự động thông minh \\ \hline
+& Có giao diện hiện đại, danh mục sự kiện đa dạng, hỗ trợ nhiều phương thức thanh toán và gửi vé điện tử; đồng thời có ứng dụng check-in cho ban tổ chức 
+& Có khu vực sự kiện xu hướng, sự kiện đặc biệt và phân loại theo danh mục trên trang chủ; tại phạm vi giao diện công khai, nhóm chưa ghi nhận cơ chế cá nhân hóa theo hồ sơ người dùng 
+& Có hotline, email và các chính sách hỗ trợ công khai; tại thời điểm khảo sát, nhóm chưa ghi nhận giao diện chatbot hội thoại tự động \\ \hline
 
 \textbf{VnTicket} 
-& Độ uy tín cao; phù hợp sự kiện lớn (thể thao, nghệ thuật); tuy nhiên giao diện và công nghệ còn cũ 
-& Hầu như chưa có hệ thống gợi ý thông minh, ít cá nhân hóa 
-& Hỗ trợ chậm khi có lỗi; thiếu hệ thống tự động hóa \\ \hline
+& Có website phục vụ nhu cầu tra cứu và đặt vé sự kiện trực tuyến; trong phạm vi thông tin công khai mà nhóm truy cập được, phần mô tả tính năng được trình bày tương đối gọn 
+& Nhóm chưa ghi nhận phần giới thiệu riêng về cơ chế gợi ý cá nhân hóa hoặc đề xuất sự kiện theo hành vi người dùng trên giao diện công khai 
+& Nhóm chưa ghi nhận phần mô tả rõ về kênh hỗ trợ hội thoại tự động trên giao diện công khai đã khảo sát \\ \hline
 
-\textbf{Ticketgo} 
-& Dễ sử dụng cho sự kiện vừa và nhỏ; quy trình tạo và quản lý sự kiện đơn giản 
-& Gợi ý hạn chế do quy mô dữ liệu nhỏ; chưa phát triển cá nhân hóa 
-& Chủ yếu hỗ trợ qua hotline/chat thủ công; chưa tích hợp chatbot tự động \\ \hline
+\textbf{TicketGo} 
+& Có hệ thống phân loại sự kiện theo thể loại, trang hướng dẫn đặt vé khá chi tiết, nhiều phương thức thanh toán và gửi vé điện tử qua email 
+& Có mục sự kiện nổi bật và phân nhóm sự kiện rõ ràng; trên thông tin công khai, nhóm chưa thấy mô tả rõ cơ chế gợi ý cá nhân hóa theo hồ sơ người dùng 
+& Có hotline, email, mục câu hỏi thường gặp và cửa sổ chat trên website; nhóm chưa ghi nhận mô tả rõ về chatbot tư vấn tự động theo ngữ cảnh \\ \hline
 
-\end{tabularx}
-\vspace{15pt}
-\caption{So sánh các nền tảng đặt vé tại Việt Nam theo tính năng chính}
-\label{tab:so_sanh_he_thong_ve}
-\end{table}
+\textbf{Hệ thống đề xuất} 
+& Có định hướng giao diện web responsive, quy trình tìm kiếm - đặt vé - thanh toán thống nhất và tích hợp PayOS 
+& Có định hướng xây dựng hệ thống gợi ý dựa trên lịch sử tương tác và sở thích người dùng 
+& Có định hướng tích hợp chatbot AI để tư vấn sự kiện và hỗ trợ người dùng 24/7 \\ \hline
+\end{longtable}
 
-Thông qua bảng so sánh trên, nhóm nhận thấy các hệ thống trên vẫn vận hành theo mô hình truyền thống—chủ yếu tập trung vào việc hoàn thiện luồng nghiệp vụ mua/bán thuần túy—mà chưa chú trọng đúng mức vào việc tối ưu hóa trải nghiệm tương tác thông minh cho người dùng.
-Qua đó, nhóm rút ra một số nhận định quan trọng làm cơ sở cho việc phát triển đề tài:
+Thông qua bảng so sánh trên, nhóm nhận thấy mỗi nền tảng đang tập trung vào một nhóm giá trị riêng. TicketBox và TicketGo thể hiện khá rõ phần danh mục sự kiện, quy trình mua vé và kênh hỗ trợ công khai; trong khi đó, với VnTicket, các thông tin mà nhóm truy cập được chủ yếu cho thấy vai trò của một kênh bán vé trực tuyến, còn các nội dung về gợi ý cá nhân hóa và hỗ trợ tự động chưa được thể hiện rõ trên bề mặt giao diện khảo sát.
+Từ các quan sát đó, nhóm xác định một số hướng phát triển có thể tạo khác biệt cho đề tài:
 \begin{itemize}
-    \item[1.] Sự thiếu hụt về tính tương tác: Các hệ thống hiện nay mang tính chất "tĩnh", người dùng phải chủ động tìm kiếm qua các bộ lọc thủ công. Việc thiếu vắng một giao diện hội thoại thông minh (Conversational AI) khiến quy trình tư vấn và giải đáp thắc mắc thường bị gián đoạn.
-    \item[2.] Hệ thống gợi ý chưa sâu: Việc đề xuất sự kiện thường dựa trên số đông thay vì phân tích dữ liệu lịch sử và sở thích thực tế của từng cá nhân.
-    \item[3.] Áp lực hỗ trợ khách hàng: Việc phụ thuộc vào hotline hoặc nhân sự trực chat truyền thống tạo ra độ trễ lớn khi số lượng yêu cầu tăng đột biến, đồng thời không đảm bảo khả năng hỗ trợ 24/7.
+    \item[1.] Cần tăng cường tính tương tác trong quá trình tìm kiếm và tư vấn sự kiện, nhằm giúp người dùng tiếp cận thông tin theo cách tự nhiên hơn thay vì chỉ phụ thuộc vào bộ lọc tĩnh.
+    \item[2.] Cần phát triển cơ chế gợi ý đi sâu hơn vào hành vi và sở thích cá nhân, để việc đề xuất sự kiện không chỉ dừng ở mức phân loại hoặc xu hướng chung.
+    \item[3.] Cần mở rộng mức độ tự động hóa trong hỗ trợ khách hàng, đặc biệt ở các tình huống hỏi đáp lặp lại hoặc cần phản hồi ngoài giờ hành chính.
 \end{itemize}
 
 \subsection{Mục tiêu và Phạm vi đề tài}

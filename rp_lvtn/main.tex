@@ -45,6 +45,7 @@
 \usepackage{geometry}
 \usepackage{booktabs}
 \usepackage{longtable}
+\usepackage{needspace}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{xcolor}
@@ -151,7 +152,7 @@ morekeywords={}
 \makeatletter
 \newcounter {subsubsubsection}[subsubsection]
 \renewcommand\thesubsubsubsection{\thesubsubsection .\@alph\c@subsubsubsection}
-\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+\newcommand\subsubsubsection{\Needspace{18\baselineskip}\@startsection{subsubsubsection}{4}{\z@}%
                                      {-3.25ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
                                      {\normalfont\normalsize\bfseries}}
@@ -161,11 +162,13 @@ morekeywords={}
 
 \everymath{\color{black}}%make in-line maths symbols blue to read/check easily
 
+\raggedbottom
 \sloppy
 \captionsetup[figure]{labelfont={small,bf},textfont={small,normal},belowskip=-1pt,aboveskip=-9pt}
 
 %space remove between caption, figure, and text
-\captionsetup[table]{labelfont={small,bf},textfont={small,normal},belowskip=-1pt,aboveskip=-9pt}
+\captionsetup[table]{labelfont={small,bf},textfont={small,normal},position=top,skip=15pt}
+\captionsetup[longtable]{labelfont={small,bf},textfont={small,normal},position=top,skip=15pt}
 \setlength{\floatsep}{5pt plus 2pt minus 2pt}
 \setlength{\textfloatsep}{5pt plus 2pt minus 2pt}
 \setlength{\intextsep}{10pt plus 2pt minus 2pt}

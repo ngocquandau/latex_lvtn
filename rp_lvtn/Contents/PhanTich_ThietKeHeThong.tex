@@ -1,60 +1,137 @@
-\section{Phân tích \& Thiết kế hệ thống}
+﻿\section{Phân tích \& Thiết kế hệ thống}
 
 \subsection{Kiến trúc hệ thống}
-\indent \indent Kiến trúc hệ thống được xây dựng dựa trên mô hình 3 tầng mở rộng (Extended Three-tier Architecture) kết hợp với các dịch vụ bên ngoài (External Services) và microservice trí tuệ nhân tạo, nhằm tăng cường khả năng mở rộng, tự động hóa và cá nhân hóa trải nghiệm người dùng.\\
-\indent Mô hình này không chỉ phân tách rõ ràng giữa giao diện, xử lý nghiệp vụ và dữ liệu, mà còn tích hợp thêm các thành phần như thanh toán trực tuyến, xử lý tác vụ định kỳ và hệ thống gợi ý thông minh
-
+\indent \indent Hệ thống MyTicket được xây dựng theo mô hình client–server monolith gồm frontend React SPA, backend Node.js Express và cơ sở dữ liệu MongoDB Atlas, đồng thời tích hợp nhiều dịch vụ ngoài phục vụ thanh toán, email, AI chatbot và recommendation.\\
+\indent Kiến trúc được tổ chức thành các lớp chính gồm:
+\begin{itemize}
+    \item[1.] Lớp người dùng và giao diện frontend.
+    \item[2.] Lớp backend xử lý nghiệp vụ.
+    \item[3.] Lớp cơ sở dữ liệu trung tâm.
+    \item[4.] Lớp tích hợp dịch vụ bên ngoài.
+    \item[5.] Lớp tác vụ nền và pipeline AI recommendation.
+\end{itemize}
+Khác với kiến trúc microservice, toàn bộ nghiệp vụ chính của hệ thống hiện tại được xử lý trong một backend Express duy nhất, giúp đồng bộ dữ liệu, dễ triển khai và thuận tiện cho bảo trì trong phạm vi đồ án tốt nghiệp.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\textwidth]{Images/KTHT.png}
+    \includegraphics[width=1\textwidth]{Images/kiến trúc toàn hệ thống.jpg}
     \vspace{10pt}
     \caption{Kiến trúc hệ thống}
     \label{fig:hdfs_architecture}
 \end{figure}
 \begin{itemize}
-    \item[1.] \textbf{Client Side (Trình duyệt \& Giao diện người dùng)}
+    \item[1.] \textbf{Client Side – Frontend Web App}\\
+    Người dùng truy cập hệ thống thông qua trình duyệt web với các nhóm vai trò: khách hàng, ban tổ chức và quản trị viên.\\
+    Frontend được phát triển bằng React + TypeScript + React Router + Ant Design theo mô hình SPA (Single Page Application).\\
+    Frontend chịu trách nhiệm:
     \begin{itemize}
-        \item[-] Người dùng tương tác với hệ thống thông qua trình duyệt web (ví dụ: Chrome).
-        \item[-] Giao diện được xây dựng bằng ReactJS, đảm nhiệm việc hiển thị dữ liệu, nhận yêu cầu và phản hồi từ người dùng.
-        \item[-] Giao tiếp với máy chủ thông qua các HTTP Request/Response, sử dụng định dạng JSON để truyền dữ liệu.
+        \item[-] Hiển thị giao diện tìm kiếm và mua vé.
+        \item[-] Hiển thị lịch sử vé, QR code và vé điện tử.
+        \item[-] Cung cấp giao diện quản lý sự kiện cho organizer và admin.
+        \item[-] Gọi REST API tới backend thông qua axiosClient.
+        \item[-] Lưu JWT token và kiểm soát truy cập bằng ProtectedRoute.
     \end{itemize}
-    \item[2.] \textbf{Server Side (Back-end \& Điều phối hệ thống)}: Được phát triển bằng Node.js, đóng vai trò là trung tâm xử lý và điều phối của toàn bộ hệ thống.
+    Các vùng chức năng chính trên frontend gồm:
     \begin{itemize}
-        \item[-] Hỗ trợ các phương thức HTTP như GET, POST, PUT, DELETE để thực hiện các thao tác CRUD.
-        \item[-] Sử dụng JWT (JSON Web Token) để xác thực và phân quyền người dùng, đảm bảo tính bảo mật trong truy cập tài nguyên.
-        \item[-] Tích hợp Nodemailer để gửi email tự động (ví dụ: thông báo, xác nhận).
-        \item[-] Là tầng trung gian giữa giao diện người dùng và cơ sở dữ liệu, giúp kiểm soát luồng dữ liệu và logic xử lý.
-        \item[-] Các tích hợp mở rộng trong tầng Server:
+        \item[-] Public UI.
+        \item[-] User Portal.
+        \item[-] Organizer Portal.
+        \item[-] Admin Portal.
+    \end{itemize}
+    Frontend trong môi trường production được triển khai độc lập với backend và giao tiếp thông qua HTTPS REST API.
+    \item[2.] \textbf{Server Side – Backend API}: \\
+    Các chức năng chính của backend bao gồm:
+    \begin{itemize}
+        \item[-] Xác thực và phân quyền bằng JWT.
+        \item[-] Quản lý user, organizer, event, ticket, purchase;
+        \item[-] Xử lý checkout và thanh toán;
+        \item[-] Phát hành vé điện tử và QR code;
+        \item[-] Gửi email xác nhận;
+        \item[-] Upload ảnh;
+        \item[-] Chatbot AI;
+        \item[-] Recommendation;
+        \item[-] Thống kê và tracking interaction.
+    \end{itemize}
+    Các module nghiệp vụ chính trong backend gồm:
+    \begin{table}[H]
+    \centering
+    \caption{Danh sách các module nghiệp vụ trong backend}
+    \begin{tabular}{|c|l|}
+    \hline
+    \textbf{STT} & \textbf{Module} \\ \hline
+    1 & Auth \& User Module \\ \hline
+    2 & Event Module \\ \hline
+    3 & Organizer Module \\ \hline
+    4 & Purchase \& Payment Module \\ \hline
+    5 & Ticket \& QR Module \\ \hline
+    6 & Email Module \\ \hline
+    7 & Image Upload Module \\ \hline
+    8 & Review \& Rating Module \\ \hline
+    9 & Statistic Module \\ \hline
+    10 & Chat AI Module \\ \hline
+    11 & Recommendation Module \\ \hline
+    \end{tabular}
+    \end{table}
+    Backend giao tiếp với frontend bằng REST API và trả dữ liệu ở định dạng JSON.
+    \item[3.] \textbf{ Database Layer – MongoDB Atlas}\\
+    Hệ thống sử dụng MongoDB Atlas làm cơ sở dữ liệu trung tâm.
+    MongoDB lưu trữ toàn bộ dữ liệu nghiệp vụ như:
+    \begin{table}[H]
+    \centering
+    \caption{Danh sách các collection trong MongoDB}
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{STT} & \textbf{Collection} \\ \hline
+    1 & User \\ \hline
+    2 & Organizer \\ \hline
+    3 & Event \\ \hline
+    4 & TicketClass \\ \hline
+    5 & Ticket \\ \hline
+    6 & Purchase \\ \hline
+    7 & Voucher \\ \hline
+    8 & Review \\ \hline
+    9 & Interaction \\ \hline
+    10 & Statistic \\ \hline
+    \end{tabular}
+    \end{table}
+    Backend sử dụng Mongoose ODM để định nghĩa schema, validation và truy vấn dữ liệu.\\
+    Mọi thao tác đọc/ghi dữ liệu đều được thực hiện thông qua backend nhằm đảm bảo tính bảo mật và toàn vẹn dữ liệu.
+    \item[4.] \textbf{Tích hợp dịch vụ bên ngoài}\\
+    Hệ thống tích hợp nhiều dịch vụ ngoài nhằm mở rộng chức năng thực tế:
+    \begin{itemize}
+        \item[-] \textbf{PayOS – Thanh toán trực tuyến}\\
+        Backend tạo payment URL thông qua API của PayOS. Sau khi người dùng thanh toán thành công, PayOS gửi webhook về backend để cập nhật trạng thái giao dịch và phát hành vé điện tử.
+        \item[-] \textbf{SendGrid – Gửi email giao dịch}\\
+        Hệ thống sử dụng SendGrid để gửi email xác nhận đặt vé, email thông báo và email chứa QR code vé điện tử.
+        \item[-] \textbf{Cloudinary – Lưu trữ ảnh}\\
+        Frontend upload ảnh tới backend, sau đó backend gửi ảnh lên Cloudinary và nhận về secure URL để lưu vào hệ thống.
+        \item[-] \textbf{Gemini API – Chatbot AI}\\
+        Backend lấy dữ liệu sự kiện từ MongoDB, xây dựng context rồi gửi tới Gemini API để tạo phản hồi chatbot tư vấn sự kiện cho người dùng.
+        \item[-] \textbf{Hugging Face – Recommendation System}\\
+        Hệ thống recommendation được triển khai theo hai phần:
         \begin{itemize}
-            \item[a.] \textbf{Tích hợp hệ thống thanh toán (PayOS)}
-            \item[] Backend gửi yêu cầu tạo thanh toán đến PayOS thông qua API.
-            \item[] Sau khi người dùng hoàn tất thanh toán, PayOS gửi webhook về hệ thống.
-            \item[] Backend xử lý webhook để xác nhận trạng thái giao dịch và cập nhật dữ liệu vào hệ thống.
-            \item[b.] \textbf{Tích hợp hệ thống tác vụ định kỳ (cronjob.org)}
-            \item[] Sử dụng dịch vụ cronjob.org để thực hiện các tác vụ theo lịch.
-            \item[] Dịch vụ này sẽ gửi request đến backend theo thời gian định sẵn.
-            \item[] Các tác vụ bao gồm: gửi email nhắc lịch, cập nhật trạng thái sự kiện, cập nhật input định kỳ để huấn luyện mô hình gợi ý…
-            \item[c.] \textbf{ Tích hợp hệ thống gợi ý (Recommendation Service - Hugging Face Spaces)}
-            \item[] Hệ thống gợi ý được triển khai như một microservice độc lập trên Hugging Face Spaces.
-            \item[] Backend gửi request đến service này để lấy danh sách đề xuất.
-            \item[] Service xử lý dữ liệu bằng mô hình AI và trả về kết quả dưới dạng JSON.
-            \item[] Backend có thể xử lý bổ sung trước khi trả về client.
+            \item[+] runtime inference thông qua Hugging Face Space API.
+            \item[+] pipeline huấn luyện mô hình thông qua Hugging Face Hub (Dataset + Model) và GitHub Actions.
         \end{itemize}
+        Backend gửi feature payload của user và event tới Hugging Face Space để nhận recommendation score và trả kết quả gợi ý cho frontend.\\
+        Sau khi pipeline training hoàn tất, mô hình được lưu lên Hugging Face Model và được Hugging Face Space sử dụng lại cho quá trình inference recommendation runtime.
     \end{itemize}
-    \item[3.] \textbf{Database Layer (Lưu trữ dữ liệu)}
+    \item[5.] \textbf{Internal Cron Job – Tác vụ nền}\\
+    Hệ thống sử dụng node-cron chạy trực tiếp bên trong backend process để xử lý các tác vụ định kỳ.\\
+    Cron job hiện tại thực hiện:
     \begin{itemize}
-        \item[-] Dữ liệu được lưu trữ trong MongoDB, một hệ quản trị cơ sở dữ liệu NoSQL.
-        \item[-] Chịu trách nhiệm: lưu trữ thông tin người dùng, sự kiện, vé, giao dịch và lưu trữ dữ liệu phục vụ hệ thống gợi ý.
-        \item[-] Việc truy cập dữ liệu được thực hiện thông qua backend, đảm bảo: tính toàn vẹn dữ liệu và tính bảo mật.
+        \item[-] Quét các đơn hàng pending quá thời gian quy định.
+        \item[-] Chuyển trạng thái purchase sang failed;
+        \item[-] Giải phóng vé giữ chỗ;
+        \item[-] Cập nhật lại số lượng vé đã bán và trạng thái TicketClass.
     \end{itemize}
-    \item[4.] \textbf{Ưu điểm của kiến trúc mở rộng}
+    \item[6.] \textbf{Ưu điểm của kiến trúc hiện tại}
     \begin{itemize}
-        \item[-] Khả năng mở rộng cao: Dễ dàng tích hợp thêm các dịch vụ bên ngoài hoặc tách thành microservices.
-        \item[-] Tăng cường tự động hóa: Các tác vụ định kỳ được xử lý tự động thông qua cronjob.org.
-        \item[-] Tích hợp thực tế: Hệ thống thanh toán PayOS giúp ứng dụng gần với môi trường triển khai thực tế.
-        \item[-] Cá nhân hóa trải nghiệm người dùng: Hệ thống recommendation sử dụng AI giúp đề xuất nội dung phù hợp.
-        \item[-] Bảo mật và kiểm soát tốt: Backend đóng vai trò trung gian, kết hợp JWT và webhook verification.
-        \item[-] Dễ bảo trì và nâng cấp: Các thành phần được tách biệt rõ ràng giữa core system và external services.
+        \item[-] Kiến trúc rõ ràng, dễ triển khai và phù hợp với mô hình full-stack web application.
+        \item[-] Backend monolith giúp đồng bộ dữ liệu và giảm độ phức tạp triển khai.
+        \item[-] Dễ tích hợp các dịch vụ thực tế như PayOS, SendGrid, Cloudinary và AI services.
+        \item[-] Hỗ trợ recommendation và chatbot AI nhằm tăng khả năng cá nhân hóa trải nghiệm người dùng.
+        \item[-] Hệ thống QR vé điện tử và email giao dịch giúp tăng tính thực tiễn của ứng dụng.
+        \item[-] Dễ mở rộng thêm module mới trong tương lai mà không ảnh hưởng lớn tới kiến trúc hiện tại.
     \end{itemize}
 \end{itemize}
 
@@ -73,9 +150,10 @@
 \indent Các thực thể này gồm có các thuộc tính:
 
 %==================== USERS TABLE ====================
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{4cm}|p{11.2cm}|}
+\caption{Các thuộc tính của bảng Users}\\[15pt]
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
@@ -96,15 +174,13 @@ location & User location \\ \hline
 isActive & Account status \\ \hline
 createdAt & Timestamps for creation \\ \hline
 updatedAt & Timestamps for last update \\ \hline
-\end{tabular}
-\vspace{15pt}
-\caption{Các thuộc tính của bảng Users}
-\end{table}
+\end{longtable}
 
 %==================== ORGANIZERS TABLE ====================
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{4cm}|p{11.2cm}|}
+\caption{Các thuộc tính của bảng Organizers}\\[15pt]
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
@@ -117,15 +193,13 @@ rating & Rating \\ \hline
 user (FK) & Associated user account \\ \hline
 createdAt & Timestamps for creation \\ \hline
 updatedAt & Timestamps for last update \\ \hline
-\end{tabular}
-\vspace{15pt}
-\caption{Các thuộc tính của bảng Organizers}
-\end{table}
+\end{longtable}
 
 %==================== EVENTS TABLE ====================
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{4cm}|p{11.2cm}|}
+\caption{Các thuộc tính của bảng Events}\\[15pt]
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
@@ -146,15 +220,13 @@ organizer (FK) & Organizer ID \\ \hline
 location & Event location \\ \hline
 createdAt & Timestamps for creation \\ \hline
 updatedAt & Timestamps for last update \\ \hline
-\end{tabular}
-\vspace{15pt}
-\caption{Các thuộc tính của bảng Events}
-\end{table}
+\end{longtable}
 
 %==================== TICKETCLASSES TABLE ====================
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{4cm}|p{11.2cm}|}
+\caption{Các thuộc tính của bảng TicketClasses}\\[15pt]
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
@@ -167,15 +239,13 @@ availableUntil & Sale end time \\ \hline
 status & Ticket class status \\ \hline
 seatType & Seat type \\ \hline
 event (FK) & Belongs to which event \\ \hline
-\end{tabular}
-\vspace{15pt}
-\caption{Các thuộc tính của bảng TicketClasses}
-\end{table}
+\end{longtable}
 
 %==================== TICKETS TABLE ====================
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{4cm}|p{11.2cm}|}
+\caption{Các thuộc tính của bảng Tickets}\\[15pt]
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
@@ -185,15 +255,13 @@ isSold & Sold status \\ \hline
 qrCode & QR Code for verification \\ \hline
 purchase (FK) & Belongs to which purchase order \\ \hline
 ticketId & Display ticket ID \\ \hline
-\end{tabular}
-\vspace{15pt}
-\caption{Các thuộc tính của bảng Tickets}
-\end{table}
+\end{longtable}
 
 %==================== PURCHASES TABLE ====================
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{4cm}|p{11.2cm}|}
+\caption{Các thuộc tính của bảng Purchases}\\[15pt]
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
@@ -210,15 +278,13 @@ paymentStatus & Payment status \\ \hline
 purchaseDate & Purchase date \\ \hline
 createdAt & Timestamps for creation \\ \hline
 updatedAt & Timestamps for last update \\ \hline
-\end{tabular}
-\vspace{15pt}
-\caption{Các thuộc tính của bảng Purchases}
-\end{table}
+\end{longtable}
 
 %==================== VOUCHERS TABLE ====================
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{4cm}|p{11.2cm}|}
+\caption{Các thuộc tính của bảng Vouchers}\\[15pt]
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
@@ -227,15 +293,13 @@ discountAmount & Discount amount or percentage \\ \hline
 maxAmount & Maximum discount amount \\ \hline
 minSpend & Minimum spend required \\ \hline
 validUntil & Expiry date \\ \hline
-\end{tabular}
-\vspace{15pt}
-\caption{Các thuộc tính của bảng Vouchers}
-\end{table}
+\end{longtable}
 
 %==================== REVIEWS TABLE ====================
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{4cm}|p{11.2cm}|}
+\caption{Các thuộc tính của bảng Reviews}\\[15pt]
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
@@ -244,15 +308,13 @@ event (FK) & Reference to the event being reviewed \\ \hline
 organizer (FK) & Reference to the organizer being reviewed \\ \hline
 rating & Rating stars \\ \hline
 comment & Comment content \\ \hline
-\end{tabular}
-\vspace{15pt}
-\caption{Các thuộc tính của bảng Reviews}
-\end{table}
+\end{longtable}
 
 %==================== INTERACTIONS TABLE ====================
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{4.5cm}|p{9.5cm}|}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{4cm}|p{11.2cm}|}
+\caption{Các thuộc tính của bảng Interactions}\\[15pt]
 \hline
 \textbf{Field} & \textbf{Description} \\ \hline
 \_id (PK) & Primary key (ObjectId) \\ \hline
@@ -261,10 +323,7 @@ event\_id (FK) & Event ID \\ \hline
 click & User click count on the event \\ \hline
 purchase & User purchase count for the event \\ \hline
 createdAt & Timestamps for creation \\ \hline
-\end{tabular}
-\vspace{15pt}
-\caption{Các thuộc tính của bảng Interactions}
-\end{table}
+\end{longtable}
 
 \subsection{Cơ chế hoạt động trợ lý ảo - Chatbot AI}
 \indent \indent Chức năng trợ lý ảo được triển khai dưới dạng một chatbot AI tích hợp trực tiếp vào giao diện người dùng. Chatbot này sử dụng mô hình ngôn ngữ lớn (LLM) để hiểu và phản hồi các câu hỏi, yêu cầu của người dùng liên quan đến sự kiện, vé và các thông tin liên quan khác.\\
@@ -303,7 +362,7 @@ Sự tách biệt này không chỉ tối ưu hóa quy trình phát triển mà 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{Images/Quy trình xử lý hệ thống.png}
+    \includegraphics[width=0.9\textwidth]{Images/Quy trình xử lý hệ thống.png}
     \vspace{15pt}
     \caption{Quy trình MLOps tự động}
 \end{figure}
@@ -316,7 +375,7 @@ Sự tách biệt này không chỉ tối ưu hóa quy trình phát triển mà 
 \begin{table}[H]
 \centering
 \small
-
+\caption{Bảng dữ liệu mẫu}
 \begin{adjustbox}{width=\textwidth}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
@@ -334,11 +393,8 @@ b4e0501d885cd68d33113b & 41e00528ea39dfada77663 & 44 & 1 & 1131000 & 15834000 & 
 \hline
 \end{tabular}
 \end{adjustbox}
-\vspace{15pt}
-\caption{Dữ liệu hành vi người dùng và sự kiện}
 \end{table}
-
-\indent \textbf{Các nhóm đặc trưng (Features)}\\
+\textbf{Các nhóm đặc trưng (Features)}\\
 \indent Dữ liệu huấn luyện được tổng hợp từ ba nhóm đặc trưng chính để phản ánh toàn diện mối tương quan giữa người dùng và sự kiện:
 \begin{itemize}
     \item[1.] \textbf{Đặc trưng Người dùng (User Features):} Tuổi, giới tính, thói quen chi tiêu (tổng chi và giá vé trung bình đã chi).
@@ -352,10 +408,10 @@ b4e0501d885cd68d33113b & 41e00528ea39dfada77663 & 44 & 1 & 1131000 & 15834000 & 
 \subsubsection{Cơ chế Lọc và Chọn Tập Ứng viên (Candidate Selection)}
 \indent \indent Trước khi gửi dữ liệu đến Recommendation Server để dự đoán, hệ thống thực hiện một bước tiền xử lý nhằm xây dựng tập các sự kiện ứng viên phù hợp với từng người dùng.
 \begin{itemize}
-    \item \textbf{Bước 1 -} \textbf{Xác định thể loại yêu thích (Favorite Genres)}
+    \item[] \textbf{Bước 1 -} \textbf{Xác định thể loại yêu thích (Favorite Genres)}
     Dựa trên dữ liệu bảng Interaction, hệ thống truy xuất các sự kiện mà người dùng đã từng tương tác (click hoặc purchase), từ đó trích xuất danh sách các thể loại sự kiện tương ứng. Danh sách này được xem là tập genre yêu thích của người dùng và có thể rỗng đối với người dùng mới.
 
-    \item \textbf{Bước 2 -} \textbf{Lọc danh sách sự kiện khả dụng}
+    \item[] \textbf{Bước 2 -} \textbf{Lọc danh sách sự kiện khả dụng}
     Hệ thống truy vấn tối đa 50 sự kiện thỏa mãn các điều kiện:
     \begin{itemize}
         \item[-] Trạng thái là published
@@ -363,7 +419,7 @@ b4e0501d885cd68d33113b & 41e00528ea39dfada77663 & 44 & 1 & 1131000 & 15834000 & 
         \item[-] Sắp xếp theo thời gian bắt đầu (startDateTime) theo thứ tự tăng dần (ưu tiên các sự kiện sắp diễn ra)
     \end{itemize}
     
-    \item \textbf{Bước 3 -} \textbf{Chiến lược chọn 20 sự kiện đầu vào}
+    \item[] \textbf{Bước 3 -} \textbf{Chiến lược chọn 20 sự kiện đầu vào}
     \begin{itemize}
         \item[-] Nếu tổng số sự kiện $\le$ 20: Sử dụng toàn bộ danh sách làm đầu vào cho mô hình
         \item[-] Nếu tổng số sự kiện $>$ 20: Chia thành hai nhóm
@@ -379,7 +435,7 @@ b4e0501d885cd68d33113b & 41e00528ea39dfada77663 & 44 & 1 & 1131000 & 15834000 & 
        Hệ thống ưu tiên chọn nhiều nhất có thể từ nhóm yêu thích (tối đa 15), phần còn lại được bổ sung từ nhóm khác nhằm đảm bảo tính đa dạng (diversity) trong gợi ý.
        Trong mỗi nhóm, các sự kiện được chọn ngẫu nhiên (shuffle) để tránh thiên lệch và tăng khả năng khám phá (exploration).
     \end{itemize}
-    \item \textbf{Bước 4 -} \textbf{Gửi đến Recommendation Server:}
+    \item[] \textbf{Bước 4 -} \textbf{Gửi đến Recommendation Server:}
     Danh sách 20 sự kiện sau khi chọn sẽ được sử dụng làm đầu vào cho mô hình học máy để tính toán điểm số và xếp hạng.\\
     \textbf{Cơ chế xử lý Cold Start}\\
     Trong giai đoạn đầu, khi dữ liệu tương tác chưa đủ lớn để huấn luyện mô hình hoặc Recommendation Server chưa sẵn sàng, hệ thống sử dụng chiến lược dự phòng:
@@ -403,7 +459,47 @@ b4e0501d885cd68d33113b & 41e00528ea39dfada77663 & 44 & 1 & 1131000 & 15834000 & 
 
 
 \subsubsection{Đánh giá và Tối ưu hóa mô hình}
-\indent \indent \textbf{Tính quan trọng của đặc trưng (Feature Importance)} \\
+\textbf{a. Độ đo xếp hạng (Ranking Metrics)}\\
+\textbf{1. NDCG$@$15}\\
+NDCG$@$15 được sử dụng làm độ đo chính trong quá trình huấn luyện mô hình. Độ đo này đánh giá chất lượng sắp xếp của 15 kết quả đầu tiên, đồng thời ưu tiên các sự kiện có mức độ quan tâm cao xuất hiện ở vị trí đầu danh sách.\\
+\textbf{Công thức:} $DCG@K = \sum_{i=1}^{K} \frac{2^{rel_i} - 1}{\log_2(i + 1)}$ \\
+\textbf{Trong đó:}
+\begin{itemize}
+    \item[-] $rel_i$: mức độ liên quan của sự kiện tại vị trí i (trong trường hợp của hệ thống là Relevance Level được rời rạc hoá từ interestScore)
+    \item[-] $i$: vị trí của sự kiện trong danh sách gợi ý
+    \item[-] $K$: số lượng kết quả được đánh giá
+\end{itemize}
+\textbf{Chuẩn hóa thành NDCG:} Để đưa giá trị về khoảng từ 0 đến 1, hệ thống thực hiện chuẩn hóa \\
+$NDCG@K = \frac{DCG@K}{IDCG@K}$.\\
+\textbf{Trong đó:} IDCG là giá trị DCG lý tưởng khi toàn bộ các sự kiện được sắp xếp hoàn hảo theo đúng mức độ quan tâm giảm dần.\\
+\textbf{Ý nghĩa:}
+\begin{itemize}
+    \item[-] NDCG = 1 $\rightarrow$ sắp xếp hoàn hảo
+    \item[-] NDCG gần 1 $\rightarrow$ thứ tự gợi ý rất tốt
+    \item[-] NDCG thấp $\rightarrow$ mô hình xếp hạng chưa hiệu quả
+\end{itemize}
+\textbf{Kết quả thực nghiệm:} Mean NDCG$@$15 xấp xỉ 0.71\\
+Giá trị này cho thấy mô hình có khả năng sắp xếp các sự kiện phù hợp lên các vị trí ưu tiên với độ chính xác tương đối cao.
+
+\textbf{2. Precision$@$10}\\
+Precision$@$10 đo tỉ lệ các sự kiện phù hợp xuất hiện trong 10 kết quả gợi ý đầu tiên.\\
+\textbf{Công thức:} $Precision@K = \frac{\text{relevant items in top K}}{K}$\\
+Trong top K event gợi ý, có bao nhiêu event thực sự user quan tâm.\\
+\textbf{Kết quả thực nghiệm:} Mean Precision$@$10 xấp xỉ 0.84\\
+Điều này cho thấy phần lớn các sự kiện được đề xuất ở top đầu đều phù hợp với sở thích và hành vi người dùng. Đây là yếu tố quan trọng trong hệ thống gợi ý vì người dùng thường chỉ quan tâm đến một số lượng nhỏ kết quả đầu tiên.
+
+\textbf{3. MRR (Mean Reciprocal Rank)}
+MRR đánh giá vị trí xuất hiện đầu tiên của một sự kiện phù hợp trong danh sách gợi ý. Nếu sự kiện phù hợp xuất hiện càng sớm thì giá trị MRR càng cao.\\
+\textbf{Công thức:} $MRR = \frac{1}{|Q|} \sum_{i=1}^{|Q|} \frac{1}{rank_i}$\\
+\textbf{Trong đó:} 
+\begin{itemize}
+    \item[-] $rank_i$ :vị trí của sự kiện phù hợp đầu tiên
+    \item[-] Q: tập người dùng hoặc tập truy vấn
+\end{itemize}
+\textbf{Kết quả thực nghiệm:} Mean MRR xấp xỉ 0.92 \\
+Kết quả này cho thấy mô hình thường đưa được ít nhất một sự kiện có mức độ quan tâm cao lên vị trí đầu tiên trong danh sách gợi ý. Điều này phản ánh khả năng ưu tiên chính xác các sự kiện phù hợp nhất đối với người dùng.\\
+
+\textbf{b. Tính quan trọng của đặc trưng (Feature Importance)} \\
 \indent Thông qua huấn luyện, mô hình xác định các đặc trưng về avgPurchasePrice, totalSpent, sameEventGenreClickCount và eventClickCount có ảnh hưởng lớn nhất đến kết quả dự đoán.
 \begin{figure}[H]
     \centering
@@ -411,7 +507,7 @@ b4e0501d885cd68d33113b & 41e00528ea39dfada77663 & 44 & 1 & 1131000 & 15834000 & 
     \vspace{15pt}
     \caption{Tính quan trọng của các đặc trưng trong mô hình gợi ý}
 \end{figure}
-\indent \textbf{Đánh giá bằng Ma trận nhầm lẫn (Confusion Matrix)}\\
+\textbf{c. Đánh giá bằng Ma trận nhầm lẫn (Confusion Matrix)}\\
 \indent Để đánh giá chi tiết hiệu năng phân loại, nhóm thực hiện sử dụng ma trận nhầm lẫn trên 5 mức độ quan tâm (từ 0 đến 4).
 \begin{figure}[H]
     \centering
@@ -424,13 +520,121 @@ b4e0501d885cd68d33113b & 41e00528ea39dfada77663 & 44 & 1 & 1131000 & 15834000 & 
     \item[-] \textbf{Phân tích sai số:} Một số sự nhầm lẫn xảy ra giữa các nhãn kề nhau (ví dụ: nhãn 2 và 3). Điều này là hợp lý trong bài toán gợi ý, vì ranh giới định lượng giữa các mức độ "quan tâm trung bình" thường có sự giao thoa lớn, không ảnh hưởng quá nhiều đến trải nghiệm xếp hạng tổng thể.
 \end{itemize}
 
-\indent \textbf{Tối ưu hóa với định dạng ONNX}\\
+\textbf{d. Tối ưu hóa với định dạng ONNX}\\
 \indent Để đưa mô hình vào vận hành thực tế, nhóm đã thực hiện chuyển đổi định dạng sang ONNX (Open Neural Network Exchange). Giải pháp này mang lại hai lợi ích cốt lõi:
 \begin{itemize}
     \item[-] \textbf{Tối ưu hiệu năng:} Giảm đáng kể độ trễ khi dự đoán (Inference Latency), cho phép Recommendation Server phản hồi danh sách gợi ý gần như tức thời khi nhận yêu cầu từ Web Server.
     \item[-] \textbf{Tính độc lập:} Loại bỏ sự phụ thuộc vào thư viện huấn luyện gốc (LightGBM) trong môi trường production, giúp hệ thống gọn nhẹ, dễ dàng mở rộng và tương thích tốt với nhiều nền tảng phần cứng khác nhau.
 \end{itemize}
 
+\subsubsection{Đánh giá hiệu năng hệ thống MLOps}
+\textbf{a. inference latency}\\
+Inference Latency là độ trễ từ thời điểm Recommendation Server nhận yêu cầu cho đến khi trả về kết quả gợi ý.\\
+Để đánh giá khả năng phản hồi của hệ thống trong môi trường thực tế, nhóm sử dụng công cụ kiểm thử tải k6 để gửi đồng thời nhiều request đến Recommendation Server được triển khai trên Hugging Face Spaces.\\
+%chèn bảng
+\textbf{Kết quả:}
+\begin{itemize}
+    \item[-] Hệ thống duy trì độ trễ trung bình dưới 350 ms ngay cả khi xử lý đồng thời 100 người dùng kéo dài trong khoảng 30s.
+    \item[-] Tỉ lệ lỗi bằng 0\% trong toàn bộ quá trình kiểm thử ở mức tải thông thường.
+    \item[-] Recommendation Server có khả năng phục vụ realtime inference tương đối ổn định cho hệ thống gợi ý sự kiện.
+\end{itemize}
+Nhóm tiếp tục thử nghiệm ở mức tải cực lớn (1000 VUs). Khi đó hệ thống xuất hiện cơ chế rate limiting từ Hugging Face Spaces:\\
+%chèn bảng
+Nguyên nhân không đến từ lỗi mô hình mà do nền tảng Hugging Face Spaces giới hạn lưu lượng truy cập nhằm bảo vệ tài nguyên hệ thống. Điều này cho thấy Recommendation Server vẫn có khả năng xử lý tải lớn nhưng bị giới hạn bởi hạ tầng triển khai miễn phí.\\
+\textbf{b. Training time}\\
+Trong quá trình thực nghiệm, thời gian huấn luyện toàn bộ mô hình LightGBM LambdaRank trên tập dữ liệu hiện tại đạt khoảng 0.037 giây. Kết quả này cho thấy mô hình có tốc độ huấn luyện rất nhanh nhờ vào các đặc điểm:
+\begin{itemize}
+    \item[-] Thuật toán LightGBM được tối ưu cho dữ liệu dạng bảng (tabular data).
+    \item[-] Kích thước đặc trưng đầu vào tương đối nhỏ.
+    \item[-] Quá trình huấn luyện sử dụng cơ chế Early Stopping giúp giảm số vòng lặp không cần thiết.
+    \item[-] Hạ tầng GitHub Actions hỗ trợ tự động hóa pipeline MLOps mà không cần can thiệp thủ công.
+\end{itemize}
+Thời gian huấn luyện thấp mang lại lợi thế lớn cho hệ thống MLOps, cho phép mô hình được cập nhật thường xuyên khi có dữ liệu tương tác mới từ người dùng mà vẫn đảm bảo chi phí vận hành thấp và tốc độ triển khai nhanh.\\
+\textbf{c. Model size}\\
+Sau khi huấn luyện, mô hình được lưu dưới hai định dạng khác nhau:\\
+%chèn bảng
+Kết quả cho thấy phiên bản ONNX có kích thước nhỏ hơn so với mô hình LightGBM gốc. Điều này giúp:
+\begin{itemize}
+    \item[-] Giảm dung lượng lưu trữ trên hệ thống triển khai.
+    \item[-] Tăng tốc độ tải mô hình khi Recommendation Server khởi động.
+    \item[-] Giảm băng thông khi tự động cập nhật mô hình từ Hugging Face Models.
+    \item[-] Tối ưu hiệu năng inference trong môi trường production.
+\end{itemize}
+Ngoài ra, việc chuyển đổi sang định dạng ONNX còn giúp mô hình độc lập với thư viện huấn luyện gốc, tăng khả năng tương thích và mở rộng trên nhiều nền tảng triển khai khác nhau.
+
 \subsubsection{Kết luận và Hướng phát triển}
 \indent \indent \textbf{Kết quả:} Xây dựng thành công pipeline tự động từ khâu dữ liệu đến triển khai, đáp ứng bài toán gợi ý thực tế với độ trễ thấp.\\
 \indent \textbf{Hướng cải thiện:} Tích hợp thêm các kỹ thuật xử lý ngôn ngữ tự nhiên (NLP) để phân tích mô tả sự kiện sâu hơn cũng như phân tích hình ảnh banner sự kiện để tăng độ chính xác của gợi ý.
+
+\subsection{Quy trình xuất dữ liệu Danh sách khách hàng (PDF/CSV)}
+Chức năng xuất dữ liệu Danh sách khách hàng (PDF/CSV) được thiết kế dành riêng cho vai trò Organizer (Ban tổ chức), 
+cho phép trích xuất dữ liệu danh sách các khách hàng đã thanh toán thành công vé của một sự kiện cụ thể, tạo tiền đề để phát triển thêm các chức năng mới về sau như đối soát, 
+chăm sóc khách hàng và vận hành check-in tại sự kiện. 
+Giải pháp hướng đến việc giảm tải cho server bằng cách đẩy việc sinh tệp (render file) về phía Client (Frontend) sau khi nhận được dataset chuẩn hóa từ Backend.\\
+\textbf{Quy trình được thực hiện qua 3 giai đoạn chính:}
+\begin{itemize}
+    \item[1.] \textbf{Truy vấn và Tổng hợp (Backend)}
+    \begin{itemize}
+        \item[-] Hệ thống xác thực quyền sở hữu sự kiện thông qua Middleware JWT và kiểm tra quan hệ giữa Organizer với Event.
+        \item[-] Thực hiện truy vấn liên kết (Aggregation) giữa các tập thực thể: Purchase (trạng thái "paid"), User, TicketClass và Ticket.
+        \item[-] Logic xử lý quan trọng: Backend không trả về dữ liệu thô mà thực hiện "làm phẳng" (Flattening) dữ liệu thành một mảng JSON attendeeRows duy nhất để Frontend dễ dàng xử lý mà không cần tính toán lại logic nghiệp vụ.
+    \end{itemize}
+    \item[2.] \textbf{Chuẩn hóa hiển thị (Frontend)}
+    \begin{itemize}
+        \item[-] Dữ liệu sau khi nhận được từ API được map thành các interface TypeScript (AttendeeRow) để đảm bảo tính nhất quán.
+        \item[-] Các trường thông tin (tên, giá vé, thời gian mua) được format theo quy chuẩn địa phương (vi-VN) và sắp xếp theo tên khách hàng trước khi đưa vào bảng hiển thị.
+    \end{itemize}
+    \item[3.] \textbf{Kích hoạt Export}
+    \begin{itemize}
+        \item[-] Đối với CSV: Sử dụng Blob API để tạo tệp trực tiếp từ chuỗi text. Đặc biệt, hệ thống thêm ký tự BOM ($uFEFF$) để đảm bảo file hiển thị đúng định dạng tiếng Việt khi mở bằng Excel.
+        \item[-] Đối với PDF: Sử dụng thư viện jsPDF kết hợp plugin jspdf-autotable. Dữ liệu được vẽ lên canvas theo khổ ngang (A4 Landscape) để tối ưu không gian hiển thị cho bảng nhiều cột thông tin.
+    \end{itemize}
+\end{itemize}
+\textbf{Các kỹ thuật đặc trưng:}
+\begin{itemize}
+    \item[-] \textbf{Xác thực:} Đảm bảo tính an toàn dữ liệu khách hàng thông qua kiểm tra chéo giữa organizerId và req.user.id.
+    \item[-] \textbf{Hiệu suất:} Việc sử dụng Frontend để tạo file giúp hệ thống không phải lưu trữ tệp tạm trên máy chủ, tối ưu tài nguyên lưu trữ.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/Cơ chế xuất file.png}
+    \vspace{15pt}
+    \caption{Quy trình xuất dữ liệu Danh sách khách hàng}
+\end{figure}
+
+\subsection{Cơ chế quản lý Mã QR và Vé điện tử}
+Hệ thống áp dụng phương pháp "Public URL Encoding": Mã QR không chứa dữ liệu vé thô mà chứa một liên kết công khai dẫn tới trang thông tin vé điện tử (/ticket-info/:ticketId).\\
+\textbf{Mục tiêu hướng tới:}
+\begin{itemize}
+    \item[-] Mã QR đơn giản, dễ quét ngay cả ở độ phân giải thấp.
+    \item[-] Có thể cập nhật giao diện hiển thị hoặc bổ sung thông tin vé mà không cần thu hồi/đổi mã QR đã phát hành.
+    \item[-] Dễ dàng tích hợp đa kênh (Web preview, Email, Tải ảnh).
+\end{itemize}
+\textbf{Quy trình xử lý đa luồng:}
+\begin{itemize}
+    \item[a.] \textbf{Luồng hiển thị và Tải xuống (Client-side)}
+    \begin{itemize}
+        \item[-] \textbf{Xem nhanh (Preview):} Khi người dùng mở lịch sử vé, Frontend sử dụng component QRCode của Ant Design để vẽ mã QR ngay lập tức từ dữ liệu sẵn có, giúp phản hồi giao diện đạt tốc độ tối đa (Real-time).
+        \item[-] \textbf{Tải xuống (Server-side):} Khi có yêu cầu lưu tệp, hệ thống gọi API GET /.../qr-image. Backend sử dụng thư viện qrcode để sinh một Buffer ảnh PNG chuẩn, hỗ trợ lưu trữ lâu dài trên thiết bị người dùng.
+    \end{itemize}
+    \item[b.] \textbf{Luồng Email xác nhận (Automated Trigger)}\\
+    Sau khi thanh toán thành công (hoặc đơn hàng 0đ được xác nhận), hệ thống kích hoạt luồng gửi email tự động qua SendGrid:
+    \begin{itemize}
+        \item[1.] \textbf{Tạo Attachment:} Mỗi vé trong đơn hàng được sinh một ảnh QR riêng biệt dưới dạng Buffer.
+        \item[2.] \textbf{Nhúng Inline (CID):} Để tránh việc ảnh bị chặn bởi các trình duyệt mail (như Gmail/Outlook), hệ thống sử dụng cơ chế nhúng cid. Ảnh QR sẽ xuất hiện trực tiếp trong nội dung HTML của email thay vì chỉ là tệp đính kèm rời rạc.
+    \end{itemize}
+    \item[c.] \textbf{Quy trình quét và Xác thực (Validation)}\\
+    Khi nhân viên check-in quét mã QR (hoặc người dùng bấm link email):
+    \begin{itemize}
+        \item[1.] Frontend điều hướng tới route TicketInfoPage dựa trên ID trong mã QR.
+        \item[2.] Hệ thống gọi Public API để lấy thông tin chi tiết (Tên sự kiện, Loại vé, Vị trí ghế).
+        \item[3.] Kiểm tra tính hợp lệ: Backend kiểm tra trạng thái thanh toán (paymentStatus = paid) trước khi trả về dữ liệu, đảm bảo chỉ những vé hợp lệ mới được hiển thị thông tin.
+    \end{itemize}
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/cơ chế QR code.png}
+    \vspace{15pt}
+    \caption{Cơ chế quản lý Mã QR và Vé điện tử}
+\end{figure}
+

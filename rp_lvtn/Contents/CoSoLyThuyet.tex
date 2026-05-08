@@ -1,35 +1,58 @@
 \section{Cơ sở lý thuyết}
 
 \subsection{Mô hình Client - Server}
-\indent \indent Mô hình Client-Server là một kiến trúc hệ thống phổ biến trong phát triển phần mềm, đặc biệt là các hệ thống web và di động. Trong mô hình này, hệ thống được chia thành hai phần chính: Client (máy khách) và Server (máy chủ). Client chịu trách nhiệm xử lý giao diện người dùng và gửi yêu cầu đến Server, trong khi Server xử lý logic kinh doanh, lưu trữ dữ liệu và trả về kết quả cho Client. Sự giao tiếp giữa hai bên thường diễn ra qua mạng, sử dụng các giao thức như HTTP hoặc HTTPS để đảm bảo an toàn và hiệu quả.\\
-\indent Các thành phần chính của mô hình Client-Server bao gồm:
-\begin{itemize}
-    \item[-] Client: Là thiết bị hoặc hệ thống của người dùng cuối, chẳng hạn như trình duyệt web, hệ thống di động hoặc phần mềm máy tính. Client thu thập đầu vào từ người dùng, gửi yêu cầu đến Server và hiển thị kết quả nhận được. Trong đồ án này, phần frontend được xây dựng bằng ReactJS với TypeScript đóng vai trò là Client, cho phép người dùng tương tác như tìm kiếm sự kiện, mua vé hoặc chat.
-    \item[-] Server: Là máy chủ trung tâm, xử lý các yêu cầu từ Client, thực hiện các tác vụ phức tạp như xác thực, truy vấn cơ sở dữ liệu và tính toán logic. Server trả về dữ liệu dưới dạng phù hợp, thường là JSON qua API. Trong hệ thống, backend sử dụng Node.js làm Server, kết nối với MongoDB để quản lý dữ liệu sự kiện và vé.
-    \item[-] Giao tiếp: Client gửi yêu cầu (request) đến Server qua mạng, và Server phản hồi (response) với dữ liệu cần thiết. Mô hình này hỗ trợ mở rộng bằng cách thêm nhiều Client mà không ảnh hưởng đến Server, đồng thời cho phép Server được nâng cấp độc lập.
-\end{itemize}
+\indent \indent Mô hình Client-Server (Khách - Chủ) là kiến trúc nền tảng phân chia nhiệm vụ giữa bên yêu cầu dịch vụ (Client) và bên cung cấp dịch vụ (Server). Trong hệ thống này, Client đóng vai trò là "cửa ngõ" để người dùng tương tác, trong khi Server giữ vai trò là "trung tâm điều phối" xử lý các tác vụ phức tạp và quản lý tài nguyên. Việc tách biệt này giúp hệ thống vận hành linh hoạt, bảo mật và dễ dàng nâng cấp hơn so với các kiến trúc truyền thống.
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{6pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\needspace{18\baselineskip}
+\begin{longtable}{|p{0.17\textwidth}|p{0.75\textwidth}|}
+    \caption{Các thành phần cốt lõi của hệ thống Client-Server}
+    \label{tab:client_server_components}\\
+    \hline
+    \textbf{Thành phần} & \textbf{Diễn giải} \\ \hline
+    \textbf{Client (Máy khách)} & Là giao diện tương tác trực tiếp với người dùng (như ứng dụng ReactJS trong đồ án). Nhiệm vụ chính là tiếp nhận thao tác, gửi yêu cầu dịch vụ và trình diễn dữ liệu trả về dưới dạng hình ảnh, văn bản sinh động. \\ \hline
+    \textbf{Server (Máy chủ)} & Đóng vai trò bộ não điều khiển (sử dụng Node.js và MongoDB). Thành phần này túc trực để tiếp nhận yêu cầu, thực thi các thuật toán nghiệp vụ, kiểm tra quyền truy cập và quản lý dữ liệu lưu trữ một cách an toàn. \\ \hline
+    \textbf{Cơ chế giao tiếp} & Là phương thức kết nối thông qua môi trường mạng (Internet/Intranet). Quá trình trao đổi diễn ra theo chu kỳ Request - Response (Yêu cầu - Phản hồi) dựa trên các giao thức chuẩn hóa, đảm bảo dữ liệu đi đúng hướng và toàn vẹn. \\ \hline
+\end{longtable}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{Images/MoHinhClient_Server.png}
     \vspace{15pt}
     \caption{Cách thức hoạt động của mô hình Client-Server}
 \end{figure}
-\indent \indent Ưu điểm của mô hình Client-Server:
-\begin{itemize}
-    \item[-] Tập trung hóa quản lý: Dữ liệu và logic chính được lưu trữ trên Server, dễ dàng bảo trì và cập nhật mà không cần thay đổi Client.
-    \item[-] Khả năng mở rộng: Hỗ trợ nhiều người dùng đồng thời, phù hợp với hệ thống như đặt vé sự kiện nơi lượng truy cập có thể tăng đột biến.
-    \item[-] Bảo mật cao hơn: Server có thể kiểm soát quyền truy cập, mã hóa dữ liệu và bảo vệ khỏi các rủi ro từ phía Client.
-    \item[-] Hiệu quả tài nguyên: Client chỉ cần xử lý giao diện, trong khi Server đảm nhận các tác vụ nặng, giúp tối ưu hóa hiệu suất hệ thống.
-\end{itemize}
+\indent \indent Các lợi ích tiêu biểu của mô hình Client-Server có thể tóm lược qua bảng sau:
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{6pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{0.17\textwidth}|p{0.75\textwidth}|}
+    \caption{Các ưu điểm chính của mô hình Client-Server}
+    \label{tab:client_server_advantages}\\
+    \hline
+    \textbf{Ưu điểm} & \textbf{Diễn giải} \\ \hline
+    \textbf{Quản lý tập trung} & Phần dữ liệu và nghiệp vụ cốt lõi được đặt tại Server, nhờ đó việc cập nhật, bảo trì hoặc điều chỉnh chức năng có thể thực hiện đồng bộ mà không cần can thiệp trực tiếp trên từng Client. \\ \hline
+    \textbf{Dễ mở rộng} & Kiến trúc này cho phép phục vụ đồng thời nhiều người dùng và thuận lợi cho việc nâng cấp tài nguyên phía máy chủ khi lưu lượng truy cập tăng cao, đặc biệt trong các hệ thống đặt vé trực tuyến. \\ \hline
+    \textbf{Tăng cường bảo mật} & Server có thể đảm nhiệm việc xác thực, phân quyền, mã hóa và kiểm soát truy cập, từ đó giảm rủi ro phát sinh do thao tác trực tiếp từ phía Client. \\ \hline
+    \textbf{Phân bổ xử lý hợp lý} & Client tập trung vào hiển thị giao diện và tiếp nhận thao tác người dùng, còn Server xử lý các tác vụ nặng như tính toán nghiệp vụ và truy xuất dữ liệu, giúp hệ thống vận hành hiệu quả hơn. \\ \hline
+\end{longtable}
 \indent \indent Tuy nhiên, mô hình này cũng có nhược điểm như phụ thuộc vào kết nối mạng ổn định và có thể gặp tình trạng quá tải Server nếu không thiết kế tốt.
 
 \subsection{Kiến trúc RESTful API}
-\indent \indent RESTful API là một phong cách thiết kế API dành cho các hệ thống web, giúp đơn giản hóa việc quản lý và tương tác với các tài nguyên. Nó tập trung vào các tài nguyên hệ thống như tệp văn bản, hình ảnh, âm thanh, video hoặc dữ liệu động, với trạng thái của chúng được định dạng và truyền tải thông qua giao thức HTTP một cách hiệu quả.\\
-\indent Các yếu tố chính trong RESTful API bao gồm:
-\begin{itemize}
-    \item[-] API (Application Programming Interface): Đây là bộ quy tắc và cơ chế cho phép một hệ thống hoặc thành phần tương tác với các hệ thống khác. API có thể trả về dữ liệu dưới dạng phổ biến như JSON hoặc XML.
-    \item[-] REST (Representational State Transfer): Đây là một kiến trúc chuyển đổi cấu trúc dữ liệu, sử dụng các phương thức HTTP cơ bản như GET, POST, DELETE để giao tiếp giữa các thiết bị. Thay vì dùng URL để xử lý thông tin cụ thể, REST gửi yêu cầu HTTP đến URL nhằm thao tác dữ liệu.
-\end{itemize}
+\indent \indent Trong kiến trúc hệ thống hiện đại, RESTful API đóng vai trò là "ngôn ngữ chung" giúp các thành phần phần mềm khác nhau có thể hiểu và làm việc cùng nhau một cách trơn tru.
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{6pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{0.21\textwidth}|p{0.71\textwidth}|}
+    \caption{Các thành phần nền tảng cấu thành RESTful API}
+    \label{tab:restful_api_elements}\\
+    \hline
+    \textbf{Thành phần} & \textbf{Diễn giải} \\ \hline
+    \textbf{API (Giao diện lập trình ứng dụng)} & Đóng vai trò là cầu nối trung gian, cung cấp các quy tắc định sẵn để các hệ thống riêng biệt có thể trao đổi thông tin. Dữ liệu thường được đóng gói dưới dạng JSON hoặc XML để tối ưu hóa việc truyền tải và xử lý. \\ \hline
+    \textbf{REST (Kiến trúc chuyển đổi dữ liệu)} & Là một phong cách thiết kế hệ thống dựa trên việc sử dụng linh hoạt các phương thức HTTP (GET, POST, PUT, DELETE). Thay vì tạo ra các URL phức tạp cho mỗi hành động, REST tập trung vào việc định danh tài nguyên và thao tác chúng thông qua các tiêu chuẩn web phổ biến. \\ \hline
+\end{longtable}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{Images/RESTful api.png}
@@ -40,75 +63,112 @@
 
 \subsection{Cơ sở dữ liệu dữ liệu}
 \indent \indent Cơ sở dữ liệu (Database) hay gọi tắt là CSDL, là tập hợp có tổ chức của các dữ liệu liên quan logic với nhau, được lưu trữ và truy cập từ hệ thống máy tính nhằm phục vụ nhu cầu khai thác thông tin của người dùng hoặc hệ thống. Trong thực tế, khái niệm này thường bao quát cả hệ quản trị cơ sở dữ liệu (DBMS) và hệ thống cơ sở dữ liệu tổng thể. 
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{Images/CSDL.png}
+    \includegraphics[width=0.9\textwidth]{Images/Hình ảnh CSDL.png}
     \vspace{15pt}
-    \caption{Hệ thống cơ sở dữ liệu đơn giản}
+    \caption{Các Thành phần Chính của Hệ thống Cơ sở Dữ liệu}
 \end{figure}
-\indent Hệ thống cơ sở dữ liệu bao gồm các thành phần chính:
-\begin{table}[H]
-\centering
-\renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{6pt}
-\begin{tabularx}{\textwidth}{|p{4cm}|X|}
-\hline
-\multicolumn{2}{|c|}{\textbf{A. Người dùng và Vai trò}} \\
-\hline
-\textbf{Thành phần} & \textbf{Vai trò/Mô tả} \\
-\hline
-\textbf{Người dùng} & Là những người tương tác trực tiếp với dữ liệu thông qua hệ thống, thực hiện các thao tác cơ bản như thêm, xóa, chỉnh sửa (CRUD) hoặc truy vấn dữ liệu. \\
-\hline
-\textbf{Người Phát triển Hệ thống} & Bao gồm Phân tích viên Hệ thống (xác định yêu cầu) và Lập trình viên (viết mã hệ thống và truy vấn). Họ xây dựng các chương trình để người dùng có thể truy cập CSDL. \\
-\hline
-\textbf{Người Quản trị CSDL (DBA)} & Là người có quyền điều khiển tập trung cao nhất. Họ chịu trách nhiệm thiết kế, triển khai, bảo trì, cấp quyền và đảm bảo tính bảo mật/toàn vẹn cho toàn bộ CSDL và các chương trình truy xuất nó. \\
-\hline
-\multicolumn{2}{|c|}{\textbf{B. Phần mềm và Giao diện}} \\
-\hline
-\textbf{Hệ Quản trị Cơ sở Dữ liệu (DBMS)} & Là phần mềm trung tâm của hệ thống. Chức năng chính là tạo, duy trì và cung cấp cơ chế truy cập có kiểm soát (bảo mật, đồng thời) đến dữ liệu. \\
-\hline
-\textbf{hệ thống} & Là các chương trình giao tiếp (phần mềm) được phát triển để người dùng cuối có thể truy cập và tương tác với dữ liệu một cách dễ dàng và có cấu trúc. \\
-\hline
-\textbf{Giao diện Người dùng} & Là các phương tiện hiển thị (ví dụ: màn hình nhập liệu, form, báo cáo) cho phép người dùng thao tác với các thành phần của hệ thống CSDL. \\
-\hline
-\multicolumn{2}{|c|}{\textbf{C. Dữ liệu và Lưu trữ}} \\
-\hline
-\textbf{Cơ sở Dữ liệu (CSDL)} & Là tập hợp dữ liệu có liên quan logic với nhau, được tổ chức và lưu trữ nhằm phục vụ nhu cầu thông tin chung của nhiều người dùng trong một tổ chức. \\
-\hline
-\textbf{Dữ liệu} & Là thông tin thực tế liên quan đến hệ thống (ví dụ: tên khách hàng, mã sản phẩm) được lưu trữ dưới dạng các tập tin trên thiết bị vật lý. \\
-\hline
-\textbf{Hệ thống Chủ} & Là hệ thống máy tính vật lý hoặc máy chủ, có trách nhiệm quản lý và thực hiện việc truy cập vật lý đến các tập tin chứa dữ liệu. \\
-\hline
-\end{tabularx}
-\vspace{15pt} % Thêm khoảng cách nếu cần thiết để tách bảng và caption
-\caption{Các Thành phần Chính của Hệ thống Cơ sở Dữ liệu}
-\label{tab:dbs_components}
-\end{table}
+
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.6\textwidth]{Images/CSDL.png}
+%     \vspace{15pt}
+%     \caption{Hệ thống cơ sở dữ liệu đơn giản}
+% \end{figure}
+% \indent Hệ thống cơ sở dữ liệu bao gồm các thành phần chính:
+% \begin{table}[H]
+% \centering
+% \renewcommand{\arraystretch}{1.3}
+% \setlength{\tabcolsep}{6pt}
+% \begin{tabularx}{\textwidth}{|p{4cm}|X|}
+% \hline
+% \multicolumn{2}{|c|}{\textbf{A. Người dùng và Vai trò}} \\
+% \hline
+% \textbf{Thành phần} & \textbf{Vai trò/Mô tả} \\
+% \hline
+% \textbf{Người dùng} & Là những người tương tác trực tiếp với dữ liệu thông qua hệ thống, thực hiện các thao tác cơ bản như thêm, xóa, chỉnh sửa (CRUD) hoặc truy vấn dữ liệu. \\
+% \hline
+% \textbf{Người Phát triển Hệ thống} & Bao gồm Phân tích viên Hệ thống (xác định yêu cầu) và Lập trình viên (viết mã hệ thống và truy vấn). Họ xây dựng các chương trình để người dùng có thể truy cập CSDL. \\
+% \hline
+% \textbf{Người Quản trị CSDL (DBA)} & Là người có quyền điều khiển tập trung cao nhất. Họ chịu trách nhiệm thiết kế, triển khai, bảo trì, cấp quyền và đảm bảo tính bảo mật/toàn vẹn cho toàn bộ CSDL và các chương trình truy xuất nó. \\
+% \hline
+% \multicolumn{2}{|c|}{\textbf{B. Phần mềm và Giao diện}} \\
+% \hline
+% \textbf{Hệ Quản trị Cơ sở Dữ liệu (DBMS)} & Là phần mềm trung tâm của hệ thống. Chức năng chính là tạo, duy trì và cung cấp cơ chế truy cập có kiểm soát (bảo mật, đồng thời) đến dữ liệu. \\
+% \hline
+% \textbf{hệ thống} & Là các chương trình giao tiếp (phần mềm) được phát triển để người dùng cuối có thể truy cập và tương tác với dữ liệu một cách dễ dàng và có cấu trúc. \\
+% \hline
+% \textbf{Giao diện Người dùng} & Là các phương tiện hiển thị (ví dụ: màn hình nhập liệu, form, báo cáo) cho phép người dùng thao tác với các thành phần của hệ thống CSDL. \\
+% \hline
+% \multicolumn{2}{|c|}{\textbf{C. Dữ liệu và Lưu trữ}} \\
+% \hline
+% \textbf{Cơ sở Dữ liệu (CSDL)} & Là tập hợp dữ liệu có liên quan logic với nhau, được tổ chức và lưu trữ nhằm phục vụ nhu cầu thông tin chung của nhiều người dùng trong một tổ chức. \\
+% \hline
+% \textbf{Dữ liệu} & Là thông tin thực tế liên quan đến hệ thống (ví dụ: tên khách hàng, mã sản phẩm) được lưu trữ dưới dạng các tập tin trên thiết bị vật lý. \\
+% \hline
+% \textbf{Hệ thống Chủ} & Là hệ thống máy tính vật lý hoặc máy chủ, có trách nhiệm quản lý và thực hiện việc truy cập vật lý đến các tập tin chứa dữ liệu. \\
+% \hline
+% \end{tabularx}
+% \vspace{15pt} % Thêm khoảng cách nếu cần thiết để tách bảng và caption
+% \caption{Các Thành phần Chính của Hệ thống Cơ sở Dữ liệu}
+% \label{tab:dbs_components}
+% \end{table}
 Về phân loại, có 2 loại cơ sở dữ liệu khác nhau là Cở sở dữ liệu quan hệ (Relational Database) và Cơ sở dữ liệu phi quan hệ (NoSQL Database). Bảng dưới đây là những tiêu chí so sánh sự khác nhau giữa chúng:
-\begin{table}[H]
-\centering
-\renewcommand{\arraystretch}{1.3} % Giảm arraystretch một chút để phù hợp với X (1.5 có thể làm giãn quá mức)
-\setlength{\tabcolsep}{6pt}
-\begin{tabularx}{\textwidth}{|l|X|X|}
+\renewcommand{\arraystretch}{1.4}
+\setlength{\tabcolsep}{5pt}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{|p{0.17\textwidth}|p{0.35\textwidth}|p{0.35\textwidth}|}
+\caption{So sánh đặc tính kỹ thuật giữa hệ quản trị CSDL SQL và NoSQL}\label{tab:sql_vs_nosql}\\
+% --- Thiết lập đầu bảng ---
 \hline
 \textbf{Tiêu chí} & \textbf{CSDL Quan hệ (SQL)} & \textbf{CSDL Phi quan hệ (NoSQL)} \\ \hline
-\textbf{Định nghĩa} & Đây là loại cơ sở dữ liệu thường gọi là RDBMS, tập trung vào việc tổ chức dữ liệu theo mối quan hệ giữa các bảng. & Đây là loại cơ sở dữ liệu thường được xem như không quan hệ hoặc phân tán, không dựa vào cấu trúc bảng cố định. \\ \hline
-\textbf{Mục đích sử dụng} & Dùng ngôn ngữ SQL để phân tích dữ liệu, giúp rút ra insights sâu hơn, thường áp dụng trong OLAP để xử lý phân tích dữ liệu lớn. & Được thiết kế để đáp ứng nhu cầu của các hệ thống hiện đại, như xử lý dữ liệu thời gian thực hoặc khối lượng lớn. \\ \hline
-\textbf{Mô hình lưu trữ} & Dữ liệu được sắp xếp theo dạng bảng với hàng và cột rõ ràng. & Dữ liệu có thể lưu dưới dạng tài liệu, cặp khóa-giá trị, hoặc biểu đồ. \\ \hline
-\textbf{Schema} & Yêu cầu schema được định nghĩa sẵn từ đầu (schema-rigid), đảm bảo cấu trúc dữ liệu nhất quán. & Sử dụng schema động (schema-less), phù hợp với dữ liệu không cấu trúc hoặc thay đổi thường xuyên. \\ \hline
-\textbf{Khả năng mở rộng} & Mở rộng theo chiều dọc (Vertical Scaling), nghĩa là nâng cấp phần cứng của máy chủ hiện tại. & Mở rộng theo chiều ngang (Horizontal Scaling), dễ dàng thêm nhiều máy chủ để phân tải. \\ \hline
-\textbf{Ví dụ} & Một số hệ phổ biến như Oracle, PostgreSQL, MySQL hay MS SQL Server. & Các ví dụ điển hình bao gồm MongoDB (Document), Redis (Key-Value), Neo4j (Graph), Cassandra và HBase. \\ \hline
-\textbf{Lưu trữ dữ liệu phân cấp} & Không lý tưởng cho dữ liệu phân cấp, vì khó xử lý các mối quan hệ phức tạp. & Rất phù hợp cho dữ liệu phân cấp nhờ mô hình cặp khóa-giá trị, giúp truy xuất nhanh. \\ \hline
-\textbf{Năm phát triển} & Ra đời vào thập niên 1970 để giải quyết hạn chế của lưu trữ file phẳng. & Phát triển mạnh vào cuối những năm 2000, nhằm khắc phục nhược điểm của SQL trong hệ thống hiện đại. \\ \hline
-\textbf{Tính nhất quán} & Đảm bảo nhất quán mạnh mẽ (Strong Consistency), tránh lỗi dữ liệu. & Tùy thuộc vào hệ thống; ưu tiên nhất quán cuối cùng (Eventual Consistency) để tăng hiệu suất và khả năng mở rộng. \\ \hline
-\textbf{Network} & Thường dùng mạng cao cấp như Infiniband hoặc Fabric Path để đảm bảo hiệu suất. & Sử dụng mạng thông thường như Ethernet, dễ triển khai hơn. \\ \hline
-\textbf{Loại lưu trữ} & Ưu tiên lưu trữ cao cấp như SAN hoặc RAID để bảo vệ dữ liệu. & Dùng ổ đĩa thông thường như HDD chuẩn hoặc JBOD, tiết kiệm chi phí. \\ \hline
-\textbf{Hiệu suất} & Tốt nếu thiết kế CSDL tối ưu, nhưng có thể chậm nếu cần JOIN phức tạp. & Thường nhanh hơn nhờ denormalization, cho phép lấy dữ liệu một cách trực tiếp mà không cần JOIN phức tạp. \\ \hline
-\end{tabularx}
-\vspace{15pt}
-\caption{So sánh Cơ sở Dữ liệu Quan hệ (SQL) và Phi quan hệ (NoSQL)}
-\label{tab:sql_vs_nosql}
-\end{table}
+\endfirsthead
+
+\hline
+\textbf{Tiêu chí} & \textbf{CSDL Quan hệ (SQL)} & \textbf{CSDL Phi quan hệ (NoSQL)} \\ \hline
+\endhead
+
+% --- Thiết lập chân bảng cho các trang trung gian ---
+% Để trống phần này để không xuất hiện dòng "Còn tiếp ở trang sau"
+\hline
+\endfoot
+
+% --- Thiết lập chân bảng cho trang cuối cùng ---
+% Không thêm \hline ở đây nếu muốn caption nằm ngay dưới mà không có gạch ngang phân cách
+\endlastfoot
+
+% --- Nội dung bảng ---
+\textbf{Mô hình dữ liệu} 
+& Tổ chức dữ liệu dựa trên cấu trúc bảng (rows và columns) với các mối quan hệ logic chặt chẽ giữa các thực thể.
+& Lưu trữ linh hoạt dưới dạng document, key-value, graph hoặc wide-column, không bắt buộc tuân theo cấu trúc bảng. \\ \hline
+
+\textbf{Đặc tính Schema} 
+& Sử dụng Schema cố định (Rigid), yêu cầu thiết kế và chuẩn hóa dữ liệu nghiêm ngặt trước khi đưa vào vận hành.
+& Sử dụng Schema động (Flexible), cho phép thay đổi cấu trúc dữ liệu tùy biến mà không cần định nghĩa trước. \\ \hline
+
+\textbf{Mở rộng (Scaling)} 
+& Ưu tiên mở rộng theo chiều dọc (Vertical): Tăng cường sức mạnh phần cứng như CPU, RAM cho máy chủ hiện có.
+& Thiết kế để mở rộng theo chiều ngang (Horizontal): Phân tán dữ liệu trên nhiều máy chủ phổ thông để chia tải. \\ \hline
+
+\textbf{Tính nhất quán} 
+& Đảm bảo tính nhất quán mạnh mẽ (ACID), phù hợp cho các giao dịch cần độ chính xác tuyệt đối như tài chính.
+& Thường ưu tiên tính sẵn sàng và nhất quán cuối cùng (Eventual Consistency), tối ưu cho các hệ thống dữ liệu lớn. \\ \hline
+
+\textbf{Truy vấn và Hiệu năng} 
+& Sử dụng ngôn ngữ SQL tiêu chuẩn; hiệu quả với các truy vấn phức tạp nhưng có thể chậm khi thực hiện JOIN quá nhiều bảng.
+& Tối ưu tốc độ đọc/ghi dữ liệu nhờ mô hình denormalization, giúp truy xuất dữ liệu trực tiếp mà không cần JOIN phức tạp. \\ \hline
+
+\textbf{Hạ tầng lưu trữ} 
+& Yêu cầu hạ tầng mạng và lưu trữ chuyên dụng cao cấp (SAN, SSD tốc độ cao) để duy trì hiệu năng ổn định.
+& Có khả năng vận hành tốt trên các thiết bị lưu trữ thông thường, giúp tiết kiệm chi phí khi triển khai quy mô lớn. \\ \hline
+
+\textbf{Ví dụ điển hình} 
+& MySQL, PostgreSQL, Microsoft SQL Server, Oracle Database.
+& MongoDB, Redis, Cassandra, Neo4j, Amazon DynamoDB. \\ \hline
+\end{longtable}
 \subsection{Xác thực và Phân quyền người dùng (Authentication \& Authorization)}
 \indent \indent \textbf{a. Xác thực (Authentication)}\\
 \indent Xác thực là quá trình kiểm tra và xác nhận danh tính của người dùng hoặc thiết bị trước khi cho phép truy cập vào hệ thống. Mục tiêu chính là đảm bảo rằng người dùng là chính họ, dựa trên thông tin họ cung cấp như tên đăng nhập, mật khẩu, mã OTP hoặc các phương pháp sinh trắc học. \\
@@ -197,84 +257,70 @@ Trong phạm vi đề tài, hệ thống sử dụng biến thể LightGBM Ranke
 \section{Công nghệ sử dụng}
 
 \subsection{Ngôn ngữ lập trình và Framework nền tảng}
+
 \subsubsection{TypeScript}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.2\textwidth]{Images/Typescript.png}
+    \includegraphics[width=0.15\textwidth]{Images/Typescript.png}
     \vspace{15pt}
-    \caption{Ngôn ngữ lập trình TypeScript}
+    \caption[Logo ngôn ngữ lập trình TypeScript]{Nguồn ảnh tham khảo từ tài liệu tham khảo \cite{TypeScript}.}
 \end{figure}
-\indent \indent TypeScript là một ngôn ngữ lập trình mã nguồn mở do Microsoft phát triển. Nó được xem là một siêu tập hợp (superset) của JavaScript (JS), nghĩa là mọi mã JS hợp lệ đều là mã TypeScript hợp lệ. Điểm mạnh lớn nhất của TypeScript là việc bổ sung kiểu dữ liệu tĩnh (static typing) vào JavaScript, giúp lập trình viên viết mã an toàn và dễ bảo trì hơn.
-Mã TypeScript (\texttt{.ts}) không thể chạy trực tiếp trên trình duyệt mà cần được biên dịch (compile) thành mã JavaScript thuần túy để có thể hoạt động ở mọi nơi mà JS được hỗ trợ (trình duyệt, máy chủ Node.js, v.v.).\\
-\indent TypeScript mang lại nhiều cải tiến đáng kể trong quy trình phát triển:
+\indent \indent TypeScript là bản nâng cấp mạnh mẽ (superset) của JavaScript, được Microsoft phát triển nhằm tối ưu hóa việc quản lý mã nguồn trong các dự án quy mô lớn. Bằng cách bổ sung cơ chế kiểm soát kiểu dữ liệu tĩnh (static typing), TypeScript cho phép phát hiện lỗi ngay từ giai đoạn biên dịch thay vì đợi đến khi chương trình vận hành.
+
+Mã nguồn TypeScript (\texttt{.ts}) sẽ được chuyển đổi thành JavaScript thuần túy, giúp hệ thống vận hành ổn định trên mọi môi trường từ trình duyệt đến máy chủ Node.js. Các ưu thế cốt lõi bao gồm:
 \begin{itemize}
-    \item[-] Phát Hiện Lỗi Sớm Hơn: Nhờ có kiểu dữ liệu tĩnh, TypeScript giúp bạn tìm thấy các lỗi phổ biến ngay trong quá trình viết mã (chứ không phải khi chạy chương trình). Điều này giúp tiết kiệm thời gian gỡ lỗi và làm tăng chất lượng mã nguồn.
-    \item[-] Xây Dựng hệ thống Lớn Dễ Dàng: Với cấu trúc rõ ràng, hỗ trợ lập trình hướng đối tượng (OOP) và khả năng quản lý mã nguồn tốt hơn, TypeScript là lựa chọn lý tưởng cho các dự án quy mô lớn, nơi mà sự rõ ràng và khả năng bảo trì là tối quan trọng.
-    \item[-] Tương Thích Ngược Và Tiến:
-    \begin{itemize}
-        \item[+] Hỗ trợ JS Hiện Đại: TypeScript cho phép bạn sử dụng các tính năng mới nhất của JavaScript (như ECMAScript 2015/ES6 trở lên) và biên dịch chúng về phiên bản JS cũ hơn, đảm bảo khả năng chạy trên nhiều môi trường khác nhau.
-        \item[+] Là JavaScript (Về Bản Chất): Vì cuối cùng được biên dịch thành JS, mã TypeScript có thể chạy ở bất cứ đâu. Hơn nữa, bạn có thể kết hợp mã JS hiện có vào dự án TS một cách dễ dàng, giúp việc chuyển đổi và tiếp cận trở nên linh hoạt.
-    \end{itemize}
-    \item[-] Được Cộng Đồng Và Framework Ưu Ái:
-    \begin{itemize}
-        \item[+] Mã Nguồn Mở \& Miễn Phí: TypeScript là dự án mã nguồn mở nên bạn có thể sử dụng hoàn toàn miễn phí, đi kèm với sự hỗ trợ lớn từ cộng đồng.
-        \item[+] Hỗ Trợ Từ Framework: Các Framework JavaScript phổ biến hiện nay (như Angular, React và Vue) đều có sự hỗ trợ mạnh mẽ và thậm chí khuyến khích sử dụng TypeScript làm ngôn ngữ chính.
-    \end{itemize}
+    \item[-] \textbf{Kiểm soát mã nguồn chặt chẽ:} Nhờ hệ thống kiểu dữ liệu, lập trình viên có thể xây dựng các cấu trúc dữ liệu phức tạp mà vẫn đảm bảo tính nhất quán, giảm thiểu tối đa các lỗi logic tiềm ẩn.
+    \item[-] \textbf{Hỗ trợ lập trình hiện đại:} TypeScript cho phép áp dụng các tính năng mới nhất của ECMAScript và các nguyên lý lập trình hướng đối tượng (OOP), giúp mã nguồn dễ đọc và dễ bảo trì hơn.
+    \item[-] \textbf{Hệ sinh thái hỗ trợ mạnh mẽ:} Hầu hết các framework hiện đại như React, Angular đều ưu tiên sử dụng TypeScript để tăng cường độ tin cậy cho hệ thống.
 \end{itemize}
-\indent \indent Tóm lại, TypeScript mang lại sự ổn định, rõ ràng và hiệu quả cho việc phát triển web hiện đại. Nó là cầu nối giúp lập trình viên tận dụng được sự linh hoạt của JavaScript đồng thời có được sự an toàn của kiểu dữ liệu tĩnh.
-\subsubsection{ReactJS}
+
+\subsubsection{React}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.2\textwidth]{Images/react.png}
+    \includegraphics[width=0.15\textwidth]{Images/react.png}
     \vspace{15pt}
-    \caption{Thư viên ReactJS}
+    \caption[Logo thư viện React]{Nguồn ảnh tham khảo từ tài liệu tham khảo \cite{React}.}
 \end{figure}
-\indent \indent ReactJS (thường được gọi là React) là một thư viện JavaScript mã nguồn mở, được phát triển và bảo trì bởi Meta (trước đây là Facebook). React ra đời với mục đích chính là giải quyết các thách thức trong việc xây dựng giao diện người dùng (User Interface - UI) động, phức tạp và có hiệu suất cao, đặc biệt là cho các hệ thống web một trang (Single Page Applications - SPAs).
+\indent \indent React là thư viện JavaScript mã nguồn mở do Meta khởi xướng, chuyên dụng cho việc xây dựng giao diện người dùng (UI) năng động và hiệu năng cao. Triết lý của React tập trung vào việc chia nhỏ giao diện thành các thành phần (Components) độc lập, giúp việc tái sử dụng mã nguồn trở nên linh hoạt.
 
-Triết lý cốt lõi của React là xây dựng giao diện người dùng thông qua việc "lắp ráp" các thành phần (Components). Mỗi thành phần là một khối giao diện độc lập (ví dụ: một nút bấm, một thanh tìm kiếm, một thẻ thông tin người dùng), tự quản lý trạng thái (state) của riêng nó và có thể được tái sử dụng trong toàn bộ hệ thống.
-
-React đã trở thành một trong những công nghệ front-end phổ biến nhất trên toàn cầu nhờ vào những ưu điểm kỹ thuật vượt trội sau:
+React đã khẳng định vị thế dẫn đầu trong phát triển Front-end nhờ vào các đặc tính kỹ thuật sau:
 \begin{itemize}
-    \item[-] Hiệu suất cao (Nhờ Virtual DOM): React tạo ra một bản sao "ảo" của giao diện. Khi dữ liệu thay đổi, nó chỉ cập nhật những chi tiết nhỏ cần thiết trên giao diện thật, thay vì tải lại toàn bộ, giúp hệ thống chạy cực kỳ nhanh và mượt.
-    \item[-] Kiến trúc dựa trên Thành phần (Components): React chia giao diện thành các khối nhỏ, độc lập (như khối LEGO). Điều này giúp code rất dễ tái sử dụng, dễ quản lý, và dễ dàng sửa lỗi mà không ảnh hưởng đến các phần khác.
-    \item[-] Cú pháp Khai báo (Declarative UI): Người dùng chỉ cần "ra lệnh" cho React biết giao diện nên trông như thế nào ở các trạng thái khác nhau. React sẽ tự lo phần còn lại. Cách này giúp code dễ đọc, dễ hiểu và dễ dự đoán hơn.
-    \item[-] Cộng đồng lớn và Hệ sinh thái mạnh: React có một cộng đồng khổng lồ, đồng nghĩa với việc có rất nhiều tài liệu, khóa học, và các thư viện hỗ trợ (như Redux, React Router) để giải quyết hầu hết mọi vấn đề.
-    \item[-] "Học một lần, viết mọi nơi": Khi đã thành thạo React, lập trình viên thể dễ dàng sử dụng kiến thức đó để xây dựng hệ thống di động (iOS và Android) với React Native, giúp tiết kiệm rất nhiều thời gian và nguồn lực.
+    \item[-] \textbf{Tối ưu hóa hiệu suất với Virtual DOM:} Thay vì cập nhật toàn bộ trang web, React chỉ thay đổi những chi tiết cần thiết trên giao diện thật dựa trên bản sao ảo, giúp trải nghiệm người dùng mượt mà hơn.
+    \item[-] \textbf{Kiến trúc Component-Based:} Cách tiếp cận theo module giúp việc quản lý logic giao diện trở nên đơn giản, dễ kiểm thử và nâng cấp mà không ảnh hưởng đến các phần khác của hệ thống.
+    \item[-] \textbf{Hệ sinh thái toàn diện:} Với sự hỗ trợ từ cộng đồng lớn, React cung cấp vô số thư viện bổ trợ cho việc quản lý trạng thái (State Management) và điều hướng (Routing), đáp ứng tốt các yêu cầu phức tạp của ứng dụng web một trang (SPA).
 \end{itemize}
-\subsubsection{NodeJS}
+
+\subsubsection{Node.js}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.2\textwidth]{Images/nodejs.png}
     \vspace{15pt}
-    \caption{Môi trường lập trình NodeJS}
+    \caption[Logo môi trường lập trình Node.js]{Nguồn ảnh tham khảo từ tài liệu tham khảo \cite{NodeJS}.}
 \end{figure}
-\indent \indent Nodejs là một nền tảng phát triển hệ thống phía máy chủ, cho phép lập trình viên sử dụng JavaScript để xây dựng các hệ thống web nhanh chóng và hiệu quả. Với kiến trúc phi đồng bộ và sự kiện, Node.js rất phù hợp cho các hệ thống cần xử lý nhiều kết nối đồng thời, chẳng hạn như hệ thống trò chuyện hoặc dịch vụ phát trực tuyến. 
-NodeJS cũng nổi bật với hệ sinh thái phong phú của các thư viện và công cụ, giúp tăng tốc quá trình phát triển và tối ưu hóa hiệu suất của hệ thống.
+\indent \indent Node.js là môi trường thực thi JavaScript phía máy chủ, vận hành trên bộ máy V8 của Google. Đây là giải pháp lý tưởng cho các hệ thống cần xử lý luồng dữ liệu lớn và phản hồi thời gian thực nhờ kiến trúc phi đồng bộ đặc trưng.
+
+Các giá trị cốt lõi mà Node.js mang lại cho dự án:
 \begin{itemize}
-    \item[-] Hiệu suất cao nhờ mô hình phi đồng bộ: NodeJS sử dụng kiến trúc I/O không chặn (non-blocking I/O) và một Vòng lặp Sự kiện (Event Loop). Thay vì "chờ" một tác vụ (như truy vấn cơ sở dữ liệu) hoàn tất và làm nghẽn luồng xử lý, NodeJS sẽ ủy thác tác vụ đó và tiếp tục xử lý các yêu cầu khác. Khi tác vụ hoàn tất, nó sẽ thông báo lại qua cơ chế callback (hoặc Promise/Async-Await). Điều này cho phép NodeJS xử lý hàng nghìn kết nối đồng thời một cách hiệu quả chỉ với một luồng, tối ưu hóa việc sử dụng tài nguyên hệ thống.
-    \item[-] Chạy trên nhiều nền tảng (cross-platform): Mã nguồn của NodeJS có khả năng chạy nhất quán trên nhiều hệ điều hành phổ biến, bao gồm Windows, macOS và các bản phân phối Linux. Khả năng này loại bỏ sự khác biệt về môi trường, cho phép các nhà phát triển xây dựng hệ thống trên máy cá nhân và triển khai lên máy chủ một cách liền mạch mà không cần sửa đổi mã nguồn.
-    \item[-] Hệ sinh thái npm phong phú với hàng triệu gói thư viện: NPM (Node Package Manager) là kho lưu trữ các gói phần mềm (packages) và thư viện mã nguồn mở lớn nhất thế giới. Nó hoạt động như một trình quản lý phụ thuộc, cho phép các nhà phát triển dễ dàng tìm, cài đặt và tái sử dụng các mô-đun cho gần như mọi chức năng. Điều này giúp tăng tốc đáng kể quá trình phát triển và đảm bảo chất lượng thông qua việc sử dụng các giải pháp đã được cộng đồng kiểm chứng.
-    \item[-] Dễ dàng tích hợp với các dịch vụ và API của bên thứ ba: Nhờ bản chất phi đồng bộ, NodeJS rất lý tưởng để xây dựng các hệ thống trung gian (như API Gateway) trong kiến trúc Microservices. Nó có thể thực hiện nhiều lệnh gọi API đến các dịch vụ bên ngoài một cách song song mà không làm chậm thời gian phản hồi chung của hệ thống, giúp tối ưu hóa việc tổng hợp dữ liệu từ nhiều nguồn.
-    \item[-] Cộng đồng hỗ trợ lớn và tài liệu phong phú: NodeJS sở hữu một cộng đồng toàn cầu cực kỳ lớn mạnh và năng động, được hậu thuẫn bởi OpenJS Foundation và nhiều tập đoàn công nghệ lớn. Điều này đảm bảo rằng tài liệu, các bài hướng dẫn và các diễn đàn hỗ trợ (như Stack Overflow) luôn có sẵn, giúp giải quyết vấnE đề kỹ thuật nhanh chóng và đảm bảo nền tảng được cập nhật, bảo trì liên tục.
+    \item[-] \textbf{Xử lý đa nhiệm Non-blocking:} Cơ chế I/O không chặn kết hợp với Event Loop cho phép Node.js xử lý hàng ngàn kết nối đồng thời mà không gây nghẽn mạch luồng chính, tối ưu hóa tài nguyên máy chủ.
+    \item[-] \textbf{Quản lý gói thư viện với NPM:} Hệ sinh thái npm khổng lồ giúp lập trình viên nhanh chóng tích hợp các giải pháp có sẵn, từ bảo mật đến kết nối cơ sở dữ liệu, giúp đẩy nhanh tiến độ dự án.
+    \item[-] \textbf{Nhất quán ngôn ngữ:} Việc sử dụng JavaScript cho cả Front-end và Back-end giúp đội ngũ phát triển dễ dàng chia sẻ logic và tối ưu hóa quy trình làm việc.
 \end{itemize}
 
 \subsubsection{Python}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.15\textwidth]{Images/python.png}
+    \includegraphics[width=0.25\textwidth]{Images/python.png}
     \vspace{15pt}
-    \caption{Ngôn ngữ lập trình Python}
+    \caption[Ngôn ngữ lập trình Python]{Nguồn ảnh tham khảo từ tài liệu tham khảo \cite{Python}.}
 \end{figure}
-\indent \indent Python là một ngôn ngữ lập trình bậc cao, được Guido van Rossum tạo ra và lần đầu ra mắt vào năm 1991. Ngôn ngữ này được thiết kế với triết lý ưu tiên tính dễ đọc, cú pháp rõ ràng và ngắn gọn, giúp lập trình viên có thể viết mã dễ hiểu và dễ bảo trì. Python hỗ trợ nhiều mô hình lập trình như lập trình hướng đối tượng, lập trình cấu trúc và lập trình hàm, làm cho nó trở thành một công cụ linh hoạt trong nhiều lĩnh vực.\\
-\indent Trong lĩnh vực máy học và khoa học dữ liệu, Python đã trở thành ngôn ngữ hàng đầu nhờ hệ sinh thái thư viện phong phú và mạnh mẽ. Các thư viện như NumPy và Pandas cung cấp khả năng xử lý dữ liệu số và cấu trúc dữ liệu hiệu quả, trong khi Scikit-learn cung cấp các công cụ toàn diện cho việc xây dựng và đánh giá mô hình máy học. Đối với các bài toán học sâu, các framework như TensorFlow và PyTorch cho phép triển khai các mạng neural phức tạp. Ngoài ra, các thư viện chuyên biệt cho bài toán xếp hạng và gradient boosting như LightGBM, XGBoost và CatBoost cũng được tích hợp dễ dàng trong Python. \\
-\indent Lợi ích chính của Python trong máy học bao gồm:
-\begin{itemize}
-    \item[-] Dễ học và dễ sử dụng: Cú pháp trực quan giúp lập trình viên tập trung vào giải thuật thay vì chi tiết cú pháp.
-    \item[-] Tính linh hoạt cao: Python có thể được sử dụng ở mọi giai đoạn của pipeline máy học, từ tiền xử lý dữ liệu, huấn luyện mô hình đến triển khai sản phẩm.
-    \item[-] Cộng đồng và tài nguyên phong phú: Với số lượng người dùng lớn, Python có hệ sinh thái thư viện phát triển nhanh chóng, cùng nhiều tài liệu hướng dẫn, diễn đàn hỗ trợ và các khóa học trực tuyến.
-    \item[-] Khả năng tích hợp đa nền tảng: Python có thể kết nối với nhiều hệ thống và ngôn ngữ khác, hỗ trợ đọc và xuất dữ liệu dưới nhiều định dạng, đồng thời dễ dàng triển khai dưới dạng dịch vụ web thông qua các framework như Flask hoặc FastAPI.
-\end{itemize}
+\indent \indent Python là ngôn ngữ lập trình bậc cao nổi bật với triết lý thiết kế ưu tiên sự sáng rõ và ngắn gọn. Với cú pháp gần gũi với ngôn ngữ tự nhiên, Python cho phép lập trình viên tập trung tối đa vào việc giải quyết bài toán logic thay vì các chi tiết cú pháp phức tạp.
 
+Trong lĩnh vực khoa học dữ liệu và máy học, Python đóng vai trò là ngôn ngữ chủ chốt nhờ:
+\begin{itemize}
+    \item[-] \textbf{Hệ sinh thái Machine Learning toàn diện:} Sở hữu các thư viện chuẩn mực như Pandas cho xử lý dữ liệu, Scikit-learn cho học máy truyền thống và các công cụ mạnh mẽ như XGBoost, LightGBM cho bài toán xếp hạng.
+    \item[-] \textbf{Khả năng tích hợp linh hoạt:} Python dễ dàng kết nối với các hệ thống khác thông qua các framework API hiện đại như FastAPI hoặc Flask, phục vụ hiệu quả cho việc triển khai mô hình trí tuệ nhân tạo vào sản phẩm thực tế.
+    \item[-] \textbf{Cộng đồng học thuật lớn mạnh:} Nguồn tài liệu phong phú và sự hỗ trợ liên tục từ cộng đồng giúp việc nghiên cứu và áp dụng các thuật toán mới nhất trở nên thuận tiện hơn.
+\end{itemize}
 
 \subsection{Lưu trữ và Xử lý dữ liệu}
 \subsubsection{Hệ quản trị cơ sở dữ liệu MongoDB}
@@ -282,46 +328,40 @@ NodeJS cũng nổi bật với hệ sinh thái phong phú của các thư viện
     \centering
     \includegraphics[width=0.25\textwidth]{Images/mongoDB.png}
     \vspace{15pt}
-    \caption{Hệ quản trị cơ sở dữ liệu MongoDB}
+    \caption[Hệ quản trị cơ sở dữ liệu MongoDB]{Nguồn ảnh tham khảo từ tài liệu tham khảo \cite{mongodb_core_db_collections}.}
 \end{figure}
-\indent \indent MongoDB được khởi nguồn từ công ty 10gen (hiện nay là MongoDB Inc.) vào khoảng năm 2007, với phiên bản ổn định đầu tiên được phát hành vào năm 2009.
-
-Mục tiêu thiết kế của MongoDB là giải quyết các bài toán lưu trữ và xử lý khối lượng dữ liệu lớn đang nảy sinh trong kỷ nguyên web. Sự bùng nổ của dữ liệu phi cấu trúc và bán cấu trúc (như nội dung mạng xã hội, log máy chủ, dữ liệu cảm biến) đã cho thấy những hạn chế của các hệ quản trị cơ sở dữ liệu quan hệ (SQL) truyền thống trong việc mở rộng quy mô và xử lý linh hoạt. MongoDB ra đời như một giải pháp thuộc nhóm NoSQL, cung cấp một cách tiếp cận mới cho các bài toán này. 
-
-Đến nay, MongoDB đã trở thành một trong những cơ sở dữ liệu NoSQL phổ biến nhất thế giới và được phát triển thành một dự án mã nguồn mở. Các ưu điểm nổi bật bao gồm:
+\indent \indent Trong đề tài này, nhóm lựa chọn MongoDB vì đây là hệ quản trị cơ sở dữ liệu NoSQL phù hợp với dữ liệu linh hoạt và khối lượng truy cập lớn của hệ thống đặt vé. So với mô hình SQL truyền thống, MongoDB đáp ứng tốt hơn các bài toán dữ liệu bán cấu trúc, mở rộng nhanh và phát triển theo hướng lặp. Các ưu điểm chính gồm:
 \begin{itemize}
-    \item[-] Linh hoạt về Mô hình Dữ liệu (Flexible Schema): Đây là lợi thế lớn nhất. Người dùng không cần phải định nghĩa cấu trúc bảng, cột và kiểu dữ liệu một cách cố định từ đầu. Mỗi "bản ghi" (được gọi là một tài liệu - document) có thể có cấu trúc riêng biệt. Điều này cho phép các nhà phát triển có thể lặp lại và thay đổi mô hình dữ liệu một cách nhanh chóng trong quá trình phát triển hệ thống.
-    \item[-] Khả năng Mở rộng theo Chiều ngang (Horizontal Scalability): MongoDB được thiết kế để hỗ trợ "sharding" - một kỹ thuật phân tán dữ liệu trên nhiều máy chủ (cụm cluster). Khi khối lượng dữ liệu hoặc lưu lượng truy cập tăng lên, ta có thể dễ dàng thêm các máy chủ mới vào cụm để mở rộng hệ thống, thay vì nâng cấp một máy chủ đơn lẻ (scale-up) vốn tốn kém và có giới hạn.
-    \item[-] Hiệu suất Truy vấn Cao: Các tài liệu được lưu trữ dưới dạng BSON (một dạng nhị phân của JSON), cho phép truy xuất và truy vấn dữ liệu một cách nhanh chóng. Việc lưu trữ các dữ liệu liên quan cùng một chỗ trong một tài liệu cũng giúp giảm thiểu số lần truy vấn JOIN phức tạp, vốn là nguyên nhân gây chậm hiệu năng trong cơ sở dữ liệu quan hệ.
-    \item[-] Ngôn ngữ Truy vấn Mạnh mẽ: MongoDB cung cấp một ngôn ngữ truy vấn phong phú với các toán tử cho phép thực hiện nhiều loại thao tác: tìm kiếm, sắp xếp, cập nhật, tổng hợp dữ liệu... một cách hiệu quả.
-    \item[-] Phát triển hệ thống Nhanh chóng: Nhờ mô hình dữ liệu linh hoạt và cú pháp truy vấn dễ hiểu (gần gũi với cấu trúc dữ liệu trong code), các nhà phát triển có thể làm việc với MongoDB một cách trực quan và giảm thiểu thời gian chuyển đổi giữa mã hệ thống và cơ sở dữ liệu, từ đó đẩy nhanh tốc độ phát triển sản phẩm.
+    \item[-] \textbf{Linh hoạt schema:} Dữ liệu lưu theo document (BSON), không bắt buộc cố định cấu trúc ngay từ đầu, nên dễ thích nghi khi nghiệp vụ thay đổi.
+    \item[-] \textbf{Mở rộng theo chiều ngang:} Hỗ trợ sharding để phân tán dữ liệu trên nhiều node, phù hợp khi số lượng người dùng và giao dịch tăng nhanh.
+    \item[-] \textbf{Hiệu năng truy vấn tốt:} Mô hình document giúp giảm phụ thuộc vào JOIN phức tạp, từ đó cải thiện tốc độ đọc/ghi trong nhiều tác vụ thực tế.
+    \item[-] \textbf{Triển khai nhanh:} Cú pháp truy vấn trực quan, gần với cấu trúc dữ liệu trong code, giúp rút ngắn thời gian phát triển và bảo trì.
 \end{itemize}
 
 \subsubsection{Multer và Cloudinary trong xử lý và lưu trữ hình ảnh}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.35\textwidth]{Images/Cloudninary.jpg}
+    \includegraphics[width=0.8\textwidth]{Images/Cloudninary.png}
     \vspace{15pt}
     \caption{Giải pháp xử lý và lưu trữ hình ảnh Cloudinary}    
 \end{figure}
 
-\indent \indent Trong các hệ thống web hiện đại, đặc biệt là hệ thống đặt vé sự kiện, việc xử lý và lưu trữ hình ảnh đóng vai trò quan trọng trong việc nâng cao trải nghiệm người dùng. Hình ảnh không chỉ giúp minh họa nội dung sự kiện mà còn góp phần thu hút và giữ chân người dùng. Do đó, hệ thống cần một giải pháp hiệu quả để xử lý quá trình tải lên, lưu trữ và tối ưu hóa hình ảnh.\\
-\indent Trong đề tài này, nhóm sử dụng kết hợp hai công cụ là \textbf{Multer} và \textbf{Cloudinary} nhằm xây dựng quy trình xử lý và quản lý hình ảnh một cách tối ưu.
+\indent \indent Với hệ thống đặt vé, nhóm xem xử lý ảnh là thành phần quan trọng để đảm bảo trải nghiệm người dùng và hiệu năng tải trang. Vì vậy, đề tài kết hợp \textbf{Multer} và \textbf{Cloudinary} để tạo pipeline tải lên - lưu trữ - tối ưu hóa ảnh gọn và ổn định.
 \begin{itemize}
-    \item[-] \textbf{Multer} là một middleware cho Node.js, được sử dụng để xử lý các yêu cầu HTTP có chứa dữ liệu dạng multipart/form-data, thường gặp trong các chức năng tải tệp lên (file upload). Multer hỗ trợ trích xuất dữ liệu tệp từ request và lưu trữ tạm thời trên máy chủ, tạo điều kiện thuận lợi để tiếp tục xử lý hoặc chuyển tiếp đến các dịch vụ lưu trữ khác.
-    \item[-] \textbf{Cloudinary} là một nền tảng điện toán đám mây chuyên cung cấp các dịch vụ lưu trữ, quản lý và phân phối hình ảnh và video. Hệ thống này cho phép tối ưu hóa hình ảnh tự động, chuyển đổi định dạng, thay đổi kích thước và áp dụng các hiệu ứng mà không cần xử lý phức tạp phía máy chủ.
+    \item[-] \textbf{Multer:} Middleware Node.js để nhận file dạng multipart/form-data, trích xuất tệp từ request và lưu tạm trước khi xử lý tiếp.
+    \item[-] \textbf{Cloudinary:} Dịch vụ đám mây để lưu trữ, phân phối và tự động tối ưu ảnh (định dạng, kích thước, chất lượng) mà không làm nặng backend.
 \end{itemize}
 
-\indent \textbf{Lợi ích của việc sử dụng Multer và Cloudinary:}
+\indent \textbf{Lợi ích chính của cách kết hợp này:}
 \begin{itemize} 
-    \item[-] \textbf{Xử lý tệp hiệu quả}: Multer giúp tiếp nhận và xử lý dữ liệu hình ảnh từ phía người dùng một cách chính xác và nhanh chóng.
-    \item[-] \textbf{Lưu trữ linh hoạt và mở rộng}: Cloudinary cung cấp giải pháp lưu trữ đám mây ổn định, giảm tải cho máy chủ và dễ dàng mở rộng khi số lượng dữ liệu tăng lên.
-    \item[-] \textbf{Tối ưu hóa hiệu năng}: Cloudinary tự động tối ưu hóa hình ảnh theo thiết bị và băng thông, góp phần cải thiện tốc độ tải trang.
-    \item[-] \textbf{Dễ dàng tích hợp}: Cả hai công cụ đều có tài liệu đầy đủ và hỗ trợ tốt cho nhiều nền tảng, giúp rút ngắn thời gian phát triển hệ thống.
+    \item[-] \textbf{Nhanh và chính xác ở bước upload:} Multer chuẩn hóa quy trình nhận file từ người dùng.
+    \item[-] \textbf{Giảm tải hệ thống:} Cloudinary tách lưu trữ ảnh khỏi server ứng dụng, thuận lợi khi mở rộng.
+    \item[-] \textbf{Tối ưu trải nghiệm truy cập:} Ảnh được tối ưu theo thiết bị và băng thông, giúp trang tải mượt hơn.
+    \item[-] \textbf{Dễ triển khai:} Cả hai công cụ có tài liệu tốt, rút ngắn thời gian phát triển và bảo trì.
 \end{itemize}
 
-\indent Việc kết hợp Multer và Cloudinary mang lại một giải pháp toàn diện cho bài toán xử lý và lưu trữ hình ảnh trong hệ thống. Giải pháp này không chỉ giúp nâng cao hiệu suất xử lý mà còn đảm bảo khả năng mở rộng và tối ưu trải nghiệm người dùng trong các hệ thống web hiện đại.
+\indent Tóm lại, Multer + Cloudinary giúp nhóm xây dựng luồng xử lý ảnh rõ ràng, hiệu quả và dễ mở rộng, đồng thời giữ chất lượng trải nghiệm người dùng ở mức ổn định.
 
 \subsection{Hạ tầng Machine Learning và MLOps}
 
@@ -329,81 +369,69 @@ Mục tiêu thiết kế của MongoDB là giải quyết các bài toán lưu t
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.35\textwidth]{Images/Hugging_Face.jpg}
+    \includegraphics[width=0.35\textwidth]{Images/Hugging_Face.png}
     \vspace{15pt}
-    \caption{Nền tảng Hugging Face}
+    \caption[Hệ sinh thái Hugging Face]{Nguồn ảnh tham khảo từ tài liệu tham khảo \cite{Hhf_js_index}.}
 \end{figure}
 
-\indent \indent Trong các hệ thống học máy hiện đại, việc xây dựng một pipeline hoàn chỉnh từ xử lý dữ liệu đến triển khai mô hình là yếu tố then chốt quyết định hiệu quả của hệ thống. Đặc biệt, trong bối cảnh MLOps, các công cụ hỗ trợ quản lý dữ liệu, phiên bản mô hình và triển khai nhanh chóng ngày càng trở nên cần thiết.
-Hugging Face là một hệ sinh thái mạnh mẽ cung cấp nhiều công cụ phục vụ cho toàn bộ vòng đời của mô hình học máy. Trong phạm vi đề tài, hai thành phần chính được sử dụng là \textbf{Datasets} và \textbf{Spaces}, hỗ trợ lần lượt cho giai đoạn xử lý dữ liệu và triển khai mô hình.\\
-\indent \textbf{Hugging Face Datasets} là một thư viện mã nguồn mở cho phép truy cập và quản lý hàng ngàn tập dữ liệu chuẩn trong lĩnh vực machine learning. Công cụ này hỗ trợ nhiều định dạng dữ liệu khác nhau và cung cấp các chức năng xử lý, biến đổi và tải dữ liệu hiệu quả, giúp đơn giản hóa quá trình chuẩn bị dữ liệu cho huấn luyện và đánh giá mô hình.\\
-\indent \textbf{Hugging Face Spaces} là nền tảng cho phép triển khai các ứng dụng học máy dưới dạng dịch vụ web. Spaces hỗ trợ nhiều framework phổ biến như TensorFlow, PyTorch và scikit-learn, đồng thời cho phép xây dựng các ứng dụng tương tác như chatbot, hệ thống gợi ý hoặc demo mô hình trực tiếp thông qua giao diện web.\\
-\indent \textbf{Lợi ích của Hugging Face trong quy trình MLOps:}
+\indent \indent Trong quy trình MLOps của đề tài, nhóm sử dụng \textbf{Hugging Face} để rút ngắn thời gian từ xử lý dữ liệu đến triển khai mô hình. Hai thành phần chính được khai thác là \textbf{Datasets} (quản lý dữ liệu) và \textbf{Spaces} (triển khai ứng dụng ML).\
+\indent \textbf{Vai trò của từng thành phần:}
 \begin{itemize}
-    \item[-] \textbf{Quản lý dữ liệu hiệu quả}: Datasets giúp chuẩn hóa và tối ưu quá trình xử lý dữ liệu trong pipeline.
-    \item[-] \textbf{Triển khai nhanh chóng}: Spaces cho phép đưa mô hình vào môi trường thực tế mà không cần xây dựng hạ tầng backend phức tạp.
-    \item[-] \textbf{Tính linh hoạt cao}: Hỗ trợ nhiều framework machine learning phổ biến, dễ dàng tích hợp vào các hệ thống hiện có.
-    \item[-] \textbf{Tài nguyên phong phú}: Cung cấp nhiều dataset, mô hình và tài liệu sẵn có từ cộng đồng, giúp rút ngắn thời gian phát triển.
+    \item[-] \textbf{Datasets:} Chuẩn hóa, quản lý và xử lý dữ liệu huấn luyện/đánh giá theo cách nhất quán.
+    \item[-] \textbf{Spaces:} Đưa mô hình lên môi trường chạy thực tế dưới dạng ứng dụng web, thuận tiện cho demo và kiểm thử nhanh.
 \end{itemize}
 
-\indent Việc sử dụng Hugging Face Datasets và Spaces giúp tối ưu hóa hai giai đoạn quan trọng trong pipeline học máy là xử lý dữ liệu và triển khai mô hình. Ngoài ra, nền tảng này còn hỗ trợ tích hợp với các công cụ CI/CD như GitHub Actions, cho phép tự động hóa quá trình triển khai sau mỗi lần cập nhật. Nhờ đó, hệ thống đảm bảo tính liên tục, dễ mở rộng và luôn sẵn sàng phục vụ người dùng trong môi trường thực tế.
+\indent \textbf{Lợi ích chính trong hệ thống:}
+\begin{itemize}
+    \item[-] \textbf{Rút ngắn vòng đời phát triển:} Giảm công sức xây hạ tầng cho các bước dữ liệu và triển khai.
+    \item[-] \textbf{Tăng tính linh hoạt:} Dễ tích hợp với nhiều framework machine learning phổ biến.
+    \item[-] \textbf{Hỗ trợ tự động hóa:} Phối hợp tốt với CI/CD (như GitHub Actions) để cập nhật mô hình liên tục.
+\end{itemize}
+
+\indent Tóm lại, việc kết hợp Datasets và Spaces giúp nhóm duy trì pipeline ML gọn, dễ mở rộng và sẵn sàng đưa mô hình vào vận hành thực tế.
 
 \subsubsection{ONNX (Open Neural Network Exchange): Định dạng tối ưu hóa hiệu suất dự đoán}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.35\textwidth]{Images/ONNX.png}
+    \includegraphics[width=0.25\textwidth]{Images/ONNX.png}
     \vspace{15pt}
-    \caption{Định dạng ONNX (Open Neural Network Exchange)}
+    \caption[Định dạng ONNX (Open Neural Network Exchange)]{Nguồn ảnh tham khảo từ tài liệu tham khảo \cite{onnx}.}
 \end{figure}
+\indent \indent Một trong những thách thức lớn nhất khi đưa trí tuệ nhân tạo vào thực tiễn là sự khác biệt giữa môi trường huấn luyện và môi trường vận hành. ONNX (Open Neural Network Exchange) ra đời như một chuẩn định dạng trung gian mã nguồn mở, cho phép các mô hình học máy có thể "giao tiếp" và chuyển đổi linh hoạt giữa các framework khác nhau mà không bị bó hẹp trong một hệ sinh thái duy nhất.
 
-\indent \indent Trong quá trình triển khai các mô hình machine learning vào môi trường thực tế, việc đảm bảo hiệu suất dự đoán và khả năng tương thích giữa các nền tảng là một thách thức quan trọng. ONNX (Open Neural Network Exchange) được phát triển như một định dạng trung gian, cho phép lưu trữ và trao đổi mô hình giữa các framework khác nhau một cách hiệu quả.
-ONNX giúp tách biệt quá trình huấn luyện và triển khai mô hình, cho phép mô hình được xây dựng bằng một framework (ví dụ: LightGBM, PyTorch) nhưng có thể được triển khai và chạy tối ưu trên môi trường khác thông qua các công cụ hỗ trợ như ONNX Runtime.
-Các đặc điểm nổi bật của ONNX bao gồm:
+Bằng cách sử dụng ONNX, quy trình phát triển được tách biệt hóa: mô hình có thể được xây dựng trên các công cụ chuyên về huấn luyện (như LightGBM, PyTorch) nhưng lại được thực thi (inference) trên các môi trường tối ưu hóa hiệu năng thông qua ONNX Runtime.
 
 \begin{itemize}
-    \item[-] \textbf{Tối ưu hóa hiệu suất dự đoán}: Các mô hình được chuyển đổi sang ONNX có thể sử dụng ONNX Runtime để tăng tốc quá trình inference, giảm độ trễ và tối ưu việc sử dụng tài nguyên hệ thống.
-    \item[-] \textbf{Khả năng tương thích đa nền tảng}: ONNX hỗ trợ nhiều framework phổ biến như TensorFlow, PyTorch, scikit-learn và LightGBM, giúp việc chuyển đổi và tích hợp mô hình trở nên linh hoạt hơn.
+    \item[-] \textbf{Chuẩn hóa cấu trúc mô hình:} ONNX cung cấp một đồ thị tính toán định dạng chung, giúp đồng nhất các toán tử và cấu trúc dữ liệu từ nhiều nguồn khác nhau về một tiêu chuẩn duy nhất.
+    \item[-] \textbf{Đẩy mạnh tốc độ phản hồi:} Khi được chuyển đổi sang ONNX, mô hình có khả năng tận dụng tối đa sức mạnh phần cứng thông qua các kỹ thuật tối ưu đồ thị, từ đó giảm thiểu độ trễ (latency) và tiết kiệm tài nguyên máy chủ.
 \end{itemize}
 
-\indent \textbf{Lợi ích của ONNX trong MLOps:}
+\indent \textbf{Vai trò cốt lõi trong quy trình MLOps:}
 \begin{itemize}
-    \item[-] \textbf{Tăng tốc độ triển khai}: Mô hình có thể được chuyển đổi và đưa vào môi trường production nhanh chóng mà không phụ thuộc vào framework huấn luyện ban đầu.
-    \item[-] \textbf{Cải thiện hiệu suất hệ thống}: Giảm độ trễ trong quá trình dự đoán, đặc biệt quan trọng đối với các hệ thống yêu cầu phản hồi thời gian thực.
-    \item[-] \textbf{Tăng tính linh hoạt}: Cho phép lựa chọn công cụ tối ưu nhất cho từng giai đoạn (training và inference), từ đó nâng cao hiệu quả tổng thể của hệ thống.
+    \item[-] \textbf{Xóa bỏ rào cản nền tảng:} Cho phép triển khai mô hình lên các môi trường production đa dạng (từ Cloud đến Edge) mà không cần cài đặt lại toàn bộ thư viện huấn luyện ban đầu vốn rất cồng kềnh.
+    \item[-] \textbf{Tăng cường tính ổn định:} Việc sử dụng một định dạng tĩnh như ONNX giúp quá trình dự đoán diễn ra nhất quán, hạn chế các lỗi phát sinh do khác biệt phiên bản giữa các framework.
+    \item[-] \textbf{Tối ưu hóa Pipeline Recommendation:} Cho phép hệ thống gợi ý thực hiện các phép tính toán phức tạp trong thời gian thực, đáp ứng ngay lập tức nhu cầu của người dùng tại thời điểm truy cập.
 \end{itemize}
 
-\indent Việc sử dụng ONNX trong hệ thống giúp tối ưu hóa hiệu suất dự đoán và giảm sự phụ thuộc vào framework huấn luyện ban đầu. Trong dự án, ONNX đóng vai trò quan trọng trong việc triển khai mô hình gợi ý một cách nhanh chóng, ổn định và đáp ứng yêu cầu xử lý thời gian thực.
-Mô hình sau khi được huấn luyện sẽ được chuyển đổi sang ONNX và tích hợp vào Recommendation Server nhằm phục vụ dự đoán thời gian thực.
+\indent \indent Trong phạm vi dự án, mô hình sau khi đạt độ chính xác mục tiêu sẽ được đóng gói dưới dạng tệp tin \texttt{.onnx}. Tệp tin này sau đó được tích hợp trực tiếp vào Recommendation Server, đóng vai trò là "trái tim" cung cấp các kết quả dự đoán nhanh chóng, ổn định và sẵn sàng phục vụ lượng truy cập lớn.
 
 \subsubsection{GitHub Actions: Công cụ tự động hóa quy trình huấn luyện và triển khai mô hình}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.35\textwidth]{Images/github-actions.png}
+    \includegraphics[width=0.3\textwidth]{Images/github-actions.png}
     \vspace{15pt}
-    \caption{Công cụ tự động hóa GitHub Actions}
+    \caption[Công cụ tự động hóa GitHub Actions]{Nguồn ảnh tham khảo từ tài liệu tham khảo \cite{github_actions_docs}.}
 \end{figure}
-
-\indent \indent Trong các hệ thống phát triển phần mềm hiện đại, đặc biệt là các hệ thống tích hợp machine learning, việc tự động hóa quy trình phát triển và triển khai đóng vai trò quan trọng nhằm đảm bảo tính nhất quán và giảm thiểu sai sót. GitHub Actions là một nền tảng CI/CD (Continuous Integration/Continuous Deployment) được tích hợp trực tiếp trong GitHub, cho phép tự động hóa các workflow ngay tại kho mã nguồn.\\
-\indent Với GitHub Actions, các nhà phát triển có thể xây dựng các pipeline để thực hiện các tác vụ như kiểm tra mã nguồn, huấn luyện mô hình, đánh giá hiệu suất và triển khai hệ thống một cách tự động và liên tục. Trong bối cảnh MLOps, công cụ này được sử dụng để tự động hóa toàn bộ vòng đời của mô hình machine learning, bao gồm:
+\indent \indent GitHub Actions là nền tảng CI/CD tích hợp trong kho mã nguồn, giúp tự động hóa pipeline MLOps từ huấn luyện đến triển khai mô hình.
 
 \begin{itemize}
-    \item[-] \textbf{Tự động huấn luyện mô hình}: Khi có thay đổi trong mã nguồn hoặc dữ liệu (ví dụ: push code hoặc cập nhật dataset), hệ thống sẽ kích hoạt workflow để huấn luyện lại mô hình.
-    \item[-] \textbf{Đánh giá mô hình}: Sau khi huấn luyện, mô hình được kiểm tra trên tập dữ liệu validation/test với các chỉ số đánh giá phù hợp nhằm đảm bảo chất lượng.
-    \item[-] \textbf{Triển khai mô hình}: Nếu mô hình đạt yêu cầu, workflow có thể tự động triển khai lên môi trường sản xuất hoặc các nền tảng đám mây như AWS, Azure hoặc Google Cloud.
-    \item[-] \textbf{Giám sát và bảo trì}: Hệ thống có thể được cấu hình để chạy theo lịch (schedule) nhằm kiểm tra hiệu suất mô hình, cập nhật dữ liệu hoặc huấn luyện lại định kỳ.
+    \item[-] \textbf{Tự động huấn luyện và đánh giá:} Kích hoạt lại khi mã nguồn hoặc dữ liệu thay đổi, đồng thời kiểm định chất lượng trước khi phát hành.
+    \item[-] \textbf{Triển khai và vận hành định kỳ:} Tự động đóng gói, triển khai mô hình và hỗ trợ lịch cập nhật/giám sát theo chu kỳ.
 \end{itemize}
 
-\indent \textbf{Lợi ích của GitHub Actions trong MLOps:}
-\begin{itemize}
-    \item[-] \textbf{Tích hợp liền mạch}: Hoạt động trực tiếp trong GitHub, không cần sử dụng thêm công cụ bên ngoài.
-    \item[-] \textbf{Tự động hóa toàn diện}: Hỗ trợ tự động hóa toàn bộ pipeline từ phát triển đến triển khai, giúp giảm thiểu lỗi thủ công.
-    \item[-] \textbf{Tính linh hoạt cao}: Hỗ trợ nhiều trigger (push, pull request, schedule) và nhiều môi trường chạy khác nhau.
-    \item[-] \textbf{Hệ sinh thái phong phú}: Có sẵn nhiều actions từ cộng đồng giúp rút ngắn thời gian xây dựng pipeline.
-\end{itemize}
-
-\indent Việc sử dụng GitHub Actions trong quy trình MLOps giúp tự động hóa và chuẩn hóa toàn bộ pipeline phát triển mô hình machine learning, từ đó nâng cao hiệu suất làm việc, giảm thiểu sai sót và đảm bảo hệ thống luôn được cập nhật một cách liên tục và ổn định.
+\indent \textbf{Giá trị chính:} Giảm thao tác thủ công, rút ngắn time-to-market và đảm bảo quy trình phát triển mô hình nhất quán, dễ mở rộng.
 
 \subsection{Các dịch vụ tích hợp và Tiện ích hỗ trợ}
 
@@ -412,62 +440,77 @@ Mô hình sau khi được huấn luyện sẽ được chuyển đổi sang ONN
     \centering
     \includegraphics[width=0.3\textwidth]{Images/Gemini 2.5 Flash.png}
     \vspace{15pt}
-    \caption{Mô hình ngôn ngữ lớn Gemini 2.5 Flash} 
+    \caption[Mô hình ngôn ngữ lớn Gemini 2.5 Flash]{Nguồn ảnh tham khảo từ tài liệu tham khảo \cite{gemini_2.5_flash}.}
 \end{figure}
 \indent \indent Gemini 2.5 Flash là mô hình ngôn ngữ lớn theo hướng tối ưu tốc độ phản hồi, phù hợp cho các bài toán hội thoại thời gian thực trong hệ thống web. Về bản chất, chatbot AI sử dụng mô hình này hoạt động theo cơ chế: tiếp nhận câu hỏi người dùng, kết hợp ngữ cảnh hội thoại, áp dụng chỉ dẫn hệ thống, sau đó sinh phản hồi ngôn ngữ tự nhiên. So với chatbot luật, cách tiếp cận dựa trên mô hình ngôn ngữ lớn có ưu điểm là linh hoạt hơn, hiểu ngữ cảnh tốt hơn và giảm phụ thuộc vào kịch bản cố định.\\
 \indent Trong triển khai nghiệp vụ, chất lượng trả lời phụ thuộc mạnh vào thiết kế prompt gồm ba lớp: chỉ dẫn vai trò trợ lý, dữ liệu ngữ cảnh phiên trao đổi, và câu hỏi hiện tại của người dùng. Ngoài ra, cần kiểm soát tham số suy luận như mức sáng tạo và độ dài đầu ra để đảm bảo phản hồi ổn định, ngắn gọn, đúng mục đích. Để tăng độ tin cậy, hệ thống cần cơ chế hậu kiểm nội dung và chính sách fallback khi thiếu dữ liệu. Như vậy, hiệu quả chatbot không chỉ đến từ bản thân mô hình Gemini 2.5 Flash mà còn từ kiến trúc tích hợp, quản lý ngữ cảnh và kiểm soát đầu ra.
 
-\subsubsection{Nodemailer trong hệ thống gửi email thông báo và xác thực}
+% \subsubsection{Nodemailer trong hệ thống gửi email thông báo và xác thực}
 
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=0.2\textwidth]{Images/Nodemailer.png}
+%     \vspace{15pt}
+%     \caption{Thư viện Nodemailer cho dịch vụ gửi email}
+% \end{figure}
+
+% \indent \indent Trong các hệ thống web hiện đại, đặc biệt là hệ thống đặt vé sự kiện trực tuyến, việc giao tiếp với người dùng thông qua email đóng vai trò quan trọng trong việc cung cấp thông tin và nâng cao trải nghiệm người dùng. Các chức năng như xác thực tài khoản, thông báo trạng thái đơn hàng hay gửi vé điện tử đều cần được thực hiện một cách tự động, chính xác và kịp thời.
+% Nodemailer là một thư viện mã nguồn mở dành cho Node.js, được sử dụng phổ biến để xây dựng chức năng gửi email trong các ứng dụng backend. Thư viện này cung cấp giao diện lập trình đơn giản nhưng mạnh mẽ, cho phép gửi email thông qua nhiều giao thức và dịch vụ khác nhau.
+% Nodemailer hỗ trợ nhiều phương thức gửi email như SMTP, Amazon SES, SendGrid và các dịch vụ email phổ biến khác, giúp hệ thống dễ dàng tích hợp với các nhà cung cấp dịch vụ bên ngoài. Ngoài ra, thư viện còn hỗ trợ gửi email với nội dung văn bản thuần túy hoặc HTML, cũng như khả năng đính kèm tệp tin như vé điện tử hoặc hóa đơn.
+
+% \indent \textbf{Lợi ích của Nodemailer trong hệ thống:}
+% \begin{itemize}
+%     \item[-] \textbf{Dễ dàng tích hợp}: Cung cấp API đơn giản, giúp nhanh chóng triển khai chức năng gửi email.
+%     \item[-] \textbf{Tính linh hoạt cao}: Hỗ trợ nhiều dịch vụ email khác nhau, đảm bảo khả năng thay thế và mở rộng.
+%     \item[-] \textbf{Tùy chỉnh nội dung}: Cho phép thiết kế email với HTML, nâng cao tính chuyên nghiệp và trải nghiệm người dùng.
+%     \item[-] \textbf{Hỗ trợ đính kèm}: Có thể gửi kèm các tệp như vé điện tử, hóa đơn hoặc tài liệu liên quan.
+% \end{itemize}
+
+% \indent Trong đề tài, Nodemailer được sử dụng để gửi email xác thực tài khoản khi người dùng đăng ký, đồng thời gửi thông báo về trạng thái đơn hàng và vé điện tử sau khi giao dịch hoàn tất. Điều này giúp đảm bảo người dùng luôn nhận được thông tin kịp thời và tăng độ tin cậy của hệ thống.
+% Việc sử dụng Nodemailer giúp hệ thống xây dựng được cơ chế giao tiếp tự động với người dùng thông qua email một cách hiệu quả và linh hoạt. Giải pháp này không chỉ nâng cao trải nghiệm người dùng mà còn góp phần hoàn thiện quy trình xử lý nghiệp vụ trong hệ thống đặt vé sự kiện.
+
+\subsubsection{SendGrid: Hệ thống gửi email thông báo và xác thực}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{Images/Nodemailer.png}
+    \includegraphics[width=0.25\textwidth]{Images/SendGrid.png}
     \vspace{15pt}
-    \caption{Thư viện Nodemailer cho dịch vụ gửi email}
+    \caption[Hệ thống gửi email SendGrid]{Nguồn ảnh tham khảo từ tài liệu tham khảo \cite{send_grid_homepage}.}
 \end{figure}
-
-\indent \indent Trong các hệ thống web hiện đại, đặc biệt là hệ thống đặt vé sự kiện trực tuyến, việc giao tiếp với người dùng thông qua email đóng vai trò quan trọng trong việc cung cấp thông tin và nâng cao trải nghiệm người dùng. Các chức năng như xác thực tài khoản, thông báo trạng thái đơn hàng hay gửi vé điện tử đều cần được thực hiện một cách tự động, chính xác và kịp thời.
-Nodemailer là một thư viện mã nguồn mở dành cho Node.js, được sử dụng phổ biến để xây dựng chức năng gửi email trong các ứng dụng backend. Thư viện này cung cấp giao diện lập trình đơn giản nhưng mạnh mẽ, cho phép gửi email thông qua nhiều giao thức và dịch vụ khác nhau.
-Nodemailer hỗ trợ nhiều phương thức gửi email như SMTP, Amazon SES, SendGrid và các dịch vụ email phổ biến khác, giúp hệ thống dễ dàng tích hợp với các nhà cung cấp dịch vụ bên ngoài. Ngoài ra, thư viện còn hỗ trợ gửi email với nội dung văn bản thuần túy hoặc HTML, cũng như khả năng đính kèm tệp tin như vé điện tử hoặc hóa đơn.
-
-\indent \textbf{Lợi ích của Nodemailer trong hệ thống:}
+SendGrid là một nền tảng truyền thông dựa trên điện toán đám mây (Cloud-based Email Service) được sở hửu bởi Twilio từ năm 2009, 
+chuyên cung cấp giải pháp gửi email giao dịch (Transactional Email) dựa trên nền tảng đám mây với độ tin cậy và khả năng mở rộng cao thay thế cho các dịch vụ email truyền thống.\\
+\textbf{Ưu điểm của SendGrid bao gồm:}
 \begin{itemize}
-    \item[-] \textbf{Dễ dàng tích hợp}: Cung cấp API đơn giản, giúp nhanh chóng triển khai chức năng gửi email.
-    \item[-] \textbf{Tính linh hoạt cao}: Hỗ trợ nhiều dịch vụ email khác nhau, đảm bảo khả năng thay thế và mở rộng.
-    \item[-] \textbf{Tùy chỉnh nội dung}: Cho phép thiết kế email với HTML, nâng cao tính chuyên nghiệp và trải nghiệm người dùng.
-    \item[-] \textbf{Hỗ trợ đính kèm}: Có thể gửi kèm các tệp như vé điện tử, hóa đơn hoặc tài liệu liên quan.
+    \item[-] \textbf{Độ tin cậy cao:} Với cơ sở hạ tầng mạnh mẽ và mạng lưới máy chủ toàn cầu, SendGrid đảm bảo tỷ lệ gửi thành công cao và giảm thiểu tình trạng email bị chặn hoặc rơi vào hộp thư rác.
+    \item[-] \textbf{Khả năng mở rộng linh hoạt:} Dù là gửi vài trăm hay hàng triệu email mỗi ngày, SendGrid có thể đáp ứng nhu cầu của doanh nghiệp mà không gặp phải vấn đề về hiệu suất.
+    \item[-] \textbf{Tích hợp dễ dàng:} Cung cấp API RESTful và các thư viện hỗ trợ nhiều ngôn ngữ lập trình, giúp việc tích hợp vào hệ thống backend trở nên nhanh chóng và đơn giản.
+    \item[-] \textbf{Tính năng phân tích và báo cáo chi tiết:} Cho phép theo dõi hiệu suất chiến dịch email thông qua các chỉ số như tỷ lệ mở, tỷ lệ nhấp chuột và tỷ lệ phản hồi, giúp doanh nghiệp tối ưu hóa chiến lược giao tiếp với khách hàng.
 \end{itemize}
-
-\indent Trong đề tài, Nodemailer được sử dụng để gửi email xác thực tài khoản khi người dùng đăng ký, đồng thời gửi thông báo về trạng thái đơn hàng và vé điện tử sau khi giao dịch hoàn tất. Điều này giúp đảm bảo người dùng luôn nhận được thông tin kịp thời và tăng độ tin cậy của hệ thống.
-Việc sử dụng Nodemailer giúp hệ thống xây dựng được cơ chế giao tiếp tự động với người dùng thông qua email một cách hiệu quả và linh hoạt. Giải pháp này không chỉ nâng cao trải nghiệm người dùng mà còn góp phần hoàn thiện quy trình xử lý nghiệp vụ trong hệ thống đặt vé sự kiện.
-
 
 \subsubsection{PayOS \& Webhooks: Cổng thanh toán và cơ chế xử lý giao dịch thời gian thực}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.3\textwidth]{Images/PayOs.png}
+    \includegraphics[width=0.2\textwidth]{Images/PayOs.png}
     \vspace{15pt}
-    \caption{Cổng thanh toán PayOS và cơ chế Webhooks}
+    \caption[Cổng thanh toán PayOS và cơ chế Webhooks]{Nguồn ảnh tham khảo từ tài liệu tham khảo \cite{payos_docs}.}
 \end{figure}
+\indent \indent Trong các hệ thống thương mại điện tử hiện đại, việc tối ưu hóa quy trình giao dịch và đảm bảo tính đồng bộ dữ liệu là yếu tố then chốt. PayOS được lựa chọn như một giải pháp thanh toán trực tuyến toàn diện, cho phép hệ thống kết nối với mạng lưới ngân hàng và ví điện tử thông qua giao diện API đơn giản, bảo mật.
+Điểm đặc biệt của PayOS nằm ở khả năng tự động hóa quy trình xác nhận thanh toán thông qua cơ chế Webhooks, giúp hệ thống phản hồi tức thời với các biến động giao dịch.
 
-\indent \indent Trong các hệ thống thương mại điện tử và nền tảng đặt vé trực tuyến, việc xử lý thanh toán an toàn và cập nhật trạng thái giao dịch theo thời gian thực là một yêu cầu quan trọng. PayOS là một cổng thanh toán trực tuyến cung cấp các giải pháp tích hợp giúp hệ thống thực hiện giao dịch một cách nhanh chóng, an toàn và thuận tiện cho người dùng.
-PayOS hỗ trợ nhiều phương thức thanh toán như thẻ tín dụng, thẻ ghi nợ, ví điện tử và chuyển khoản ngân hàng, đồng thời cung cấp API giúp tích hợp dễ dàng vào hệ thống backend. Bên cạnh đó, cơ chế Webhooks đóng vai trò quan trọng trong việc đồng bộ trạng thái giao dịch giữa hệ thống thanh toán và ứng dụng.
-
-\indent \textbf{Cơ chế Webhooks trong hệ thống thanh toán:}
+\indent \textbf{Cơ chế vận hành của Webhooks:}
 \begin{itemize}
-    \item[-] \textbf{Gửi sự kiện thời gian thực}: Khi một giao dịch xảy ra (ví dụ: thanh toán thành công, thất bại), PayOS sẽ gửi một HTTP request đến endpoint đã được cấu hình trước.
-    \item[-] \textbf{Cập nhật trạng thái tự động}: Backend hệ thống nhận dữ liệu từ webhook và cập nhật trạng thái đơn hàng (pending → success/failed) mà không cần người dùng thực hiện thao tác thủ công.
-    \item[-] \textbf{Đảm bảo tính nhất quán dữ liệu}: Webhooks giúp đồng bộ dữ liệu giữa hệ thống thanh toán và hệ thống ứng dụng, giảm thiểu sai lệch trạng thái giao dịch.
+    \item[-] \textbf{Thông báo sự kiện tức thời:} Ngay khi giao dịch hoàn tất, PayOS sẽ phát một tín hiệu HTTP Request đến máy chủ ứng dụng, loại bỏ việc phải liên tục truy vấn (polling) trạng thái thủ công.
+    \item[-] \textbf{Tự động hóa trạng thái đơn hàng:} Hệ thống Backend căn cứ vào dữ liệu từ Webhook để chuyển đổi trạng thái vé hoặc dịch vụ (từ chờ thanh toán sang đã xác nhận) một cách chính xác.
+    \item[-] \textbf{Đảm bảo tính vẹn toàn dữ liệu:} Cơ chế này hạn chế tối đa các sai sót do ngắt kết nối giữa trình duyệt và máy chủ, đảm bảo thông tin trên Dashboard của người bán luôn khớp với thực tế thanh toán.
 \end{itemize}
 
-\indent \textbf{Lợi ích của PayOS và Webhooks trong hệ thống:}
+\indent \textbf{Lợi ích triển khai thực tế:}
 \begin{itemize}
-    \item[-] \textbf{Tích hợp nhanh chóng}: Cung cấp API và webhook giúp giảm thời gian phát triển hệ thống thanh toán.
-    \item[-] \textbf{Xử lý giao dịch thời gian thực}: Cho phép hệ thống phản hồi ngay lập tức với các thay đổi trạng thái thanh toán.
-    \item[-] \textbf{Nâng cao trải nghiệm người dùng}: Người dùng nhận được thông tin cập nhật nhanh chóng về trạng thái đơn hàng.
-    \item[-] \textbf{Tăng độ tin cậy hệ thống}: Giảm thiểu lỗi đồng bộ và đảm bảo dữ liệu giao dịch luôn chính xác.
+    \item[-] \textbf{Tối ưu quy trình phát triển:} API chuẩn hóa giúp rút ngắn thời gian tích hợp các phương thức thanh toán phức tạp vào hệ thống hiện có.
+    \item[-] \textbf{Nâng cao tính tương tác:} Người dùng nhận được kết quả phản hồi gần như ngay lập tức sau khi quét mã QR hoặc thực hiện chuyển khoản.
+    \item[-] \textbf{Vận hành ổn định 24/7:} Webhooks cho phép hệ thống xử lý giao dịch tự động tại mọi thời điểm mà không cần sự can thiệp trực tiếp của quản trị viên.
 \end{itemize}
 
-\indent Việc tích hợp PayOS kết hợp với cơ chế Webhooks giúp hệ thống xử lý thanh toán một cách tự động, chính xác và theo thời gian thực. Điều này không chỉ nâng cao trải nghiệm người dùng mà còn đảm bảo tính nhất quán và độ tin cậy trong toàn bộ quy trình xử lý đơn hàng.
-Webhooks được sử dụng để đồng bộ trạng thái đơn hàng giữa hệ thống thanh toán và Seller Dashboard trong quy trình xác nhận giao dịch.
+\indent \indent Việc kết hợp PayOS và Webhooks không chỉ mang lại sự tiện lợi trong thao tác mà còn xây dựng một quy trình xử lý đơn hàng khép kín, an toàn và có độ tin cậy cao, đáp ứng tiêu chuẩn của các nền tảng đặt vé chuyên nghiệp.
+
+

@@ -1,4 +1,4 @@
-\section{Mô hình hoá hệ thống (System modelling)}
+\section{Mô hình hoá hệ thống}
 
 %%%%% Use case diagram
 \subsection{Lược đồ Use-Case}
@@ -13,11 +13,11 @@
     \label{fig:uc_user}
 \end{figure}
 
-% \subsubsubsection{Đăng ký}
+% \textbf{Đăng ký}
 % \begin{table}[H]
 % \centering
 % \renewcommand{\arraystretch}{1.3}
-% \setlength{\tabcolsep}{8pt}
+% \setlength{\tabcolsep}{4pt}
 % \begin{tabularx}{\textwidth}{|l|X|}
 % \hline
 % \textbf{Tên Use Case} & Đăng ký \\ \hline
@@ -43,11 +43,11 @@
 % \label{tab:uc_register_user}
 % \end{table}
 
-% \subsubsubsection{Đăng nhập}
+% \textbf{Đăng nhập}
 % \begin{table}[H]
 % \centering
 % \renewcommand{\arraystretch}{1.3}
-% \setlength{\tabcolsep}{8pt}
+% \setlength{\tabcolsep}{4pt}
 % \begin{tabularx}{\textwidth}{|l|X|}
 % \hline
 % \textbf{Tên Use Case} & Đăng nhập \\ \hline
@@ -73,10 +73,11 @@
 % \label{tab:uc_login_user}
 % \end{table}
 
-\subsubsubsection{Quên mật khẩu}
+% \textbf{Quên mật khẩu}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Quên mật khẩu (Người dùng) }\label{tab:uc_forgot_password_user}\\
 \hline
 \textbf{Tên Use Case} & Quên mật khẩu \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -105,14 +106,12 @@
 - Trường hợp lỗi 1: Lỗi hệ thống khi xử lý khôi phục mật khẩu $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Password recovery failed, please try again.” \newline
 - Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép khôi phục mật khẩu nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Quên mật khẩu (Người dùng) }
-\label{tab:uc_forgot_password_user}
 
-\subsubsubsection{Mua vé}
-\renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+% \textbf{Mua vé}
+\renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{|p{0.25\textwidth}|p{0.71\textwidth}|}
+\caption{Đặc tả Use Case -- Mua vé (Người dùng) }\label{tab:uc_buy_ticket_user}\\
 \hline
 \textbf{Tên Use Case} & Mua vé \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -138,14 +137,12 @@
 - Trường hợp lỗi 1: Lỗi hệ thống khi xử lý mua vé $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Ticket purchase failed, please try again.” \newline
 - Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép mua vé nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Mua vé (Người dùng) }
-\label{tab:uc_buy_ticket_user}
 
-\subsubsubsection{Xem lịch sử mua vé}
+%\textbf{Xem lịch sử mua vé}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Xem lịch sử mua vé (Người dùng) }\label{tab:uc_view_ticket_history_user}\\
 \hline
 \textbf{Tên Use Case} & Xem lịch sử mua vé \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -163,14 +160,12 @@
 - Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo lỗi và ghi log để kiểm tra. \newline
 - Trường hợp lỗi 2: Dữ liệu lịch sử mua vé không tải được $\rightarrow$ Hệ thống ghi log và thông báo lỗi, yêu cầu truy cập lại. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Xem lịch sử mua vé (Người dùng) }
-\label{tab:uc_view_ticket_history_user}
 
-\subsubsubsection{Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra}
+%\textbf{Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra (Người dùng) }\label{tab:uc_review_organizer_user}\\
 \hline
 \textbf{Tên Use Case} & Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -192,14 +187,12 @@
 - Trường hợp lỗi 1: Lỗi hệ thống khi xử lý đánh giá $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Failed to submit review, please try again.” \newline
 - Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép đánh giá nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra (Người dùng) }
-\label{tab:uc_review_organizer_user}
 
-\subsubsubsection{Chat với trợ lý ảo}
+%\textbf{Chat với trợ lý ảo}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Chat với trợ lý ảo (Người dùng) }\label{tab:uc_chat_virtual_assistant_user}\\
 \hline
 \textbf{Tên Use Case} & Chat với trợ lý ảo \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -219,15 +212,13 @@
 - Trường hợp lỗi 1: Lỗi hệ thống khi xử lý yêu cầu từ trợ lý ảo $\rightarrow$ Hệ thống ghi log lỗi và thông báo “An error occurred while processing your request, please try again.” \newline
 - Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép tương tác với trợ lý ảo nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Chat với trợ lý ảo (Người dùng) }
-\label{tab:uc_chat_virtual_assistant_user}
 
 
-\subsubsubsection{Xem danh sách sự kiện}
+% \textbf{Xem danh sách sự kiện}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Xem danh sách sự kiện (Người dùng) }\label{tab:uc_view_event_list}\\
 \hline
 \textbf{Tên Use Case} & Xem danh sách sự kiện \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -245,14 +236,12 @@
 - Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo lỗi và ghi log để kiểm tra. \newline
 - Trường hợp lỗi 2: Dữ liệu sự kiện không tải được $\rightarrow$ Hệ thống ghi log và thông báo “Failed to load event list, please try again.” \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Xem danh sách sự kiện (Người dùng) }
-\label{tab:uc_view_event_list}
 
-\subsubsubsection{Xem thông tin chi tiết sự kiện}
+% \textbf{Xem thông tin chi tiết sự kiện}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Xem thông tin chi tiết sự kiện (Người dùng) }\label{tab:uc_view_event_details}\\
 \hline
 \textbf{Tên Use Case} & Xem thông tin chi tiết sự kiện \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -270,14 +259,12 @@
 - Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo lỗi và ghi log để kiểm tra. \newline
 - Trường hợp lỗi 2: Dữ liệu chi tiết về sự kiện không tải được $\rightarrow$ Hệ thống ghi log và thông báo lỗi, yêu cầu truy cập lại \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Xem thông tin chi tiết sự kiện (Người dùng) }
-\label{tab:uc_view_event_details}
 
-\subsubsubsection{Tìm kiếm sự kiện}
+% \textbf{Tìm kiếm sự kiện}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Tìm kiếm sự kiện (Người dùng) }\label{tab:uc_search_event}\\
 \hline
 \textbf{Tên Use Case} & Tìm kiếm sự kiện \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -295,14 +282,12 @@
 - Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo lỗi và ghi log để kiểm tra. \newline
 - Trường hợp lỗi 2: Lỗi hệ thống khi xử lý tìm kiếm $\rightarrow$ Hệ thống ghi log và thông báo lỗi, yêu cầu thử lại. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Tìm kiếm sự kiện (Người dùng) }
-\label{tab:uc_search_event}
 
-\subsubsubsection{Xem thông tin cá nhân}
+% \textbf{Xem thông tin cá nhân}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Xem thông tin cá nhân (Người dùng) }\label{tab:uc_view_profile_user}\\
 \hline
 \textbf{Tên Use Case} & Xem thông tin cá nhân \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -320,14 +305,12 @@
 - Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo lỗi và ghi log để kiểm tra. \newline
 - Trường hợp lỗi 2: Dữ liệu thông tin cá nhân không tải được $\rightarrow$ Hệ thống ghi log và thông báo lỗi, yêu cầu truy cập lại. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Xem thông tin cá nhân (Người dùng) }
-\label{tab:uc_view_profile_user}
 
-\subsubsubsection{Chỉnh sửa thông tin cá nhân}
+% \textbf{Chỉnh sửa thông tin cá nhân}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Chỉnh sửa thông tin cá nhân (Người dùng) }\label{tab:uc_edit_profile_user}\\
 \hline
 \textbf{Tên Use Case} & Chỉnh sửa thông tin cá nhân \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -347,14 +330,12 @@
 - Trường hợp lỗi 1: Lỗi hệ thống khi xử lý chỉnh sửa thông tin cá nhân $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Failed to update profile, please try again.” \newline
 - Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép chỉnh sửa thông tin cá nhân nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Chỉnh sửa thông tin cá nhân (Người dùng) }
-\label{tab:uc_edit_profile_user}
 
-\subsubsubsection{Thay đổi mật khẩu}
+% \textbf{Thay đổi mật khẩu}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Thay đổi mật khẩu (Người dùng) }\label{tab:uc_change_password_user}\\
 \hline
 \textbf{Tên Use Case} & Thay đổi mật khẩu \\ \hline 
 \textbf{Tác nhân} & Người dùng \\ \hline
@@ -375,9 +356,6 @@
 - Trường hợp lỗi 1: Lỗi hệ thống khi xử lý thay đổi mật khẩu $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Failed to change password, please try again.” \newline
 - Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép thay đổi mật khẩu nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Thay đổi mật khẩu (Người dùng) }
-\label{tab:uc_change_password_user}
 
 
 
@@ -390,11 +368,11 @@
     \label{fig:uc_organizer}
 \end{figure}
 
-% \subsubsubsection{Đăng nhập}
+% \textbf{Đăng nhập}
 % \begin{table}[H]
 % \centering
 % \renewcommand{\arraystretch}{1.3}
-% \setlength{\tabcolsep}{8pt}
+% \setlength{\tabcolsep}{4pt}
 % \begin{tabularx}{\textwidth}{|l|X|}
 % \hline
 % \textbf{Tên Use Case} & Đăng nhập \\ \hline
@@ -421,11 +399,11 @@
 % \end{table}
 
 
-% \subsubsubsection{Đăng xuất}
+% \textbf{Đăng xuất}
 % \begin{table}[H]
 % \centering
 % \renewcommand{\arraystretch}{1.3}
-% \setlength{\tabcolsep}{8pt}
+% \setlength{\tabcolsep}{4pt}
 % \begin{tabularx}{\textwidth}{|l|X|}
 % \hline
 % \textbf{Tên Use Case} & Đăng xuất \\ \hline
@@ -451,10 +429,11 @@
 % \label{tab:uc_logout}
 % \end{table}
 
-\subsubsubsection{Theo dõi dữ liệu thống kê}
+% \textbf{Theo dõi dữ liệu thống kê}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Theo dõi dữ liệu thống kê (Ban tổ chức) }\label{tab:uc_statistics}\\
 \hline
 \textbf{Tên Use Case} & Theo dõi dữ liệu thống kê \\ \hline
 \textbf{Tác nhân} & Ban tổ chức \\ \hline
@@ -472,16 +451,14 @@
 - Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo lỗi và ghi log để kiểm tra. \newline
 - Trường hợp lỗi 2: Dữ liệu thống kê không chính xác $\rightarrow$ Hệ thống ghi log và thông báo “Data may be outdated, please refresh.” \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Theo dõi dữ liệu thống kê (Ban tổ chức) }
-\label{tab:uc_statistics}
 
 
-\subsubsubsection{Theo dõi thông tin sự kiện}
+%\textbf{Theo dõi thông tin sự kiện}
 
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Theo dõi thông tin sự kiện (Ban tổ chức)}\label{tab:uc_view_search_event}\\
 \hline
 \textbf{Tên Use Case} & Theo dõi thông tin sự kiện \\ \hline
 \textbf{Tác nhân} & Ban tổ chức \\ \hline
@@ -515,14 +492,12 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 - Lỗi kết nối: Hệ thống không thể kết nối Database, hiển thị thông báo lỗi hệ thống. \newline
 - Lỗi trích xuất: Lỗi trong quá trình tạo file PDF/CSV, hệ thống thông báo "Export failed, please try again." \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Theo dõi thông tin sự kiện (Ban tổ chức)}
-\label{tab:uc_view_search_event}
 
-\subsubsubsection{Thay đổi mật khẩu}
+% \textbf{Thay đổi mật khẩu}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Thay đổi mật khẩu (Ban tổ chức) }\label{tab:uc_change_password}\\
 \hline
 \textbf{Tên Use Case} & Thay đổi mật khẩu \\ \hline
 \textbf{Tác nhân} & Ban tổ chức \\ \hline
@@ -547,14 +522,12 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 - Trường hợp lỗi 1: Lỗi hệ thống khi cập nhật mật khẩu $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Password change failed, please try again.” \newline
 - Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép cập nhật mật khẩu nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Thay đổi mật khẩu (Ban tổ chức) }
-\label{tab:uc_change_password}
 
-\subsubsubsection{Quên mật khẩu}
+% \textbf{Quên mật khẩu}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Quên mật khẩu (Ban tổ chức) }\label{tab:uc_forgot_password}\\
 \hline
 \textbf{Tên Use Case} & Quên mật khẩu \\ \hline
 \textbf{Tác nhân} & Ban tổ chức \\ \hline
@@ -585,14 +558,12 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 - Trường hợp lỗi 1: Lỗi hệ thống khi cập nhật mật khẩu $\rightarrow$ Hệ thống ghi log lỗi và thông báo “Password reset failed, please try again.” \newline
 - Trường hợp lỗi 2: Lỗi kết nối khi ghi log $\rightarrow$ Hệ thống vẫn cho phép đặt lại mật khẩu nhưng ghi log lỗi vào file cục bộ để kiểm tra sau. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Quên mật khẩu (Ban tổ chức) }
-\label{tab:uc_forgot_password}
 
-\subsubsubsection{Xem profile cá nhân}
+% \textbf{Xem profile cá nhân}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Xem profile cá nhân (Ban tổ chức) }\label{tab:uc_view_profile}\\
 \hline
 \textbf{Tên Use Case} & Xem profile cá nhân \\ \hline
 \textbf{Tác nhân} & Ban tổ chức \\ \hline
@@ -610,24 +581,22 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 - Trường hợp lỗi 1: Lỗi kết nối cơ sở dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo lỗi và ghi log để kiểm tra. \newline
 - Trường hợp lỗi 2: Dữ liệu cá nhân không tải được $\rightarrow$ Hệ thống ghi log và thông báo “Failed to load profile information, please try again.” \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Xem profile cá nhân (Ban tổ chức) }
-\label{tab:uc_view_profile}
 
 
 \subsubsection{Use Case cho Quản trị viên}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.95\textwidth]{Images/Admin_UseCaseDiagram.png}
+    \includegraphics[width=1\textwidth]{Images/DACN - Use Case Diagram - Admin-NEW.drawio.png}
     \vspace{15pt}
     \caption{Use Case Diagram -- Quản trị viên}
     \label{fig:uc_admin}
 \end{figure}
 
-\subsubsubsection{Quản lý sự kiện}
+% \textbf{Quản lý sự kiện}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Quản lý sự kiện (Admin)}\label{tab:uc_manage_events}\\
 \hline
 \textbf{Tên Use Case} & Quản lý sự kiện \\ \hline
 \textbf{Tác nhân} & Admin \\ \hline
@@ -650,14 +619,12 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 - Trường hợp lỗi 2: Lỗi hệ thống khi ghi dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo thất bại và ghi log lỗi. \newline
 - Trường hợp lỗi 3: Xóa sự kiện đang có vé đã bán $\rightarrow$ Hệ thống hiển thị cảnh báo vi phạm ràng buộc và yêu cầu xác nhận đặc biệt. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Quản lý sự kiện (Admin)}
-\label{tab:uc_manage_events}
 
-\subsubsubsection{Quản lý đơn vị tổ chức}
+% \textbf{Quản lý đơn vị tổ chức}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Quản lý đơn vị tổ chức (Admin)}\label{tab:uc_manage_organizers}\\
 \hline
 \textbf{Tên Use Case} & Quản lý đơn vị tổ chức \\ \hline
 \textbf{Tác nhân} & Admin \\ \hline
@@ -684,14 +651,12 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 - Trường hợp lỗi 2: Xóa đơn vị tổ chức đang có sự kiện hoạt động $\rightarrow$ Hệ thống hiển thị cảnh báo vi phạm ràng buộc nghiệp vụ và không cho phép xóa. \newline
 - Trường hợp lỗi 3: Lỗi hệ thống khi ghi dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo thất bại và ghi log lỗi hệ thống. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Quản lý đơn vị tổ chức (Admin)}
-\label{tab:uc_manage_organizers}
 
-\subsubsubsection{Quản lý vé}
+% \textbf{Quản lý vé}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Quản lý vé (Admin)}\label{tab:uc_manage_tickets}\\
 \hline
 \textbf{Tên Use Case} & Quản lý vé \\ \hline
 \textbf{Tác nhân} & Admin \\ \hline
@@ -716,14 +681,12 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 - Trường hợp lỗi 2: Xóa vé thuộc sự kiện đang hoạt động $\rightarrow$ Hệ thống cảnh báo vi phạm ràng buộc và không cho phép xóa. \newline
 - Trường hợp lỗi 3: Lỗi hệ thống khi ghi dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo thất bại và ghi log. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Quản lý vé (Admin)}
-\label{tab:uc_manage_tickets}
 
-\subsubsubsection{Quản lý thông tin khách hàng}
+\textbf{Quản lý thông tin khách hàng}
 \renewcommand{\arraystretch}{1.3}
-\setlength{\tabcolsep}{8pt}
+\setlength{\tabcolsep}{4pt}
 \begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
+\caption{Đặc tả Use Case -- Quản lý thông tin khách hàng (Admin)}\label{tab:uc_manage_customers}\\
 \hline
 \textbf{Tên Use Case} & Quản lý thông tin khách hàng \\ \hline
 \textbf{Tác nhân} & Admin \\ \hline
@@ -749,9 +712,6 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 - Trường hợp lỗi 1: Không tìm thấy khách hàng theo từ khóa $\rightarrow$ Hệ thống hiển thị thông báo "No results found" (không có kết quả). \newline
 - Trường hợp lỗi 2: Lỗi hệ thống khi cập nhật dữ liệu $\rightarrow$ Hệ thống hiển thị thông báo thất bại và ghi log giám sát. \\ \hline
 \end{longtable}
-\vspace{15pt}
-\captionof{table}{Đặc tả Use Case -- Quản lý thông tin khách hàng (Admin)}
-\label{tab:uc_manage_customers}
 
 
 % %%%%%%%%%%%%%% Activity diagram
@@ -761,7 +721,7 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 
 \subsubsection{Activity Diagram cho Người dùng}
 
-% \subsubsubsection{Đăng ký}
+% \textbf{Đăng ký}
 % \begin{figure}[H]
 %     \centering
 %     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_User/User_RegisterAccount.drawio.png}
@@ -773,7 +733,7 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 % thông tin đã nhập là hợp lệ thì hệ thống sẽ lưu tài khoản và mã hóa mật khẩu. Trường hợp thông tin đã nhập được xác định là chưa hợp lệ, hệ thống sẽ báo lỗi và người dùng buộc phải nhập lại.
 
 
-% \subsubsubsection{Đăng nhập}
+% \textbf{Đăng nhập}
 % \begin{figure}[H]
 %     \centering
 %     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_User/User_Login.drawio.png}
@@ -784,7 +744,7 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 % \indent \indent Người dùng sẽ truy cập vào hệ thống, chọn "Đăng nhập" trên thanh Header để tiến hành đăng nhập. Hệ thống sẽ hiển thị giao diện form đăng nhập tài khoản. Sau khi người dùng nhập thông tin và chọn đăng nhập, nếu thông tin đã nhập là hợp lệ thì hệ thống sẽ tạo JWT token, lưu vào localStorage/session và ghi log hoạt động đăng nhập. Trường hợp thông tin đã nhập được xác định là chưa hợp lệ, hệ thống sẽ báo lỗi và người dùng buộc phải nhập lại.
 % \indent \underline{Lưu ý:} Sơ đồ hoạt động đăng nhập tài khoản trên có thể áp dụng cho cả Ban tổ chức hoặc quản trị viên trong cùng hoạt động.
 
-\subsubsubsection{Mua vé sự kiện}
+\textbf{a. Mua vé sự kiện}
 
 \begin{figure}[H]
     \centering
@@ -797,7 +757,7 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 Tại đây, hệ thống sẽ hiển thị cảnh báo độ tuổi nếu có. Trong đồng ý tiếp tục mua vé, người dùng sẽ kiểm tra lại thông tin vé và có thể điều chỉnh số lượng vé (miễn là còn đủ số lượng vé). Nếu loại vé đang mua là vé có chỗ ngồi cố định thì cần chọn ghế. 
 Sau khi chọn xác nhận mua vé, hệ thống sẽ điều hướng sang trang thanh toán, người dùng tiến hành quét mã QR để thanh toán bằng app ngân hàng hoặc ví điện tử của mình. Sau khi thanh toán thành công, hệ thống sẽ cập nhật trạng thái vé là "Đã mua", ghi log hoạt động mua vé, hiển thị thông báo và gửi email xác nhận mua vé thành công, tạo vé và điều hướng sang trang lịch sử mua vé. 
 Nếu có lỗi trong quá trình thanh toán, hệ thống sẽ ghi log lỗi và thông báo “Payment failed, please try again.”
-\subsubsubsection{Chat với trợ lý ảo}
+\textbf{b. Chat với trợ lý ảo}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_User/User_ChatBoxAI.drawio.png}
@@ -807,7 +767,7 @@ Nếu có lỗi trong quá trình thanh toán, hệ thống sẽ ghi log lỗi v
 
 \indent \indent Người dùng sẽ truy cập vào hệ thống, chọn biểu tượng Chatbot trên giao diện để bắt đầu trò chuyện với trợ lý ảo. Hệ thống sẽ hiển thị giao diện hộp thoại chat. Người dùng nhập câu hỏi hoặc yêu cầu vào ô nhập liệu và gửi đi. Hệ thống sẽ xử lý yêu cầu, gửi câu hỏi đến API của Gemini và nhận phản hồi. Sau đó, hệ thống sẽ hiển thị phản hồi từ Gemini trong hộp thoại chat. Người dùng có thể tiếp tục đặt câu hỏi hoặc kết thúc cuộc trò chuyện khi đã nhận được thông tin cần thiết.
 
-\subsubsubsection{Đánh giá ban tổ chức sau sự kiện}
+\textbf{c. Đánh giá ban tổ chức sau sự kiện}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_User/User_Feelback.drawio.png}
@@ -819,7 +779,7 @@ Nếu có lỗi trong quá trình thanh toán, hệ thống sẽ ghi log lỗi v
 
 \subsubsection{Activity Diagram cho Ban tổ chức}
 
-\subsubsubsection{Theo dõi dữ liệu thống kê}
+\textbf{a. Theo dõi dữ liệu thống kê}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Xem dữ liệu thống kê.drawio.png}
@@ -829,7 +789,7 @@ Nếu có lỗi trong quá trình thanh toán, hệ thống sẽ ghi log lỗi v
 
 \indent \indent Ban tổ chức sẽ truy cập vào mục Statistical data trên thanh navbar để theo dõi các số liệu thống kê liên quan đến các sự kiện của mình tổ chức được đăng tải lên hệ thống. Hệ thống sẽ truy xuất dữ liệu liên quan đến sự kiện (Số sự kiện, Số vé đã đăng, Số vé đã bán, Tỉ lệ bán vé trung bình, Tổng doanh thu) từ cơ sở dữ liệu và hiển thị dữ liệu thống kê dưới dạng số liệu tổng quan. Nếu có lỗi kết nối cơ sở dữ liệu hoặc dữ liệu thống kê không chính xác, hệ thống có thông báo lỗi và hiển thị "Không có dữ liệu thống kê".
 
-\subsubsubsection{Theo dõi thông tin sự kiện}
+\textbf{b. Theo dõi thông tin sự kiện}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Xem danh sách sự kiện.drawio.png}
@@ -858,22 +818,22 @@ Nếu có lỗi trong quá trình thanh toán, hệ thống sẽ ghi log lỗi v
 Nếu có lỗi kết nối cơ sở dữ liệu hoặc không có dữ liệu về các khách hàng đã mua vé, hệ thống sẽ có thông báo lỗi, hiển thị danh sách khách hàng trống và vô hiệu hóa các nút xuất file dữ liệu khách hàng.
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Xem_xuất thông tin khách hàng đã mua vé 1 sự kiện cụ thể.drawio.png}
+    \includegraphics[width=0.55\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Xem_xuất thông tin khách hàng đã mua vé 1 sự kiện cụ thể.drawio.png}
     \vspace{15pt}
     \caption{Activity Diagram -- Xem danh sách khách hàng mua vé (Ban tổ chức)}
 \end{figure}
 
-\subsubsubsection{Thay đổi mật khẩu}
+\textbf{c. Thay đổi mật khẩu}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Đổi mật khẩu.drawio.png}
+    \includegraphics[width=0.55\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Đổi mật khẩu.drawio.png}
     \vspace{15pt}
     \caption{Activity Diagram -- Thay đổi mật khẩu (Ban tổ chức)}
 \end{figure}
 
 \indent \indent Khi có nhu cầu đổi mật khẩu, Ban tổ chức sẽ truy cập vào mục Profile tại thanh navbar và chọn chức năng đổi mật khẩu. Hệ thống sẽ hiển thị form yêu cầu nhập mật khẩu mới và xác nhận mật khẩu mới. Ban tổ chức nhập thông tin và gửi yêu cầu. Hệ thống sẽ kiểm tra tính hợp lệ của mật khẩu mới, nếu hợp lệ thì cập nhật mật khẩu mới vào cơ sở dữ liệu, ghi log hoạt động và thông báo thành công. Nếu có lỗi hoặc thông tin không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
 
-\subsubsubsection{Quên mật khẩu}
+\textbf{d. Quên mật khẩu}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Quên mật khẩu.drawio.png}
@@ -883,7 +843,7 @@ Nếu có lỗi kết nối cơ sở dữ liệu hoặc không có dữ liệu v
 
 \indent \indent Khi quên mật khẩu, Ban tổ chức sẽ truy cập vào form đăng nhập và chọn chức năng quên mật khẩu. Hệ thống sẽ hiển thị form yêu cầu nhập email đã đăng ký. Ban tổ chức nhập email và gửi yêu cầu. Hệ thống sẽ xác thực xem email có định dạng hợp lệ và có tài khoản nào được tạo với email trên hay không, nếu đáp ứng cả hai yêu cầu thì tạo token khôi phục mật khẩu và gửi mật khẩu mới tạm thời kèm hướng dẫn qua email trên. Ban tổ chức nhận email, sử dụng mật khẩu tạm thời để đăng nhập thành công và được hệ thống điều hướng tự động tới mục đổi mật khẩu. Ban tổ chức sẽ thực hiện quy trình đổi sang mật khẩu mới như được mô tả ở \textbf{mục 5.2.2.c}. Hệ thống sẽ xác thực token, cập nhật mật khẩu mới vào cơ sở dữ liệu, ghi log hoạt động và thông báo thành công. Nếu có lỗi hoặc thông tin không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
 
-\subsubsubsection{Xem profile cá nhân}
+\textbf{e. Xem profile cá nhân}
 
 \begin{figure}[H]
     \centering
@@ -896,7 +856,7 @@ Nếu có lỗi kết nối cơ sở dữ liệu hoặc không có dữ liệu v
 
 \subsubsection{Activity Diagram cho Quản trị viên}
 
-\subsubsubsection{Quản lý danh sách các sự kiện}
+\textbf{a. Quản lý danh sách các sự kiện}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_Admin/DACN - Activity Diagram - Admin-Quản lý sự kiện.drawio.png}
@@ -904,7 +864,7 @@ Nếu có lỗi kết nối cơ sở dữ liệu hoặc không có dữ liệu v
     \caption{Activity Diagram -- Quản lý sự kiện}
 \end{figure}
 \indent \indent Đầu tiên, admin mở mục thông tin sự kiện trên thanh navbar. Tại đây admin có thể xem nhanh danh sách các sự kiện và có thể nhập từ khóa tìm kiếm. Khi chọn một sự kiện cụ thể để xem chi tiết, admin có thể thực hiện các chức năng như chỉnh sửa hoặc xóa thông tin sự kiện. Nếu xóa, hệ thống sẽ yêu cầu xác nhận và hiển thị thông báo sau khi xóa thành công; nếu chỉnh sửa hoặc tạo mới, hệ thống hiển thị form nhập liệu để admin điền thông tin. Sau khi admin lưu, hệ thống kiểm tra tính hợp lệ và đầy đủ của dữ liệu, rồi lưu thông tin vào cơ sở dữ liệu và thông báo kết quả tương ứng.
-\subsubsubsection{Quản lý đơn vị tổ chức sự kiện}
+\textbf{b. Quản lý đơn vị tổ chức sự kiện}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_Admin/DACN - Activity Diagram - Admin-Quản lý đơn vị tổ chức.drawio.png}

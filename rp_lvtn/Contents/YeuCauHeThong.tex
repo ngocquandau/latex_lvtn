@@ -84,7 +84,7 @@
 
 \subsubsection{Bảo mật (Security)}
 
-\subsubsubsection{Xác thực và Phân quyền}
+\textbf{Xác thực và Phân quyền}
 
 \begin{itemize}[leftmargin=*, label={--}]
     \item \textbf{JWT (JSON Web Token):} Mọi API bảo vệ đều yêu cầu Bearer Token
@@ -106,7 +106,7 @@
     trang chủ.
 \end{itemize}
 
-\subsubsubsection{Mã hóa Dữ liệu Nhạy cảm}
+\textbf{Mã hóa Dữ liệu Nhạy cảm}
 
 \begin{itemize}[leftmargin=*, label={--}]
     \item \textbf{bcryptjs} với \texttt{saltRounds = 10} để hash password trước
@@ -119,7 +119,7 @@
     qua API -- server kiểm tra và xóa field nếu người gửi không phải admin.
 \end{itemize}
 
-\subsubsubsection{Ngăn chặn Tấn công}
+\textbf{Ngăn chặn Tấn công}
 
 \begin{itemize}[leftmargin=*, label={--}]
     \item \textbf{CORS Whitelist:} Chỉ chấp nhận request từ
@@ -143,7 +143,7 @@
     không để raw query từ client truyền thẳng vào MongoDB.
 \end{itemize}
 
-\subsubsubsection{Bảo mật Thanh toán}
+\textbf{Bảo mật Thanh toán}
 
 \begin{itemize}[leftmargin=*, label={--}]
     \item Tích hợp \textbf{PayOS} với \texttt{checksumKey} riêng để xác minh
@@ -158,7 +158,7 @@
 % ============================================================
 \subsubsection{Hiệu năng (Performance)}
 
-\subsubsubsection{Cơ sở Dữ liệu}
+\textbf{Cơ sở Dữ liệu}
 
 \begin{itemize}[leftmargin=*, label={--}]
     \item \textbf{MongoDB Text Index:} Hỗ trợ full-text search trên sự kiện
@@ -178,7 +178,7 @@
     tính toán trực tiếp trong MongoDB thay vì load toàn bộ về Node.js.
 \end{itemize}
 
-\subsubsubsection{Caching}
+\textbf{Caching}
 
 \begin{itemize}[leftmargin=*, label={--}]
     \item \textbf{Logo caching:} Biến \texttt{cachedLogoAttachment} và
@@ -189,7 +189,7 @@
     caching layer / session store cho toàn hệ thống.
 \end{itemize}
 
-\subsubsubsection{Phân trang và Giới hạn Tải}
+\textbf{Phân trang và Giới hạn Tải}
 
 \begin{itemize}[leftmargin=*, label={--}]
     \item Phân trang chuẩn với các tham số: \texttt{page}, \texttt{limit},
@@ -202,7 +202,7 @@
     không dump toàn bộ cơ sở dữ liệu vào prompt.
 \end{itemize}
 
-\subsubsubsection{Xử lý Bất đồng bộ}
+\textbf{Xử lý Bất đồng bộ}
 
 \begin{itemize}[leftmargin=*, label={--}]
     \item \textbf{BullMQ} (dependency) để xử lý job nặng (email, notification)
@@ -218,7 +218,7 @@
 % ============================================================
 \subsubsection{Độ tin cậy và Tính nhất quán Dữ liệu (Reliability \& Data Integrity)}
 
-\subsubsubsection{Giao dịch Nguyên tử}
+\textbf{Giao dịch Nguyên tử}
 
 \begin{itemize}[leftmargin=*, label={--}]
     \item \textbf{MongoDB Transactions} trong cron job: Mỗi đơn hàng pending
@@ -227,7 +227,7 @@
     vời (vé đã thu hồi nhưng số lượng chưa được hoàn trả).
 \end{itemize}
 
-\subsubsubsection{Cơ chế Tự phục hồi}
+\textbf{Cơ chế Tự phục hồi}
 
 \begin{itemize}[leftmargin=*, label={--}]
     \item \textbf{Cron Job mỗi 1 phút:} Tự động quét và thu hồi vé của đơn
@@ -246,7 +246,7 @@
     resolver của Render khi kết nối MongoDB Atlas.
 \end{itemize}
 
-\subsubsubsection{Validation Dữ liệu}
+\textbf{Validation Dữ liệu}
 
 \begin{itemize}[leftmargin=*, label={--}]
     \item \textbf{Mongoose validators:}
@@ -388,11 +388,13 @@
 % ============================================================
 \subsubsection{Tích hợp Bên thứ ba (Third-party Integration)}
 
-\begin{longtable}{>{\bfseries}p{3.5cm} p{5.5cm} p{5.5cm}}
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\begin{longtable}{>{\bfseries}p{3cm} p{5cm} p{6cm}}
+\caption{Các dịch vụ bên thứ ba được tích hợp trong hệ thống}\\[15pt]
 \toprule
 \textbf{Dịch vụ} & \textbf{Mục đích} & \textbf{Ghi chú} \\
 \midrule
-\endhead
 PayOS          & Cổng thanh toán nội địa            & Webhook xác nhận thanh toán; QR hết hạn sau 15 phút \\
 \midrule
 Cloudinary     & Lưu trữ và CDN ảnh                 & Upload từ buffer stream, không lưu file trên server \\
