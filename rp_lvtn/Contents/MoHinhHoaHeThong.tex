@@ -2,7 +2,14 @@
 
 %%%%% Use case diagram
 \subsection{Lược đồ Use-Case}
-
+\subsubsection{Use Case cho toàn bộ hệ thống}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/use case toàn hệ thống.jpg}
+    \vspace{10pt}
+    \caption{Use Case Diagram -- Toàn bộ hệ thống}
+    \label{fig:uc_system}
+\end{figure}
 
 \subsubsection{Use Case cho Người Dùng}
 \begin{figure}[H]
@@ -76,9 +83,10 @@
 % \textbf{Quên mật khẩu}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Quên mật khẩu (Người dùng) }\label{tab:uc_forgot_password_user}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-US-01) -- Quên mật khẩu (Người dùng) }\label{tab:uc_forgot_password_user}\\
 \hline
+\textbf{Mã Use Case} & UC-US-01 \\ \hline
 \textbf{Tên Use Case} & Quên mật khẩu \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
 \textbf{Mục đích} & Cho phép người dùng khôi phục mật khẩu khi quên để tiếp tục sử dụng hệ thống. \\ \hline
@@ -110,9 +118,11 @@
 % \textbf{Mua vé}
 \renewcommand{\arraystretch}{1.5}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.25\textwidth}|p{0.71\textwidth}|}
-\caption{Đặc tả Use Case -- Mua vé (Người dùng) }\label{tab:uc_buy_ticket_user}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-US-02) -- Mua vé (Người dùng) }\label{tab:uc_buy_ticket_user}\\
 \hline
+\textbf{Mã Use Case} & UC-US-02 \\ \hline
+\textbf{Mã Activity Diagram tương ứng} & AC-US-01 \\ \hline
 \textbf{Tên Use Case} & Mua vé \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
 \textbf{Mục đích} & Cho phép người dùng mua vé cho các sự kiện mà mình quan tâm. \\ \hline
@@ -141,9 +151,10 @@
 %\textbf{Xem lịch sử mua vé}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Xem lịch sử mua vé (Người dùng) }\label{tab:uc_view_ticket_history_user}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-US-03) -- Xem lịch sử mua vé (Người dùng) }\label{tab:uc_view_ticket_history_user}\\
 \hline
+\textbf{Mã Use Case} & UC-US-03 \\ \hline
 \textbf{Tên Use Case} & Xem lịch sử mua vé \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
 \textbf{Mục đích} & Cho phép người dùng xem lại lịch sử các vé đã mua trước đó. \\ \hline
@@ -164,9 +175,11 @@
 %\textbf{Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra (Người dùng) }\label{tab:uc_review_organizer_user}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-US-04) -- Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra (Người dùng) }\label{tab:uc_review_organizer_user}\\
 \hline
+\textbf{Mã Use Case} & UC-US-04 \\ \hline
+\textbf{Mã Activity Diagram tương ứng} & AC-US-02 \\ \hline
 \textbf{Tên Use Case} & Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
 \textbf{Mục đích} & Cho phép người dùng đánh giá và xem lại đánh giá của mình dành cho ban tổ chức của sự kiện mà mình đã tham gia. \\ \hline
@@ -191,9 +204,11 @@
 %\textbf{Chat với trợ lý ảo}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Chat với trợ lý ảo (Người dùng) }\label{tab:uc_chat_virtual_assistant_user}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-US-05) -- Chat với trợ lý ảo (Người dùng) }\label{tab:uc_chat_virtual_assistant_user}\\
 \hline
+\textbf{Mã Use Case} & UC-US-05 \\ \hline
+\textbf{Mã Activity Diagram tương ứng} & AC-US-03 \\ \hline
 \textbf{Tên Use Case} & Chat với trợ lý ảo \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
 \textbf{Mục đích} & Cho phép người dùng tương tác với trợ lý ảo để nhận được sự hỗ trợ nhanh chóng và tiện lợi. \\ \hline
@@ -217,9 +232,10 @@
 % \textbf{Xem danh sách sự kiện}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Xem danh sách sự kiện (Người dùng) }\label{tab:uc_view_event_list}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-US-06) -- Xem danh sách sự kiện (Người dùng) }\label{tab:uc_view_event_list}\\
 \hline
+\textbf{Mã Use Case} & UC-US-06 \\ \hline
 \textbf{Tên Use Case} & Xem danh sách sự kiện \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
 \textbf{Mục đích} & Cho phép người dùng xem danh sách các sự kiện đang được đăng tải lên hệ thống. \\ \hline
@@ -240,9 +256,10 @@
 % \textbf{Xem thông tin chi tiết sự kiện}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Xem thông tin chi tiết sự kiện (Người dùng) }\label{tab:uc_view_event_details}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-US-07) -- Xem thông tin chi tiết sự kiện (Người dùng) }\label{tab:uc_view_event_details}\\
 \hline
+\textbf{Mã Use Case} & UC-US-07 \\ \hline
 \textbf{Tên Use Case} & Xem thông tin chi tiết sự kiện \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
 \textbf{Mục đích} & Cho phép người dùng xem thông tin chi tiết về sự kiện mà mình quan tâm. \\ \hline
@@ -263,9 +280,10 @@
 % \textbf{Tìm kiếm sự kiện}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Tìm kiếm sự kiện (Người dùng) }\label{tab:uc_search_event}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-US-08) -- Tìm kiếm sự kiện (Người dùng) }\label{tab:uc_search_event}\\
 \hline
+\textbf{Mã Use Case} & UC-US-08 \\ \hline
 \textbf{Tên Use Case} & Tìm kiếm sự kiện \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
 \textbf{Mục đích} & Cho phép người dùng tìm kiếm sự kiện theo từ khóa để nhanh chóng tìm được sự kiện mình quan tâm. \\ \hline
@@ -286,9 +304,10 @@
 % \textbf{Xem thông tin cá nhân}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Xem thông tin cá nhân (Người dùng) }\label{tab:uc_view_profile_user}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-US-09) -- Xem thông tin cá nhân (Người dùng) }\label{tab:uc_view_profile_user}\\
 \hline
+\textbf{Mã Use Case} & UC-US-09 \\ \hline
 \textbf{Tên Use Case} & Xem thông tin cá nhân \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
 \textbf{Mục đích} & Cho phép người dùng xem thông tin cá nhân của mình đã đăng ký trên hệ thống. \\ \hline
@@ -309,9 +328,10 @@
 % \textbf{Chỉnh sửa thông tin cá nhân}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Chỉnh sửa thông tin cá nhân (Người dùng) }\label{tab:uc_edit_profile_user}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-US-10) -- Chỉnh sửa thông tin cá nhân (Người dùng) }\label{tab:uc_edit_profile_user}\\
 \hline
+\textbf{Mã Use Case} & UC-US-10 \\ \hline
 \textbf{Tên Use Case} & Chỉnh sửa thông tin cá nhân \\ \hline
 \textbf{Tác nhân} & Người dùng \\ \hline
 \textbf{Mục đích} & Cho phép người dùng chỉnh sửa thông tin cá nhân của mình đã đăng ký trên hệ thống. \\ \hline
@@ -334,9 +354,10 @@
 % \textbf{Thay đổi mật khẩu}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Thay đổi mật khẩu (Người dùng) }\label{tab:uc_change_password_user}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-US-11) -- Thay đổi mật khẩu (Người dùng) }\label{tab:uc_change_password_user}\\
 \hline
+\textbf{Mã Use Case} & UC-US-11 \\ \hline
 \textbf{Tên Use Case} & Thay đổi mật khẩu \\ \hline 
 \textbf{Tác nhân} & Người dùng \\ \hline
 \textbf{Mục đích} & Cho phép người dùng thay đổi mật khẩu của mình để bảo vệ tài khoản. \\ \hline
@@ -432,9 +453,11 @@
 % \textbf{Theo dõi dữ liệu thống kê}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Theo dõi dữ liệu thống kê (Ban tổ chức) }\label{tab:uc_statistics}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-OG-01) -- Theo dõi dữ liệu thống kê (Ban tổ chức) }\label{tab:uc_statistics}\\
 \hline
+\textbf{Mã Use Case} & UC-OG-01 \\ \hline
+\textbf{Mã Activity Diagram tương ứng} & AC-OG-01 \\ \hline
 \textbf{Tên Use Case} & Theo dõi dữ liệu thống kê \\ \hline
 \textbf{Tác nhân} & Ban tổ chức \\ \hline
 \textbf{Mục đích} & Cho phép Ban tổ chức theo dõi các dữ liệu thống kê liên quan đến các sự kiện của mình tổ chức được đăng tải lên hệ thống \\ \hline
@@ -457,9 +480,11 @@
 
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Theo dõi thông tin sự kiện (Ban tổ chức)}\label{tab:uc_view_search_event}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-OG-02) -- Theo dõi thông tin sự kiện (Ban tổ chức)}\label{tab:uc_view_search_event}\\
 \hline
+\textbf{Mã Use Case} & UC-OG-02 \\ \hline
+\textbf{Mã Activity Diagram tương ứng} & AC-OG-02 \\ \hline
 \textbf{Tên Use Case} & Theo dõi thông tin sự kiện \\ \hline
 \textbf{Tác nhân} & Ban tổ chức \\ \hline
 \textbf{Mục đích} & 
@@ -496,9 +521,11 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 % \textbf{Thay đổi mật khẩu}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Thay đổi mật khẩu (Ban tổ chức) }\label{tab:uc_change_password}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-OG-03) -- Thay đổi mật khẩu (Ban tổ chức) }\label{tab:uc_change_password}\\
 \hline
+\textbf{Mã Use Case} & UC-OG-03 \\ \hline
+\textbf{Mã Activity Diagram tương ứng} & AC-OG-06 \\ \hline
 \textbf{Tên Use Case} & Thay đổi mật khẩu \\ \hline
 \textbf{Tác nhân} & Ban tổ chức \\ \hline
 \textbf{Mục đích} & Cho phép Ban tổ chức thay đổi mật khẩu để bảo vệ tài khoản. \\ \hline
@@ -526,9 +553,11 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 % \textbf{Quên mật khẩu}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Quên mật khẩu (Ban tổ chức) }\label{tab:uc_forgot_password}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-OG-04) -- Quên mật khẩu (Ban tổ chức) }\label{tab:uc_forgot_password}\\
 \hline
+\textbf{Mã Use Case} & UC-OG-04 \\ \hline
+\textbf{Mã Activity Diagram tương ứng} & AC-OG-07 \\ \hline
 \textbf{Tên Use Case} & Quên mật khẩu \\ \hline
 \textbf{Tác nhân} & Ban tổ chức \\ \hline
 \textbf{Mục đích} & Cho phép Ban tổ chức khôi phục mật khẩu khi quên để tiếp tục sử dụng hệ thống. \\ \hline
@@ -562,9 +591,11 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 % \textbf{Xem profile cá nhân}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Xem profile cá nhân (Ban tổ chức) }\label{tab:uc_view_profile}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-OG-05) -- Xem profile cá nhân (Ban tổ chức) }\label{tab:uc_view_profile}\\
 \hline
+\textbf{Mã Use Case} & UC-OG-05 \\ \hline
+\textbf{Mã Activity Diagram tương ứng} & AC-OG-08 \\ \hline
 \textbf{Tên Use Case} & Xem profile cá nhân \\ \hline
 \textbf{Tác nhân} & Ban tổ chức \\ \hline
 \textbf{Mục đích} & Cho phép Ban tổ chức xem thông tin cá nhân của mình. \\ \hline
@@ -595,9 +626,11 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 % \textbf{Quản lý sự kiện}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Quản lý sự kiện (Admin)}\label{tab:uc_manage_events}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-AD-01) -- Quản lý sự kiện (Admin)}\label{tab:uc_manage_events}\\
 \hline
+\textbf{Mã Use Case} & UC-AD-01 \\ \hline
+\textbf{Mã Activity Diagram tương ứng} & AC-AD-01 \\ \hline
 \textbf{Tên Use Case} & Quản lý sự kiện \\ \hline
 \textbf{Tác nhân} & Admin \\ \hline
 \textbf{Mục đích} & Quản lý toàn bộ thông tin sự kiện: thêm mới, xem, chỉnh sửa, xóa và tìm kiếm sự kiện. \\ \hline
@@ -623,9 +656,11 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 % \textbf{Quản lý đơn vị tổ chức}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Quản lý đơn vị tổ chức (Admin)}\label{tab:uc_manage_organizers}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-AD-02) -- Quản lý đơn vị tổ chức (Admin)}\label{tab:uc_manage_organizers}\\
 \hline
+\textbf{Mã Use Case} & UC-AD-02 \\ \hline
+\textbf{Mã Activity Diagram tương ứng} & AC-AD-02 \\ \hline
 \textbf{Tên Use Case} & Quản lý đơn vị tổ chức \\ \hline
 \textbf{Tác nhân} & Admin \\ \hline
 \textbf{Mục đích} & Quản lý thông tin các đơn vị tổ chức sự kiện: thêm mới, xem, chỉnh sửa, xóa, tìm kiếm và cập nhật trạng thái tài khoản. \\ \hline
@@ -655,9 +690,10 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 % \textbf{Quản lý vé}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Quản lý vé (Admin)}\label{tab:uc_manage_tickets}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-AD-03) -- Quản lý vé (Admin)}\label{tab:uc_manage_tickets}\\
 \hline
+\textbf{Mã Use Case} & UC-AD-03 \\ \hline
 \textbf{Tên Use Case} & Quản lý vé \\ \hline
 \textbf{Tác nhân} & Admin \\ \hline
 \textbf{Mục đích} & Quản lý toàn bộ thông tin vé: tạo mới, xem, chỉnh sửa và xóa vé đã tạo. \\ \hline
@@ -685,9 +721,10 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
 \textbf{Quản lý thông tin khách hàng}
 \renewcommand{\arraystretch}{1.3}
 \setlength{\tabcolsep}{4pt}
-\begin{longtable}{|p{0.28\textwidth}|p{0.68\textwidth}|}
-\caption{Đặc tả Use Case -- Quản lý thông tin khách hàng (Admin)}\label{tab:uc_manage_customers}\\
+\begin{longtable}{|p{0.32\textwidth}|p{0.64\textwidth}|}
+\caption{Đặc tả Use Case (UC-AD-04) -- Quản lý thông tin khách hàng (Admin)}\label{tab:uc_manage_customers}\\
 \hline
+\textbf{Mã Use Case} & UC-AD-04 \\ \hline
 \textbf{Tên Use Case} & Quản lý thông tin khách hàng \\ \hline
 \textbf{Tác nhân} & Admin \\ \hline
 \textbf{Mục đích} & Quản lý thông tin tài khoản khách hàng: xem, chỉnh sửa, tìm kiếm và xóa tài khoản. \\ \hline
@@ -750,32 +787,36 @@ Ban tổ chức truy cập vào danh sách sự kiện để theo dõi trạng t
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_User/User_BuyTicket.drawio.png}
     \vspace{15pt}
-    \caption{Activity Diagram -- Mua vé sự kiện}
+    \caption{Activity Diagram (AC-US-01) -- Mua vé sự kiện (Người dùng)}
 \end{figure}
-
-\indent \indent Sau khi đã truy cập vào hệ thống và đăng nhập thành công, người dùng sẽ chọn một sự kiện mà mình quan tâm. Tại trang thông tin chi tiết sự kiện, người dùng sẽ chọn mua vé với loại vé tương ứng. Hệ thống sẽ điều hướng đến trang xác nhận thanh toán. 
+\textbf{Mã Activity Diagram:} AC-US-01\\
+\textbf{Mã Use Case tương ứng:} UC-US-02\\
+\indent \indent \textbf{Mô tả: }Sau khi đã truy cập vào hệ thống và đăng nhập thành công, người dùng sẽ chọn một sự kiện mà mình quan tâm. Tại trang thông tin chi tiết sự kiện, người dùng sẽ chọn mua vé với loại vé tương ứng. Hệ thống sẽ điều hướng đến trang xác nhận thanh toán. 
 Tại đây, hệ thống sẽ hiển thị cảnh báo độ tuổi nếu có. Trong đồng ý tiếp tục mua vé, người dùng sẽ kiểm tra lại thông tin vé và có thể điều chỉnh số lượng vé (miễn là còn đủ số lượng vé). Nếu loại vé đang mua là vé có chỗ ngồi cố định thì cần chọn ghế. 
 Sau khi chọn xác nhận mua vé, hệ thống sẽ điều hướng sang trang thanh toán, người dùng tiến hành quét mã QR để thanh toán bằng app ngân hàng hoặc ví điện tử của mình. Sau khi thanh toán thành công, hệ thống sẽ cập nhật trạng thái vé là "Đã mua", ghi log hoạt động mua vé, hiển thị thông báo và gửi email xác nhận mua vé thành công, tạo vé và điều hướng sang trang lịch sử mua vé. 
 Nếu có lỗi trong quá trình thanh toán, hệ thống sẽ ghi log lỗi và thông báo “Payment failed, please try again.”
-\textbf{b. Chat với trợ lý ảo}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_User/User_ChatBoxAI.drawio.png}
-    \vspace{15pt}
-    \caption{Activity Diagram -- Chat với trợ lý ảo}
-\end{figure}
 
-\indent \indent Người dùng sẽ truy cập vào hệ thống, chọn biểu tượng Chatbot trên giao diện để bắt đầu trò chuyện với trợ lý ảo. Hệ thống sẽ hiển thị giao diện hộp thoại chat. Người dùng nhập câu hỏi hoặc yêu cầu vào ô nhập liệu và gửi đi. Hệ thống sẽ xử lý yêu cầu, gửi câu hỏi đến API của Gemini và nhận phản hồi. Sau đó, hệ thống sẽ hiển thị phản hồi từ Gemini trong hộp thoại chat. Người dùng có thể tiếp tục đặt câu hỏi hoặc kết thúc cuộc trò chuyện khi đã nhận được thông tin cần thiết.
-
-\textbf{c. Đánh giá ban tổ chức sau sự kiện}
+\textbf{b. Đánh giá ban tổ chức sau sự kiện}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_User/User_Feelback.drawio.png}
     \vspace{15pt}
-    \caption{Activity Diagram -- Đánh giá ban tổ chức sau sự kiện}
+    \caption{Activity Diagram (AC-US-02) -- Đánh giá ban tổ chức sau sự kiện (Người dùng)}
 \end{figure}
+\textbf{Mã Activity Diagram:} AC-US-02\\
+\textbf{Mã Use Case tương ứng:} UC-US-04\\
+\indent \indent \textbf{Mô tả: }Đối với những sự kiện đã mua vé thành công và đã diễn ra, người dùng có thể truy cập vào trang lịch sử mua vé hoặc icon ngôi sao trên thanh Header để tiến hành đánh giá ban tổ chức sự kiện bằng cấp đánh số sao (từ 1 đến 5) và bình luận. Hệ thống sẽ hiển thị form đánh giá với các trường nhập liệu cần thiết. Người dùng nhập thông tin và gửi đánh giá. Hệ thống sẽ xác thực thông tin, lưu đánh giá vào cơ sở dữ liệu, ghi log hoạt động đánh giá và hiển thị thông báo thành công. Nếu có lỗi trong quá trình lưu đánh giá, hệ thống sẽ ghi log lỗi và thông báo “Failed to submit feedback, please try again.”
 
-\indent \indent Đối với những sự kiện đã mua vé thành công và đã diễn ra, người dùng có thể truy cập vào trang lịch sử mua vé hoặc icon ngôi sao trên thanh Header để tiến hành đánh giá ban tổ chức sự kiện bằng cấp đánh số sao (từ 1 đến 5) và bình luận. Hệ thống sẽ hiển thị form đánh giá với các trường nhập liệu cần thiết. Người dùng nhập thông tin và gửi đánh giá. Hệ thống sẽ xác thực thông tin, lưu đánh giá vào cơ sở dữ liệu, ghi log hoạt động đánh giá và hiển thị thông báo thành công. Nếu có lỗi trong quá trình lưu đánh giá, hệ thống sẽ ghi log lỗi và thông báo “Failed to submit feedback, please try again.”
+\textbf{c. Chat với trợ lý ảo}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_User/User_ChatBoxAI.drawio.png}
+    \vspace{15pt}
+    \caption{Activity Diagram (AC-US-03) -- Chat với trợ lý ảo (Người dùng)}
+\end{figure}
+\textbf{Mã Activity Diagram:} AC-US-03\\
+\textbf{Mã Use Case tương ứng:} UC-US-05\\
+\indent \indent \textbf{Mô tả: }Người dùng sẽ truy cập vào hệ thống, chọn biểu tượng Chatbot trên giao diện để bắt đầu trò chuyện với trợ lý ảo. Hệ thống sẽ hiển thị giao diện hộp thoại chat. Người dùng nhập câu hỏi hoặc yêu cầu vào ô nhập liệu và gửi đi. Hệ thống sẽ xử lý yêu cầu, gửi câu hỏi đến API của Gemini và nhận phản hồi. Sau đó, hệ thống sẽ hiển thị phản hồi từ Gemini trong hộp thoại chat. Người dùng có thể tiếp tục đặt câu hỏi hoặc kết thúc cuộc trò chuyện khi đã nhận được thông tin cần thiết.
 
 \subsubsection{Activity Diagram cho Ban tổ chức}
 
@@ -784,64 +825,69 @@ Nếu có lỗi trong quá trình thanh toán, hệ thống sẽ ghi log lỗi v
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Xem dữ liệu thống kê.drawio.png}
     \vspace{15pt}
-    \caption{Activity Diagram -- Theo dõi dữ liệu thống kê (Ban tổ chức)}
+    \caption{Activity Diagram (AC-OG-01) -- Theo dõi dữ liệu thống kê (Ban tổ chức)}
 \end{figure}
-
-\indent \indent Ban tổ chức sẽ truy cập vào mục Statistical data trên thanh navbar để theo dõi các số liệu thống kê liên quan đến các sự kiện của mình tổ chức được đăng tải lên hệ thống. Hệ thống sẽ truy xuất dữ liệu liên quan đến sự kiện (Số sự kiện, Số vé đã đăng, Số vé đã bán, Tỉ lệ bán vé trung bình, Tổng doanh thu) từ cơ sở dữ liệu và hiển thị dữ liệu thống kê dưới dạng số liệu tổng quan. Nếu có lỗi kết nối cơ sở dữ liệu hoặc dữ liệu thống kê không chính xác, hệ thống có thông báo lỗi và hiển thị "Không có dữ liệu thống kê".
+\textbf{Mã Activity Diagram:} AC-OG-01\\
+\textbf{Mã Use Case tương ứng:} UC-OG-01\\
+\indent \indent \textbf{Mô tả: }Ban tổ chức sẽ truy cập vào mục Statistical data trên thanh navbar để theo dõi các số liệu thống kê liên quan đến các sự kiện của mình tổ chức được đăng tải lên hệ thống. Hệ thống sẽ truy xuất dữ liệu liên quan đến sự kiện (Số sự kiện, Số vé đã đăng, Số vé đã bán, Tỉ lệ bán vé trung bình, Tổng doanh thu) từ cơ sở dữ liệu và hiển thị dữ liệu thống kê dưới dạng số liệu tổng quan. Nếu có lỗi kết nối cơ sở dữ liệu hoặc dữ liệu thống kê không chính xác, hệ thống có thông báo lỗi và hiển thị "Không có dữ liệu thống kê".
 
 \textbf{b. Theo dõi thông tin sự kiện}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Xem danh sách sự kiện.drawio.png}
     \vspace{15pt}
-    \caption{Activity Diagram -- Theo dõi thông tin sự kiện (Ban tổ chức)}
+    \caption{Activity Diagram (AC-OG-02) -- Theo dõi thông tin sự kiện (Ban tổ chức)}
 \end{figure}
-
-\indent \indent Ban tổ chức sẽ truy cập vào mục Event Information trên thanh navbar để xem danh sách các sự kiện do mình tổ chức. Hệ thống sẽ truy xuất và hiển thị danh sách các sự kiện, bao gồm poster, tên, thời gian, địa điểm và trạng thái. \\
+\textbf{Mã Activity Diagram:} AC-OG-02\\
+\textbf{Mã Use Case tương ứng:} UC-OG-02\\
+\indent \indent \textbf{Mô tả: }Ban tổ chức sẽ truy cập vào mục Event Information trên thanh navbar để xem danh sách các sự kiện do mình tổ chức. Hệ thống sẽ truy xuất và hiển thị danh sách các sự kiện, bao gồm poster, tên, thời gian, địa điểm và trạng thái. \\
 \indent Tại giao diện danh sách sự kiện tổng quan, Ban tổ chức có thể nhập từ khóa vào thanh tìm kiếm để lọc các sự kiện. Nếu có lỗi kết nối cơ sở dữ liệu hoặc không có dữ liệu sự kiện phù hợp, hệ thống sẽ hiển thị thông báo lỗi và hiển thị "No data".
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Tìm kiếm sự kiện.drawio.png}
     \vspace{15pt}
-    \caption{Activity Diagram -- Tìm kiếm sự kiện (Ban tổ chức)}
+    \caption{Activity Diagram (AC-OG-03) -- Tìm kiếm sự kiện (Ban tổ chức)}
 \end{figure}
-
-\indent Để xem thông tin chi tiết của một sự kiện cụ thể, Ban tổ chức sẽ chọn icon Eye tương ứng với sự kiện đó ở cột Action. Hệ thống sẽ hiển thị giao diện bảng chi tiết nội dung sự kiện. Để tắt giao diện bảng thông tin chi tiết, Ban tổ chức cần nhấn dấu X ở góc phải và giao diện sẽ quay về giao diện danh sách dữ liệu tổng quan ban đầu \\
-\begin{figure}
+\textbf{Mã Activity Diagram:} AC-OG-03\\
+\indent \textbf{Mô tả: }Để xem thông tin chi tiết của một sự kiện cụ thể, Ban tổ chức sẽ chọn icon Eye tương ứng với sự kiện đó ở cột Action. Hệ thống sẽ hiển thị giao diện bảng chi tiết nội dung sự kiện. Để tắt giao diện bảng thông tin chi tiết, Ban tổ chức cần nhấn dấu X ở góc phải và giao diện sẽ quay về giao diện danh sách dữ liệu tổng quan ban đầu \\
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-xem chi tiết thông tin sự kiện.drawio.png}
     \vspace{15pt}
-    \caption{Activity Diagram -- Xem chi tiết sự kiện (Ban tổ chức)}
+    \caption{Activity Diagram (AC-OG-04) -- Xem chi tiết sự kiện (Ban tổ chức)}
 \end{figure}
-
-\indent Ban tổ chức cũng có thể chọn icon Person tương ứng với sự kiện đó ở cột Action để xem danh sách khách hàng đã mua vé cho sự kiện đó. Hệ thống sẽ hiển thị giao diện bảng danh sách khách hàng mua vé tương ứng với sự kiện đã chọn. Ban tổ chức có thể nhấn vào một trong hai nút xuất file dữ liệu khách hàng trên về máy với định dạng CSV hoặc PDF.
+\textbf{Mã Activity Diagram:} AC-OG-04\\
+\indent \textbf{Mô tả: }Ban tổ chức cũng có thể chọn icon Person tương ứng với sự kiện đó ở cột Action để xem danh sách khách hàng đã mua vé cho sự kiện đó. Hệ thống sẽ hiển thị giao diện bảng danh sách khách hàng mua vé tương ứng với sự kiện đã chọn. Ban tổ chức có thể nhấn vào một trong hai nút xuất file dữ liệu khách hàng trên về máy với định dạng CSV hoặc PDF.
 Nếu có lỗi kết nối cơ sở dữ liệu hoặc không có dữ liệu về các khách hàng đã mua vé, hệ thống sẽ có thông báo lỗi, hiển thị danh sách khách hàng trống và vô hiệu hóa các nút xuất file dữ liệu khách hàng.
-\begin{figure}
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.55\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Xem_xuất thông tin khách hàng đã mua vé 1 sự kiện cụ thể.drawio.png}
     \vspace{15pt}
-    \caption{Activity Diagram -- Xem danh sách khách hàng mua vé (Ban tổ chức)}
+    \caption{Activity Diagram (AC-OG-05) -- Xem danh sách khách hàng mua vé (Ban tổ chức)}
 \end{figure}
+\textbf{Mã Activity Diagram:} AC-OG-05\\
 
 \textbf{c. Thay đổi mật khẩu}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.55\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Đổi mật khẩu.drawio.png}
     \vspace{15pt}
-    \caption{Activity Diagram -- Thay đổi mật khẩu (Ban tổ chức)}
+    \caption{Activity Diagram (AC-OG-06) -- Thay đổi mật khẩu (Ban tổ chức)}
 \end{figure}
-
-\indent \indent Khi có nhu cầu đổi mật khẩu, Ban tổ chức sẽ truy cập vào mục Profile tại thanh navbar và chọn chức năng đổi mật khẩu. Hệ thống sẽ hiển thị form yêu cầu nhập mật khẩu mới và xác nhận mật khẩu mới. Ban tổ chức nhập thông tin và gửi yêu cầu. Hệ thống sẽ kiểm tra tính hợp lệ của mật khẩu mới, nếu hợp lệ thì cập nhật mật khẩu mới vào cơ sở dữ liệu, ghi log hoạt động và thông báo thành công. Nếu có lỗi hoặc thông tin không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
+\textbf{Mã Activity Diagram:} AC-OG-06\\
+\textbf{Mã Use Case tương ứng:} UC-OG-03\\
+\indent \indent \textbf{Mô tả: }Khi có nhu cầu đổi mật khẩu, Ban tổ chức sẽ truy cập vào mục Profile tại thanh navbar và chọn chức năng đổi mật khẩu. Hệ thống sẽ hiển thị form yêu cầu nhập mật khẩu mới và xác nhận mật khẩu mới. Ban tổ chức nhập thông tin và gửi yêu cầu. Hệ thống sẽ kiểm tra tính hợp lệ của mật khẩu mới, nếu hợp lệ thì cập nhật mật khẩu mới vào cơ sở dữ liệu, ghi log hoạt động và thông báo thành công. Nếu có lỗi hoặc thông tin không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
 
 \textbf{d. Quên mật khẩu}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Quên mật khẩu.drawio.png}
     \vspace{15pt}
-    \caption{Activity Diagram -- Quên mật khẩu (Ban tổ chức)}
+    \caption{Activity Diagram (AC-OG-07) -- Quên mật khẩu (Ban tổ chức)}
 \end{figure}
-
-\indent \indent Khi quên mật khẩu, Ban tổ chức sẽ truy cập vào form đăng nhập và chọn chức năng quên mật khẩu. Hệ thống sẽ hiển thị form yêu cầu nhập email đã đăng ký. Ban tổ chức nhập email và gửi yêu cầu. Hệ thống sẽ xác thực xem email có định dạng hợp lệ và có tài khoản nào được tạo với email trên hay không, nếu đáp ứng cả hai yêu cầu thì tạo token khôi phục mật khẩu và gửi mật khẩu mới tạm thời kèm hướng dẫn qua email trên. Ban tổ chức nhận email, sử dụng mật khẩu tạm thời để đăng nhập thành công và được hệ thống điều hướng tự động tới mục đổi mật khẩu. Ban tổ chức sẽ thực hiện quy trình đổi sang mật khẩu mới như được mô tả ở \textbf{mục 5.2.2.c}. Hệ thống sẽ xác thực token, cập nhật mật khẩu mới vào cơ sở dữ liệu, ghi log hoạt động và thông báo thành công. Nếu có lỗi hoặc thông tin không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
+\textbf{Mã Activity Diagram:} AC-OG-07\\
+\textbf{Mã Use Case tương ứng:} UC-OG-04\\
+\indent \indent \textbf{Mô tả: }Khi quên mật khẩu, Ban tổ chức sẽ truy cập vào form đăng nhập và chọn chức năng quên mật khẩu. Hệ thống sẽ hiển thị form yêu cầu nhập email đã đăng ký. Ban tổ chức nhập email và gửi yêu cầu. Hệ thống sẽ xác thực xem email có định dạng hợp lệ và có tài khoản nào được tạo với email trên hay không, nếu đáp ứng cả hai yêu cầu thì tạo token khôi phục mật khẩu và gửi mật khẩu mới tạm thời kèm hướng dẫn qua email trên. Ban tổ chức nhận email, sử dụng mật khẩu tạm thời để đăng nhập thành công và được hệ thống điều hướng tự động tới mục đổi mật khẩu. Ban tổ chức sẽ thực hiện quy trình đổi sang mật khẩu mới như được mô tả ở \textbf{mục 5.2.2.c}. Hệ thống sẽ xác thực token, cập nhật mật khẩu mới vào cơ sở dữ liệu, ghi log hoạt động và thông báo thành công. Nếu có lỗi hoặc thông tin không hợp lệ, hệ thống sẽ thông báo lỗi và yêu cầu nhập lại.
 
 \textbf{e. Xem profile cá nhân}
 
@@ -849,10 +895,11 @@ Nếu có lỗi kết nối cơ sở dữ liệu hoặc không có dữ liệu v
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_BTC/Ativity Diagram-Profile.drawio.png}
     \vspace{15pt}
-    \caption{Activity Diagram -- Xem profile cá nhân (Ban tổ chức)}
+    \caption{Activity Diagram (AC-OG-08) -- Xem profile cá nhân (Ban tổ chức)}
 \end{figure}
-
-\indent \indent Ban tổ chức có thể xem thông tin cá nhân của mình, bao gồm  Name, Email, Phone, Address, Tax Code, Rating, Created At và Updated At. Hệ thống sẽ hiển thị các thông tin này khi Ban tổ chức truy cập vào mục Profile trên thanh navbar. Nếu có lỗi khi tải thông tin cá nhân, hệ thống sẽ hiển thị thông báo lỗi và giá trị ở các trường sẽ hiển thị là "--". 
+\textbf{Mã Activity Diagram:} AC-OG-08\\
+\textbf{Mã Use Case tương ứng:} UC-OG-05\\
+\indent \indent \textbf{Mô tả: }Ban tổ chức có thể xem thông tin cá nhân của mình, bao gồm  Name, Email, Phone, Address, Tax Code, Rating, Created At và Updated At. Hệ thống sẽ hiển thị các thông tin này khi Ban tổ chức truy cập vào mục Profile trên thanh navbar. Nếu có lỗi khi tải thông tin cá nhân, hệ thống sẽ hiển thị thông báo lỗi và giá trị ở các trường sẽ hiển thị là "--". 
 
 \subsubsection{Activity Diagram cho Quản trị viên}
 
@@ -861,17 +908,22 @@ Nếu có lỗi kết nối cơ sở dữ liệu hoặc không có dữ liệu v
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_Admin/DACN - Activity Diagram - Admin-Quản lý sự kiện.drawio.png}
     \vspace{15pt}
-    \caption{Activity Diagram -- Quản lý sự kiện}
+    \caption{Activity Diagram (AC-AD-01) -- Quản lý sự kiện (Admin)}
 \end{figure}
-\indent \indent Đầu tiên, admin mở mục thông tin sự kiện trên thanh navbar. Tại đây admin có thể xem nhanh danh sách các sự kiện và có thể nhập từ khóa tìm kiếm. Khi chọn một sự kiện cụ thể để xem chi tiết, admin có thể thực hiện các chức năng như chỉnh sửa hoặc xóa thông tin sự kiện. Nếu xóa, hệ thống sẽ yêu cầu xác nhận và hiển thị thông báo sau khi xóa thành công; nếu chỉnh sửa hoặc tạo mới, hệ thống hiển thị form nhập liệu để admin điền thông tin. Sau khi admin lưu, hệ thống kiểm tra tính hợp lệ và đầy đủ của dữ liệu, rồi lưu thông tin vào cơ sở dữ liệu và thông báo kết quả tương ứng.
+\textbf{Mã Activity Diagram:} AC-AD-01\\
+\textbf{Mã Use Case tương ứng:} UC-AD-01\\
+\indent \indent \textbf{Mô tả: }Đầu tiên, admin mở mục thông tin sự kiện trên thanh navbar. Tại đây admin có thể xem nhanh danh sách các sự kiện và có thể nhập từ khóa tìm kiếm. Khi chọn một sự kiện cụ thể để xem chi tiết, admin có thể thực hiện các chức năng như chỉnh sửa hoặc xóa thông tin sự kiện. Nếu xóa, hệ thống sẽ yêu cầu xác nhận và hiển thị thông báo sau khi xóa thành công; nếu chỉnh sửa hoặc tạo mới, hệ thống hiển thị form nhập liệu để admin điền thông tin. Sau khi admin lưu, hệ thống kiểm tra tính hợp lệ và đầy đủ của dữ liệu, rồi lưu thông tin vào cơ sở dữ liệu và thông báo kết quả tương ứng.
+
 \textbf{b. Quản lý đơn vị tổ chức sự kiện}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Images/Activity_Diagram_Admin/DACN - Activity Diagram - Admin-Quản lý đơn vị tổ chức.drawio.png}
     \vspace{15pt}
-    \caption{Activity Diagram -- Quản lý các đơn vị tổ chức sự kiện}
+    \caption{Activity Diagram (AC-AD-02) -- Quản lý các đơn vị tổ chức sự kiện (Admin)}
 \end{figure}
-\indent \indent Đầu tiên, admin truy cập mục thông tin ban tổ chức trên thanh navbar. Tại đây, admin có thể xem nhanh danh sách các ban tổ chức, tạo mới thông tin ban tổ chức và có thể nhập từ khóa tìm kiếm. Khi chọn một đơn vị tổ chức sự kiện cụ thể để xem chi tiết, admin có thể thực hiện các chức năng như tạo chỉnh sửa hoặc xóa đơn vị tổ chức. Khi thực hiện thao tác xóa, hệ thống sẽ yêu cầu xác nhận trước khi xóa dữ liệu. Đối với thao tác thêm hoặc chỉnh sửa, hệ thống kiểm tra tính hợp lệ của thông tin và lưu vào cơ sở dữ liệu nếu hợp lệ, đồng thời hiển thị thông báo kết quả tương ứng.
+\textbf{Mã Activity Diagram:} AC-AD-02\\
+\textbf{Mã Use Case tương ứng:} UC-AD-02\\
+\indent \indent \textbf{Mô tả: }Đầu tiên, admin truy cập mục thông tin ban tổ chức trên thanh navbar. Tại đây, admin có thể xem nhanh danh sách các ban tổ chức, tạo mới thông tin ban tổ chức và có thể nhập từ khóa tìm kiếm. Khi chọn một đơn vị tổ chức sự kiện cụ thể để xem chi tiết, admin có thể thực hiện các chức năng như tạo chỉnh sửa hoặc xóa đơn vị tổ chức. Khi thực hiện thao tác xóa, hệ thống sẽ yêu cầu xác nhận trước khi xóa dữ liệu. Đối với thao tác thêm hoặc chỉnh sửa, hệ thống kiểm tra tính hợp lệ của thông tin và lưu vào cơ sở dữ liệu nếu hợp lệ, đồng thời hiển thị thông báo kết quả tương ứng.
 
 
 

@@ -5,37 +5,37 @@
 \contentsline {table}{\numberline {4}{\ignorespaces Các thành phần nền tảng cấu thành RESTful API}}{5}{table.4}%
 \contentsline {table}{\numberline {5}{\ignorespaces So sánh đặc tính kỹ thuật giữa hệ quản trị CSDL SQL và NoSQL}}{7}{table.5}%
 \contentsline {table}{\numberline {6}{\ignorespaces Các dịch vụ bên thứ ba được tích hợp trong hệ thống}}{24}{table.6}%
-\contentsline {table}{\numberline {7}{\ignorespaces Đặc tả Use Case -- Quên mật khẩu (Người dùng) }}{26}{table.7}%
-\contentsline {table}{\numberline {8}{\ignorespaces Đặc tả Use Case -- Mua vé (Người dùng) }}{27}{table.8}%
-\contentsline {table}{\numberline {9}{\ignorespaces Đặc tả Use Case -- Xem lịch sử mua vé (Người dùng) }}{29}{table.9}%
-\contentsline {table}{\numberline {10}{\ignorespaces Đặc tả Use Case -- Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra (Người dùng) }}{29}{table.10}%
-\contentsline {table}{\numberline {11}{\ignorespaces Đặc tả Use Case -- Chat với trợ lý ảo (Người dùng) }}{30}{table.11}%
-\contentsline {table}{\numberline {12}{\ignorespaces Đặc tả Use Case -- Xem danh sách sự kiện (Người dùng) }}{31}{table.12}%
-\contentsline {table}{\numberline {13}{\ignorespaces Đặc tả Use Case -- Xem thông tin chi tiết sự kiện (Người dùng) }}{31}{table.13}%
-\contentsline {table}{\numberline {14}{\ignorespaces Đặc tả Use Case -- Tìm kiếm sự kiện (Người dùng) }}{32}{table.14}%
-\contentsline {table}{\numberline {15}{\ignorespaces Đặc tả Use Case -- Xem thông tin cá nhân (Người dùng) }}{33}{table.15}%
-\contentsline {table}{\numberline {16}{\ignorespaces Đặc tả Use Case -- Chỉnh sửa thông tin cá nhân (Người dùng) }}{33}{table.16}%
-\contentsline {table}{\numberline {17}{\ignorespaces Đặc tả Use Case -- Thay đổi mật khẩu (Người dùng) }}{34}{table.17}%
-\contentsline {table}{\numberline {18}{\ignorespaces Đặc tả Use Case -- Theo dõi dữ liệu thống kê (Ban tổ chức) }}{36}{table.18}%
-\contentsline {table}{\numberline {19}{\ignorespaces Đặc tả Use Case -- Theo dõi thông tin sự kiện (Ban tổ chức)}}{36}{table.19}%
-\contentsline {table}{\numberline {20}{\ignorespaces Đặc tả Use Case -- Thay đổi mật khẩu (Ban tổ chức) }}{37}{table.20}%
-\contentsline {table}{\numberline {21}{\ignorespaces Đặc tả Use Case -- Quên mật khẩu (Ban tổ chức) }}{38}{table.21}%
-\contentsline {table}{\numberline {22}{\ignorespaces Đặc tả Use Case -- Xem profile cá nhân (Ban tổ chức) }}{39}{table.22}%
-\contentsline {table}{\numberline {23}{\ignorespaces Đặc tả Use Case -- Quản lý sự kiện (Admin)}}{41}{table.23}%
-\contentsline {table}{\numberline {24}{\ignorespaces Đặc tả Use Case -- Quản lý đơn vị tổ chức (Admin)}}{41}{table.24}%
-\contentsline {table}{\numberline {25}{\ignorespaces Đặc tả Use Case -- Quản lý vé (Admin)}}{42}{table.25}%
-\contentsline {table}{\numberline {26}{\ignorespaces Đặc tả Use Case -- Quản lý thông tin khách hàng (Admin)}}{43}{table.26}%
-\contentsline {table}{\numberline {27}{\ignorespaces Danh sách các module nghiệp vụ trong backend}}{59}{table.caption.38}%
-\contentsline {table}{\numberline {28}{\ignorespaces Danh sách các collection trong MongoDB}}{59}{table.caption.39}%
-\contentsline {table}{\numberline {29}{\ignorespaces Các thuộc tính của bảng Users}}{62}{table.29}%
-\contentsline {table}{\numberline {30}{\ignorespaces Các thuộc tính của bảng Organizers}}{62}{table.30}%
-\contentsline {table}{\numberline {31}{\ignorespaces Các thuộc tính của bảng Events}}{63}{table.31}%
-\contentsline {table}{\numberline {32}{\ignorespaces Các thuộc tính của bảng TicketClasses}}{64}{table.32}%
-\contentsline {table}{\numberline {33}{\ignorespaces Các thuộc tính của bảng Tickets}}{64}{table.33}%
-\contentsline {table}{\numberline {34}{\ignorespaces Các thuộc tính của bảng Purchases}}{64}{table.34}%
-\contentsline {table}{\numberline {35}{\ignorespaces Các thuộc tính của bảng Vouchers}}{65}{table.35}%
-\contentsline {table}{\numberline {36}{\ignorespaces Các thuộc tính của bảng Reviews}}{65}{table.36}%
-\contentsline {table}{\numberline {37}{\ignorespaces Các thuộc tính của bảng Interactions}}{66}{table.37}%
-\contentsline {table}{\numberline {38}{\ignorespaces Bảng dữ liệu mẫu}}{68}{table.caption.42}%
-\contentsline {table}{\numberline {39}{\ignorespaces Danh sách các công cụ và thư viện sử dụng trong Testing}}{78}{table.39}%
-\contentsline {table}{\numberline {40}{\ignorespaces Chi tiết kết quả thực thi Test Case cho các API và Middleware}}{80}{table.40}%
+\contentsline {table}{\numberline {7}{\ignorespaces Đặc tả Use Case (UC-US-01) -- Quên mật khẩu (Người dùng) }}{27}{table.7}%
+\contentsline {table}{\numberline {8}{\ignorespaces Đặc tả Use Case (UC-US-02) -- Mua vé (Người dùng) }}{28}{table.8}%
+\contentsline {table}{\numberline {9}{\ignorespaces Đặc tả Use Case (UC-US-03) -- Xem lịch sử mua vé (Người dùng) }}{30}{table.9}%
+\contentsline {table}{\numberline {10}{\ignorespaces Đặc tả Use Case (UC-US-04) -- Đánh giá/Xem lại của mình dành cho đánh giá ban tổ chức sự kiện đã mua vé thành công và đã diễn ra (Người dùng) }}{31}{table.10}%
+\contentsline {table}{\numberline {11}{\ignorespaces Đặc tả Use Case (UC-US-05) -- Chat với trợ lý ảo (Người dùng) }}{32}{table.11}%
+\contentsline {table}{\numberline {12}{\ignorespaces Đặc tả Use Case (UC-US-06) -- Xem danh sách sự kiện (Người dùng) }}{32}{table.12}%
+\contentsline {table}{\numberline {13}{\ignorespaces Đặc tả Use Case (UC-US-07) -- Xem thông tin chi tiết sự kiện (Người dùng) }}{33}{table.13}%
+\contentsline {table}{\numberline {14}{\ignorespaces Đặc tả Use Case (UC-US-08) -- Tìm kiếm sự kiện (Người dùng) }}{34}{table.14}%
+\contentsline {table}{\numberline {15}{\ignorespaces Đặc tả Use Case (UC-US-09) -- Xem thông tin cá nhân (Người dùng) }}{34}{table.15}%
+\contentsline {table}{\numberline {16}{\ignorespaces Đặc tả Use Case (UC-US-10) -- Chỉnh sửa thông tin cá nhân (Người dùng) }}{35}{table.16}%
+\contentsline {table}{\numberline {17}{\ignorespaces Đặc tả Use Case (UC-US-11) -- Thay đổi mật khẩu (Người dùng) }}{36}{table.17}%
+\contentsline {table}{\numberline {18}{\ignorespaces Đặc tả Use Case (UC-OG-01) -- Theo dõi dữ liệu thống kê (Ban tổ chức) }}{37}{table.18}%
+\contentsline {table}{\numberline {19}{\ignorespaces Đặc tả Use Case (UC-OG-02) -- Theo dõi thông tin sự kiện (Ban tổ chức)}}{38}{table.19}%
+\contentsline {table}{\numberline {20}{\ignorespaces Đặc tả Use Case (UC-OG-03) -- Thay đổi mật khẩu (Ban tổ chức) }}{39}{table.20}%
+\contentsline {table}{\numberline {21}{\ignorespaces Đặc tả Use Case (UC-OG-04) -- Quên mật khẩu (Ban tổ chức) }}{40}{table.21}%
+\contentsline {table}{\numberline {22}{\ignorespaces Đặc tả Use Case (UC-OG-05) -- Xem profile cá nhân (Ban tổ chức) }}{41}{table.22}%
+\contentsline {table}{\numberline {23}{\ignorespaces Đặc tả Use Case (UC-AD-01) -- Quản lý sự kiện (Admin)}}{43}{table.23}%
+\contentsline {table}{\numberline {24}{\ignorespaces Đặc tả Use Case (UC-AD-02) -- Quản lý đơn vị tổ chức (Admin)}}{44}{table.24}%
+\contentsline {table}{\numberline {25}{\ignorespaces Đặc tả Use Case (UC-AD-03) -- Quản lý vé (Admin)}}{45}{table.25}%
+\contentsline {table}{\numberline {26}{\ignorespaces Đặc tả Use Case (UC-AD-04) -- Quản lý thông tin khách hàng (Admin)}}{46}{table.26}%
+\contentsline {table}{\numberline {27}{\ignorespaces Danh sách các module nghiệp vụ trong backend}}{63}{table.caption.39}%
+\contentsline {table}{\numberline {28}{\ignorespaces Danh sách các collection trong MongoDB}}{63}{table.caption.40}%
+\contentsline {table}{\numberline {29}{\ignorespaces Cấu trúc dữ liệu của bảng Users}}{66}{table.29}%
+\contentsline {table}{\numberline {30}{\ignorespaces Các thuộc tính của bảng Organizers}}{67}{table.30}%
+\contentsline {table}{\numberline {31}{\ignorespaces Các thuộc tính của bảng Events}}{68}{table.31}%
+\contentsline {table}{\numberline {32}{\ignorespaces Các thuộc tính của bảng TicketClasses}}{69}{table.32}%
+\contentsline {table}{\numberline {33}{\ignorespaces Các thuộc tính của bảng Tickets}}{70}{table.33}%
+\contentsline {table}{\numberline {34}{\ignorespaces Các thuộc tính của bảng Purchases}}{71}{table.34}%
+\contentsline {table}{\numberline {35}{\ignorespaces Các thuộc tính của bảng Vouchers}}{72}{table.35}%
+\contentsline {table}{\numberline {36}{\ignorespaces Các thuộc tính của bảng Reviews}}{72}{table.36}%
+\contentsline {table}{\numberline {37}{\ignorespaces Các thuộc tính của bảng Interactions}}{73}{table.37}%
+\contentsline {table}{\numberline {38}{\ignorespaces Bảng dữ liệu mẫu}}{75}{table.caption.43}%
+\contentsline {table}{\numberline {39}{\ignorespaces Danh sách các công cụ và thư viện sử dụng trong Testing}}{84}{table.39}%
+\contentsline {table}{\numberline {40}{\ignorespaces Chi tiết kết quả thực thi Test Case cho các API và Middleware}}{86}{table.40}%
