@@ -7,7 +7,7 @@
 \contentsline {section}{\numberline {2}Cơ sở lý thuyết}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Mô hình Client - Server}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Kiến trúc RESTful API}{5}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Cơ sở dữ liệu dữ liệu}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Cơ sở dữ liệu}{6}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Xác thực và Phân quyền người dùng (Authentication \& Authorization)}{7}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Hệ thống gợi ý (Recommendation System)}{8}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Thuật toán LightGBM Ranker (LambdaRank - Gradient Boosted Decision Trees for Ranking)}{9}{subsection.2.6}%
@@ -111,4 +111,4 @@
 \contentsline {section}{\numberline {9}Tổng kết}{118}{section.9}%
 \contentsline {subsection}{\numberline {9.1}Đánh giá kết quả hiện thực hệ thống giai đoạn Đồ án tốt nghiệp}{118}{subsection.9.1}%
 \contentsline {subsection}{\numberline {9.2}Hạn chế và hướng phát triển tương lai}{119}{subsection.9.2}%
-\contentsline {section}{Tài liệu tham khảo}{123}{Item.20}%
+\contentsline {section}{Tài liệu tham khảo}{122}{Item.18}%

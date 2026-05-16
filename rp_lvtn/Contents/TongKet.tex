@@ -33,7 +33,7 @@ sự kiện hỗ trợ \textbf{nhiều hạng vé} (\texttt{TicketClass}) với 
 chỗ ngồi: tự do (\texttt{general}) và có ghế cụ thể (\texttt{reserved}),
 kèm cơ chế kiểm soát số lượng và trạng thái bán vé (\texttt{available},
 \texttt{sold\_out}, \texttt{unavailable}). Quản trị viên có toàn quyền duyệt,
-chỉnh sửa và theo dõi toàn bộ sự kiện trên hệ thống.
+chỉnh sửa và theo dõi toàn bộ sự kiện và vé sự kiện trên hệ thống.
 
 \subsubsection*{(3) Luồng đặt vé và thanh toán}
 
@@ -66,25 +66,19 @@ thuần với logo thương hiệu nhúng dạng CID, tương thích với hầu
 ứng dụng email phổ biến. Dữ liệu động được escape HTML trước khi render
 để phòng chống tấn công XSS qua email.
 
-\subsubsection*{(6) Gợi ý sự kiện thông minh -- AI Chatbot}
+\subsubsection*{(6) Gợi ý sự kiện thông minh -- Mô hình ML Collaborative Filtering}
 
-\indent \indent Nhóm tích hợp \textbf{Google Gemini 2.5 Flash} làm trợ lý ảo tư vấn sự
-kiện cho người dùng. Chatbot được cung cấp context động là danh sách tối
-đa 30 sự kiện đang mở bán (bao gồm tên, thể loại, thời gian, địa điểm,
-giá vé từng hạng), giúp trả lời các câu hỏi như ``có sự kiện nào rẻ dưới
-500k không?'' hay ``sự kiện âm nhạc nào cuối tuần này?'' một cách tự nhiên
-bằng tiếng Việt.
+\indent \indent Nhóm đã hoàn thiện toàn bộ pipeline gợi ý cá nhân hóa, bao gồm: (a) thu thập
+dữ liệu tương tác người dùng thông qua model \texttt{Interaction} (click, purchase),
+(b) xử lý và aggregate dữ liệu trong MongoDB với tính toán điểm tương tác,
+mã hóa đặc trưng về tuổi, giới tính, thể loại sự kiện, (c) xuất ra file CSV
+và upload lên \textbf{HuggingFace Hub}, (d) huấn luyện mô hình Collaborative Filtering
+ngoại tuyến, và (e) triển khai API inference để phục vụ gợi ý theo thời gian thực
+cho từng người dùng. Bên cạnh đó, \textbf{Google Gemini 2.5 Flash} được tích hợp
+làm trợ lý ảo tư vấn sự kiện, cung cấp context động từ danh sách các sự kiện
+đang mở bán để trả lời các câu hỏi tự nhiên bằng tiếng Việt.
 
-\subsubsection*{(7) Pipeline dữ liệu cho mô hình gợi ý ML}
-
-\indent \indent Hệ thống xây dựng pipeline thu thập và xử lý dữ liệu tương tác người dùng
-(click, purchase theo từng cặp user--event) thông qua model \texttt{Interaction}.
-Dữ liệu được aggregate trong MongoDB (tính điểm tương tác, mã hóa đặc trưng
-về tuổi, giới tính, thể loại sự kiện, vị trí địa lý, ngân sách trung bình)
-và xuất ra file CSV, tự động upload lên \textbf{HuggingFace Hub} để phục vụ
-việc huấn luyện mô hình gợi ý ngoại tuyến (\textit{offline training}).
-
-\subsubsection*{(8) Dashboard thống kê}
+\subsubsection*{(7) Dashboard thống kê}
 
 \indent \indent Ban tổ chức có trang thống kê riêng với dữ liệu doanh thu, số vé bán được
 theo sự kiện. Quản trị viên có dashboard tổng quan với các chỉ số: tổng số
@@ -93,7 +87,7 @@ sự kiện, tổng người dùng, tổng ban tổ chức, số liệu tăng tr
 được lưu dạng snapshot định kỳ trong collection \texttt{statistics}, cho
 phép theo dõi xu hướng theo thời gian.
 
-\subsubsection*{(9) Đánh giá và phản hồi}
+\subsubsection*{(8) Đánh giá và phản hồi}
 
 \indent \indent Hệ thống hiện thực chức năng đánh giá sự kiện với ràng buộc nghiệp vụ chặt
 chẽ: chỉ người dùng đã mua vé và thanh toán thành công mới được đánh giá,
@@ -102,7 +96,7 @@ lần cho mỗi sự kiện (ràng buộc unique index). Điểm đánh giá tru
 ban tổ chức được tự động cập nhật mỗi khi có đánh giá mới thông qua
 MongoDB Aggregation Pipeline.
 
-\subsubsection*{(10) Bảo mật tổng thể}
+\subsubsection*{(9) Bảo mật tổng thể}
 
 \indent \indent Toàn bộ các cơ chế bảo mật đã được hiện thực như mô tả trong Phần~1, bao
 gồm: JWT với kiểm tra trạng thái tài khoản trong DB, hash mật khẩu bcrypt,
@@ -121,15 +115,6 @@ ra những hướng phát triển cụ thể cho giai đoạn tiếp theo.
 \subsubsection*{Hạn chế hiện tại}
 
 \begin{enumerate}[leftmargin=*, label=\textbf{\arabic*.}]
-
-    \item \textbf{Mô hình gợi ý ML chưa được triển khai ở tầng phục vụ
-    (inference serving).}
-    Pipeline thu thập dữ liệu và upload lên HuggingFace đã được xây dựng
-    đầy đủ, tuy nhiên việc tích hợp mô hình đã huấn luyện trở lại vào hệ
-    thống để phục vụ gợi ý theo thời gian thực (real-time inference) cho
-    từng người dùng chưa được hoàn thiện trong giai đoạn này. Hiện tại,
-    chức năng gợi ý sự kiện chủ yếu dựa vào Gemini Chatbot với context
-    tĩnh.
 
     \item \textbf{Chưa có bộ kiểm thử tự động (automated testing).}
     Cả backend lẫn frontend đều chưa có unit test hay integration test.
@@ -165,12 +150,12 @@ ra những hướng phát triển cụ thể cho giai đoạn tiếp theo.
     thái) chưa được phát triển. Người dùng hiện chưa thể tự chọn ghế cụ
     thể trên sơ đồ.
 
-    \item \textbf{Chưa hỗ trợ cập nhật trạng thái vé theo thời gian thực.}
-    Khi số lượng vé thay đổi (có người vừa mua hoặc cron job thu hồi vé),
-    giao diện người dùng chỉ cập nhật khi họ tải lại trang, không có cơ
-    chế đẩy dữ liệu theo thời gian thực (WebSocket / Server-Sent Events).
-    Điều này có thể dẫn đến trải nghiệm kém trong các sự kiện có lượng
-    người mua đồng thời cao.
+    % \item \textbf{Chưa hỗ trợ cập nhật trạng thái vé theo thời gian thực.}
+    % Khi số lượng vé thay đổi (có người vừa mua hoặc cron job thu hồi vé),
+    % giao diện người dùng chỉ cập nhật khi họ tải lại trang, không có cơ
+    % chế đẩy dữ liệu theo thời gian thực (WebSocket / Server-Sent Events).
+    % Điều này có thể dẫn đến trải nghiệm kém trong các sự kiện có lượng
+    % người mua đồng thời cao.
 
     \item \textbf{Ràng buộc một tài khoản -- một ban tổ chức.}
     Hiện tại mỗi tài khoản \texttt{organizer} chỉ được liên kết với một
@@ -184,23 +169,17 @@ ra những hướng phát triển cụ thể cho giai đoạn tiếp theo.
     ứng dụng native (iOS/Android) để cung cấp trải nghiệm người dùng
     đầy đủ trên thiết bị di động, đặc biệt cho chức năng quét QR check-in.
 
-    \item \textbf{Hệ thống thiếu kho mã giảm giá.}
-    Hiện tại hệ thống chưa có cơ chế quản lý và mã giảm giá hợp lệ cho người dùng khi thanh toán vé do chưa thể làm việc được với nhà quản lý nền tảng thanh toán chính hiện tại là PayOs. 
-    Việc này hạn chế khả năng triển khai các chiến dịch khuyến mãi và tăng cường trải nghiệm người dùng.
+    \item \textbf{Hỗ trợ cổng thanh toán còn hạn chế.}
+    Hiện tại hệ thống chỉ tích hợp PayOS. Để mở rộng thị trường và 
+    cung cấp lựa chọn thanh toán đa dạng cho người dùng, cần bổ sung 
+    hỗ trợ cho các phương thức thanh toán phổ biến khác tại Việt Nam 
+    như VNPay, MoMo và ZaloPay.
 
 \end{enumerate}
 
 \subsubsection*{Hướng phát triển tương lai}
 
 \begin{enumerate}[leftmargin=*, label=\textbf{\arabic*.}]
-
-    \item \textbf{Hoàn thiện và triển khai mô hình gợi ý cá nhân hóa.}
-    Bước tiếp theo quan trọng nhất là hoàn thiện vòng lặp ML: huấn luyện
-    mô hình collaborative filtering hoặc content-based filtering trên
-    dataset đã thu thập tại HuggingFace, sau đó triển khai API inference
-    (có thể dùng HuggingFace Inference Endpoints hoặc một microservice
-    riêng) để tích hợp vào luồng gợi ý sự kiện theo người dùng cụ thể
-    thay vì context chung như hiện tại.
 
     \item \textbf{Xây dựng bộ kiểm thử tự động và CI/CD pipeline.}
     Cần bổ sung unit test cho các controller và service quan trọng
@@ -226,11 +205,11 @@ ra những hướng phát triển cụ thể cho giai đoạn tiếp theo.
     đã đặt, đang giữ chỗ). Tích hợp WebSocket để cập nhật trạng thái
     ghế theo thời gian thực trong quá trình nhiều người cùng đặt.
 
-    \item \textbf{Cập nhật thời gian thực với WebSocket.}
-    Tích hợp Socket.IO hoặc Server-Sent Events để đẩy cập nhật số
-    lượng vé còn lại, trạng thái sự kiện và thông báo hệ thống đến
-    người dùng mà không cần tải lại trang, đặc biệt quan trọng trong
-    các sự kiện có lưu lượng mua vé cao.
+    % \item \textbf{Cập nhật thời gian thực với WebSocket.}
+    % Tích hợp Socket.IO hoặc Server-Sent Events để đẩy cập nhật số
+    % lượng vé còn lại, trạng thái sự kiện và thông báo hệ thống đến
+    % người dùng mà không cần tải lại trang, đặc biệt quan trọng trong
+    % các sự kiện có lưu lượng mua vé cao.
 
     \item \textbf{Phát triển ứng dụng di động.}
     Xây dựng ứng dụng React Native tái sử dụng logic từ các service
@@ -245,30 +224,41 @@ ra những hướng phát triển cụ thể cho giai đoạn tiếp theo.
     tương tác thực tế (tỷ lệ chuyển đổi click-to-purchase) vào
     dashboard để ban tổ chức tối ưu chiến lược bán vé.
 
-    \item \textbf{Mở rộng tích hợp cổng thanh toán và phát triển kho mã giảm giá.}
+    \item \textbf{Mở rộng tích hợp cổng thanh toán.}
     Bổ sung hỗ trợ các phương thức thanh toán phổ biến khác tại Việt
-    Nam như VNPay, MoMo và ZaloPay, đồng thời xây dựng luồng hoàn tiền
-    (refund) tự động khi sự kiện bị hủy.\\
-    Phát triển hệ thống quản lý mã giảm giá (coupon) với các loại chiết khấu: 
-    theo phần trăm, theo số tiền cố định, hoặc miễn phí vận chuyển (nếu có). Mã giảm giá sẽ có điều kiện áp dụng (tối thiểu hóa đơn, chỉ áp dụng cho sự kiện cụ thể, giới hạn số lượng sử dụng) 
-    và được tích hợp vào luồng thanh toán.
+    Nam như VNPay, MoMo và ZaloPay. Đồng thời xây dựng luồng hoàn tiền
+    (refund) tự động khi sự kiện bị hủy hoặc người dùng yêu cầu.
+
+    \item \textbf{Phát triển hệ thống quản lý mã giảm giá.}
+    Xây dựng hệ thống quản lý voucher nâng cao với các loại chiết khấu:
+    theo phần trăm, theo số tiền cố định, hoặc miễn phí vận chuyển (nếu có).
+    Mã giảm giá sẽ có điều kiện áp dụng chi tiết (tối thiểu hóa đơn, chỉ
+    áp dụng cho sự kiện cụ thể, giới hạn số lượng sử dụng, ngày hiệu lực)
+    và được tích hợp toàn diện vào luồng thanh toán, đồng thời cung cấp
+    công cụ quản lý cho ban tổ chức.
 
     \item \textbf{Hỗ trợ đa ngôn ngữ.}
     Mở rộng hệ thống hỗ trợ tiếng Anh ngoài tiếng Việt, sử dụng thư
     viện \texttt{i18next} hoặc \texttt{react-intl}, nhằm phục vụ cả
     người dùng quốc tế và ban tổ chức sự kiện có yếu tố nước ngoài.
 
+    \item \textbf{Phát triển chức năng team-based organizer.}
+    Nâng cấp mô hình organizer để hỗ trợ nhiều thành viên trong một
+    ban tổ chức, với hệ thống phân quyền chi tiết (quản lý sự kiện,
+    xem báo cáo, quản lý thanh toán, v.v.), cho phép phân công công
+    việc hiệu quả hơn trong các ban tổ chức quy mô lớn.
+
 \end{enumerate}
 
 \section*{Kết luận}
 
-\indent \indent Nhìn lại toàn bộ quá trình thực hiện, hiện nhóm
+\indent \indent Nhìn lại toàn bộ quá trình thực hiện, nhóm
 đã thành công trong việc xây dựng một hệ thống đặt vé sự kiện trực tuyến
 đầy đủ chức năng, tích hợp các công nghệ hiện đại bao gồm xác thực JWT,
-thanh toán điện tử, vé QR điện tử, email tự động và trí tuệ nhân tạo,
-được triển khai và vận hành thực tế trên nền tảng cloud. Các hạn chế hiện
-tại chủ yếu là những tính năng nâng cao mà nhóm đã có kế hoạch kiến trúc
-rõ ràng nhưng chưa đủ thời gian hoàn thiện trong phạm vi đồ án. Những
-hướng phát triển được đề xuất đều có cơ sở từ kiến trúc hệ thống đã xây
-dựng, tạo nền tảng vững chắc để nhóm hoặc các thành viên tiếp theo có thể
-phát triển liên tục sau khi kết thúc đồ án.
+thanh toán điện tử, vé QR điện tử, email tự động, học máy collaborative filtering
+và trí tuệ nhân tạo, được triển khai và vận hành thực tế trên nền tảng cloud.
+Các hạn chế hiện tại chủ yếu là những tính năng nâng cao và nâng cấp kiến trúc
+mà nhóm đã có kế hoạch rõ ràng nhưng chưa đủ thời gian hoàn thiện trong phạm vi
+đồ án. Những hướng phát triển được đề xuất đều có cơ sở từ kiến trúc hệ thống
+đã xây dựng, tạo nền tảng vững chắc để nhóm hoặc các thành viên tiếp theo có
+thể phát triển liên tục sau khi kết thúc đồ án.
